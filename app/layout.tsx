@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Hanken_Grotesk, Instrument_Serif, DM_Mono } from "next/font/google";
+import { NavBar } from "./components/";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const hankenGrotesk = Hanken_Grotesk({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-hanken-grotesk",
+});
+
+export const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
+  variable: "--font-dm-mono",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} dark:bg-greyscale-950 dark:text-greyscale-50 antialiased`}
       >
+        <NavBar />
         {children}
       </body>
     </html>

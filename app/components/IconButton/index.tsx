@@ -1,0 +1,25 @@
+import { IconButtonPropTypes } from "./types";
+
+export const IconButton = ({
+  theme,
+  onClick,
+  additionalClasses,
+  icon,
+  name,
+}: IconButtonPropTypes) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] px-3 transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
+        theme === "primary"
+          ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-sm hover:shadow-md"
+          : theme === "secondary"
+            ? "bg-greyscale-50 border-greyscale-100 text-greyscale-950 hover:bg-greyscale-100 shadow-sm hover:shadow-md"
+            : "text-greyscale-950 hover:bg-greyscale-100 border-transparent bg-transparent"
+      }`}
+    >
+      {icon}
+      <span className="sr-only">{name}</span>
+    </button>
+  );
+};

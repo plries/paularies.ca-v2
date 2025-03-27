@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  /* greyscale */
+  --color-greyscale-50: #f6f6f6;
+  --color-greyscale-100: #f0f0f0;
+  --color-greyscale-200: #d1d1d1;
+  --color-greyscale-300: #b0b0b0;
+  --color-greyscale-400: #888888;
+  --color-greyscale-500: #6d6d6d;
+  --color-greyscale-600: #5d5d5d;
+  --color-greyscale-700: #393939;
+  --color-greyscale-800: #232323;
+  --color-greyscale-900: #202020;
+  --color-greyscale-950: #1a1a1a;
+  /* sky */
+  --color-sky-50: #f3f8fa;
+  --color-sky-100: #e9f2f6;
+  --color-sky-200: #d7e5ee;
+  --color-sky-300: #bed4e3;
+  --color-sky-400: #a3bed6;
+  --color-sky-500: #8ca7c8;
+  --color-sky-600: #7790b9;
+  --color-sky-700: #6278a0;
+  --color-sky-800: #516382;
+  --color-sky-900: #465469;
+  --color-sky-950: #29313d;
+  /* grass */
+  --color-grass-50: #f7f9ec;
+  --color-grass-100: #ebf0d7;
+  --color-grass-200: #d8e3b3;
+  --color-grass-300: #bed086;
+  --color-grass-400: #a4bc5f;
+  --color-grass-500: #86a141;
+  --color-grass-600: #718a35;
+  --color-grass-700: #506229;
+  --color-grass-800: #424f25;
+  --color-grass-900: #394423;
+  --color-grass-950: #1d240f;
+  /* typography */
+  --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
+  --font-instrument-serif: "Instrument Serif", serif;
+  --font-dm-mono: "DM Mono", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-hanken-grotesk);
+  letter-spacing: -0.02rem;
+  line-height: 110%;
 }
