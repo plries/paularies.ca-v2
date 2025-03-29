@@ -1,19 +1,20 @@
 import Link from "next/link";
-import { IconButtonPropTypes } from "./types";
+import { ButtonLinkPropTypes } from "./types";
 
-export const IconButton = ({
+export const Button = ({
+  href,
+  children,
   theme,
   onClick,
-  href,
   additionalClasses,
   icon,
-  name,
   isLink,
-}: IconButtonPropTypes) => {
+}: ButtonLinkPropTypes) => {
   return isLink ? (
     <Link
-      href={href ?? ""}
-      className={`grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] px-2.5 transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
+      href={href}
+      onClick={onClick}
+      className={`flex h-10 flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 backdrop-blur-md transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
           ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-inset-dark-sm"
           : theme === "secondary"
@@ -21,13 +22,13 @@ export const IconButton = ({
             : "text-greyscale-950 hover:bg-greyscale-100 border-transparent bg-transparent"
       }`}
     >
-      {icon}
-      <span className="sr-only">{name}</span>
+      {children}
+      {icon && <span className="inline-block">{icon}</span>}
     </Link>
   ) : (
     <button
       onClick={onClick}
-      className={`grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] px-2.5 transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
+      className={`flex h-10 flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 backdrop-blur-md transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
           ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-inset-dark-sm"
           : theme === "secondary"
@@ -35,8 +36,8 @@ export const IconButton = ({
             : "text-greyscale-950 hover:bg-greyscale-100 border-transparent bg-transparent"
       }`}
     >
-      {icon}
-      <span className="sr-only">{name}</span>
+      {children}
+      {icon && <span className="inline-block">{icon}</span>}
     </button>
   );
 };

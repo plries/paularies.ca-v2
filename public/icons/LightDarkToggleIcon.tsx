@@ -4,9 +4,9 @@ export const LightDarkToggleIcon = () => {
       <path fill="currentColor" d="M8 0a8 8 0 0 0 0 16V0Z" />
       <path
         fill="currentColor"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M15 8a7.002 7.002 0 0 0-7-7V0a8 8 0 0 1 0 16v-1a7.002 7.002 0 0 0 7-7Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
     </svg>
   );

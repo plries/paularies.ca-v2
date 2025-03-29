@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} dark:bg-greyscale-950 dark:text-greyscale-50 antialiased`}
+        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} dark:bg-greyscale-950 dark:text-greyscale-100 antialiased`}
       >
         <NavBar />
         {children}

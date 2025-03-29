@@ -1,9 +1,9 @@
-export type IconButtonThemesEnum = "primary" | "secondary" | "tertiary";
-
 export type IconButtonPropTypes = {
-  theme: IconButtonThemesEnum;
+  name: string;
+  href?: string;
+  theme: "primary" | "secondary" | "tertiary";
   onClick?: () => void;
   additionalClasses?: string[];
   icon: React.ReactNode;
-  name: string;
+  isLink?: boolean;
 };

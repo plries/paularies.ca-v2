@@ -1,10 +1,9 @@
-export type ButtonLinkThemesEnum = "primary" | "secondary" | "tertiary";
-
 export type ButtonLinkPropTypes = {
-  href: string;
   children: React.ReactNode;
-  theme: ButtonLinkThemesEnum;
+  href: string;
+  theme: "primary" | "secondary" | "tertiary";
   onClick?: () => void;
   additionalClasses?: string[];
   icon?: React.ReactNode;
+  isLink?: boolean;
 };

@@ -43,10 +43,40 @@
   --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
   --font-instrument-serif: "Instrument Serif", serif;
   --font-dm-mono: "DM Mono", monospace;
+  /* shadows */
+  --inset-light-sm:
+    0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
+    0px 1px 1px 0px rgba(26, 26, 26, 0.25);
+  --inset-dark-sm:
+    0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
+    0px 1px 1px 0px rgba(26, 26, 26, 0.25);
+  --nav-bar:
+    0px 0px 12px 0px rgba(255, 255, 255, 0.25) inset,
+    0px 2px 8px -2px rgba(0, 0, 0, 0.05), 0px 4px 8px -1px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0s ease-in-out,
+    border-color 0.3s ease-in-out,
+    stroke 0.3s ease-in-out;
 }
 
 body {
   font-family: var(--font-hanken-grotesk);
-  letter-spacing: -0.02rem;
+  letter-spacing: calc(-0.04em);
   line-height: 110%;
+}
+
+.shadow-inset-light-sm {
+  box-shadow: var(--inset-light-sm);
+}
+
+.shadow-inset-dark-sm {
+  box-shadow: var(--inset-dark-sm);
+}
+
+.shadow-nav-bar {
+  box-shadow: var(--nav-bar);
 }
