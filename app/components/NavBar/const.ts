@@ -4,6 +4,7 @@ import {
   LightDarkToggleIcon,
   EmailIcon,
   MenuIcon,
+  CloseIcon,
 } from "@/public";
 
 export const NAVBAR_CONST = {
@@ -22,6 +23,10 @@ export const NAVBAR_CONST = {
       HREF: "/about",
       TEXT: "about",
     },
+    {
+      HREF: "mailto:hello@paularies.ca",
+      TEXT: "contact",
+    },
   ],
   LIGHT_DARK: {
     ICON: LightDarkToggleIcon,
@@ -33,7 +38,13 @@ export const NAVBAR_CONST = {
     TEXT: "contact",
   },
   MOBILE_MENU: {
-    ICON: MenuIcon,
-    TEXT: "menu",
+    CLOSED: {
+      ICON: MenuIcon,
+      TEXT: "open menu",
+    },
+    OPEN: {
+      ICON: CloseIcon,
+      TEXT: "close menu",
+    },
   },
 };

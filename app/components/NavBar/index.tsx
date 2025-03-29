@@ -1,6 +1,7 @@
 "use client";
 import { NAVBAR_CONST } from "./const";
 import { Button, IconButton } from "../";
+import { MobileMenu } from "./components";
 import { useModeToggle, useWindowSize } from "@/app/hooks";
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ export const NavBar = () => {
   const lightDark = useModeToggle();
 
   return (
-    <header className="bg-greyscale-[#f0f0f080] border-greyscale-100 dark:border-greyscale-700 shadow-nav-bar sticky top-3 left-0 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 text-base backdrop-blur-md md:top-6 md:m-6 md:text-lg lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] lg:text-xl">
+    <header className="border-greyscale-100 dark:border-greyscale-700 shadow-nav-bar bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)]">
       <nav className="contents">
         <Link
           href={NAVBAR_CONST.LOGO.HREF}
@@ -22,14 +23,16 @@ export const NavBar = () => {
           <span className="sr-only">{NAVBAR_CONST.LOGO.HOME}</span>
         </Link>
         {!windowSize.isMobile && (
-          <ul className="flex flex-row gap-2">
-            {NAVBAR_CONST.LINKS.map(({ HREF, TEXT }) => (
-              <li key={TEXT}>
-                <Button href={HREF} theme="tertiary" isLink>
-                  {TEXT}
-                </Button>
-              </li>
-            ))}
+          <div className="flex flex-row gap-2">
+            <ul className="contents">
+              {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, TEXT }) => (
+                <li key={TEXT}>
+                  <Button href={HREF} theme="tertiary" isLink>
+                    {TEXT}
+                  </Button>
+                </li>
+              ))}
+            </ul>
             <IconButton
               onClick={lightDark.toggleMode}
               icon={<NAVBAR_CONST.LIGHT_DARK.ICON />}
@@ -43,15 +46,18 @@ export const NavBar = () => {
               name={NAVBAR_CONST.CONTACT.TEXT}
               isLink
             />
-          </ul>
+          </div>
         )}
         {windowSize.isMobile && (
-          <IconButton
-            onClick={lightDark.toggleMode}
-            icon={<NAVBAR_CONST.MOBILE_MENU.ICON />}
-            theme="primary"
-            name={NAVBAR_CONST.MOBILE_MENU.TEXT}
-          />
+          <div className="flex flex-row gap-2">
+            <IconButton
+              onClick={lightDark.toggleMode}
+              icon={<NAVBAR_CONST.LIGHT_DARK.ICON />}
+              theme="secondary"
+              name={NAVBAR_CONST.LIGHT_DARK.TEXT}
+            />
+            <MobileMenu />
+          </div>
         )}
       </nav>
     </header>
