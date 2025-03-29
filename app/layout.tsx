@@ -11,6 +11,7 @@ export const hankenGrotesk = Hanken_Grotesk({
 
 export const instrumentSerif = Instrument_Serif({
   weight: "400",
+  style: ["normal", "italic"],
   variable: "--font-instrument-serif",
   subsets: ["latin"],
 });
@@ -34,10 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-950 dark:text-greyscale-100 antialiased`}
+        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-950 dark:text-greyscale-100 mx-auto grid auto-rows-min place-items-center grid-cols-1 antialiased`}
       >
         <NavBar />
-        <main className="grid grid-cols-4 gap-3 px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-8">
+        <main className="grid max-w-7xl grid-cols-4 gap-3 px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-8">
           {children}
         </main>
       </body>

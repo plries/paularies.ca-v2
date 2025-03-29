@@ -9,7 +9,7 @@ export const NavBar = () => {
   const lightDark = useModeToggle();
 
   return (
-    <header className="bg-greyscale-[#f0f0f080] border-greyscale-100 dark:border-greyscale-700 shadow-nav-bar sticky top-0 left-0 m-3 flex flex-row items-center justify-between rounded-3xl border-[1px] p-3 text-base backdrop-blur-md md:m-6 md:text-lg lg:m-8 lg:text-xl">
+    <header className="bg-greyscale-[#f0f0f080] border-greyscale-100 dark:border-greyscale-700 shadow-nav-bar sticky top-3 left-0 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 text-base backdrop-blur-md md:top-6 md:m-6 md:text-lg lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] lg:text-xl">
       <nav className="contents">
         <Link
           href={NAVBAR_CONST.LOGO.HREF}

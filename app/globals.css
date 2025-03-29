@@ -67,7 +67,7 @@
 
 body {
   font-family: var(--font-hanken-grotesk);
-  color: var(--greyscale-950);
+  color: var(--color-greyscale-950);
   letter-spacing: calc(-0.04em);
   line-height: 110%;
 }
