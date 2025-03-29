@@ -34,10 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} dark:bg-greyscale-950 dark:text-greyscale-100 antialiased`}
+        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-950 dark:text-greyscale-100 antialiased`}
       >
         <NavBar />
-        {children}
+        <main className="grid grid-cols-4 gap-3 px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-8">
+          {children}
+        </main>
       </body>
     </html>
   );

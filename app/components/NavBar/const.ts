@@ -1,4 +1,10 @@
-import { PaStar, PaWordmark, LightDarkToggleIcon, EmailIcon } from "@/public";
+import {
+  PaStar,
+  PaWordmark,
+  LightDarkToggleIcon,
+  EmailIcon,
+  MenuIcon,
+} from "@/public";
 
 export const NAVBAR_CONST = {
   LOGO: {
@@ -25,5 +31,9 @@ export const NAVBAR_CONST = {
     HREF: "mailto:hello@paularies.ca",
     ICON: EmailIcon,
     TEXT: "contact",
+  },
+  MOBILE_MENU: {
+    ICON: MenuIcon,
+    TEXT: "menu",
   },
 };

@@ -16,9 +16,9 @@ export const Button = ({
       onClick={onClick}
       className={`flex h-10 flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 backdrop-blur-md transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
-          ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-inset-dark-sm"
+          ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-button-dark"
           : theme === "secondary"
-            ? "bg-greyscale-50 border-greyscale-100 text-greyscale-950 hover:bg-greyscale-100 shadow-inset-light-sm"
+            ? "bg-greyscale-50 border-greyscale-100 text-greyscale-950 hover:bg-greyscale-100 shadow-button-light"
             : "text-greyscale-950 hover:bg-greyscale-100 border-transparent bg-transparent"
       }`}
     >
@@ -30,9 +30,9 @@ export const Button = ({
       onClick={onClick}
       className={`flex h-10 flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 backdrop-blur-md transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
-          ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-inset-dark-sm"
+          ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-button-dark"
           : theme === "secondary"
-            ? "bg-greyscale-50 border-greyscale-100 text-greyscale-950 hover:bg-greyscale-100 shadow-inset-light-sm"
+            ? "bg-greyscale-50 border-greyscale-100 text-greyscale-950 hover:bg-greyscale-100 shadow-button-light"
             : "text-greyscale-950 hover:bg-greyscale-100 border-transparent bg-transparent"
       }`}
     >

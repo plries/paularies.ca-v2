@@ -44,12 +44,14 @@
   --font-instrument-serif: "Instrument Serif", serif;
   --font-dm-mono: "DM Mono", monospace;
   /* shadows */
-  --inset-light-sm:
+  --button-light:
     0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
     0px 1px 1px 0px rgba(26, 26, 26, 0.25);
-  --inset-dark-sm:
+  --button-dark:
     0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
     0px 1px 1px 0px rgba(26, 26, 26, 0.25);
+  --inset-light:
+    0px 1px 1px 0px rgba(26, 26, 26, 0.25) inset, 0px -1px 1px 0px #fff inset;
   --nav-bar:
     0px 0px 12px 0px rgba(255, 255, 255, 0.25) inset,
     0px 2px 8px -2px rgba(0, 0, 0, 0.05), 0px 4px 8px -1px rgba(0, 0, 0, 0.05);
@@ -65,16 +67,21 @@
 
 body {
   font-family: var(--font-hanken-grotesk);
+  color: var(--greyscale-950);
   letter-spacing: calc(-0.04em);
   line-height: 110%;
 }
 
-.shadow-inset-light-sm {
-  box-shadow: var(--inset-light-sm);
+.shadow-button-light {
+  box-shadow: var(--button-light);
 }
 
-.shadow-inset-dark-sm {
-  box-shadow: var(--inset-dark-sm);
+.shadow-button-dark {
+  box-shadow: var(--button-dark);
+}
+
+.shadow-inset-light {
+  box-shadow: var(--inset-light);
 }
 
 .shadow-nav-bar {
