@@ -12,7 +12,7 @@ export const MobileMenu = ({}) => {
         icon={
           <>
             <span
-              className={`!transition-all duration-700 ease-in-out ${hook.isOpen ? "scale-100" : "scale-0 opacity-0"}`}
+              className={`absolute !transition-all duration-700 ease-in-out ${hook.isOpen ? "scale-100" : "scale-0 opacity-0"}`}
             >
               <NAVBAR_CONST.MOBILE_MENU.OPEN.ICON />
             </span>
