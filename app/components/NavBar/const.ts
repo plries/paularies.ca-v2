@@ -3,8 +3,6 @@ import {
   PaWordmark,
   LightDarkToggleIcon,
   EmailIcon,
-  MenuIcon,
-  CloseIcon,
 } from "@/public";
 
 export const NAVBAR_CONST = {
@@ -38,13 +36,7 @@ export const NAVBAR_CONST = {
     TEXT: "contact",
   },
   MOBILE_MENU: {
-    CLOSED: {
-      ICON: MenuIcon,
-      TEXT: "open menu",
-    },
-    OPEN: {
-      ICON: CloseIcon,
-      TEXT: "close menu",
-    },
+    OPEN_MENU: "open menu",
+    CLOSE_MENU: "close menu",
   },
 };

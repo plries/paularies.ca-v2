@@ -14,7 +14,7 @@ export const Button = ({
     <Link
       href={href}
       onClick={onClick}
-      className={`flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 text-base backdrop-blur-md transition-all duration-300 ease-in-out md:text-lg lg:text-xl ${additionalClasses?.join(" ") ?? ""} ${
+      className={`flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 text-base backdrop-blur-md !transition-all duration-300 ease-in-out md:text-lg lg:text-xl ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
           ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-button-dark"
           : theme === "secondary"
@@ -28,7 +28,7 @@ export const Button = ({
   ) : (
     <button
       onClick={onClick}
-      className={`flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 backdrop-blur-md transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
+      className={`flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border-[1px] px-3 py-2 backdrop-blur-md !transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
           ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-button-dark"
           : theme === "secondary"

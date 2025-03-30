@@ -1,6 +1,7 @@
 import { Button, IconButton } from "@/app/components";
 import { NAVBAR_CONST } from "../../const";
 import { useMobileMenu } from "./useMobileMenu";
+import { LineIcon } from "@/public";
 
 export const MobileMenu = ({}) => {
   const hook = useMobileMenu();
@@ -12,25 +13,25 @@ export const MobileMenu = ({}) => {
         icon={
           <>
             <span
-              className={`absolute !transition-all duration-700 ease-in-out ${hook.isOpen ? "scale-100" : "scale-0 opacity-0"}`}
+              className={`absolute !transition-all duration-700 ease-in-out ${hook.isOpen ? "" : "mb-1.5"}`}
             >
-              <NAVBAR_CONST.MOBILE_MENU.OPEN.ICON />
+              <LineIcon />
             </span>
             <span
-              className={`absolute !transition-all duration-700 ease-in-out ${!hook.isOpen ? "scale-100" : "scale-0 opacity-0"}`}
+              className={`absolute !transition-all duration-700 ease-in-out ${hook.isOpen ? "rotate-90" : "mt-1.5"}`}
             >
-              <NAVBAR_CONST.MOBILE_MENU.CLOSED.ICON />
+              <LineIcon />
             </span>
           </>
         }
         theme="primary"
         name={
           hook.isOpen
-            ? NAVBAR_CONST.MOBILE_MENU.OPEN.TEXT
-            : NAVBAR_CONST.MOBILE_MENU.CLOSED.TEXT
+            ? NAVBAR_CONST.MOBILE_MENU.OPEN_MENU
+            : NAVBAR_CONST.MOBILE_MENU.CLOSE_MENU
         }
         additionalClasses={[
-          `!transition-all duration-700 ease-in-out ${hook.isOpen ? "rotate-90 " : "rotate-0"}`,
+          `duration-700 ease-in-out ${hook.isOpen ? "rotate-45 scale-90" : ""}`,
         ]}
       />
       <ul
