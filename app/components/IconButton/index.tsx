@@ -13,7 +13,7 @@ export const IconButton = ({
   return isLink ? (
     <Link
       href={href ?? ""}
-      className={`grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] px-2.5 transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
+      className={`grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] p-3 transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
           ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-button-dark"
           : theme === "secondary"
@@ -27,7 +27,7 @@ export const IconButton = ({
   ) : (
     <button
       onClick={onClick}
-      className={`grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] px-2.5 transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
+      className={`grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] p-3 transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
         theme === "primary"
           ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-800 shadow-button-dark"
           : theme === "secondary"
