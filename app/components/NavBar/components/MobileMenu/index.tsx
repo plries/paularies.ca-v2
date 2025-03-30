@@ -31,7 +31,7 @@ export const MobileMenu = ({}) => {
             : NAVBAR_CONST.MOBILE_MENU.CLOSE_MENU
         }
         additionalClasses={[
-          `duration-700 ease-in-out leading-none ${hook.isOpen ? "rotate-45 scale-90" : ""}`,
+          `duration-700 relative !flex items-center justify-center ${hook.isOpen ? "rotate-45 scale-90" : ""}`,
         ]}
       />
       <ul
