@@ -1,9 +1,4 @@
-import {
-  PaStar,
-  PaWordmark,
-  LightDarkToggleIcon,
-  EmailIcon,
-} from "@/public";
+import { PaStar, PaWordmark, LightDarkToggleIcon, EmailIcon } from "@/public";
 
 export const NAVBAR_CONST = {
   LOGO: {

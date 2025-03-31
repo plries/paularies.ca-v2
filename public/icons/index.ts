@@ -1,3 +1,4 @@
-    export * from "./EmailIcon";
-    export * from "./LightDarkToggleIcon";
-    export * from "./LineIcon";
+export * from "./ArrowIcon";
+export * from "./EmailIcon";
+export * from "./LightDarkToggleIcon";
+export * from "./LineIcon";

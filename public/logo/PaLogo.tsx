@@ -9,7 +9,7 @@ export const PaLogo = () => {
       xmlns="http://www.w3.org/2000/svg"
       width={!hook.isMobile ? "auto" : "100%"}
       height={hook.isMobile ? "auto" : "100%"}
-      viewBox="0 0 228 105.56"
+      viewBox="0 0 230 106"
       fill="none"
       className="h-full w-auto"
     >

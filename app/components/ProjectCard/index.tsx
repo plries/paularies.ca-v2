@@ -1,0 +1,67 @@
+import Link from "next/link";
+import Image from "next/image";
+import { Dot } from "../Dot";
+import { ProjectCardPropTypes } from "./types";
+import { IconButton } from "../IconButton";
+import { ArrowIcon } from "@/public";
+
+export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
+  return (
+    <article
+      className={`bg-greyscale-50 shadow-card group border-greyscale-950/10 col-span-full flex flex-col gap-2 rounded-xl border-[1px] p-2 !transition-all hover:scale-[99%] md:flex-row ${
+        project.DISCIPLINE === "design"
+          ? "hover:border-sky-200"
+          : "hover:border-grass-200"
+      } `}
+    >
+      <Link className="contents" href={project.LINK}>
+        <Image
+          src={project.IMAGE.SRC}
+          alt={project.IMAGE.ALT}
+          height={1080}
+          width={1920}
+          className="aspect-video rounded-lg md:w-1/2"
+        />
+        <div className="flex w-full flex-col justify-between gap-4">
+          <div>
+            <div className="flex w-full items-start justify-between">
+              <h3 className="font-instrument-serif text-2xl md:text-[1.75rem] lg:text-[2rem]">
+                {project.TITLE}
+              </h3>
+              <Dot
+                discipline={project.DISCIPLINE as "design" | "development"}
+              />
+            </div>
+            <p className="text-greyscale-600">{project.DESCRIPTION}</p>
+          </div>
+          <div className="flex flex-row items-end justify-between gap-2">
+            <div className="flex h-fit w-fit flex-row flex-wrap gap-y-2 rounded-full">
+              {project.SKILLS.map((tag, index) => (
+                <p
+                  className="bg-greyscale-100 font-dm-mono text-greyscale-500 border-greyscale-50 border-r-[1px] p-2 !text-sm leading-none first:rounded-l-full first:pl-3 last:rounded-r-full last:border-0 last:pr-3 md:!text-base"
+                  key={index}
+                >
+                  {tag}
+                </p>
+              ))}
+            </div>
+            <IconButton
+              theme="tertiary"
+              name={"view project"}
+              icon={
+                <span
+                  className={`!transition-all duration-300 group-hover:-rotate-45 hover:bg-transparent ${project.DISCIPLINE === "design" ? "group-hover:border-sky-600 group-hover:text-sky-600" : "group-hover:text-grass-600 group-hover:border-grass-600"}`}
+                >
+                  <ArrowIcon />
+                </span>
+              }
+              additionalClasses={[
+                `${project.DISCIPLINE === "design" ? "group-hover:border-sky-600" : "group-hover:border-grass-600"}`,
+              ]}
+            />
+          </div>
+        </div>
+      </Link>
+    </article>
+  );
+};

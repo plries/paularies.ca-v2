@@ -3,7 +3,7 @@ import { PaLogo } from "@/public/logo";
 export const HERO_CONST = {
   HEADSHOT: {
     SRC: "/images/PaulAriesHeadshot.jpg",
-    ALT: "Paul Aries Headshot",
+    ALT: "headshot of paul aries",
   },
   LOGO: PaLogo,
   INTRO: [
@@ -31,5 +31,13 @@ export const INTRO_CONST = {
   BUTTON: {
     HREF: "/about",
     TEXT: "learn more",
-  }
+  },
+};
+
+export const SELECTED_WORKS_CONST = {
+  HEADING: "selected works",
+  BUTTON: {
+    HREF: "/works",
+    TEXT: "view all works",
+  },
 };

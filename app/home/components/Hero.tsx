@@ -4,7 +4,10 @@ import { Dot } from "@/app/components";
 
 export const Hero = () => {
   return (
-    <div className="bg-greyscale-100 shadow-inset-light col-span-full grid grid-cols-4 gap-3 rounded-3xl p-3 md:grid-cols-8 md:gap-4 md:px-6 md:py-24 lg:grid-cols-12 lg:py-36">
+    <div
+      className="bg-greyscale-100 shadow-inset-light col-span-full grid grid-cols-4 gap-3 rounded-3xl p-3 md:grid-cols-8 md:gap-4 md:px-6 md:py-24 lg:grid-cols-12 lg:py-36"
+      id="top"
+    >
       <Image
         src={HERO_CONST.HEADSHOT.SRC}
         alt={HERO_CONST.HEADSHOT.ALT}
