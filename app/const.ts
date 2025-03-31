@@ -27,7 +27,7 @@ export const PROJECTS_CONST = {
       IMAGE: {
         SRC: "/images/projects/tempo.jpg",
         ALT: "tempo",
-      },
+    },
       TITLE: "tempo",
       DESCRIPTION: "mobile app prototype for a dance studio booking flow.",
       SKILLS: ["figma", "user testing", "user research"],

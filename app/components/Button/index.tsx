@@ -19,7 +19,7 @@ export const Button = ({
   }`;
 
   return isLink ? (
-    <Link href={href} onClick={onClick} className={styles}>
+    <Link href={href as string} onClick={onClick} className={styles}>
       {children}
       {icon && <span className="inline-block">{icon}</span>}
     </Link>

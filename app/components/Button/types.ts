@@ -1,6 +1,6 @@
 export type ButtonLinkPropTypes = {
   children: React.ReactNode;
-  href: string;
+  href?: string;
   theme: "primary" | "secondary" | "tertiary";
   onClick?: () => void;
   additionalClasses?: string[];

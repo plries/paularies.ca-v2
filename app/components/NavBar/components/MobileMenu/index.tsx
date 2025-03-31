@@ -1,11 +1,9 @@
 import { Button, IconButton } from "@/app/components";
 import { NAVBAR_CONST } from "../../const";
-import { useMobileMenu } from "./useMobileMenu";
 import { LineIcon } from "@/public";
+import { MobileMenuPropTypes } from "./types";
 
-export const MobileMenu = ({}) => {
-  const hook = useMobileMenu();
-
+export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
   return (
     <>
       <IconButton
@@ -42,7 +40,12 @@ export const MobileMenu = ({}) => {
             key={TEXT}
             className="border-greyscale-100 flex justify-end border-b-[1px] last:border-0"
           >
-            <Button href={HREF} theme="tertiary" isLink>
+            <Button
+              href={HREF}
+              theme="tertiary"
+              isLink
+              onClick={hook.closeMenu}
+            >
               {TEXT}
             </Button>
           </li>
