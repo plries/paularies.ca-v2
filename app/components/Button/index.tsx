@@ -20,7 +20,7 @@ export const Button = ({
 
   return (
     <div
-      className={`hover:bg-greyscale-200/25 dark:hover:bg-greyscale-600/25 group rounded-2xl ${theme === "tertiary" ? "" : "md:px-1 md:py-1.5"} ${additionalClasses?.container?.join(" ") ?? ""}`}
+      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group rounded-2xl ${theme === "tertiary" ? "" : "md:px-1 md:py-1.5"} ${additionalClasses?.container?.join(" ") ?? ""}`}
     >
       {isLink ? (
         <Link href={href as string} onClick={onClick} className={styles}>

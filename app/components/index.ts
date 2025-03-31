@@ -4,3 +4,4 @@ export * from "./Heading";
 export * from "./IconButton";
 export * from "./NavBar";
 export * from "./ProjectCard";
+export * from "./Testimonial";

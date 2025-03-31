@@ -19,7 +19,7 @@ export const IconButton = ({
   }`;
 
   return (
-    <div className="hover:bg-greyscale-200/25 dark:hover:bg-greyscale-600/25 rounded-2xl md:p-1">
+    <div className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-2xl md:p-1">
       {isLink ? (
         <Link href={href ?? ""} className={styles}>
           {icon}
