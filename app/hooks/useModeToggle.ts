@@ -2,30 +2,45 @@
 import { useState, useEffect } from "react";
 
 export const useModeToggle = () => {
-  // default mode light
-  const [mode, setMode] = useState<"light" | "dark">("light");
-
-  useEffect(() => {
-    // runs after component is mounted
+  const [mode, setMode] = useState<"light" | "dark">(() => {
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem("theme");
-      setMode(storedTheme === "dark" ? "dark" : "light");
+      if (storedTheme) return storedTheme as "light" | "dark";
+
+      // system preference fallback
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
     }
-  }, []);
+    return "light"; // defaults to light mode
+  });
 
   useEffect(() => {
+    const root = document.documentElement;
+
+    // apply theme
     if (mode === "dark") {
-      document.documentElement.classList.add("dark");
-      if (typeof window !== "undefined") {
-        localStorage.theme = "dark";
-      }
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove("dark");
-      if (typeof window !== "undefined") {
-        localStorage.theme = "light";
-      }
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [mode]);
+
+  // listen for system preference changes
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem("theme")) {
+        setMode(e.matches ? "dark" : "light");
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const toggleMode = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));

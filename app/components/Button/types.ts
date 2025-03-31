@@ -3,7 +3,10 @@ export type ButtonLinkPropTypes = {
   href?: string;
   theme: "primary" | "secondary" | "tertiary";
   onClick?: () => void;
-  additionalClasses?: string[];
+  additionalClasses?: {
+    container?: string[];
+    button?: string[];
+  };
   icon?: React.ReactNode;
   isLink?: boolean;
 };

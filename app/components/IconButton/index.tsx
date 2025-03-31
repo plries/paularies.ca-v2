@@ -10,23 +10,27 @@ export const IconButton = ({
   name,
   isLink,
 }: IconButtonPropTypes) => {
-  const styles = `grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] p-3 !transition-all duration-300 ease-in-out ${additionalClasses?.join(" ") ?? ""} ${
+  const styles = `grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] p-3 !transition-all duration-500 ease-in-out hover:scale-95 ${additionalClasses?.join(" ") ?? ""} ${
     theme === "primary"
-      ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 hover:bg-greyscale-950/80 shadow-button-dark dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950 dark:hover:bg-greyscale-100 dark:!shadow-[var(--button-light)]"
+      ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 shadow-button-dark dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950 dark:hover:bg-greyscale-200 dark:!shadow-[var(--button-light)]"
       : theme === "secondary"
-        ? "bg-greyscale-50 border-greyscale-950/10 text-greyscale-950 hover:bg-greyscale-100 shadow-button-light dark:bg-greyscale-950 dark:border-greyscale-900 dark:text-greyscale-50 dark:hover:bg-greyscale-950/80 dark:!shadow-[var(--button-light)]"
-        : "text-greyscale-950 hover:bg-greyscale-100 border-greyscale-950"
+        ? "bg-greyscale-50 border-greyscale-950/10 text-greyscale-950 shadow-button-light dark:bg-greyscale-950 dark:border-greyscale-900 dark:text-greyscale-50 dark:hover:bg-greyscale-800 dark:!shadow-[var(--button-light)]"
+        : "text-greyscale-950 border-greyscale-950"
   }`;
 
-  return isLink ? (
-    <Link href={href ?? ""} className={styles}>
-      {icon}
-      <span className="sr-only">{name}</span>
-    </Link>
-  ) : (
-    <button onClick={onClick} className={styles}>
-      {icon}
-      <span className="sr-only">{name}</span>
-    </button>
+  return (
+    <div className="hover:bg-greyscale-200/25 dark:hover:bg-greyscale-600/25 rounded-2xl md:p-1">
+      {isLink ? (
+        <Link href={href ?? ""} className={styles}>
+          {icon}
+          <span className="sr-only">{name}</span>
+        </Link>
+      ) : (
+        <button onClick={onClick} className={styles}>
+          {icon}
+          <span className="sr-only">{name}</span>
+        </button>
+      )}
+    </div>
   );
 };

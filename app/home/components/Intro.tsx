@@ -23,9 +23,9 @@ export const Intro = () => {
       <Button
         href={INTRO_CONST.BUTTON.HREF}
         theme="secondary"
-        additionalClasses={[
+        additionalClasses={{ container: [
           "col-span-2 col-start-3 justify-self-end md:col-start-6 lg:col-start-9",
-        ]}
+        ]}}
         isLink
       >
         {INTRO_CONST.BUTTON.TEXT}
