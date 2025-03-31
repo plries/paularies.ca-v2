@@ -9,6 +9,7 @@ export const IconButton = ({
   icon,
   name,
   isLink,
+  target,
 }: IconButtonPropTypes) => {
   const styles = `grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] p-3 !transition-all duration-500 ease-in-out hover:scale-95 ${additionalClasses?.join(" ") ?? ""} ${
     theme === "primary"
@@ -21,7 +22,7 @@ export const IconButton = ({
   return (
     <div className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-2xl md:p-1">
       {isLink ? (
-        <Link href={href ?? ""} className={styles}>
+        <Link target={target} href={href ?? ""} className={styles}>
           {icon}
           <span className="sr-only">{name}</span>
         </Link>

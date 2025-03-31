@@ -9,4 +9,5 @@ export type ButtonLinkPropTypes = {
   };
   icon?: React.ReactNode;
   isLink?: boolean;
+  target?: string;
 };

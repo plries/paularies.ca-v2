@@ -6,4 +6,5 @@ export type IconButtonPropTypes = {
   additionalClasses?: string[];
   icon: React.ReactNode;
   isLink?: boolean;
+  target?: string;
 };

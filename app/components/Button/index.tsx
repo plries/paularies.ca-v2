@@ -9,6 +9,7 @@ export const Button = ({
   additionalClasses,
   icon,
   isLink,
+  target,
 }: ButtonLinkPropTypes) => {
   const styles = `flex h-10 w-fit flex-row items-center justify-center !transition-all duration-500 gap-2 rounded-xl border-[1px] px-3 py-2 text-base ease-in-out md:text-lg lg:text-xl ${additionalClasses?.button?.join(" ") ?? ""} ${
     theme === "primary"
@@ -20,10 +21,10 @@ export const Button = ({
 
   return (
     <div
-      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group rounded-2xl ${theme === "tertiary" ? "" : "md:px-1 md:py-1.5"} ${additionalClasses?.container?.join(" ") ?? ""}`}
+      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group w-fit rounded-2xl ${theme === "tertiary" ? "" : "md:px-1 md:py-1.5"} ${additionalClasses?.container?.join(" ") ?? ""}`}
     >
       {isLink ? (
-        <Link href={href as string} onClick={onClick} className={styles}>
+        <Link target={target} href={href as string} onClick={onClick} className={styles}>
           <span
             className={`inline-block !transition-[scale] duration-500 ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
           >

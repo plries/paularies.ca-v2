@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, Instrument_Serif, DM_Mono } from "next/font/google";
-import { NavBar } from "./components/";
+import { NavBar, Footer } from "./components/";
 import { ScrollToTop } from "./hooks";
 import "./globals.css";
 
@@ -43,6 +43,7 @@ export default function RootLayout({
         <main className="grid max-w-7xl grid-cols-4 gap-3 px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-8">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
