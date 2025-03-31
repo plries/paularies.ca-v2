@@ -19,6 +19,7 @@ export const NavBar = () => {
         <Link
           href={pathname === "/" ? "#top" : NAVBAR_CONST.LOGO.HREF}
           className="dark:text-greyscale-50 group hover:bg-greyscale-200/25 rounded-xl"
+          onClick={useMobile.closeMenu}
         >
           <span className="flex flex-row items-center gap-2 !transition-all duration-700 group-hover:scale-95 md:p-2">
             <span className="motion-safe:animate-[spin_12s_linear_infinite]">
@@ -44,7 +45,8 @@ export const NavBar = () => {
               icon={<NAVBAR_CONST.LIGHT_DARK.ICON />}
               theme="secondary"
               name={NAVBAR_CONST.LIGHT_DARK.TEXT}
-              additionalClasses={["h-full"]}            />
+              additionalClasses={["h-full"]}
+            />
             <IconButton
               href={NAVBAR_CONST.CONTACT.HREF}
               icon={<NAVBAR_CONST.CONTACT.ICON />}
