@@ -21,7 +21,7 @@ export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
             alt={project.IMAGE.ALT}
             height={1080}
             width={1920}
-            className="aspect-video rounded-lg md:w-1/2"
+            className="dark:bg-greyscale-900 bg-greyscale-100 aspect-video rounded-lg md:w-1/2"
           />
           <div className="flex w-full flex-col justify-between gap-4">
             <div>

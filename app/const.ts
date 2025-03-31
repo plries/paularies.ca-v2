@@ -3,7 +3,7 @@ export const PROJECTS_CONST = {
     {
       DISCIPLINE: "development",
       IMAGE: {
-        SRC: "/images/projects/afleuries.jpg",
+        SRC: "/images/projects/afleuries.png",
         ALT: "afleuries illustrated",
       },
       TITLE: "afleuries illustrated",
@@ -14,7 +14,7 @@ export const PROJECTS_CONST = {
     {
       DISCIPLINE: "development",
       IMAGE: {
-        SRC: "/images/projects/guy.jpg",
+        SRC: "/images/projects/guy.png",
         ALT: "guy",
       },
       TITLE: "guy",
@@ -25,7 +25,7 @@ export const PROJECTS_CONST = {
     {
       DISCIPLINE: "design",
       IMAGE: {
-        SRC: "/images/projects/tempo.jpg",
+        SRC: "/images/projects/tempo.png",
         ALT: "tempo",
     },
       TITLE: "tempo",
@@ -36,7 +36,7 @@ export const PROJECTS_CONST = {
     {
       DISCIPLINE: "design",
       IMAGE: {
-        SRC: "/images/projects/odd.jpg",
+        SRC: "/images/projects/odd.png",
         ALT: "odd",
       },
       TITLE: "odd",
