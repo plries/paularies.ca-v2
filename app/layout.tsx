@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-950 dark:text-greyscale-100 mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased`}
+        className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900 dark:text-greyscale-100 mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased`}
       >
         <ScrollToTop />
         <NavBar />

@@ -5,7 +5,7 @@ import { Dot } from "@/app/components";
 export const Hero = () => {
   return (
     <div
-      className="bg-greyscale-100 shadow-inset-light col-span-full grid grid-cols-4 gap-3 rounded-3xl p-3 md:grid-cols-8 md:gap-4 md:px-6 md:py-24 lg:grid-cols-12 lg:py-36"
+      className="bg-greyscale-100 dark:bg-greyscale-900 shadow-inset-light col-span-full grid grid-cols-4 gap-3 rounded-3xl p-3 md:grid-cols-8 md:gap-4 md:px-6 md:py-24 lg:grid-cols-12 lg:py-36 dark:!shadow-[var(--inset-dark)]"
       id="top"
     >
       <Image
@@ -15,7 +15,7 @@ export const Hero = () => {
         width={1056}
         className="col-span-2 col-start-2 aspect-square rounded-full md:col-start-4 lg:col-start-6"
       />
-      <div className="contents h-full md:col-span-6 md:col-start-2 md:flex md:flex-row md:justify-center md:gap-4 lg:col-span-8 lg:col-start-3">
+      <div className="dark:text-greyscale-50 contents h-full md:col-span-6 md:col-start-2 md:flex md:flex-row md:justify-center md:gap-4 lg:col-span-8 lg:col-start-3">
         <div className="col-span-2 col-start-2">
           <HERO_CONST.LOGO />
         </div>

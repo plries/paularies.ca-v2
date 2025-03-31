@@ -33,12 +33,12 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
         ]}
       />
       <ul
-        className={`border-greyscale-100 shadow-nav-bar text-greyscale-950 bg-greyscale-50 absolute left-0 w-full rounded-3xl border-[1px] !transition-all duration-700 ease-in-out ${hook.isOpen ? "top-full mt-4" : "-top-full -translate-y-full"} `}
+        className={`border-greyscale-100 shadow-nav-bar bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-900 absolute left-0 mt-4 w-full rounded-3xl border-[1px] !transition-all duration-700 ease-in-out dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full" : "-top-full -translate-y-full"} `}
       >
         {NAVBAR_CONST.LINKS.map(({ HREF, TEXT }) => (
           <li
             key={TEXT}
-            className="border-greyscale-100 flex justify-end border-b-[1px] last:border-0"
+            className="border-greyscale-100 dark:border-greyscale-900 flex justify-end border-b-[1px] last:border-0"
           >
             <Button
               href={HREF}

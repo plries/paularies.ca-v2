@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "nav-bar-dark": "var(--nav-bar-dark)",
+      },
       colors: {
         greyscale: {
           50: "--var(--color-greyscale-50)",

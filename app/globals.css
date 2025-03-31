@@ -48,15 +48,23 @@
     0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
     0px 1px 1px 0px rgba(26, 26, 26, 0.25);
   --button-dark:
-    0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
+    0px 2px 2px 0px rgba(255, 255, 255, 0.15) inset,
     0px 1px 1px 0px rgba(26, 26, 26, 0.25);
   --inset-light:
     0px 1px 1px 0px rgba(26, 26, 26, 0.25) inset, 0px -1px 1px 0px #fff inset;
-  --nav-bar:
+  --inset-dark:
+    0px 1px 1px 0px #1a1a1a inset,
+    0px -1px 1px 0px rgba(117, 117, 117, 0.25) inset;
+  --nav-bar-light:
     0px 0px 12px 0px rgba(255, 255, 255, 0.25) inset,
     0px 2px 8px -2px rgba(0, 0, 0, 0.05), 0px 4px 8px -1px rgba(0, 0, 0, 0.05);
-  --card:
+  --nav-bar-dark:
+    0px 4px 12px 0px rgba(68, 68, 68, 0.25) inset,
+    0px 2px 8px -2px rgba(0, 0, 0, 0.1), 0px 4px 8px -1px rgba(0, 0, 0, 0.1);
+  --card-light:
     0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --card-dark:
+    0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
 @layer utilities {
@@ -72,6 +80,7 @@
     background-color 0.3s ease-in-out,
     color 0s ease-in-out,
     border-color 0.3s ease-in-out,
+    box-shadow 1s ease-in-out,
     stroke 0.3s ease-in-out;
 }
 
@@ -85,7 +94,6 @@ body {
 .shadow-button-light {
   box-shadow: var(--button-light);
 }
-
 .shadow-button-dark {
   box-shadow: var(--button-dark);
 }
@@ -94,12 +102,12 @@ body {
   box-shadow: var(--inset-light);
 }
 
-.shadow-nav-bar {
-  box-shadow: var(--nav-bar);
+.shadow-nav-bar-light {
+  box-shadow: var(--nav-bar-light);
 }
 
-.shadow-card {
-  box-shadow: var(--card);
+.shadow-card-light {
+  box-shadow: var(--card-light);
 }
 
 /* font sizes */

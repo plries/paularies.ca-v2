@@ -14,7 +14,7 @@ export const NavBar = () => {
   const useMobile = useMobileMenu();
 
   return (
-    <header className="border-greyscale-100 dark:border-greyscale-700 shadow-nav-bar bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)]">
+    <header className="border-greyscale-100 dark:border-greyscale-700 dark:bg-greyscale-950/50 shadow-nav-bar-light bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:!shadow-[var(--nav-bar-dark)]">
       <nav className="contents">
         <Link
           href={pathname === "/" ? "#top" : NAVBAR_CONST.LOGO.HREF}
@@ -42,7 +42,13 @@ export const NavBar = () => {
             </ul>
             <IconButton
               onClick={lightDark.toggleMode}
-              icon={<NAVBAR_CONST.LIGHT_DARK.ICON />}
+              icon={
+                <span
+                  className={`!transition-transform duration-700 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
+                >
+                  <NAVBAR_CONST.LIGHT_DARK.ICON />
+                </span>
+              }
               theme="secondary"
               name={NAVBAR_CONST.LIGHT_DARK.TEXT}
               additionalClasses={["h-full"]}
@@ -61,7 +67,13 @@ export const NavBar = () => {
           <div className="flex flex-row gap-2">
             <IconButton
               onClick={lightDark.toggleMode}
-              icon={<NAVBAR_CONST.LIGHT_DARK.ICON />}
+              icon={
+                <span
+                  className={`!transition-transform duration-700 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
+                >
+                  <NAVBAR_CONST.LIGHT_DARK.ICON />
+                </span>
+              }
               theme="secondary"
               name={NAVBAR_CONST.LIGHT_DARK.TEXT}
             />
