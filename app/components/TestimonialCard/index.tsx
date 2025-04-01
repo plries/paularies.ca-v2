@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { ContentBlock } from "../../components/";
-import { TestimonialPropTypes } from "./types";
+import { ContentBlock, ContentHeading } from "../";
+import { TestimonialCardPropTypes } from "./types";
 
-export const Testimonial = ({ testimonial }: TestimonialPropTypes) => {
+export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
   return (
     <ContentBlock additionalClasses="flex flex-col gap-4 !transition-all duration-500 odd:hover:-rotate-1 even:hover:rotate-1">
       <div className="flex flex-row gap-2">
@@ -14,10 +14,10 @@ export const Testimonial = ({ testimonial }: TestimonialPropTypes) => {
           className="aspect-square h-12 w-12 rounded-full lg:h-14 lg:w-14"
         />
         <div className="flex flex-col">
-          <h3 className="font-instrument-serif dark:text-greyscale-50 text-2xl leading-none md:text-[1.75rem] lg:text-[2rem]">
+          <ContentHeading level="h3" additionalClasses="leading-none">
             {testimonial.NAME}
-          </h3>
-          <h4 className="text-greyscale-800 dark:text-greyscale-100 text-sm !leading-none md:!text-base lg:!text-lg">
+          </ContentHeading>
+          <h4 className="text-greyscale-800 dark:text-greyscale-200 text-sm leading-none md:!text-base lg:!text-lg">
             {testimonial.TITLE}
           </h4>
         </div>

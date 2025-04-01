@@ -1,22 +1,20 @@
-import { Heading, ContentBlock, Dot } from "@/app/components";
+import { Heading, ContentBlock, Dot, ContentHeading } from "@/app/components";
 import { SKILLS_CONST } from "../const";
 
 export const Skills = () => {
   return (
-    <section className="contents">
+    <section className="col-span-full mt-16 grid grid-cols-4 gap-3 rounded-3xl md:grid-cols-8 md:gap-4 lg:grid-cols-12">
       <Heading level="h2">{SKILLS_CONST.HEADING}</Heading>
       {SKILLS_CONST.SKILLS.map((skill, index) => (
         <ContentBlock
           key={index}
           additionalClasses={
-            "flex flex-col gap-3 col-span-full md:col-span-4 lg:col-span-5 md:col-start-2 last:md:col-start-5 lg:col-start-2 last:lg:col-start-7"
+            "flex flex-col gap-3 col-span-full md:col-span-3 md:col-start-2 [&:nth-child(3)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(3)]:lg:col-start-7"
           }
         >
           <div className="flex flex-row items-center gap-1">
             <Dot discipline={skill.TITLE as "design" | "development"} />
-            <h3 className="font-instrument-serif dark:text-greyscale-200 w-full !text-xl md:!text-2xl lg:!text-[1.75rem]">
-              {skill.TITLE}
-            </h3>
+            <ContentHeading level="h3">{skill.TITLE}</ContentHeading>
           </div>
           <div className="flex w-full flex-row gap-4">
             <ul className="w-full">

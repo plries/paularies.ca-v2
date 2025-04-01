@@ -1,4 +1,4 @@
-import { Heading, Testimonial } from "@/app/components";
+import { Heading, TestimonialCard } from "@/app/components";
 import { TESTIMONIALS_CONST } from "../const";
 
 export const Testimonials = () => {
@@ -11,7 +11,7 @@ export const Testimonials = () => {
             0,
             TESTIMONIALS_CONST.TESTIMONIALS.length / 2,
           ).map((testimonial) => (
-            <Testimonial key={testimonial.NAME} testimonial={testimonial} />
+            <TestimonialCard key={testimonial.NAME} testimonial={testimonial} />
           ))}
         </div>
         <div className="flex flex-col gap-4">
@@ -19,7 +19,7 @@ export const Testimonials = () => {
             TESTIMONIALS_CONST.TESTIMONIALS.length / 2,
             TESTIMONIALS_CONST.TESTIMONIALS.length,
           ).map((testimonial) => (
-            <Testimonial key={testimonial.NAME} testimonial={testimonial} />
+            <TestimonialCard key={testimonial.NAME} testimonial={testimonial} />
           ))}
         </div>
       </div>

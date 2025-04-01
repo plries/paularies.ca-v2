@@ -1,4 +1,4 @@
-export type TestimonialPropTypes = {
+export type TestimonialCardPropTypes = {
   testimonial: {
     IMAGE: {
       SRC: string;

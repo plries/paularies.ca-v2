@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Dot } from "../Dot";
 import { ProjectCardPropTypes } from "./types";
-import { IconButton } from "../IconButton";
+import { IconButton, ContentHeading } from "../../components";
 import { ArrowIcon } from "@/public";
 
 export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
@@ -28,9 +28,7 @@ export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
           <div className="flex w-full flex-col justify-between gap-4">
             <div>
               <div className="flex w-full items-start justify-between">
-                <h3 className="font-instrument-serif dark:text-greyscale-50 text-2xl md:text-[1.75rem] lg:text-[2rem]">
-                  {project.TITLE}
-                </h3>
+                <ContentHeading level="h3">{project.TITLE}</ContentHeading>
                 <Dot
                   discipline={project.DISCIPLINE as "design" | "development"}
                 />
@@ -60,9 +58,7 @@ export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
                     <ArrowIcon />
                   </span>
                 }
-                additionalClasses={
-                  `dark:border-greyscale-50 ${project.DISCIPLINE === "design" ? "group-hover:border-sky-600" : "group-hover:border-grass-600"}`
-                }
+                additionalClasses={`dark:border-greyscale-50 ${project.DISCIPLINE === "design" ? "group-hover:border-sky-600" : "group-hover:border-grass-600"}`}
               />
             </div>
           </div>

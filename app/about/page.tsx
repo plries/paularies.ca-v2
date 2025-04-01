@@ -1,5 +1,5 @@
 import { Heading } from "../components";
-import { AboutHero, Skills } from "./components";
+import { AboutHero, Experience, Skills, Values } from "./components";
 import { HEADING_CONST } from "./const";
 
 export default function About() {
@@ -8,6 +8,8 @@ export default function About() {
       <Heading level="h1">{HEADING_CONST}</Heading>
       <AboutHero />
       <Skills />
+      <Values />
+      <Experience />
     </>
   );
 }
