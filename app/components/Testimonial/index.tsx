@@ -3,7 +3,7 @@ import { TestimonialPropTypes } from "./types";
 
 export const Testimonial = ({ testimonial }: TestimonialPropTypes) => {
   return (
-    <div className="bg-greyscale-50 border-greyscale-950/10 dark:bg-greyscale-950 flex flex-col gap-4 rounded-xl border-[1px] p-4 !transition-[rotate] odd:hover:-rotate-1 even:hover:rotate-1">
+    <div className="bg-greyscale-50 border-greyscale-950/10 dark:bg-greyscale-950 flex flex-col gap-4 rounded-xl border-[1px] p-4 !transition-all duration-500 odd:hover:-rotate-1 even:hover:rotate-1">
       <div className="flex flex-row gap-2">
         <Image
           src={testimonial.IMAGE.SRC}

@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAVBAR_CONST } from "./const";
@@ -13,13 +12,6 @@ export const NavBar = () => {
   const windowSize = useWindowSize();
   const lightDark = useModeToggle();
   const useMobile = useMobileMenu();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true); // component only renders after hydration to prevent mismatch
-  }, []);
-
-  if (!isClient) return null;
 
   return (
     <header className="border-greyscale-100 dark:border-greyscale-700 dark:bg-greyscale-950/50 shadow-nav-bar-light bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:!shadow-[var(--nav-bar-dark)]">

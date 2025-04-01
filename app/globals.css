@@ -67,12 +67,7 @@
     0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
-@layer utilities {
-  .force-blur {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Safari */
-  }
-}
+/* smooth scroll + transitions */
 
 * {
   scroll-behavior: smooth;
@@ -84,12 +79,25 @@
     stroke 0.5s ease-in-out;
 }
 
-body {
-  font-family: var(--font-hanken-grotesk);
-  color: var(--color-greyscale-950);
-  letter-spacing: calc(-0.04em);
-  line-height: calc(1.3em);
+/* animations */
+
+@keyframes float {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* custom shadows */
 
 .shadow-button-light {
   box-shadow: var(--button-light);
@@ -111,6 +119,13 @@ body {
 }
 
 /* font sizes */
+
+body {
+  font-family: var(--font-hanken-grotesk);
+  color: var(--color-greyscale-950);
+  letter-spacing: calc(-0.04em);
+  line-height: calc(1.3em);
+}
 
 p,
 a,

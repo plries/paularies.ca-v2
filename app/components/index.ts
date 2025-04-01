@@ -1,4 +1,5 @@
 export * from "./Button";
+export * from "./ClientOnly";
 export * from "./Dot";
 export * from "./Footer";
 export * from "./Heading";

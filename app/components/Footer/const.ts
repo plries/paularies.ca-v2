@@ -31,11 +31,8 @@ export const FOOTER_CONST = {
     ],
   },
   BAR: {
-    TEXT: "hand-coded by",
+    TEXT: "hand-coded by ",
     SR: " paul aries",
-    LOGO: {
-      STAR: PaStar,
-      WORDMARK: PaWordmark,
-    },
+    LOGO: PaWordmark,
   },
 };
