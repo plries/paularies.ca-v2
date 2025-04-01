@@ -7,9 +7,9 @@ import { ArrowIcon } from "@/public";
 
 export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
   return (
-    <div className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1">
+    <div className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1 transition-[background-color] duration-500">
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 shadow-card-light border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 !transition-all duration-500 group-hover:scale-[99.5%] md:flex-row dark:!shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 shadow-card-light border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 transition-[scale] duration-500 group-hover:scale-[99.5%] md:flex-row dark:!shadow-[var(--card-dark)] ${
           project.DISCIPLINE === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
@@ -22,7 +22,7 @@ export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
               alt={project.IMAGE.ALT}
               height={1080}
               width={1920}
-              className={`w-full !transition-all duration-700 ${project.DISCIPLINE === "development" ? "scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
+              className={`w-full transition-[translate,scale] duration-700 ${project.DISCIPLINE === "development" ? "scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
             />
           </div>
           <div className="flex w-full flex-col justify-between gap-4">
@@ -53,12 +53,14 @@ export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
                 name={"view project"}
                 icon={
                   <span
-                    className={`dark:text-greyscale-50 !transition-all duration-500 group-hover:-rotate-45 hover:bg-transparent ${project.DISCIPLINE === "design" ? "group-hover:border-sky-600 group-hover:text-sky-600" : "group-hover:text-grass-600 group-hover:border-grass-600"}`}
+                    className={`dark:text-greyscale-50 transition-[rotate] duration-500 group-hover:-rotate-45 hover:bg-transparent ${project.DISCIPLINE === "design" ? "group-hover:border-sky-600 group-hover:text-sky-600" : "group-hover:text-grass-600 group-hover:border-grass-600"}`}
                   >
                     <ArrowIcon />
                   </span>
                 }
-                additionalClasses={`dark:border-greyscale-50 ${project.DISCIPLINE === "design" ? "group-hover:border-sky-600" : "group-hover:border-grass-600"}`}
+                additionalClasses={{
+                  button: `dark:border-greyscale-50 ${project.DISCIPLINE === "design" ? "group-hover:border-sky-600" : "group-hover:border-grass-600"}`,
+                }}
               />
             </div>
           </div>

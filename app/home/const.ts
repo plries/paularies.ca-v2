@@ -46,6 +46,7 @@ export const TESTIMONIALS_CONST = {
   HEADING: "testimonials",
   TESTIMONIALS: [
     {
+      ISOPEN: true,
       IMAGE: {
         SRC: "/images/testimonials/sharleen.jpg",
         ALT: "headshot of sharleen yan",
@@ -58,8 +59,8 @@ export const TESTIMONIALS_CONST = {
         "it’s been amazing to watch his growth, and i have no doubt he’ll continue to do incredible things. any team would be lucky to have him!",
       ],
     },
-
     {
+      ISOPEN: false,
       IMAGE: {
         SRC: "/images/testimonials/emma.jpg",
         ALT: "headshot of emma englund",
@@ -73,6 +74,7 @@ export const TESTIMONIALS_CONST = {
       ],
     },
     {
+      ISOPEN: false,
       IMAGE: {
         SRC: "/images/testimonials/thanh.jpg",
         ALT: "headshot of thanh nguyen",
@@ -84,18 +86,7 @@ export const TESTIMONIALS_CONST = {
       ],
     },
     {
-      IMAGE: {
-        SRC: "/images/testimonials/nicole.jpg",
-        ALT: "headshot of nicole espiritu",
-      },
-      NAME: "nicole espiritu",
-      TITLE: "web developer",
-      QUOTE: [
-        "paul consistently impresses me with his dedication to his craft. not only is he highly talented with a keen eye for design, but he also writes clean, innovative code that perfectly complements his user-centered ui.",
-        "having paul on your team is a true asset—he’s reliable and manages his time so effectively that he consistently delivers strong, well-thought-out projects.",
-      ],
-    },
-    {
+      ISOPEN: false,
       IMAGE: {
         SRC: "/images/testimonials/maria.jpg",
         ALT: "headshot maria supikhanova",
@@ -106,6 +97,19 @@ export const TESTIMONIALS_CONST = {
         "paul is one of the most reliable and talented people i’ve worked with. his natural eye for design shines through in every project, making his work both polished and creative.",
         "he’s great at meeting deadlines, often takes on extra responsibilities, and is a fantastic collaborator. paul’s versatility across creative fields makes every solution he offers thoughtful and effective.",
         "if i had the choice of a teammate for any project, it would be paul without hesitation.",
+      ],
+    },
+    {
+      ISOPEN: false,
+      IMAGE: {
+        SRC: "/images/testimonials/nicole.jpg",
+        ALT: "headshot of nicole espiritu",
+      },
+      NAME: "nicole espiritu",
+      TITLE: "web developer",
+      QUOTE: [
+        "paul consistently impresses me with his dedication to his craft. not only is he highly talented with a keen eye for design, but he also writes clean, innovative code that perfectly complements his user-centered ui.",
+        "having paul on your team is a true asset—he’s reliable and manages his time so effectively that he consistently delivers strong, well-thought-out projects.",
       ],
     },
   ],

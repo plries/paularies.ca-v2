@@ -1,3 +1,4 @@
+"use client";
 import { Heading, TestimonialCard } from "@/app/components";
 import { TESTIMONIALS_CONST } from "../const";
 

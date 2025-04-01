@@ -1,5 +1,6 @@
 export type TestimonialCardPropTypes = {
   testimonial: {
+    ISOPEN: boolean;
     IMAGE: {
       SRC: string;
       ALT: string;

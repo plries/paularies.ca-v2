@@ -12,14 +12,14 @@ export const AboutHero = () => {
             alt={ABOUT_HERO_CONST.IMAGES[0].ALT}
             height={500}
             width={500}
-            className="animate-float border-greyscale-50 dark:border-greyscale-950 z-10 col-span-2 col-start-2 aspect-square w-16 translate-x-2 -rotate-4 rounded-xl border-[1px] shadow-md !transition-all duration-700 hover:scale-105 md:w-36"
+            className="animate-float border-greyscale-50 dark:border-greyscale-950 z-10 col-span-2 col-start-2 aspect-square w-16 translate-x-2 -rotate-4 rounded-xl border-[1px] shadow-md transition-[scale] duration-700 hover:scale-105 md:w-36"
           />
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="animate-float border-greyscale-50 dark:border-greyscale-950 col-span-2 col-start-2 aspect-square w-24 rounded-xl border-[1px] shadow-md !transition-all duration-700 hover:scale-105 md:w-48"
+            className="animate-float border-greyscale-50 dark:border-greyscale-950 col-span-2 col-start-2 aspect-square w-24 rounded-xl border-[1px] shadow-md transition-[scale] duration-700 hover:scale-105 md:w-48"
           >
             <source src={ABOUT_HERO_CONST.VIDEO} type="video/mp4" />
           </video>
@@ -28,7 +28,7 @@ export const AboutHero = () => {
             alt={ABOUT_HERO_CONST.IMAGES[1].ALT}
             height={500}
             width={500}
-            className="animate-float border-greyscale-50 dark:border-greyscale-950 hover:scale-105!transition-all z-10 col-span-2 col-start-2 aspect-square w-16 -translate-x-2 rotate-4 rounded-xl border-[1px] shadow-md !transition-all duration-700 hover:scale-105 md:w-36"
+            className="animate-float border-greyscale-50 dark:border-greyscale-950 z-10 col-span-2 col-start-2 aspect-square w-16 -translate-x-2 rotate-4 rounded-xl border-[1px] shadow-md transition-[scale] duration-700 hover:scale-105 md:w-36"
           />
         </div>
         <p className="dark:text-greyscale-50 col-span-full text-center !text-xl md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
