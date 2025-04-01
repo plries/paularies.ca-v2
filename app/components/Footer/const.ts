@@ -1,4 +1,4 @@
-import { PaStar, PaWordmark } from "@/public";
+import { PaWordmark } from "@/public";
 
 export const FOOTER_CONST = {
   CONTACT: {

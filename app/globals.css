@@ -118,6 +118,13 @@
   box-shadow: var(--card-light);
 }
 
+/* mask gradient */
+
+.mask-gradient {
+  -webkit-mask-image: linear-gradient(transparent, black);
+  mask-image: linear-gradient(transparent, black);
+}
+
 /* font sizes */
 
 body {

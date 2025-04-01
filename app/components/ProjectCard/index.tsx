@@ -9,20 +9,22 @@ export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
   return (
     <div className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1">
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 shadow-card-light border-greyscale-950/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 !transition-all duration-500 group-hover:scale-[99.5%] md:flex-row dark:!shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 shadow-card-light border-greyscale-950/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 !transition-all duration-500 md:flex-row dark:!shadow-[var(--card-dark)] ${
           project.DISCIPLINE === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
         } `}
       >
         <Link className="contents" href={project.LINK}>
-          <Image
-            src={project.IMAGE.SRC}
-            alt={project.IMAGE.ALT}
-            height={1080}
-            width={1920}
-            className="dark:bg-greyscale-900 bg-greyscale-100 aspect-video rounded-lg md:w-1/2"
-          />
+          <div className="dark:bg-greyscale-900 bg-greyscale-100 relative aspect-video w-full overflow-hidden rounded-lg">
+            <Image
+              src={project.IMAGE.SRC}
+              alt={project.IMAGE.ALT}
+              height={1080}
+              width={1920}
+              className={`w-full !transition-all duration-700 ${project.DISCIPLINE === "development" ? "scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
+            />
+          </div>
           <div className="flex w-full flex-col justify-between gap-4">
             <div>
               <div className="flex w-full items-start justify-between">
