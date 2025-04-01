@@ -13,7 +13,7 @@ export const Hero = () => {
         alt={HERO_CONST.HEADSHOT.ALT}
         height={1056}
         width={1056}
-        className="animate-float col-span-2 col-start-2 aspect-square rounded-full md:col-start-4 lg:col-start-6"
+        className="animate-float border-greyscale-50 dark:border-greyscale-950 col-span-2 col-start-2 aspect-square rounded-full border-[1px] shadow-md md:col-start-4 lg:col-start-6"
       />
       <div className="dark:text-greyscale-50 contents h-full md:col-span-6 md:col-start-2 md:flex md:flex-row md:justify-center md:gap-4 lg:col-span-8 lg:col-start-3">
         <div className="col-span-2 col-start-2">
