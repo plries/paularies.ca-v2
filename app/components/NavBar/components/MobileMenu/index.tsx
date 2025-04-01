@@ -28,8 +28,9 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
             ? NAVBAR_CONST.MOBILE_MENU.OPEN_MENU
             : NAVBAR_CONST.MOBILE_MENU.CLOSE_MENU
         }
-        additionalClasses={
-          {button: `duration-500 relative !flex items-center justify-center ${hook.isOpen ? "rotate-45 scale-90" : ""}`
+        additionalClasses={{
+          container: `transition-[rotate] duration-500  ${hook.isOpen ? "rotate-45 scale-90" : ""}`,
+          button: "relative flex items-center justify-center",
         }}
       />
       <ul

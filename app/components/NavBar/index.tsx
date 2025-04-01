@@ -44,7 +44,7 @@ export const NavBar = () => {
               onClick={lightDark.toggleMode}
               icon={
                 <span
-                  className={`!transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
                 >
                   <NAVBAR_CONST.LIGHT_DARK.ICON />
                 </span>
@@ -67,7 +67,7 @@ export const NavBar = () => {
               onClick={lightDark.toggleMode}
               icon={
                 <span
-                  className={`!transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
                 >
                   <NAVBAR_CONST.LIGHT_DARK.ICON />
                 </span>
