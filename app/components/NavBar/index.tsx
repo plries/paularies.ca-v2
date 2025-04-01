@@ -21,7 +21,7 @@ export const NavBar = () => {
           className="dark:text-greyscale-50 group hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-xl"
           onClick={useMobile.closeMenu}
         >
-          <span className="flex flex-row items-center gap-2 !transition-all duration-500 group-hover:scale-95 md:px-1 md:py-2">
+          <span className="flex flex-row items-center gap-2 !transition-all duration-500 group-hover:scale-90 p-1">
             <span className="motion-safe:animate-[spin_12s_linear_infinite]">
               <NAVBAR_CONST.LOGO.STAR />
             </span>

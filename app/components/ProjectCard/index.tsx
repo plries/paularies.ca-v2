@@ -9,7 +9,7 @@ export const ProjectCard = ({ project }: ProjectCardPropTypes) => {
   return (
     <div className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1">
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 shadow-card-light border-greyscale-950/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 !transition-all duration-500 md:flex-row dark:!shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 shadow-card-light border-greyscale-950/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 !transition-all duration-500 group-hover:scale-[99.5%] md:flex-row dark:!shadow-[var(--card-dark)] ${
           project.DISCIPLINE === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
