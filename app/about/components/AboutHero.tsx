@@ -9,18 +9,37 @@ export const AboutHero = () => {
         id="top"
       >
         <div className="col-span-full flex flex-row items-center justify-center md:col-span-4 md:col-start-3 lg:col-start-5">
-          {ABOUT_HERO_CONST.IMAGES.map((image, index) => (
-            <Image
-              key={index}
-              src={image.SRC}
-              alt={image.ALT}
-              height={500}
-              width={500}
-              className="animate-float border-greyscale-50 dark:border-greyscale-950 col-span-2 col-start-2 aspect-square rounded-xl border-[1px] shadow-md first:z-10 first:w-32 first:translate-x-2 first:-rotate-4 last:w-48 last:-translate-x-2 last:rotate-1 md:col-start-4 lg:col-start-6"
-            />
-          ))}
+          <Image
+            src={ABOUT_HERO_CONST.IMAGES[0].SRC}
+            alt={ABOUT_HERO_CONST.IMAGES[0].ALT}
+            height={500}
+            width={500}
+            className="animate-float border-greyscale-50 dark:border-greyscale-950 z-10 col-span-2 col-start-2 aspect-square w-16 translate-x-2 -rotate-4 rounded-xl border-[1px] shadow-md !transition-all duration-700 hover:scale-105 md:w-36"
+          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="animate-float border-greyscale-50 dark:border-greyscale-950 col-span-2 col-start-2 aspect-square w-24 rounded-xl border-[1px] shadow-md !transition-all duration-700 hover:scale-105 md:w-48"
+          >
+            <source src={ABOUT_HERO_CONST.VIDEO} type="video/mp4" />
+          </video>
+          <Image
+            src={ABOUT_HERO_CONST.IMAGES[1].SRC}
+            alt={ABOUT_HERO_CONST.IMAGES[1].ALT}
+            height={500}
+            width={500}
+            className="animate-float border-greyscale-50 dark:border-greyscale-950 hover:scale-105!transition-all z-10 col-span-2 col-start-2 aspect-square w-16 -translate-x-2 rotate-4 rounded-xl border-[1px] shadow-md !transition-all duration-700 hover:scale-105 md:w-36"
+          />
         </div>
+        <p className="col-span-full text-center !text-xl md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
+          {ABOUT_HERO_CONST.PARAGRAPHS[0]}
+        </p>
       </div>
+      <p className="text-greyscale-600 dark:text-greyscale-300 col-span-full my-8 text-center md:col-span-6 md:col-start-2 lg:col-start-4">
+        {ABOUT_HERO_CONST.PARAGRAPHS[1]}
+      </p>
     </section>
   );
 };

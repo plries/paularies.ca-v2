@@ -4,8 +4,8 @@ export type ButtonLinkPropTypes = {
   theme: "primary" | "secondary" | "tertiary";
   onClick?: () => void;
   additionalClasses?: {
-    container?: string[];
-    button?: string[];
+    container?: string;
+    button?: string;
   };
   icon?: React.ReactNode;
   isLink?: boolean;

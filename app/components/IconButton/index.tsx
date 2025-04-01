@@ -11,7 +11,7 @@ export const IconButton = ({
   isLink,
   target,
 }: IconButtonPropTypes) => {
-  const styles = `grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] p-3 !transition-all duration-500 ease-in-out hover:scale-95 ${additionalClasses?.join(" ") ?? ""} ${
+  const styles = `grid aspect-square h-10 cursor-pointer place-items-center rounded-xl border-[1px] p-3 !transition-all duration-500 ease-in-out hover:scale-95 ${additionalClasses} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 shadow-button-dark dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950 dark:!shadow-[var(--button-light)]"
       : theme === "secondary"

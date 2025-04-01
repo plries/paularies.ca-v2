@@ -14,14 +14,14 @@ export const NavBar = () => {
   const useMobile = useMobileMenu();
 
   return (
-    <header className="border-greyscale-100 dark:border-greyscale-700 dark:bg-greyscale-950/50 shadow-nav-bar-light bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:!shadow-[var(--nav-bar-dark)]">
+    <header className="border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 shadow-nav-bar-light bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:!shadow-[var(--nav-bar-dark)]">
       <nav className="contents">
         <Link
           href={pathname === "/" ? "#top" : NAVBAR_CONST.LOGO.HREF}
           className="dark:text-greyscale-50 group hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-xl"
           onClick={useMobile.closeMenu}
         >
-          <span className="flex flex-row items-center gap-2 !transition-all duration-500 group-hover:scale-90 p-1">
+          <span className="flex flex-row items-center gap-2 p-1 !transition-all duration-500 group-hover:scale-95 md:py-1">
             <span className="motion-safe:animate-[spin_12s_linear_infinite]">
               <NAVBAR_CONST.LOGO.STAR />
             </span>
@@ -51,7 +51,7 @@ export const NavBar = () => {
               }
               theme="secondary"
               name={NAVBAR_CONST.LIGHT_DARK.TEXT}
-              additionalClasses={["h-full"]}
+              additionalClasses={"h-full"}
             />
             <IconButton
               href={NAVBAR_CONST.CONTACT.HREF}
@@ -59,7 +59,7 @@ export const NavBar = () => {
               theme="primary"
               name={NAVBAR_CONST.CONTACT.TEXT}
               isLink
-              additionalClasses={["h-full"]}
+              additionalClasses={"h-full"}
             />
           </div>
         )}

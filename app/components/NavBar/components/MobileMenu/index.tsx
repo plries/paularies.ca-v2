@@ -28,9 +28,9 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
             ? NAVBAR_CONST.MOBILE_MENU.OPEN_MENU
             : NAVBAR_CONST.MOBILE_MENU.CLOSE_MENU
         }
-        additionalClasses={[
-          `duration-500 relative !flex items-center justify-center ${hook.isOpen ? "rotate-45 scale-90" : ""}`,
-        ]}
+        additionalClasses={
+          `duration-500 relative !flex items-center justify-center ${hook.isOpen ? "rotate-45 scale-90" : ""}`
+        }
       />
       <ul
         className={`border-greyscale-100 shadow-nav-bar-light bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-900 absolute left-0 mt-4 w-full rounded-3xl border-[1px] !transition-all duration-500 ease-in-out dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full" : "-top-full -translate-y-full"} `}

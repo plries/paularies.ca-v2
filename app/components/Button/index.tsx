@@ -11,7 +11,7 @@ export const Button = ({
   isLink,
   target,
 }: ButtonLinkPropTypes) => {
-  const styles = `flex h-10 w-fit flex-row items-center justify-center !transition-all duration-500 gap-2 rounded-xl border-[1px] px-3 py-2 text-base ease-in-out md:text-lg lg:text-xl ${additionalClasses?.button?.join(" ") ?? ""} ${
+  const styles = `flex h-10 w-fit flex-row items-center justify-center !transition-all duration-500 gap-2 rounded-xl border-[1px] px-3 py-2 text-base ease-in-out md:text-lg lg:text-xl ${additionalClasses?.button} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-900 text-greyscale-50 shadow-button-dark dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950  dark:!shadow-[var(--button-light)] group-hover:scale-95"
       : theme === "secondary"
@@ -21,7 +21,7 @@ export const Button = ({
 
   return (
     <div
-      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group w-fit rounded-2xl ${theme === "tertiary" ? "" : "px-1 py-1.5"} ${additionalClasses?.container?.join(" ") ?? ""}`}
+      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group w-fit rounded-2xl ${theme === "tertiary" ? "" : "px-1 py-1.5"} ${additionalClasses?.container}`}
     >
       {isLink ? (
         <Link target={target} href={href as string} onClick={onClick} className={styles}>

@@ -3,7 +3,7 @@ export type IconButtonPropTypes = {
   href?: string;
   theme: "primary" | "secondary" | "tertiary";
   onClick?: () => void;
-  additionalClasses?: string[];
+  additionalClasses?: string;
   icon: React.ReactNode;
   isLink?: boolean;
   target?: string;
