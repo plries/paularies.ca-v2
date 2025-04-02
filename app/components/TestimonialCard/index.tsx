@@ -18,7 +18,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
         theme="tertiary"
         additionalClasses={{
           container: "absolute bottom-4 left-1/2 -translate-x-1/2 z-10",
-          button: `bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 !text-greyscale-500 dark:!text-greyscale-300 dark:bg-greyscale-950 ${hook.isOpen ? "" : "shadow-sm"}`,
+          button: `bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 !text-greyscale-600 dark:!text-greyscale-300 dark:bg-greyscale-950 ${hook.isOpen ? "" : "shadow-sm"}`,
         }}
         icon={
           <span
