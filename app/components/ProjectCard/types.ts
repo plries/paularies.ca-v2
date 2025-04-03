@@ -1,6 +1,6 @@
 export type ProjectCardPropTypes = {
   project: {
-    DISCIPLINE: string;
+    DISCIPLINE: string[];
     IMAGE: {
       SRC: string;
       ALT: string;
@@ -8,6 +8,6 @@ export type ProjectCardPropTypes = {
     TITLE: string;
     DESCRIPTION: string;
     SKILLS: string[];
-    LINK: string;
+    SLUG: string;
   };
 };

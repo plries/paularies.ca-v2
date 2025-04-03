@@ -32,7 +32,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
       <div
         className={`after:to-greyscale-100 dark:after:to-greyscale-900 flex flex-col gap-4 transition-opacity duration-300 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-300 ${hook.isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
       >
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 items-center">
           <Image
             src={testimonial.IMAGE.SRC}
             alt={testimonial.IMAGE.ALT}

@@ -8,6 +8,7 @@ export const Button = ({
   onClick,
   additionalClasses,
   icon,
+  iconRight,
   isLink,
   target,
 }: ButtonLinkPropTypes) => {
@@ -24,6 +25,7 @@ export const Button = ({
       className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group w-fit rounded-2xl transition-[background-color] duration-500 ${theme === "tertiary" ? "" : "px-1 py-1.5"} ${additionalClasses?.container}`}
     >
       {isLink ? (
+        
         <Link
           target={target}
           href={href as string}
@@ -31,19 +33,21 @@ export const Button = ({
           className={styles}
         >
           <span
-            className={`inline-block transition-[scale] duration-500 ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
-          >
+              className={`inline-flex flex-row gap-1 items-center transition-[scale] duration-500 ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
+            >
+            {icon && !iconRight && <span className={`inline-block ${additionalClasses?.icon}`}>{icon}</span>}
             {children}
-            {icon && <span className="inline-block">{icon}</span>}
+            {icon && iconRight && <span className={`inline-block ${additionalClasses?.icon}`}>{icon}</span>}
           </span>
         </Link>
       ) : (
         <button onClick={onClick} className={styles}>
           <span
-            className={`inline-block transition-[scale] duration-500 ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
-          >
+            className={`inline-flex flex-row gap-1 items-center transition-[scale] duration-500 ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
+            >
+            {icon && !iconRight && <span className={`inline-block ${additionalClasses?.icon}`}>{icon}</span>}
             {children}
-            {icon && <span className="inline-block">{icon}</span>}
+            {icon && iconRight && <span className={`inline-block ${additionalClasses?.icon}`}>{icon}</span>}
           </span>
         </button>
       )}

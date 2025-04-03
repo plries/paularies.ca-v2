@@ -6,8 +6,10 @@ export type ButtonLinkPropTypes = {
   additionalClasses?: {
     container?: string;
     button?: string;
+    icon?: string;
   };
   icon?: React.ReactNode;
+  iconRight?: boolean;
   isLink?: boolean;
   target?: string;
 };
