@@ -31,7 +31,7 @@ export const AboutHero = () => {
             className="animate-float border-greyscale-50 dark:border-greyscale-950 z-10 col-span-2 col-start-2 aspect-square w-16 -translate-x-2 rotate-4 rounded-xl border-[1px] shadow-md transition-[scale] duration-700 hover:scale-105 md:w-36"
           />
         </div>
-        <p className="dark:text-greyscale-50 col-span-full flex flex-col items-center gap-1 text-center !text-xl md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
+        <p className="dark:text-greyscale-50 col-span-full flex flex-col items-center gap-1 text-center !text-xl leading-none md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
           <span className="inline-flex w-fit flex-row items-center gap-x-2">
             <Image
               width={160}

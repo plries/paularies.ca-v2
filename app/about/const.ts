@@ -8,7 +8,7 @@ export const ABOUT_HERO_CONST = {
     },
     {
       SRC: "/images/about/paul-bear.jpg",
-      ALT: "paul aries with a bear",
+      ALT: "paul aries with wa bear",
     },
   ],
   VIDEO: "/images/about/paul-vid.mp4",
