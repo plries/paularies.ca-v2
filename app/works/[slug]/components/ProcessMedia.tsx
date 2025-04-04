@@ -19,7 +19,7 @@ export const ProcessMedia = ({
   return (
     <div className="flex w-full flex-col gap-4">
       <div
-        className={`bg-greyscale-100 dark:bg-greyscale-800 border-greyscale-950/10 dark:border-greyscale-50/10 relative aspect-video w-full rounded-lg border-[1px] ${hook.isCode ? "overflow-x-hidden overflow-y-scroll" : "overflow-hidden"}`}
+        className={`bg-greyscale-100 dark:bg-greyscale-800 border-greyscale-950/10 dark:border-greyscale-50/10 relative aspect-video w-full overflow-hidden rounded-lg border-[1px]`}
       >
         {PROCESS.IMAGE && (
           <Image
@@ -27,7 +27,7 @@ export const ProcessMedia = ({
             alt={PROCESS.IMAGE.ALT}
             width={1920}
             height={1080}
-            className={`absolute top-0 left-0 z-10 h-full w-full object-cover transition-[translate,scale,filter] duration-700 ${hook.isCode ? "-translate-x-full scale-75 rounded-lg saturate-0" : ""}`}
+            className={`sticky top-0 left-0 z-10 h-full w-full object-cover transition-[opacity,filter] duration-700 ${hook.isCode ? "pointer-events-none opacity-0 blur-md" : ""}`}
           />
         )}
         {PROCESS.VIDEO && (
@@ -42,7 +42,7 @@ export const ProcessMedia = ({
           </video>
         )}
         {PROCESS.CODE && (
-          <Highlight className="text-greyscale-800 dark:text-greyscale-200 p-4">
+          <Highlight className="text-greyscale-800 dark:text-greyscale-200 absolute top-0 aspect-video w-full overflow-y-scroll p-4">
             {PROCESS.CODE}
           </Highlight>
         )}
