@@ -23,7 +23,7 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
               {process.DESCRIPTION}
             </p>
           </div>
-          <ProcessMedia process={process} />
+          <ProcessMedia PROCESS={process} />
         </ContentBlock>
       ))}
     </div>
