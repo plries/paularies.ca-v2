@@ -10,3 +10,4 @@ export * from "./InsetBlock";
 export * from "./NavBar";
 export * from "./ProjectCard";
 export * from "./TestimonialCard";
+export * from "./ViewToggle";

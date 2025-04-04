@@ -7,6 +7,7 @@ export type ButtonLinkPropTypes = {
     container?: string;
     button?: string;
     icon?: string;
+    text?: string;
   };
   icon?: React.ReactNode;
   iconRight?: boolean;

@@ -5,6 +5,7 @@ export type ProjectPagePropsTypes = {
       DISCIPLINE: string[];
       DESCRIPTION: string;
       LINK: string;
+      GITHUB?: string;
       IMAGE: { SRC: string; ALT: string };
     };
     DETAILS: [

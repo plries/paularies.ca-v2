@@ -1,5 +1,6 @@
 import { ProjectPagePropsTypes } from "./types";
 import { Heading, ContentBlock, ContentHeading } from "@/app/components";
+import { ProcessMedia } from "./ProcessMedia";
 import { PROJECT_PAGE_CONST } from "../const";
 
 export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
@@ -8,7 +9,7 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
       <Heading level="h2">{PROJECT_PAGE_CONST.HEADINGS.PROCESS}</Heading>
       {PROJECT.PROCESS.map((process, index) => (
         <ContentBlock
-          additionalClasses="flex flex-row gap-3 md:gap-4"
+          additionalClasses="flex flex-col-reverse md:flex-row gap-3 md:gap-4"
           key={index}
         >
           <div className="w-full">
@@ -22,7 +23,7 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
               {process.DESCRIPTION}
             </p>
           </div>
-          <div className="bg-greyscale-200 dark:bg-greyscale-800 aspect-video w-full rounded-lg" />
+          <ProcessMedia process={process} />
         </ContentBlock>
       ))}
     </div>

@@ -29,19 +29,28 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
               {PROJECT.HERO.DESCRIPTION}
             </p>
           </div>
-          <Button
-            theme="primary"
-            href={PROJECT.HERO.LINK}
-            target="_blank"
-            additionalClasses={{
-              container: "w-full flex justify-end md:justify-start",
-            }}
-            isLink
-          >
-            {PROJECT_PAGE_CONST.BUTTONS.VIEW}
-          </Button>
+          <div className="flex w-full justify-end md:justify-start">
+            {PROJECT.HERO.GITHUB && (
+              <Button
+                theme="secondary"
+                href={PROJECT.HERO.GITHUB}
+                target="_blank"
+                isLink
+              >
+                {PROJECT_PAGE_CONST.BUTTONS.GITHUB}
+              </Button>
+            )}
+            <Button
+              theme="primary"
+              href={PROJECT.HERO.LINK}
+              target="_blank"
+              isLink
+            >
+              {PROJECT_PAGE_CONST.BUTTONS.VIEW}
+            </Button>
+          </div>
         </div>
-        <div className="bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 dark:bg-greyscale-950 -order-1 col-span-full aspect-video rounded-lg md:order-1 md:col-span-4 md:col-start-5 lg:col-span-6 lg:col-start-7">
+        <div className="bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 dark:bg-greyscale-950 -order-1 col-span-full aspect-video rounded-lg border-[1px] md:order-1 md:col-span-4 md:col-start-5 lg:col-span-6 lg:col-start-7">
           <Image
             src={PROJECT.HERO.IMAGE.SRC}
             alt={PROJECT.HERO.IMAGE.ALT}
