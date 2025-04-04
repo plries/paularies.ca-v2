@@ -32,7 +32,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
       <div
         className={`after:to-greyscale-100 dark:after:to-greyscale-900 flex flex-col gap-4 transition-opacity duration-300 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-300 ${hook.isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
       >
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-row items-center gap-2">
           <Image
             src={testimonial.IMAGE.SRC}
             alt={testimonial.IMAGE.ALT}
@@ -41,7 +41,10 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
             className="aspect-square h-12 w-12 rounded-full lg:h-14 lg:w-14"
           />
           <div className="flex flex-col">
-            <ContentHeading level="h3" additionalClasses="leading-none">
+            <ContentHeading
+              level="h3"
+              additionalClasses="leading-none !text-2xl md:!text-[1.75rem] lg:!text-[2rem]"
+            >
               {testimonial.NAME}
             </ContentHeading>
             <h4 className="text-greyscale-800 dark:text-greyscale-200 text-sm leading-none md:!text-base lg:!text-lg">

@@ -1,5 +1,5 @@
 export type ProjectCardPropTypes = {
-  project: {
+  PROJECT: {
     DISCIPLINE: string[];
     IMAGE: {
       SRC: string;
