@@ -159,6 +159,15 @@ code {
 
 /* codeblocks */
 
+.code-snippet {
+  background-color: var(--color-greyscale-100);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  .dark {
+    background-color: var(--color-greyscale-900);
+  }
+}
+
 .hljs {
   display: block;
   overflow-x: auto;
@@ -226,6 +235,11 @@ code {
 }
 
 .dark {
+  
+  .code-snippet {
+    background-color: var(--color-greyscale-900);
+  }
+
   .hljs-keyword,
   .hljs-selector-tag,
   .hljs-tag {

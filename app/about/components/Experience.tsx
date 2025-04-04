@@ -11,9 +11,7 @@ export const Experience = () => {
           additionalClasses="flex flex-col gap-3 col-span-full md:col-start-2 md:col-span-6 lg:col-start-2 lg:col-span-10"
         >
           <div className="flex flex-col md:flex-row md:items-start md:justify-between">
-            <ContentHeading level="h3" additionalClasses="leading-none">
-              {role.TITLE}
-            </ContentHeading>
+            <ContentHeading level="h3">{role.TITLE}</ContentHeading>
             <h4 className="text-greyscale-800 dark:text-greyscale-200 text-sm leading-none md:w-full md:text-right md:!text-base lg:!text-lg">
               {role.SPAN}
             </h4>

@@ -5,7 +5,10 @@ export const HERO_CONST = {
     SRC: "/images/PaulAriesHeadshot.jpg",
     ALT: "headshot of paul aries",
   },
-  LOGO: PaLogo,
+  LOGO: {
+    SRC: PaLogo,
+    TEXT: "paul aries",
+  },
   INTRO: [
     "is a creative, user-centered",
     "designer",

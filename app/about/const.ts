@@ -12,10 +12,18 @@ export const ABOUT_HERO_CONST = {
     },
   ],
   VIDEO: "/images/about/paul-vid.mp4",
-  PARAGRAPHS: [
-    "👋 i’m a detail-oriented designer and developer that loves to create unique digital experiences.",
-    "besides my computer, you can find me exploring the outdoors or dancing at a concert. surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
+  EMOJI: {
+    SRC: "/images/about/wavingHand.png",
+    ALT: "waving hand emoji",
+  },
+  HEADING: [
+    "i'm a detail-oriented  ",
+    "artist at heart that loves  ",
+    "to create ",
+    "unique digital experiences.",
   ],
+  PARAGRAPH:
+    "besides my computer, you can find me exploring the outdoors or dancing at a concert. surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
 };
 
 export const SKILLS_CONST = {
