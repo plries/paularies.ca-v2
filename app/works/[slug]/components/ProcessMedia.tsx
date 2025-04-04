@@ -3,7 +3,17 @@ import { ViewToggle } from "@/app/components";
 import { useViewToggle } from "@/app/hooks";
 import Highlight from "react-highlight";
 
-export const ProcessMedia = ({ process }: any) => {
+export const ProcessMedia = ({
+  PROCESS,
+}: {
+  PROCESS: {
+    HEADING: string;
+    DESCRIPTION: string[];
+    IMAGE?: { SRC: string; ALT: string };
+    VIDEO?: string;
+    CODE?: string;
+  };
+}) => {
   const hook = useViewToggle();
 
   return (
@@ -11,16 +21,16 @@ export const ProcessMedia = ({ process }: any) => {
       <div
         className={`bg-greyscale-100 dark:bg-greyscale-800 border-greyscale-950/10 dark:border-greyscale-50/10 relative aspect-video w-full rounded-lg border-[1px] ${hook.isCode ? "overflow-x-hidden overflow-y-scroll" : "overflow-hidden"}`}
       >
-        {process.IMAGE && (
+        {PROCESS.IMAGE && (
           <Image
-            src={process.IMAGE.SRC}
-            alt={process.IMAGE.ALT}
+            src={PROCESS.IMAGE.SRC}
+            alt={PROCESS.IMAGE.ALT}
             width={1920}
             height={1080}
             className={`absolute top-0 left-0 z-10 h-full w-full object-cover transition-[translate,scale,filter] duration-700 ${hook.isCode ? "-translate-x-full scale-75 rounded-lg saturate-0" : ""}`}
           />
         )}
-        {process.VIDEO && (
+        {PROCESS.VIDEO && (
           <video
             autoPlay
             loop
@@ -28,16 +38,16 @@ export const ProcessMedia = ({ process }: any) => {
             playsInline
             className={`absolute top-0 left-0 z-10 h-full w-full object-cover transition-[translate,scale,filter,opacity] duration-700 ${hook.isCode ? "-translate-x-full scale-75 rounded-lg saturate-0" : ""}`}
           >
-            <source src={process.VIDEO} type="video/mp4" />
+            <source src={PROCESS.VIDEO} type="video/mp4" />
           </video>
         )}
-        {process.CODE && (
+        {PROCESS.CODE && (
           <Highlight className="text-greyscale-800 dark:text-greyscale-200 p-4">
-            {process.CODE}
+            {PROCESS.CODE}
           </Highlight>
         )}
       </div>
-      {process.CODE && (
+      {PROCESS.CODE && (
         <ViewToggle isCode={hook.isCode} toggleView={hook.toggleView} />
       )}
     </div>
