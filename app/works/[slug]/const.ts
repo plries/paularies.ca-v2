@@ -21,6 +21,7 @@ export const PROJECTS: ProjectPagePropsTypes = {
       TITLE: "afleuries illustrated",
       DISCIPLINE: ["development", "design"],
       DESCRIPTION: "stylized modern marketing page for a live portrait artist.",
+      SKILLS: ["figma", "next.js", "tailwind", "motion", "formspree"],
       LINK: "https://afleuries.com",
       GITHUB: "https://github.com/plries/afleuries",
       IMAGE: {
@@ -36,10 +37,6 @@ export const PROJECTS: ProjectPagePropsTypes = {
       {
         HEADING: "contributions",
         DESCRIPTION: ["content by abby aries"],
-      },
-      {
-        HEADING: "technologies",
-        DESCRIPTION: ["figma", "next.js", "tailwind", "motion", "formspree"],
       },
     ],
     OVERVIEW: [
@@ -85,6 +82,7 @@ export const PROJECTS: ProjectPagePropsTypes = {
       TITLE: "guy",
       DISCIPLINE: ["development"],
       DESCRIPTION: "marketing page for a fictional mobile app companion.",
+      SKILLS: ["html", "js", "sass"],
       GITHUB: "https://github.com/plries/guy-saas",
       LINK: "https://guy.paularies.ca/",
       IMAGE: {
@@ -100,10 +98,6 @@ export const PROJECTS: ProjectPagePropsTypes = {
       {
         HEADING: "contributions",
         DESCRIPTION: ["images from pexels", "icons by ionicons"],
-      },
-      {
-        HEADING: "technologies",
-        DESCRIPTION: ["html", "js", "sass"],
       },
     ],
     OVERVIEW: [
@@ -206,6 +200,7 @@ if (mode === 'darkmode') {
       TITLE: "tempo",
       DISCIPLINE: ["design"],
       DESCRIPTION: "mobile app prototype for a dance studio booking flow.",
+      SKILLS: ["figma", "user testing", "user research"],
       LINK: "https://www.figma.com/proto/59EbBSy5SoywUcNK7YeheS/tempo?node-id=90-575&t=eORgaHztt8LKIvYO-1",
       IMAGE: {
         SRC: "/images/projects/tempo.png",
@@ -220,10 +215,6 @@ if (mode === 'darkmode') {
       {
         HEADING: "contributions",
         DESCRIPTION: ["images from pexels + unsplash", "icons by icons8"],
-      },
-      {
-        HEADING: "technologies",
-        DESCRIPTION: ["figma", "user testing", "user research"],
       },
     ],
     OVERVIEW: [
@@ -260,6 +251,7 @@ if (mode === 'darkmode') {
       TITLE: "odd",
       DISCIPLINE: ["design"],
       DESCRIPTION: "mobile app prototype for a fictional juice brand.",
+      SKILLS: ["figma", "photoshop", "illustrator"],
       LINK: "https://www.figma.com/proto/5pzdmswTzaA0sZRZaL7efB/ODD?node-id=57-484&t=yieZZXhAgYwHyg9b-1&starting-point-node-id=462:961",
       IMAGE: {
         SRC: "/images/projects/odd.png",
@@ -274,10 +266,6 @@ if (mode === 'darkmode') {
       {
         HEADING: "contributions",
         DESCRIPTION: ["icons by icons8"],
-      },
-      {
-        HEADING: "technologies",
-        DESCRIPTION: ["figma", "photoshop", "illustrator"],
       },
     ],
     OVERVIEW: [

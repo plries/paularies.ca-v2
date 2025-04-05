@@ -4,15 +4,12 @@ export type ProjectPagePropsTypes = {
       TITLE: string;
       DISCIPLINE: string[];
       DESCRIPTION: string;
+      SKILLS: string[];
       LINK: string;
       GITHUB?: string;
       IMAGE: { SRC: string; ALT: string };
     };
     DETAILS: [
-      {
-        HEADING: string;
-        DESCRIPTION: string[];
-      },
       {
         HEADING: string;
         DESCRIPTION: string[];

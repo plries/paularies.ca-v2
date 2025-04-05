@@ -29,7 +29,7 @@ export const ProjectCard = ({ PROJECT }: ProjectCardPropTypes) => {
             />
           </div>
           <div className="flex w-full flex-col justify-between gap-4">
-            <div>
+            <div className="flex flex-col gap-2">
               <div className="flex w-full items-start justify-between">
                 <ContentHeading level="h3">{PROJECT.TITLE}</ContentHeading>
                 <div className="flex flex-row gap-1">
