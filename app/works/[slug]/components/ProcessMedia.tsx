@@ -27,7 +27,7 @@ export const ProcessMedia = ({
             alt={PROCESS.IMAGE.ALT}
             width={1920}
             height={1080}
-            className={`sticky top-0 left-0 z-10 h-full w-full object-cover transition-[opacity,filter] duration-700 ${hook.isCode ? "pointer-events-none opacity-0 blur-md" : ""}`}
+            className={`sticky top-0 left-0 z-10 h-full w-full rounded-lg object-cover transition-[opacity,filter] duration-700 ${hook.isCode ? "pointer-events-none opacity-0 blur-md" : ""}`}
           />
         )}
         {PROCESS.VIDEO && (
@@ -36,13 +36,13 @@ export const ProcessMedia = ({
             loop
             muted
             playsInline
-            className={`absolute top-0 left-0 z-10 h-full w-full object-cover transition-[translate,scale,filter,opacity] duration-700 ${hook.isCode ? "-translate-x-full scale-75 rounded-lg saturate-0" : ""}`}
+            className={`sticky top-0 left-0 z-10 h-full w-full rounded-lg object-cover transition-[opacity,filter] duration-700 ${hook.isCode ? "pointer-events-none opacity-0 blur-md" : ""}`}
           >
             <source src={PROCESS.VIDEO} type="video/mp4" />
           </video>
         )}
         {PROCESS.CODE && (
-          <Highlight className="text-greyscale-800 dark:text-greyscale-200 absolute top-0 aspect-video w-full overflow-scroll p-4">
+          <Highlight className="text-greyscale-800 dark:text-greyscale-200 absolute top-0 aspect-video h-full w-full overflow-y-scroll p-4">
             {PROCESS.CODE}
           </Highlight>
         )}
