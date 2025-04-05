@@ -171,8 +171,9 @@ code {
 .hljs {
   display: block;
   overflow-x: auto;
+  white-space: pre-wrap;
   word-wrap: break-word;
-  text-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 .hljs-keyword,
@@ -235,7 +236,6 @@ code {
 }
 
 .dark {
-  
   .code-snippet {
     background-color: var(--color-greyscale-900);
   }
