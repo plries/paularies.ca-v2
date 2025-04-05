@@ -7,8 +7,8 @@ export const PaLogo = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={hook.isMobile ? "100%" : "auto"}
-      height={hook.isMobile ? "auto" : "41"}
+      width="75"
+      height="41"
       fill="none"
       viewBox="0 0 75 41"
       className="h-full max-w-16 md:max-w-42"
