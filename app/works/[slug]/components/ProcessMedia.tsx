@@ -19,7 +19,7 @@ export const ProcessMedia = ({
   return (
     <div className="flex w-full flex-col gap-3">
       <div
-        className={`bg-greyscale-100 dark:bg-greyscale-800 border-greyscale-950/10 dark:border-greyscale-50/10 relative aspect-video w-full overflow-hidden rounded-lg border-[1px]`}
+        className={`bg-greyscale-100 dark:bg-greyscale-800 border-greyscale-950/10 dark:border-greyscale-50/10 relative aspect-video h-fit w-full rounded-lg border-[1px]`}
       >
         {PROCESS.IMAGE && (
           <Image
@@ -42,7 +42,7 @@ export const ProcessMedia = ({
           </video>
         )}
         {PROCESS.CODE && (
-          <Highlight className="text-greyscale-800 dark:text-greyscale-200 absolute top-0 aspect-video w-full overflow-y-scroll p-4">
+          <Highlight className="text-greyscale-800 dark:text-greyscale-200 absolute top-0 aspect-video w-full overflow-scroll p-4">
             {PROCESS.CODE}
           </Highlight>
         )}
