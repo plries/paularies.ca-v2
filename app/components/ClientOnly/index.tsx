@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { PageTransition } from "../PageTransition";
 import { PaStar } from "@/public";
 
 export const ClientOnly = ({ children }: { children: React.ReactNode }) => {
