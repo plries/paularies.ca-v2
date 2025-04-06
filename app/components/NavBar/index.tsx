@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAVBAR_CONST } from "./const";
+import { PaStar, PaWordmark, LightDarkToggleIcon, EmailIcon } from "@/public";
 import { Button, IconButton } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
@@ -14,7 +15,7 @@ export const NavBar = () => {
   const useMobile = useMobileMenu();
 
   return (
-    <header className="border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 shadow-[var(--nav-bar-light)] bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)]">
+    <header className="border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 shadow-[var(--nav-bar-light)] backdrop-blur-md md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)]">
       <nav className="contents">
         <Link
           href={pathname === "/" ? "#top" : NAVBAR_CONST.LOGO.HREF}
@@ -23,9 +24,9 @@ export const NavBar = () => {
         >
           <span className="flex flex-row items-center gap-2 p-1 transition-[scale] duration-500 group-hover:scale-95 md:py-1">
             <span className="motion-safe:animate-[spin_12s_linear_infinite]">
-              <NAVBAR_CONST.LOGO.STAR />
+              <PaStar />
             </span>
-            {!windowSize.isMobile && <NAVBAR_CONST.LOGO.WORDMARK />}
+            {!windowSize.isMobile && <PaWordmark />}
           </span>
           <span className="sr-only">{NAVBAR_CONST.LOGO.HOME}</span>
         </Link>
@@ -46,7 +47,7 @@ export const NavBar = () => {
                 <span
                   className={`transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
                 >
-                  <NAVBAR_CONST.LIGHT_DARK.ICON />
+                  <LightDarkToggleIcon />
                 </span>
               }
               theme="secondary"
@@ -54,7 +55,7 @@ export const NavBar = () => {
             />
             <IconButton
               href={NAVBAR_CONST.CONTACT.HREF}
-              icon={<NAVBAR_CONST.CONTACT.ICON />}
+              icon={<EmailIcon />}
               theme="primary"
               name={NAVBAR_CONST.CONTACT.TEXT}
               isLink
@@ -69,7 +70,7 @@ export const NavBar = () => {
                 <span
                   className={`transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
                 >
-                  <NAVBAR_CONST.LIGHT_DARK.ICON />
+                  <LightDarkToggleIcon />
                 </span>
               }
               theme="secondary"

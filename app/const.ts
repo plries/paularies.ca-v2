@@ -1,10 +1,7 @@
 export const PROJECTS_CONST = {
   PROJECTS: [
     {
-      DISCIPLINE: [
-        "development",
-        "design",
-      ],
+      DISCIPLINE: ["development", "design"],
       IMAGE: {
         SRC: "/images/projects/afleuries.png",
         ALT: "afleuries illustrated",
@@ -30,7 +27,7 @@ export const PROJECTS_CONST = {
       IMAGE: {
         SRC: "/images/projects/tempo.png",
         ALT: "tempo",
-    },
+      },
       TITLE: "tempo",
       DESCRIPTION: "mobile app prototype for a dance studio booking flow.",
       SKILLS: ["figma", "user testing", "user research"],

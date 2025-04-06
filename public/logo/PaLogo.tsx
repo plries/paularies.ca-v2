@@ -1,9 +1,4 @@
-"use client";
-import { useWindowSize } from "@/app/hooks";
-
 export const PaLogo = () => {
-  const hook = useWindowSize();
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

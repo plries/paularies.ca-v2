@@ -1,5 +1,3 @@
-import { PaWordmark } from "@/public";
-
 export const FOOTER_CONST = {
   CONTACT: {
     HEADING: "let's talk!",
@@ -33,6 +31,5 @@ export const FOOTER_CONST = {
   BAR: {
     TEXT: "hand-coded by ",
     SR: " paul aries",
-    LOGO: PaWordmark,
   },
 };

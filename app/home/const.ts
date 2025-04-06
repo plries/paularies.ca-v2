@@ -1,13 +1,10 @@
-import { PaLogo } from "@/public/logo";
-
 export const HERO_CONST = {
   HEADSHOT: {
     SRC: "/images/PaulAriesHeadshot.jpg",
     ALT: "headshot of paul aries",
   },
   LOGO: {
-    SRC: PaLogo,
-    TEXT: "paul aries",
+    ALT: "paul aries",
   },
   INTRO: [
     "is a creative, user-centered",

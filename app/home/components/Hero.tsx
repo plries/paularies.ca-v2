@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PaLogo } from "@/public";
 import { HERO_CONST } from "../const";
 import { Dot, InsetBlock } from "@/app/components";
 
@@ -18,8 +19,8 @@ export const Hero = () => {
         />
         <div className="-mt-8 grid w-full place-items-center">
           <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rotate-2 rounded-xl border-[1px] px-4 py-3 transition-[rotate] duration-700 hover:rotate-0">
-            <HERO_CONST.LOGO.SRC />
-            <span className="sr-only">{HERO_CONST.LOGO.TEXT}</span>
+            <PaLogo />
+            <span className="sr-only">{HERO_CONST.LOGO.ALT}</span>
           </h1>
         </div>
       </div>

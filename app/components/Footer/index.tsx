@@ -1,3 +1,4 @@
+import { PaWordmark } from "@/public";
 import { Button } from "../../components/";
 import { FOOTER_CONST } from "./const";
 
@@ -42,7 +43,7 @@ export const Footer = () => {
       <div className="bg-greyscale-950 dark:bg-greyscale-50 col-span-full flex flex-row justify-end rounded-3xl p-4 md:p-6 lg:p-8">
         <p className="text-greyscale-50 dark:text-greyscale-950 flex flex-row items-center gap-2">
           {FOOTER_CONST.BAR.TEXT}
-          <FOOTER_CONST.BAR.LOGO />
+          <PaWordmark />
           <span className="sr-only">{FOOTER_CONST.BAR.SR}</span>
         </p>
       </div>
