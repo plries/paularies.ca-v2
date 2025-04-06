@@ -1,4 +1,7 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { MOTION_CONFIG } from "@/app/const";
 import { ButtonLinkPropTypes } from "./types";
 
 export const Button = ({
@@ -10,6 +13,7 @@ export const Button = ({
   icon,
   iconRight,
   isLink,
+  noBlur,
   target,
 }: ButtonLinkPropTypes) => {
   const styles = `flex h-10 w-fit flex-row items-center justify-center transition-[scale] duration-500 gap-2 rounded-xl border-[1px] px-3 py-2 text-base ease-in-out md:text-lg lg:text-xl ${additionalClasses?.button} ${
@@ -21,51 +25,105 @@ export const Button = ({
   }`;
 
   return (
-    <div
-      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group w-fit rounded-2xl transition-[background-color] duration-500 ${theme === "tertiary" ? "" : "px-1 py-1.5"} ${additionalClasses?.container}`}
-    >
-      {isLink ? (
-        <Link
-          target={target}
-          href={href as string}
-          onClick={onClick}
-          className={styles}
+    <>
+      {noBlur ? (
+        <div
+          className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group w-fit rounded-2xl transition-[background-color] duration-500 ${theme === "tertiary" ? "" : "px-1 py-1.5"} ${additionalClasses?.container}`}
         >
-          <span
-            className={`inline-flex flex-row items-center gap-1 transition-[scale] duration-500 ${additionalClasses?.text} ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
-          >
-            {icon && !iconRight && (
-              <span className={`inline-block ${additionalClasses?.icon}`}>
-                {icon}
+          {isLink ? (
+            <Link
+              target={target}
+              href={href as string}
+              onClick={onClick}
+              className={styles}
+            >
+              <span
+                className={`inline-flex flex-row items-center gap-1 transition-[scale] duration-500 ${additionalClasses?.text} ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
+              >
+                {icon && !iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
+                {children}
+                {icon && iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
               </span>
-            )}
-            {children}
-            {icon && iconRight && (
-              <span className={`inline-block ${additionalClasses?.icon}`}>
-                {icon}
+            </Link>
+          ) : (
+            <button onClick={onClick} className={styles}>
+              <span
+                className={`inline-flex flex-row items-center gap-1 transition-[scale] duration-500 ${additionalClasses?.text} ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
+              >
+                {icon && !iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
+                {children}
+                {icon && iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
               </span>
-            )}
-          </span>
-        </Link>
+            </button>
+          )}
+        </div>
       ) : (
-        <button onClick={onClick} className={styles}>
-          <span
-            className={`inline-flex flex-row items-center gap-1 transition-[scale] duration-500 ${additionalClasses?.text} ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
-          >
-            {icon && !iconRight && (
-              <span className={`inline-block ${additionalClasses?.icon}`}>
-                {icon}
+        <motion.div
+          initial={MOTION_CONFIG.DEFAULT.INITIAL}
+          whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
+          transition={MOTION_CONFIG.TRANSITION}
+          className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group w-fit rounded-2xl transition-[background-color] duration-500 ${theme === "tertiary" ? "" : "px-1 py-1.5"} ${additionalClasses?.container}`}
+        >
+          {isLink ? (
+            <Link
+              target={target}
+              href={href as string}
+              onClick={onClick}
+              className={styles}
+            >
+              <span
+                className={`inline-flex flex-row items-center gap-1 transition-[scale] duration-500 ${additionalClasses?.text} ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
+              >
+                {icon && !iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
+                {children}
+                {icon && iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
               </span>
-            )}
-            {children}
-            {icon && iconRight && (
-              <span className={`inline-block ${additionalClasses?.icon}`}>
-                {icon}
+            </Link>
+          ) : (
+            <button onClick={onClick} className={styles}>
+              <span
+                className={`inline-flex flex-row items-center gap-1 transition-[scale] duration-500 ${additionalClasses?.text} ${theme === "tertiary" ? "group-hover:scale-95" : ""}`}
+              >
+                {icon && !iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
+                {children}
+                {icon && iconRight && (
+                  <span className={`inline-block ${additionalClasses?.icon}`}>
+                    {icon}
+                  </span>
+                )}
               </span>
-            )}
-          </span>
-        </button>
+            </button>
+          )}
+        </motion.div>
       )}
-    </div>
+    </>
   );
 };

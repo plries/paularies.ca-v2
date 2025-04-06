@@ -12,5 +12,6 @@ export type ButtonLinkPropTypes = {
   icon?: React.ReactNode;
   iconRight?: boolean;
   isLink?: boolean;
+  noBlur?: boolean;
   target?: string;
 };

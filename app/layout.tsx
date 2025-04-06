@@ -1,6 +1,6 @@
 import { Hanken_Grotesk, Instrument_Serif, DM_Mono } from "next/font/google";
 import { ReactLenis } from "lenis/react";
-import { NavBar, Footer, ClientOnly } from "./components/";
+import { NavBar, Footer, ClientOnly, PageContent } from "./components/";
 import { ScrollToTop } from "./hooks";
 import { metadata } from "./layoutMetadata";
 import "./globals.css";
@@ -55,9 +55,7 @@ export default function RootLayout({
           <ScrollToTop />
           <ClientOnly>
             <NavBar />
-            <main className="grid w-full max-w-7xl grid-cols-4 gap-3 px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-8">
-              {children}
-            </main>
+            <PageContent>{children}</PageContent>
             <div className="mask-gradient pointer-events-none fixed bottom-0 left-0 z-50 h-16 w-screen backdrop-blur-2xl" />
             <Footer />
           </ClientOnly>

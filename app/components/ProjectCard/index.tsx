@@ -1,5 +1,8 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { MOTION_CONFIG } from "@/app/const";
 import { Dot } from "../Dot";
 import { ProjectCardPropTypes } from "./types";
 import { IconButton, ContentHeading } from "../../components";
@@ -7,7 +10,12 @@ import { ArrowIcon } from "@/public";
 
 export const ProjectCard = ({ PROJECT }: ProjectCardPropTypes) => {
   return (
-    <div className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1 transition-[background-color] duration-500">
+    <motion.div
+      initial={MOTION_CONFIG.PROJECT_CARD.INITIAL}
+      whileInView={MOTION_CONFIG.PROJECT_CARD.WHILE_IN_VIEW}
+      transition={MOTION_CONFIG.TRANSITION}
+      className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1 transition-[background-color] duration-500"
+    >
       <article
         className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 shadow-[var(--card-light)] transition-[scale] duration-500 group-hover:scale-[99.5%] md:flex-row dark:shadow-[var(--card-dark)] ${
           PROJECT.DISCIPLINE[0] === "design"
@@ -74,6 +82,6 @@ export const ProjectCard = ({ PROJECT }: ProjectCardPropTypes) => {
           </div>
         </Link>
       </article>
-    </div>
+    </motion.div>
   );
 };

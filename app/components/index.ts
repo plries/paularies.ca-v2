@@ -8,6 +8,8 @@ export * from "./Heading";
 export * from "./IconButton";
 export * from "./InsetBlock";
 export * from "./NavBar";
+export * from "./PageContent";
+export * from "./PageTransition";
 export * from "./ProjectCard";
 export * from "./TestimonialCard";
 export * from "./ViewToggle";

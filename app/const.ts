@@ -1,3 +1,5 @@
+import { easeInOut } from "framer-motion";
+
 export const PROJECTS_CONST = {
   PROJECTS: [
     {
@@ -45,4 +47,50 @@ export const PROJECTS_CONST = {
       SLUG: "odd",
     },
   ],
+};
+
+export const MOTION_CONFIG = {
+  TRANSITION: { duration: 0.7, easeInOut },
+  DEFAULT: {
+    INITIAL: { filter: "blur(8px)", opacity: 0 },
+    WHILE_IN_VIEW: { filter: "blur(0)", opacity: 1 },
+  },
+  PROJECT_CARD: {
+    INITIAL: {
+      transform: "translateX(24px)",
+      filter: "blur(8px)",
+      opacity: 0,
+      scale: 0.8,
+    },
+    WHILE_IN_VIEW: {
+      transform: "translateX(0)",
+      filter: "blur(0)",
+      opacity: 1,
+      scale: 1,
+    },
+  },
+  HEADER: {
+    INITIAL: {
+      transform: "translateY(-64px)",
+      filter: "blur(8px)",
+      opacity: 0,
+    },
+    WHILE_IN_VIEW: {
+      transform: "translateY(0)",
+      filter: "blur(0)",
+      opacity: 1,
+    },
+  },
+  FOOTER: {
+    INITIAL: {
+      transform: "translateY(64px)",
+      filter: "blur(8px)",
+      opacity: 0,
+    },
+    WHILE_IN_VIEW: {
+      transform: "translateY(0)",
+      filter: "blur(0)",
+      opacity: 1,
+    },
+  },
 };

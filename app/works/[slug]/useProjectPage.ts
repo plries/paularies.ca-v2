@@ -1,6 +1,5 @@
 "use client";
-import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { PROJECTS, PROJECT_SLUGS } from "./const";
 
 export const useProjectPage = () => {

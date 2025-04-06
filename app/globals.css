@@ -153,8 +153,15 @@ code {
 /* selection */
 
 ::selection {
-  background-color: var(--color-sky-600);
-  color: var(--color-sky-200);
+  background-color: var(--color-sky-200);
+  color: var(--color-sky-800);
+}
+
+.dark {
+  ::selection {
+    background-color: var(--color-grass-800);
+    color: var(--color-grass-200);
+  }
 }
 
 /* codeblocks */

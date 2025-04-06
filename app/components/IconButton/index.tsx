@@ -1,4 +1,7 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { MOTION_CONFIG } from "@/app/const";
 import { IconButtonPropTypes } from "./types";
 
 export const IconButton = ({
@@ -9,6 +12,7 @@ export const IconButton = ({
   icon,
   name,
   isLink,
+  noBlur,
   target,
 }: IconButtonPropTypes) => {
   const styles = `grid aspect-square h-10 w-10 cursor-pointer place-items-center rounded-xl border-[1px] p-2.5 transition-[scale] duration-500 ease-in-out hover:scale-95 ${additionalClasses?.button} ${
@@ -20,20 +24,43 @@ export const IconButton = ({
   }`;
 
   return (
-    <div
-      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-2xl p-1 transition-[background-color] duration-500 ${additionalClasses?.container}`}
-    >
-      {isLink ? (
-        <Link target={target} href={href ?? ""} className={styles}>
-          {icon}
-          <span className="sr-only">{name}</span>
-        </Link>
+    <>
+      {noBlur ? (
+        <div
+          className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-2xl p-1 transition-[background-color] duration-500 ${additionalClasses?.container}`}
+        >
+          {isLink ? (
+            <Link target={target} href={href ?? ""} className={styles}>
+              {icon}
+              <span className="sr-only">{name}</span>
+            </Link>
+          ) : (
+            <button onClick={onClick} className={styles}>
+              {icon}
+              <span className="sr-only">{name}</span>
+            </button>
+          )}
+        </div>
       ) : (
-        <button onClick={onClick} className={styles}>
-          {icon}
-          <span className="sr-only">{name}</span>
-        </button>
+        <motion.div
+          initial={MOTION_CONFIG.DEFAULT.INITIAL}
+          whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
+          transition={MOTION_CONFIG.TRANSITION}
+          className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-2xl p-1 transition-[background-color] duration-500 ${additionalClasses?.container}`}
+        >
+          {isLink ? (
+            <Link target={target} href={href ?? ""} className={styles}>
+              {icon}
+              <span className="sr-only">{name}</span>
+            </Link>
+          ) : (
+            <button onClick={onClick} className={styles}>
+              {icon}
+              <span className="sr-only">{name}</span>
+            </button>
+          )}
+        </motion.div>
       )}
-    </div>
+    </>
   );
 };

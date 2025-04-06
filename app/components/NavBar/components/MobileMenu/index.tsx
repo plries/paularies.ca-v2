@@ -32,6 +32,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
           container: `transition-[rotate,scale] duration-500  ${hook.isOpen ? "rotate-45 scale-90" : ""}`,
           button: "relative flex items-center justify-center",
         }}
+        noBlur
       />
       <ul
         className={`border-greyscale-100 shadow-[var(--nav-bar-light)]t bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-900 absolute left-0 mt-4 w-full rounded-3xl border-[1px] !transition-all duration-500 ease-in-out dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full" : "-top-full -translate-y-full"} `}
@@ -50,6 +51,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
                 container: "w-full",
                 button: "w-full justify-end",
               }}
+              noBlur
             >
               {TEXT}
             </Button>
