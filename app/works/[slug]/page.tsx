@@ -6,7 +6,7 @@ import {
   Process,
   Reflection,
 } from "./components";
-import { Button } from "@/app/components";
+import { Button, PageTransition } from "@/app/components";
 import { ArrowIcon } from "@/public";
 import { PROJECT_PAGE_CONST } from "./const";
 import { useProjectPage } from "./useProjectPage";
@@ -15,7 +15,7 @@ export default function ProjectPage() {
   const hook = useProjectPage();
 
   return (
-    <>
+    <PageTransition>
       <Button
         theme="tertiary"
         icon={<ArrowIcon />}
@@ -54,6 +54,6 @@ export default function ProjectPage() {
           {PROJECT_PAGE_CONST.BUTTONS.NEXT}
         </Button>
       </div>
-    </>
+    </PageTransition>
   );
 }

@@ -7,7 +7,7 @@ export const PageTransition = ({
 }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <AnimatePresence mode="wait">
-      <motion.div className="w-full max-w-7xl" key={usePathname()}>
+      <motion.div className="contents" key={usePathname()}>
         {children}
       </motion.div>
     </AnimatePresence>
