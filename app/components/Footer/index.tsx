@@ -43,12 +43,15 @@ export const Footer = () => {
             href={link.HREF}
             target={"_blank"}
             isLink
+            additionalClasses={{
+              text: "!text-greyscale-600 dark:!text-greyscale-300",
+            }}
           >
             {link.TEXT}
           </Button>
         ))}
       </div>
-      <div className="bg-greyscale-950 dark:bg-greyscale-50 col-span-full flex flex-row justify-end rounded-3xl p-4 md:p-6 lg:p-8">
+      <div className="bg-greyscale-950 dark:bg-greyscale-50 col-span-full flex flex-row justify-end rounded-xl p-4 md:p-6 lg:p-8">
         <p className="text-greyscale-50 dark:text-greyscale-950 flex flex-row items-center gap-2">
           {FOOTER_CONST.BAR.TEXT}
           <PaWordmark />
