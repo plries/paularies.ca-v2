@@ -11,7 +11,7 @@ export const ABOUT_HERO_CONST = {
       ALT: "paul aries with wa bear",
     },
   ],
-  VIDEO: "/images/about/paul-vid.mp4",
+  VIDEO: "/videos/about/paul-vid.mp4",
   EMOJI: {
     SRC: "/images/about/wavingHand.png",
     ALT: "waving hand emoji",

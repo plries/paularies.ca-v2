@@ -14,7 +14,7 @@ export const PROJECTS_CONST = {
       SLUG: "afleuries-illustrated",
     },
     {
-      DISCIPLINE: ["development"],
+      DISCIPLINE: ["development", "design"],
       IMAGE: {
         SRC: "/images/projects/guy.png",
         ALT: "guy",
@@ -23,28 +23,6 @@ export const PROJECTS_CONST = {
       DESCRIPTION: "marketing page for a fictional mobile app companion.",
       SKILLS: ["html", "js", "sass"],
       SLUG: "guy",
-    },
-    {
-      DISCIPLINE: ["design"],
-      IMAGE: {
-        SRC: "/images/projects/tempo.png",
-        ALT: "tempo",
-      },
-      TITLE: "tempo",
-      DESCRIPTION: "mobile app prototype for a dance studio booking flow.",
-      SKILLS: ["figma", "user testing", "user research"],
-      SLUG: "tempo",
-    },
-    {
-      DISCIPLINE: ["design"],
-      IMAGE: {
-        SRC: "/images/projects/odd.png",
-        ALT: "odd",
-      },
-      TITLE: "odd",
-      DESCRIPTION: "mobile app prototype for a fictional juice brand.",
-      SKILLS: ["figma", "photoshop", "illustrator"],
-      SLUG: "odd",
     },
   ],
 };

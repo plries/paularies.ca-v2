@@ -1,11 +1,5 @@
 "use client";
-import {
-  WorksHero,
-  Details,
-  Overview,
-  Process,
-  Reflection,
-} from "./components";
+import { WorksHero, Overview, Process, Reflection } from "./components";
 import { Button, PageTransition } from "@/app/components";
 import { ArrowIcon } from "@/public";
 import { PROJECT_PAGE_CONST } from "./const";
@@ -31,7 +25,6 @@ export default function ProjectPage() {
       </Button>
       <WorksHero PROJECT={hook.constants} />
       <div className="col-span-full flex flex-col gap-16 lg:col-span-10 lg:col-start-2">
-        <Details PROJECT={hook.constants} />
         <Overview PROJECT={hook.constants} />
         <Process PROJECT={hook.constants} />
         <Reflection PROJECT={hook.constants} />

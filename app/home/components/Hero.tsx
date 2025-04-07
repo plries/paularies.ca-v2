@@ -28,12 +28,12 @@ export const Hero = () => {
         {HERO_CONST.INTRO[0]}
         <span className="inline-flex flex-row justify-center gap-x-2">
           <span className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic">
-            <Dot discipline="design" />
+            <Dot discipline="development" />
             {HERO_CONST.INTRO[1]}
           </span>
           {HERO_CONST.INTRO[2]}
           <span className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic">
-            <Dot discipline="development" />
+            <Dot discipline="design" />
             {HERO_CONST.INTRO[3]}
           </span>
         </span>

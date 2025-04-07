@@ -19,7 +19,7 @@ export const Footer = () => {
         </h3>
         <p className="text-greyscale-600 dark:text-greyscale-300">
           {FOOTER_CONST.CONTACT.PARAGRAPH.map((text, index) => (
-            <span className="block first:font-bold" key={index}>
+            <span className="block" key={index}>
               {text}
             </span>
           ))}

@@ -1,5 +1,6 @@
 export * from "./Button";
 export * from "./ClientOnly";
+export * from "./CodeSnippet";
 export * from "./ContentBlock";
 export * from "./ContentHeading";
 export * from "./Dot";

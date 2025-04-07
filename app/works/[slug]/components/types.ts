@@ -12,41 +12,41 @@ export type ProjectPagePropsTypes = {
     DETAILS: [
       {
         HEADING: string;
-        DESCRIPTION: string[];
+        DESCRIPTION: React.ReactNode[];
       },
       {
         HEADING: string;
-        DESCRIPTION: string[];
+        DESCRIPTION: React.ReactNode[];
       },
     ];
     OVERVIEW: [
       {
         HEADING: string;
-        DESCRIPTION: string[];
+        DESCRIPTION: React.ReactNode[];
       },
       {
         HEADING: string;
-        DESCRIPTION: string[];
+        DESCRIPTION: React.ReactNode[];
       },
     ];
     PROCESS: [
       {
         HEADING: string;
-        DESCRIPTION: string[];
+        DESCRIPTION: React.ReactNode[];
         IMAGE?: { SRC: string; ALT: string };
         VIDEO?: string;
         CODE?: string;
       },
       {
         HEADING: string;
-        DESCRIPTION: string[];
+        DESCRIPTION: React.ReactNode[];
         IMAGE?: { SRC: string; ALT: string };
         VIDEO?: string;
         CODE?: string;
       },
       {
         HEADING: string;
-        DESCRIPTION: string[];
+        DESCRIPTION: React.ReactNode[];
         IMAGE?: { SRC: string; ALT: string };
         VIDEO?: string;
         CODE?: string;
@@ -54,7 +54,7 @@ export type ProjectPagePropsTypes = {
     ];
     REFLECTION: {
       HEADING: string;
-      DESCRIPTION: string[];
+      DESCRIPTION: React.ReactNode[];
     };
   };
 };

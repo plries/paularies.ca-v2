@@ -8,7 +8,7 @@ export const Values = () => {
       {VALUES_CONST.VALUES.slice(0, 2).map((value, index) => (
         <ContentBlock
           key={index}
-          additionalClasses="flex flex-col gap-3 col-span-full md:col-span-3 md:col-start-2 [&:nth-child(3)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(3)]:lg:col-start-7"
+          additionalClasses="col-span-full md:col-span-3 md:col-start-2 [&:nth-child(3)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(3)]:lg:col-start-7"
         >
           <ContentHeading level="h3">{value.TITLE}</ContentHeading>
           <p className="text-greyscale-600 dark:text-greyscale-300">
@@ -16,7 +16,7 @@ export const Values = () => {
           </p>
         </ContentBlock>
       ))}
-      <ContentBlock additionalClasses="flex flex-col gap-3 col-span-full md:col-start-2 md:col-span-6 lg:col-start-2 lg:col-span-10">
+      <ContentBlock additionalClasses="col-span-full md:col-start-2 md:col-span-6 lg:col-start-2 lg:col-span-10">
         <h3 className="font-instrument-serif dark:text-greyscale-200 w-full !text-xl md:!text-2xl lg:!text-[1.75rem]">
           {VALUES_CONST.VALUES[2].TITLE}
         </h3>

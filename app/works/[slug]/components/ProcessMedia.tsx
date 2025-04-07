@@ -17,7 +17,7 @@ export const ProcessMedia = ({
   const hook = useViewToggle();
 
   return (
-    <div className="flex w-full flex-col gap-3">
+    <div className="flex w-full flex-col gap-2">
       <div
         className={`bg-greyscale-100 dark:bg-greyscale-800 border-greyscale-950/10 dark:border-greyscale-50/10 relative aspect-video h-fit w-full rounded-lg border-[1px]`}
       >

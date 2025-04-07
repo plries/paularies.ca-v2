@@ -68,14 +68,12 @@ export const ProjectCard = ({ PROJECT }: ProjectCardPropTypes) => {
                 theme="tertiary"
                 name={"view project"}
                 icon={
-                  <span
-                    className={`dark:text-greyscale-50 transition-[rotate] duration-500 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.DISCIPLINE[0] === "design" ? "group-hover:border-sky-600 group-hover:text-sky-600" : "group-hover:text-grass-600 group-hover:border-grass-600"}`}
-                  >
+                  <span className="dark:text-greyscale-50 transition-[rotate] duration-500 group-hover:-rotate-45 hover:bg-transparent">
                     <ArrowIcon />
                   </span>
                 }
                 additionalClasses={{
-                  button: `dark:border-greyscale-50 ${PROJECT.DISCIPLINE[0] === "design" ? "group-hover:border-sky-600" : "group-hover:border-grass-600"}`,
+                  button: "dark:border-greyscale-50",
                 }}
               />
             </div>

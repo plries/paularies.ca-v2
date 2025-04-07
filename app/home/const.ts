@@ -8,9 +8,9 @@ export const HERO_CONST = {
   },
   INTRO: [
     "is a creative, user-centered",
-    "designer",
-    "and",
     "developer",
+    "and",
+    "designer",
     "based in",
     "vancouver, canada.",
   ],
@@ -25,8 +25,7 @@ export const INTRO_CONST = {
     "has always driven me to merge the two creatively.",
   ],
   PARAGRAPH_TWO: [
-    "that's why i love the world of front-end development and ux/ui design—",
-    "i can create innovative solutions and help users navigate the digital world in a satisfying and refreshing way.",
+    "that's why i love the world of front-end development—i can create innovative solutions and help users navigate the digital world in a satisfying and refreshing way.",
   ],
   BUTTON: {
     HREF: "/about",

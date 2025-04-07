@@ -8,7 +8,7 @@ export const ContentHeading = ({
   const Tag = level || "h1";
   return (
     <Tag
-      className={`font-instrument-serif dark:text-greyscale-200 w-full leading-none ${
+      className={`font-instrument-serif text-greyscale-950 dark:text-greyscale-50 w-full leading-none ${
         additionalClasses
           ? additionalClasses
           : "!text-2xl md:!text-[1.75rem] lg:!text-[2rem]"

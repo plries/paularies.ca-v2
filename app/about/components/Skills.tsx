@@ -9,7 +9,7 @@ export const Skills = () => {
         <ContentBlock
           key={index}
           additionalClasses={
-            "flex flex-col gap-3 col-span-full md:col-span-3 md:col-start-2 [&:nth-child(3)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(3)]:lg:col-start-7"
+            "col-span-full md:col-span-3 md:col-start-2 [&:nth-child(3)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(3)]:lg:col-start-7"
           }
         >
           <div className="flex flex-row items-center gap-1">

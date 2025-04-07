@@ -8,7 +8,7 @@ export const Experience = () => {
       {EXPERIENCE_CONST.ROLES.map((role, index) => (
         <ContentBlock
           key={index}
-          additionalClasses="flex flex-col gap-3 col-span-full md:col-start-2 md:col-span-6 lg:col-start-2 lg:col-span-10"
+          additionalClasses="col-span-full md:col-start-2 md:col-span-6 lg:col-start-2 lg:col-span-10"
         >
           <div className="flex flex-col md:flex-row md:items-start md:justify-between">
             <ContentHeading level="h3">{role.TITLE}</ContentHeading>

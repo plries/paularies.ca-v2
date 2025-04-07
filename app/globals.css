@@ -109,7 +109,7 @@ body {
   font-family: var(--font-hanken-grotesk);
   color: var(--color-greyscale-950);
   letter-spacing: calc(-0.04em);
-  line-height: calc(1.3em);
+  line-height: calc(1.6em);
 }
 
 p,
@@ -150,6 +150,16 @@ code {
   }
 }
 
+strong {
+  color: var(--color-greyscale-800);
+}
+
+.dark {
+  strong {
+    color: var(--color-greyscale-200);
+  }
+}
+
 /* selection */
 
 ::selection {
@@ -165,15 +175,6 @@ code {
 }
 
 /* codeblocks */
-
-.code-snippet {
-  background-color: var(--color-greyscale-100);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  .dark {
-    background-color: var(--color-greyscale-900);
-  }
-}
 
 .hljs {
   display: block;
@@ -243,10 +244,6 @@ code {
 }
 
 .dark {
-  .code-snippet {
-    background-color: var(--color-greyscale-900);
-  }
-
   .hljs-keyword,
   .hljs-selector-tag,
   .hljs-tag {
