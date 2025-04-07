@@ -4,7 +4,7 @@ import { MOTION_CONFIG } from "@/app/const";
 
 export const ActionBar = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="pointer-events-none fixed bottom-0 left-0 z-50 grid h-fit w-screen place-items-center">
+    <div className="pointer-events-none fixed bottom-0 left-0 z-50 flex h-fit w-screen items-end justify-center">
       <motion.div
         initial={MOTION_CONFIG.ACTION_BAR.INITIAL}
         whileInView={MOTION_CONFIG.ACTION_BAR.WHILE_IN_VIEW}
