@@ -1,4 +1,10 @@
-export const HEADING_CONST = "about";
+export const ABOUT_CONST = {
+  HEADING: "about",
+  BUTTON: {
+    HREF: "/PaulAries-Resume.pdf",
+    TEXT: "resume",
+  },
+};
 
 export const ABOUT_HERO_CONST = {
   IMAGES: [

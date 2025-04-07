@@ -52,7 +52,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
             </h4>
           </div>
         </div>
-        <p className="text-greyscale-600 dark:text-greyscale-300 flex flex-col gap-2">
+        <p className="text-greyscale-600 dark:text-greyscale-300 flex flex-col gap-4">
           {testimonial.QUOTE.map((quote, index) => (
             <span className="block" key={index}>
               {quote}

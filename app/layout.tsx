@@ -56,7 +56,7 @@ export default function RootLayout({
           <ClientOnly>
             <NavBar />
             <PageContent>{children}</PageContent>
-            <div className="mask-gradient pointer-events-none fixed bottom-0 left-0 z-50 h-16 w-screen backdrop-blur-2xl" />
+            <div className="mask-gradient pointer-events-none fixed bottom-0 left-0 z-40 h-16 w-screen backdrop-blur-2xl" />
             <Footer />
           </ClientOnly>
         </body>

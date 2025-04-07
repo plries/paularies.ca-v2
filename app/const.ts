@@ -71,4 +71,16 @@ export const MOTION_CONFIG = {
       opacity: 1,
     },
   },
+  ACTION_BAR: {
+    INITIAL: {
+      transform: "translateY(64px)",
+      filter: "blur(8px)",
+      opacity: 0,
+    },
+    WHILE_IN_VIEW: {
+      transform: "translateY(0)",
+      filter: "blur(0)",
+      opacity: 1,
+    },
+  },
 };

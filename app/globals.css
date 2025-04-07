@@ -50,6 +50,16 @@
   --button-dark:
     0px 2px 2px 0px rgba(255, 255, 255, 0.05) inset,
     0px 1px 1px 0px rgba(26, 26, 26, 0.25);
+  --button-gradient-dark:
+    2px -2px 4px 0px rgba(119, 144, 185, 0.5) inset,
+    -2px -2px 4px 0px rgba(113, 138, 53, 0.5) inset,
+    0px 1px 1px 0px rgba(26, 26, 26, 0.25),
+    0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset;
+  --button-gradient-light:
+    2px -2px 4px 0px rgba(119, 144, 185, 0.5) inset,
+    -2px -2px 4px 0px rgba(113, 138, 53, 0.5) inset,
+    0px 2px 2px 0px rgba(26, 26, 26, 0.25) inset,
+    0px 1px 1px 0px rgba(26, 26, 26, 0.25);
   --inset-light:
     0px 1px 1px 0px rgba(26, 26, 26, 0.25) inset, 0px -1px 1px 0px #fff inset;
   --inset-dark:

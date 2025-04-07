@@ -65,6 +65,10 @@ export const NavBar = () => {
               href={NAVBAR_CONST.CONTACT.HREF}
               icon={<EmailIcon />}
               theme="primary"
+              additionalClasses={{
+                button:
+                  "!shadow-[var(--button-gradient-dark)] dark:!shadow-[var(--button-gradient-light)]",
+              }}
               name={NAVBAR_CONST.CONTACT.TEXT}
               isLink
               noBlur

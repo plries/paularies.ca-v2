@@ -1,15 +1,32 @@
-import { Heading } from "../components";
+import { ActionBar, Heading, Button } from "../components";
 import { AboutHero, Experience, Skills, Values } from "./components";
-import { HEADING_CONST } from "./const";
+import { ArrowIcon } from "@/public";
+import { ABOUT_CONST } from "./const";
 
 export default function About() {
   return (
     <>
-      <Heading level="h1">{HEADING_CONST}</Heading>
+      <Heading level="h1">{ABOUT_CONST.HEADING}</Heading>
       <AboutHero />
       <Skills />
       <Values />
       <Experience />
+      <ActionBar>
+        <Button
+          theme="primary"
+          href={ABOUT_CONST.BUTTON.HREF}
+          isLink
+          noBlur
+          target="_blank"
+          icon={<ArrowIcon />}
+          additionalClasses={{
+            icon: "-rotate-45 transition-[rotate] duration-500 ease-in-out group-hover:rotate-0",
+          }}
+          iconRight
+        >
+          {ABOUT_CONST.BUTTON.TEXT}
+        </Button>
+      </ActionBar>
     </>
   );
 }

@@ -1,3 +1,4 @@
+export * from "./ActionBar";
 export * from "./Button";
 export * from "./ClientOnly";
 export * from "./CodeSnippet";

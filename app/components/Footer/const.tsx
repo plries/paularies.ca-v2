@@ -2,7 +2,7 @@ export const FOOTER_CONST = {
   CONTACT: {
     HEADING: "let's talk!",
     PARAGRAPH: [
-      <strong>like my work? have questions?</strong>,
+      <strong key="work">like my work? have questions?</strong>,
       "feel free to reach out, i'd love to collaborate!",
       "just say...",
     ],
