@@ -30,7 +30,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
         name={`${hook.isOpen ? "close testimonial" : "expand testimonial"}`}
       />
       <div
-        className={`after:to-greyscale-100 dark:after:to-greyscale-900 flex flex-col gap-4 transition-opacity duration-300 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-300 ${hook.isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
+        className={`after:to-greyscale-100 dark:after:to-greyscale-900 flex flex-col gap-4 mb-10 transition-opacity duration-300 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-300 ${hook.isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
       >
         <div className="flex flex-row items-center gap-2">
           <Image
@@ -38,7 +38,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
             alt={testimonial.IMAGE.ALT}
             width={800}
             height={800}
-            className="aspect-square h-12 w-12 rounded-full lg:h-14 lg:w-14"
+            className="border-greyscale-950/10 dark:border-greyscale-50/10 aspect-square h-12 w-12 rounded-full border-[1px] lg:h-14 lg:w-14"
           />
           <div className="flex flex-col">
             <ContentHeading

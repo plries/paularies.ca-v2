@@ -11,7 +11,7 @@ export default function Works() {
   return (
     <>
       <Heading level="h1">{WORKS_CONST.HEADING}</Heading>
-      {!toggle.isChecked && (
+      {(!toggle.isChecked || windowSize.isMobile) && (
         <>
           {PROJECTS_CONST.PROJECTS.map((PROJECT) => (
             <ProjectCard

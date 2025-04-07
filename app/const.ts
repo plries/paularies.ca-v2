@@ -33,7 +33,7 @@ export const PROJECTS_CONST = {
       TITLE: "coming soon",
       DESCRIPTION: "stay tuned!",
       SKILLS: ["#$&", "0/@", "%?!"],
-      SLUG: "guy",
+      SLUG: "",
     },
     {
       DISCIPLINE: ["development", "design"],
@@ -44,7 +44,7 @@ export const PROJECTS_CONST = {
       TITLE: "work in progress",
       DESCRIPTION: "let me cook...",
       SKILLS: ["#$&", "0/@", "%?!"],
-      SLUG: "guy",
+      SLUG: "",
     },
   ],
 };

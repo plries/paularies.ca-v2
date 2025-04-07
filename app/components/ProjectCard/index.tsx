@@ -27,7 +27,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
           className="contents"
           href={`/works/${encodeURIComponent(PROJECT.SLUG)}`}
         >
-          <div className="dark:bg-greyscale-900 bg-greyscale-100 relative aspect-video w-full overflow-hidden rounded-lg">
+          <div className="dark:bg-greyscale-900 bg-greyscale-100 grid place-items-center relative aspect-video w-full overflow-hidden rounded-lg">
             {PROJECT.IMAGE.SRC && (
               <Image
                 src={PROJECT.IMAGE.SRC}
@@ -37,6 +37,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                 className={`w-full transition-[translate,scale] duration-700 ${PROJECT.DISCIPLINE[0] === "development" ? "scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
               />
             )}
+            <p className="text-greyscale-600 dark:text-greyscale-300">...</p>
           </div>
           <div className="flex w-full flex-col justify-between gap-4">
             <div className="flex flex-col gap-2">
@@ -70,7 +71,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                 theme="tertiary"
                 name={"view project"}
                 icon={
-                  <span className="dark:text-greyscale-50 transition-[rotate] duration-500 group-hover:-rotate-45 hover:bg-transparent">
+                  <span className={`dark:text-greyscale-50 transition-[rotate] duration-500 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.SLUG == "" ? "group-hover:rotate-360" : "" }`}>
                     <ArrowIcon />
                   </span>
                 }

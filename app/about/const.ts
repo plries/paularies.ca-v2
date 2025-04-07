@@ -77,7 +77,7 @@ export const VALUES_CONST = {
     {
       TITLE: "collaboration",
       PARAGRAPH:
-        "with experience in dancing in multiple competitive groups and working apart of two food-service teams, i value working with others and collaborating. i recognize the importance of communication and responsibility when working towards a shared goal.",
+        "having dancing in multiple competitive groups and working apart of two food-service teams, i value working with others and collaborating. i recognize the importance of communication and responsibility when working towards a shared goal.",
     },
     {
       TITLE: "humility",

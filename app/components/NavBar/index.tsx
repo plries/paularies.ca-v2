@@ -34,11 +34,15 @@ export const NavBar = () => {
           <span className="motion-safe:animate-[spin_12s_linear_infinite]">
             <PaStar />
           </span>
-          {!windowSize.isMobile && <PaWordmark />}
+          {!windowSize.isMobile && (
+            <span className="hidden md:inline-block">
+              <PaWordmark />
+            </span>
+          )}
           <span className="sr-only">{NAVBAR_CONST.LOGO.HOME}</span>
         </Button>
         {!windowSize.isMobile && (
-          <div className="flex h-full flex-row items-center gap-1">
+          <div className="hidden h-full flex-row items-center gap-1 md:flex">
             <ul className="contents">
               {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, TEXT }) => (
                 <li key={TEXT}>
