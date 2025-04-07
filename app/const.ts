@@ -14,7 +14,7 @@ export const PROJECTS_CONST = {
       SLUG: "afleuries-illustrated",
     },
     {
-      DISCIPLINE: ["development", "design"],
+      DISCIPLINE: ["development"],
       IMAGE: {
         SRC: "/images/projects/guy.png",
         ALT: "guy",
@@ -22,6 +22,28 @@ export const PROJECTS_CONST = {
       TITLE: "guy",
       DESCRIPTION: "marketing page for a fictional mobile app companion.",
       SKILLS: ["html", "js", "sass"],
+      SLUG: "guy",
+    },
+    {
+      DISCIPLINE: ["development", "design"],
+      IMAGE: {
+        SRC: "",
+        ALT: "",
+      },
+      TITLE: "coming soon",
+      DESCRIPTION: "stay tuned!",
+      SKILLS: ["#$&", "0/@", "%?!"],
+      SLUG: "guy",
+    },
+    {
+      DISCIPLINE: ["development", "design"],
+      IMAGE: {
+        SRC: "",
+        ALT: "",
+      },
+      TITLE: "work in progress",
+      DESCRIPTION: "let me cook...",
+      SKILLS: ["#$&", "0/@", "%?!"],
       SLUG: "guy",
     },
   ],

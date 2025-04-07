@@ -14,7 +14,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
       initial={MOTION_CONFIG.PROJECT_CARD.INITIAL}
       whileInView={MOTION_CONFIG.PROJECT_CARD.WHILE_IN_VIEW}
       transition={MOTION_CONFIG.TRANSITION}
-      className={`hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1 transition-[background-color] duration-500 ${isChecked ? "md:col-span-4 lg:col-span-6" : ""} `}
+      className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1 transition-[background-color] duration-500"
     >
       <article
         className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 shadow-[var(--card-light)] transition-[scale] duration-500 group-hover:scale-[99.5%] md:flex-row dark:shadow-[var(--card-dark)] ${
@@ -28,13 +28,15 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
           href={`/works/${encodeURIComponent(PROJECT.SLUG)}`}
         >
           <div className="dark:bg-greyscale-900 bg-greyscale-100 relative aspect-video w-full overflow-hidden rounded-lg">
-            <Image
-              src={PROJECT.IMAGE.SRC}
-              alt={PROJECT.IMAGE.ALT}
-              height={1080}
-              width={1920}
-              className={`w-full transition-[translate,scale] duration-700 ${PROJECT.DISCIPLINE[0] === "development" ? "scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
-            />
+            {PROJECT.IMAGE.SRC && (
+              <Image
+                src={PROJECT.IMAGE.SRC}
+                alt={PROJECT.IMAGE.ALT}
+                height={1080}
+                width={1920}
+                className={`w-full transition-[translate,scale] duration-700 ${PROJECT.DISCIPLINE[0] === "development" ? "scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
+              />
+            )}
           </div>
           <div className="flex w-full flex-col justify-between gap-4">
             <div className="flex flex-col gap-2">

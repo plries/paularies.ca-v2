@@ -11,13 +11,43 @@ export default function Works() {
   return (
     <>
       <Heading level="h1">{WORKS_CONST.HEADING}</Heading>
-      {PROJECTS_CONST.PROJECTS.map((PROJECT) => (
-        <ProjectCard
-          key={PROJECT.TITLE}
-          PROJECT={PROJECT}
-          isChecked={toggle.isChecked}
-        />
-      ))}
+      {!toggle.isChecked && (
+        <>
+          {PROJECTS_CONST.PROJECTS.map((PROJECT) => (
+            <ProjectCard
+              key={PROJECT.TITLE}
+              PROJECT={PROJECT}
+              isChecked={toggle.isChecked}
+            />
+          ))}
+        </>
+      )}
+      {toggle.isChecked && (
+        <>
+          <div className="flex flex-col gap-4 md:col-span-4 lg:col-span-6">
+            {PROJECTS_CONST.PROJECTS.filter((_, index) => index % 2 === 0).map(
+              (PROJECT) => (
+                <ProjectCard
+                  key={PROJECT.TITLE}
+                  PROJECT={PROJECT}
+                  isChecked={toggle.isChecked}
+                />
+              ),
+            )}
+          </div>
+          <div className="flex flex-col gap-4 md:col-span-4 lg:col-span-6">
+            {PROJECTS_CONST.PROJECTS.filter((_, index) => index % 2 !== 0).map(
+              (PROJECT) => (
+                <ProjectCard
+                  key={PROJECT.TITLE}
+                  PROJECT={PROJECT}
+                  isChecked={toggle.isChecked}
+                />
+              ),
+            )}
+          </div>
+        </>
+      )}
       {!windowSize.isMobile && (
         <ActionBar>
           <ToggleInput
