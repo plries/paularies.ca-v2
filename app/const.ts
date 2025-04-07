@@ -57,7 +57,7 @@ export const MOTION_CONFIG = {
   },
   PROJECT_CARD: {
     INITIAL: {
-      transform: "translateX(24px)",
+      transform: "translateX(12px)",
       filter: "blur(8px)",
       opacity: 0,
       scale: 0.8,

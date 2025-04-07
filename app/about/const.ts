@@ -29,7 +29,7 @@ export const ABOUT_HERO_CONST = {
     "unique digital experiences.",
   ],
   PARAGRAPH:
-    "besides my computer, you can find me exploring the outdoors or dancing at a concert. surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
+    "when i'm not at my desk, you can find me exploring the outdoors or dancing at a concert. surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
 };
 
 export const SKILLS_CONST = {
@@ -77,12 +77,12 @@ export const VALUES_CONST = {
     {
       TITLE: "collaboration",
       PARAGRAPH:
-        "having dancing in multiple competitive groups and working apart of two food-service teams, i value working with others and collaborating. i recognize the importance of communication and responsibility when working towards a shared goal.",
+        "having danced in multiple competitive groups and working apart of two food-service teams, i value working with others and collaborating. i recognize the importance of communication and responsibility when working towards a shared goal.",
     },
     {
       TITLE: "humility",
       PARAGRAPH:
-        "i always approach every project with humility, recognizing that the best ideas can come from anywhere. by valuing the contributions and suggestions of others, i am able to ensure that my work is always at its best.",
+        "i always approach every project with humility, recognizing that the best ideas can come from anywhere. by valuing the contributions and suggestions of others, i'm able to ensure that my work is always at its best.",
     },
   ],
 };
