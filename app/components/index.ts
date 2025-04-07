@@ -14,4 +14,5 @@ export * from "./PageContent";
 export * from "./PageTransition";
 export * from "./ProjectCard";
 export * from "./TestimonialCard";
+export * from "./ToggleInput";
 export * from "./ViewToggle";

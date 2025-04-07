@@ -10,7 +10,7 @@ export const ActionBar = ({ children }: { children: React.ReactNode }) => {
           initial={MOTION_CONFIG.ACTION_BAR.INITIAL}
           whileInView={MOTION_CONFIG.ACTION_BAR.WHILE_IN_VIEW}
           transition={MOTION_CONFIG.TRANSITION}
-          className="dark:bg-greyscale-950/50 bg-greyscale-50/50 border-greyscale-100 dark:border-greyscale-800 pointer-events-auto absolute bottom-0 m-3 rounded-2xl border-[1px] px-3 py-1 shadow-[var(--nav-bar-light)] backdrop-blur-md md:m-6 dark:shadow-[var(--nav-bar-dark)]"
+          className="dark:bg-greyscale-950/50 bg-greyscale-50/50 border-greyscale-100 dark:border-greyscale-800 pointer-events-auto absolute bottom-0 m-3 rounded-2xl border-[1px] px-3 py-1 shadow-[var(--nav-bar-light)] backdrop-blur-sm md:m-6 dark:shadow-[var(--nav-bar-dark)]"
         >
           {children}
         </motion.div>

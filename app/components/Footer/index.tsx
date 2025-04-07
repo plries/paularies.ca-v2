@@ -27,6 +27,10 @@ export const Footer = () => {
         <Button
           href={FOOTER_CONST.CONTACT.BUTTON.HREF}
           theme="secondary"
+          additionalClasses={{
+            button:
+              "!shadow-[var(--button-gradient-light)] dark:!shadow-[var(--button-gradient-dark)]",
+          }}
           isLink
         >
           {FOOTER_CONST.CONTACT.BUTTON.TEXT}

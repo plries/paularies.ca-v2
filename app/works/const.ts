@@ -1,3 +1,4 @@
 export const WORKS_CONST = {
-    HEADING: "works"
+    HEADING: "works",
+    TOGGLE: "grid view"
 }

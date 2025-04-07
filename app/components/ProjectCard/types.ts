@@ -10,4 +10,5 @@ export type ProjectCardPropTypes = {
     SKILLS: string[];
     SLUG: string;
   };
+  isChecked: boolean;
 };
