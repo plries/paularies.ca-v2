@@ -30,9 +30,9 @@ export const ABOUT_HERO_CONST = {
   ],
   PARAGRAPH: [
     "when i'm not at my desk, you can find me ",
-    <i>exploring the outdoors</i>,
+    <i key="outdoors">exploring the outdoors</i>,
     " or ",
-    <i>dancing at a concert</i>,
+    <i key="dancing">dancing at a concert</i>,
     ". surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
   ],
 };
