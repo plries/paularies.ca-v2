@@ -1,3 +1,4 @@
+import React from "react";
 import { Heading, ContentBlock, ContentHeading } from "@/app/components";
 import { VALUES_CONST } from "../const";
 
@@ -12,7 +13,9 @@ export const Values = () => {
         >
           <ContentHeading level="h3">{value.TITLE}</ContentHeading>
           <p className="text-greyscale-600 dark:text-greyscale-300">
-            {value.PARAGRAPH}
+            {value.PARAGRAPH.map((text, index) => (
+              <React.Fragment key={index}>{text}</React.Fragment>
+            ))}
           </p>
         </ContentBlock>
       ))}

@@ -165,6 +165,7 @@ code {
 
 strong {
   color: var(--color-greyscale-800);
+  font-weight: 500;
 }
 
 .dark {

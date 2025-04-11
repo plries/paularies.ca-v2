@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MOTION_CONFIG } from "@/app/const";
@@ -60,7 +61,11 @@ export const AboutHero = () => {
         transition={MOTION_CONFIG.TRANSITION}
         className="text-greyscale-600 dark:text-greyscale-300 col-span-full mt-16 text-center md:col-span-6 md:col-start-2 lg:col-start-4"
       >
-        {ABOUT_HERO_CONST.PARAGRAPH}
+        {ABOUT_HERO_CONST.PARAGRAPH.map((text, index) => (
+          <React.Fragment key={index}>
+            {text}
+          </React.Fragment>
+        ))}
       </motion.p>
     </section>
   );

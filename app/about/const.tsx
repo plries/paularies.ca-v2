@@ -28,8 +28,13 @@ export const ABOUT_HERO_CONST = {
     "to create ",
     "unique digital experiences.",
   ],
-  PARAGRAPH:
-    "when i'm not at my desk, you can find me exploring the outdoors or dancing at a concert. surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
+  PARAGRAPH: [
+    "when i'm not at my desk, you can find me ",
+    <i>exploring the outdoors</i>,
+    " or ",
+    <i>dancing at a concert</i>,
+    ". surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
+  ],
 };
 
 export const SKILLS_CONST = {
@@ -71,18 +76,27 @@ export const VALUES_CONST = {
   VALUES: [
     {
       TITLE: "adaptability",
-      PARAGRAPH:
-        "i embrace change and enjoy learning new things within the industry. my flexibility enables me to remain enthusiastic when learning ways to tackle new challenges.",
+      PARAGRAPH: [
+        "i embrace change and ",
+        <strong key="learning">enjoy learning new things</strong>,
+        " within the industry. my flexibility enables me to remain enthusiastic when learning ways to tackle new challenges.",
+      ],
     },
     {
       TITLE: "collaboration",
-      PARAGRAPH:
-        "having danced in multiple competitive groups and working apart of two food-service teams, i value working with others and collaborating. i recognize the importance of communication and responsibility when working towards a shared goal.",
+      PARAGRAPH: [
+        "having danced in multiple competitive groups and working apart of two food-service teams, i value working with others and collaborating. i recognize the ",
+        <strong key="responsibility">importance of communication and responsibility</strong>,
+        " when working towards a shared goal.",
+      ],
     },
     {
       TITLE: "humility",
-      PARAGRAPH:
-        "i always approach every project with humility, recognizing that the best ideas can come from anywhere. by valuing the contributions and suggestions of others, i'm able to ensure that my work is always at its best.",
+      PARAGRAPH: [
+        "i always approach every project with humility, recognizing that the ",
+        <strong key="best">best ideas can come from anywhere</strong>,
+        ". by valuing the contributions and suggestions of others, i'm able to ensure that my work is always at its best.",
+      ],
     },
   ],
 };
