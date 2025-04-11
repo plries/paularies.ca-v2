@@ -146,7 +146,7 @@ code {
   }
 
   code {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -159,7 +159,7 @@ code {
   }
 
   code {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 
@@ -169,6 +169,17 @@ strong {
 
 .dark {
   strong {
+    color: var(--color-greyscale-200);
+  }
+}
+
+i {
+  font-family: var(--font-serif);
+  color: var(--color-greyscale-800);
+}
+
+.dark {
+  i {
     color: var(--color-greyscale-200);
   }
 }

@@ -13,5 +13,6 @@ export type ButtonLinkPropTypes = {
   iconRight?: boolean;
   isLink?: boolean;
   noBlur?: boolean;
+  noHover?: boolean;
   target?: string;
 };

@@ -10,5 +10,6 @@ export type IconButtonPropTypes = {
   icon: React.ReactNode;
   isLink?: boolean;
   noBlur?: boolean;
+  noHover?: boolean;
   target?: string;
 };

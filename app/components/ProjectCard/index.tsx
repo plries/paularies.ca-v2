@@ -18,7 +18,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
     >
       <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 absolute -inset-1 rounded-2xl duration-500" />
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-2 rounded-xl border-[1px] p-2 shadow-[var(--card-light)] md:flex-row dark:shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-2 rounded-xl border p-2 shadow-[var(--card-light)] md:flex-row dark:shadow-[var(--card-dark)] ${
           PROJECT.DISCIPLINE[0] === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
@@ -82,6 +82,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                   button: "dark:border-greyscale-50",
                 }}
                 noBlur
+                noHover
               />
             </div>
           </div>

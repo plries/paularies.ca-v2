@@ -20,7 +20,7 @@ export const NavBar = () => {
       initial={MOTION_CONFIG.HEADER.INITIAL}
       whileInView={MOTION_CONFIG.HEADER.WHILE_IN_VIEW}
       transition={MOTION_CONFIG.TRANSITION}
-      className="border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border-[1px] p-3 shadow-[var(--nav-bar-light)] backdrop-blur-sm md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)]"
+      className="border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border p-3 shadow-[var(--nav-bar-light)] backdrop-blur-sm md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)]"
     >
       <nav className="contents">
         <Button

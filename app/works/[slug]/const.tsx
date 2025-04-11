@@ -32,52 +32,244 @@ export const PROJECTS: ProjectPagePropsTypes = {
         ALT: "afleuries illustrated",
       },
     },
-    DETAILS: [
+    OVERVIEW: [
+      {
+        HEADING: "problem",
+        DESCRIPTION: [
+          "capturing a personality and showcasing a service in just two pages isn’t easy.",
+        ],
+      },
+      {
+        HEADING: "solution",
+        DESCRIPTION: [
+          "a mix of hand-drawn doodles, animations, simple navigation, and real photos from live events helps tell the story and communicate the service clearly.",
+        ],
+      },
       {
         HEADING: "timeframe",
-        DESCRIPTION: ["jan 2025 - mar 2025"],
+        DESCRIPTION: ["feb 13 - mar, 2025"],
       },
       {
         HEADING: "contributions",
         DESCRIPTION: ["content - abby aries"],
       },
     ],
-    OVERVIEW: [
-      {
-        HEADING: "problem",
-        DESCRIPTION: [],
-      },
-      {
-        HEADING: "solution",
-        DESCRIPTION: [],
-      },
-    ],
     PROCESS: [
       {
-        HEADING: "",
-        DESCRIPTION: [],
-        CODE: `
-        .
-        `,
+        HEADING: "dynamic services toggle",
+        DESCRIPTION: [
+          "to help users explore both services, i added a toggle that lets them switch between ",
+          <i key="guest">guest portraits</i>,
+          " and ",
+          <i key="bride">bride & groom portraits</i>,
+          ". each option updates the image and step-by-step breakdown instantly, making it easy to understand what’s included. smooth animations defined from ",
+          <strong key="framer-motion">framer motion</strong>,
+          " keep the transition feeling polished and responsive, while the copy defined in a ",
+          <CodeSnippet key="const">const.js</CodeSnippet>,
+          "file ensures the codebase clean and easy to maintain.",
+        ],
+        VIDEO: "/videos/projects/afleuries/afleuries-toggle.mp4",
+        CODE: `<motion.div
+  initial={MOTION_CONFIG.INITIAL}
+  whileInView={MOTION_CONFIG.WHILE_IN_VIEW}
+  transition={MOTION_CONFIG.TRANSITION}
+  className="col-span-full aspect-video lg:col-span-10 lg:col-start-2"
+>
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={hook.isGuestPortrait ? "guest-portrait" : "bride-groom"}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="aspect-video lg:max-w-5xl"
+    >
+      <Image
+        src={
+          hook.isGuestPortrait
+            ? AFLEURIES_ILLUSTRATED.PORTRAITS.IMAGES.GUEST_PORTRAIT.SRC
+            : AFLEURIES_ILLUSTRATED.PORTRAITS.IMAGES.BRIDE_GROOM.SRC
+        }
+        width={1920}
+        height={1080}
+        alt={
+          hook.isGuestPortrait
+            ? AFLEURIES_ILLUSTRATED.PORTRAITS.IMAGES.GUEST_PORTRAIT.ALT
+            : AFLEURIES_ILLUSTRATED.PORTRAITS.IMAGES.BRIDE_GROOM.ALT
+        }
+        className="border-tan-60 h-full w-full rounded-2xl border object-cover shadow-md"
+      />
+    </motion.div>
+  </AnimatePresence>
+</motion.div>`,
       },
       {
-        HEADING: "",
-        DESCRIPTION: [],
-        CODE: `
-        .
-        `,
+        HEADING: "thoughtful promotion",
+        DESCRIPTION: [
+          "to promote ",
+          <i key="limited">afleuries illustrated’s limited-time offer</i>,
+          " a modal automatically appears on the homepage—but only for first-time visitors and only within a specific date range. defines in a seperate",
+          <CodeSnippet key="usemodal">useModal.ts</CodeSnippet>,
+          " file, it uses ",
+          <strong key="localstorage">localStorage</strong>,
+          " to remember if someone has already seen it, ensuring it doesn't become repetitive, and the delayed appearance and fade-in animation makes it feel smooth and non-intrusive.",
+        ],
+        VIDEO: "/videos/projects/afleuries/afleuries-modal.mp4",
+        CODE: `// hook to manage the modal state and display it if the current date is within the specified range
+export const useModal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // ref to access the modal
+  const modalRef = useRef<HTMLDialogElement>(null);
+  // get the current pathname
+  const pathname = usePathname();
+
+  // defines the start and end dates of promotion
+  const startDate = "03/23/2025";
+  const endDate = "03/29/2025";
+
+  // toggle the modal states
+  const toggleModal = (value: boolean) => {
+    if (value === true) {
+      modalRef.current?.showModal();
+      setIsOpen(true);
+    } else {
+      modalRef.current?.close();
+      setIsOpen(false);
+    }
+  };
+
+  // checks if the current date is within the specified range
+  const checkDate = () => {
+    const now = new Date();
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    return now >= start && now <= end;
+  };
+
+  useEffect(() => {
+    // if the user is on the homepage and has not seen the modal before
+    // and the current date is within the specified range
+    if (
+      pathname === "/" &&
+      localStorage.getItem("seen") !== "true" &&
+      checkDate()
+    ) {
+      // show the modal after 5 seconds
+      setTimeout(() => {
+        toggleModal(true);
+      }, 5000);
+      // mark the user as having seen the modal
+      if (!localStorage.getItem("seen")) {
+        localStorage.setItem("seen", "true");
+      }
+    }
+  }, [pathname]);
+
+  // returns the state and function to activate and close the modal
+  return {
+    modalRef,
+    toggleModal,
+    isOpen,
+  };
+};`,
       },
       {
-        HEADING: "",
-        DESCRIPTION: [],
-        CODE: `
-        .
-        `,
+        HEADING: "input micro-interactions",
+        DESCRIPTION: [
+          "each input field features a ",
+          <i key="microinteraction">smooth micro-interaction</i>,
+          " where the label starts inside the input, acting as a placeholder. once the user clicks or starts typing, ",
+          <strong key="tailwind">tailwind</strong>,
+          " classes are applied to the label, animating it while staying visible as a guide. this subtle movement keeps the form clean and intuitive while ensuring clarity at every step.",
+        ],
+        VIDEO: "/videos/projects/afleuries/afleuries-input.mp4",
+        CODE: `export const Input = ({
+  label,
+  name,
+  description,
+  htmlFor,
+}: InputPropTypes) => {
+  // refs to access the input and label, and the label's background
+  const inputRef = useRef<HTMLInputElement>(null);
+  const labelRef = useRef<HTMLLabelElement>(null);
+  const labelBgRef = useRef<HTMLDivElement>(null);
+
+  const moveLabel = (forceMove = false) => {
+    // if the refs are not defined, return
+    if (!inputRef.current || !labelRef.current || !labelBgRef.current) return;
+
+    // classes to apply to the label
+    const labelClasses = ["!translate-y-0", "!text-tan-100", "!text-sm"];
+    const labelBgClasses = ["!bg-tan-30"];
+
+    // if the input is not empty, add the classes
+    if (forceMove || inputRef.current.value !== "") {
+      labelRef.current.classList.add(...labelClasses);
+      labelBgRef.current.classList.add(...labelBgClasses);
+      } else {
+      // if the input is empty, remove the classes
+      labelRef.current.classList.remove(...labelClasses);
+      labelBgRef.current.classList.remove(...labelBgClasses);
+    }
+  };
+
+  return (
+    <motion.div
+      initial={MOTION_CONFIG.INITIAL}
+      whileInView={MOTION_CONFIG.WHILE_IN_VIEW}
+      transition={MOTION_CONFIG.TRANSITION}
+      className="flex w-full flex-col gap-2"
+    >
+      <div className="relative">
+        <div
+          ref={labelBgRef}
+          className="absolute -top-3 z-10 mx-2 h-fit w-fit bg-transparent px-2 transition-all duration-300 ease-in-out"
+        >
+          <label
+            ref={labelRef}
+            htmlFor={htmlFor}
+            className="pointer-events-none z-10 inline-block origin-left translate-y-7 text-base text-tan-90 transition-all duration-300 ease-in-out md:translate-y-[1.9rem]"
+          >
+            {label}
+          </label>
+        </div>
+        <input
+          ref={inputRef}
+          id={htmlFor}
+          type={
+            htmlFor === "email"
+              ? "email"
+              : htmlFor === "datetime-local"
+                ? "datetime-local"
+                : "text"
+          }
+          name={name}
+          required
+          className="border-tan-60 h-14 w-full appearance-none rounded-lg border bg-tan-30 p-4 text-base font-light transition-all duration-300 ease-in-out focus:shadow-md focus:outline-blue-10 md:h-[60px] md:text-lg"
+          autoComplete="on"
+          onFocus={() => moveLabel(true)}
+          onBlur={() => moveLabel()}
+        />
+      </div>
+      {description && (
+        <p className="text-sm md:text-base">
+          {description[0]}
+          <strong className="font-medium">{description[1]}</strong>
+          {description[2]}
+        </p>
+      )}
+    </motion.div>
+  );
+};`,
       },
     ],
     REFLECTION: {
-      HEADING: "reflection",
-      DESCRIPTION: [],
+      HEADING: "the big picture",
+      DESCRIPTION: [
+        "afleuries illustrated was a fun balance of personality and polish—blending hand-drawn elements with smooth interactions to make the experience feel both welcoming and professional. every detail, from the animated inputs to the timed modal, was crafted to feel thoughtful yet playful, communicating the artist's message clearly.",
+      ],
     },
   },
 
@@ -96,16 +288,6 @@ export const PROJECTS: ProjectPagePropsTypes = {
         ALT: "guy",
       },
     },
-    DETAILS: [
-      {
-        HEADING: "timeframe",
-        DESCRIPTION: ["aug 3 - 11, 2024"],
-      },
-      {
-        HEADING: "contributions",
-        DESCRIPTION: ["images - pexels", "icons - ionicons"],
-      },
-    ],
     OVERVIEW: [
       {
         HEADING: "problem",
@@ -119,13 +301,24 @@ export const PROJECTS: ProjectPagePropsTypes = {
           "designing a playful SaaS-inspired landing page that softens the concept through clean visuals, smooth animations, and friendly language.",
         ],
       },
+      {
+        HEADING: "timeframe",
+        DESCRIPTION: ["aug 3 - 11, 2024"],
+      },
+      {
+        HEADING: "contributions",
+        DESCRIPTION: ["images - pexels", "icons - ionicons"],
+      },
     ],
     PROCESS: [
       {
         HEADING: "leveraging localStorage",
         DESCRIPTION: [
           <strong key="localstorage">localStorage</strong>,
-          " allows for data to be stored in a user’s browser, allowing for certain settings to be stored across different sessions. for guy, i stored the user’s dark/light mode preference so that it can be saved every time they visit the website or refresh the page, resulting in a pleasant user experience.",
+          " allows for data to be stored in a user’s browser, allowing for certain settings to be stored across different sessions. i stored the user’s ",
+          " so that it can be saved every time they visit the website or refresh the page, resulting in a ",
+          <i key="pleasant">pleasant user experience</i>,
+          ".",
         ],
         VIDEO: "/videos/projects/guy/guy-ls.mp4",
         CODE: `// moon -> toggles dark mode; default
@@ -194,7 +387,9 @@ if (mode === 'darkmode') {
           <strong key="intersectionobserver">IntersectionObserver API</strong>,
           ". i customized it to trigger fade and slide animations as elements entered the viewport, which enhanced the site’s modern feel and visually demonstrated how guy’s notifications would appear on a phone. i also used the, ",
           <CodeSnippet key="after">::after</CodeSnippet>,
-          " pseudo-element to add a dynamic section indicator to the navbar, improving the site’s navigation and user experience.",
+          " pseudo-element to add a ",
+          <i key="dynamic">dynamic section indicator</i>,
+          " to the navbar, improving the site’s navigation and user experience.",
         ],
         VIDEO: "/videos/projects/guy/guy-io.mp4",
         CODE: `nav {
@@ -233,7 +428,9 @@ if (mode === 'darkmode') {
         DESCRIPTION: [
           "for the FAQ section, i implemented animated accordions using the ",
           <CodeSnippet key="max-height">max-height</CodeSnippet>,
-          " property. this kept the content organized and easy to access, with smooth transitions when opening or closing each question.",
+          " property. this kept the content organized and easy to access, with ",
+          <i key="smooth">smooth transitions</i>,
+          " when opening or closing each question.",
         ],
         VIDEO: "/videos/projects/guy/guy-faq.mp4",
         CODE: `// gets all FAQ items

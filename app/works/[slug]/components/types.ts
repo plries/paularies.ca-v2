@@ -9,17 +9,15 @@ export type ProjectPagePropsTypes = {
       GITHUB?: string;
       IMAGE: { SRC: string; ALT: string };
     };
-    DETAILS: [
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-      },
-    ];
     OVERVIEW: [
+      {
+        HEADING: string;
+        DESCRIPTION: React.ReactNode[];
+      },
+      {
+        HEADING: string;
+        DESCRIPTION: React.ReactNode[];
+      },
       {
         HEADING: string;
         DESCRIPTION: React.ReactNode[];

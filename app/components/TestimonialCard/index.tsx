@@ -38,7 +38,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardPropTypes) => {
             alt={testimonial.IMAGE.ALT}
             width={800}
             height={800}
-            className="border-greyscale-950/10 dark:border-greyscale-50/10 aspect-square h-12 w-12 rounded-full border-[1px] lg:h-14 lg:w-14"
+            className="border-greyscale-950/10 dark:border-greyscale-50/10 aspect-square h-12 w-12 rounded-full border lg:h-14 lg:w-14"
           />
           <div className="flex flex-col">
             <ContentHeading
