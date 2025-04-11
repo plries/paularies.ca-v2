@@ -14,7 +14,7 @@ export default function ProjectPage() {
         theme="tertiary"
         icon={<ArrowIcon />}
         additionalClasses={{
-          container: "col-span-full mb-12",
+          container: "col-span-full mb-12 w-fit",
           icon: "rotate-180",
         }}
         iconRight={false}

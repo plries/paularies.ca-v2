@@ -28,6 +28,7 @@ export const Footer = () => {
           href={FOOTER_CONST.CONTACT.BUTTON.HREF}
           theme="secondary"
           additionalClasses={{
+            container: "w-fit",
             button:
               "!shadow-[var(--button-gradient-light)] dark:!shadow-[var(--button-gradient-dark)]",
           }}
@@ -48,6 +49,7 @@ export const Footer = () => {
             target={"_blank"}
             isLink
             additionalClasses={{
+              container: "w-fit",
               text: "!text-greyscale-600 dark:!text-greyscale-300",
             }}
           >

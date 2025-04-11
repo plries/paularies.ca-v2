@@ -44,7 +44,7 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
               ))}
             </div>
           </div>
-          <div className="flex w-full flex-row justify-end gap-1">
+          <div className="flex w-full flex-row justify-end gap-2">
             {PROJECT.HERO.GITHUB && (
               <Button
                 theme="secondary"

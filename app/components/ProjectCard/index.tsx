@@ -14,10 +14,11 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
       initial={MOTION_CONFIG.PROJECT_CARD.INITIAL}
       whileInView={MOTION_CONFIG.PROJECT_CARD.WHILE_IN_VIEW}
       transition={MOTION_CONFIG.TRANSITION}
-      className="hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 group col-span-full rounded-2xl p-1 transition-[background-color] duration-500"
+      className="group group col-span-full rounded-2xl"
     >
+      <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 absolute -inset-1 rounded-2xl duration-500" />
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border-[1px] p-2 shadow-[var(--card-light)] transition-[scale] duration-500 group-hover:scale-[99.5%] md:flex-row dark:shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-2 rounded-xl border-[1px] p-2 shadow-[var(--card-light)] md:flex-row dark:shadow-[var(--card-dark)] ${
           PROJECT.DISCIPLINE[0] === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
@@ -27,7 +28,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
           className="contents"
           href={`/works/${encodeURIComponent(PROJECT.SLUG)}`}
         >
-          <div className="dark:bg-greyscale-900 bg-greyscale-100 grid place-items-center relative aspect-video w-full overflow-hidden rounded-lg">
+          <div className="dark:bg-greyscale-900 bg-greyscale-100 relative grid aspect-video w-full place-items-center overflow-hidden rounded-lg">
             {PROJECT.IMAGE.SRC && (
               <Image
                 src={PROJECT.IMAGE.SRC}
@@ -71,7 +72,9 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                 theme="tertiary"
                 name={"view project"}
                 icon={
-                  <span className={`dark:text-greyscale-50 transition-[rotate] duration-500 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.SLUG == "" ? "group-hover:rotate-360" : "" }`}>
+                  <span
+                    className={`dark:text-greyscale-50 transition-[rotate] duration-500 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.SLUG == "" ? "group-hover:rotate-360" : ""}`}
+                  >
                     <ArrowIcon />
                   </span>
                 }

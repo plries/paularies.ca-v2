@@ -27,7 +27,7 @@ export const NavBar = () => {
           theme="tertiary"
           href={pathname === "/" ? "#top" : NAVBAR_CONST.LOGO.HREF}
           onClick={useMobile.closeMenu}
-          additionalClasses={{ button: "!p-0, h-full" }}
+          additionalClasses={{ button: "[&&]:!p-1 h-full" }}
           isLink
           noBlur
         >
@@ -42,7 +42,7 @@ export const NavBar = () => {
           <span className="sr-only">{NAVBAR_CONST.LOGO.HOME}</span>
         </Button>
         {!windowSize.isMobile && (
-          <div className="hidden h-full flex-row items-center gap-1 md:flex">
+          <div className="hidden h-full flex-row items-center gap-3 md:flex">
             <ul className="contents">
               {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, TEXT }) => (
                 <li key={TEXT}>

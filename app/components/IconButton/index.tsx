@@ -15,7 +15,7 @@ export const IconButton = ({
   noBlur,
   target,
 }: IconButtonPropTypes) => {
-  const buttonStyles = `grid aspect-square h-10 w-10 cursor-pointer place-items-center rounded-xl border-[1px] p-2.5 transition-[scale] duration-500 ease-in-out hover:scale-95 ${additionalClasses?.button} ${
+  const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border-[1px] p-2.5 ease-in-out ${additionalClasses?.button || ""} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-50/10 text-greyscale-50 shadow-[var(--button-dark)] dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950 dark:shadow-[var(--button-light)]"
       : theme === "secondary"
@@ -23,14 +23,15 @@ export const IconButton = ({
         : "text-greyscale-950 border-greyscale-950"
   }`;
 
-  const containerStyles = `hover:bg-greyscale-300/15 dark:hover:bg-greyscale-600/25 rounded-2xl p-1 transition-[background-color] duration-500 ${additionalClasses?.container}`
+  const containerStyles = `relative group ${additionalClasses?.container || ""}`;
+
+  const hoverStyles = `absolute -inset-1 rounded-2xl p-1 transition-[background-color] duration-500 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"}`;
 
   return (
     <>
       {noBlur ? (
-        <div
-          className={containerStyles}
-        >
+        <div className={containerStyles}>
+          <div className={hoverStyles} />
           {isLink ? (
             <Link target={target} href={href ?? ""} className={buttonStyles}>
               {icon}
@@ -50,6 +51,7 @@ export const IconButton = ({
           transition={MOTION_CONFIG.TRANSITION}
           className={containerStyles}
         >
+          <div className={hoverStyles} />
           {isLink ? (
             <Link target={target} href={href ?? ""} className={buttonStyles}>
               {icon}
