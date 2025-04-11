@@ -43,6 +43,8 @@ export const SELECTED_WORKS_CONST = {
 
 export const TESTIMONIALS_CONST = {
   HEADING: "testimonials",
+  CLOSE: "close testimonial",
+  EXPAND: "expand testimonial",
   TESTIMONIALS: [
     {
       ISOPEN: true,

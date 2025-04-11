@@ -1,4 +1,6 @@
 export type TestimonialCardPropTypes = {
+  CLOSE: string;
+  EXPAND: string;
   testimonial: {
     ISOPEN: boolean;
     IMAGE: {
@@ -9,4 +11,6 @@ export type TestimonialCardPropTypes = {
     TITLE: string;
     QUOTE: string[];
   };
+  isOpen: boolean;
+  toggleCard: (name: string) => void;
 };
