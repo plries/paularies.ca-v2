@@ -32,4 +32,7 @@ export const FOOTER_CONST = {
     TEXT: "hand-coded by ",
     SR: " paul aries",
   },
+  LIGHT_DARK: {
+    TEXT: "light-dark toggle",
+  },
 };

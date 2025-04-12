@@ -35,12 +35,12 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
         noBlur
       />
       <ul
-        className={`border-greyscale-100 shadow-[var(--nav-bar-light)]t bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-900 ease-in-out absolute left-0 mt-4 w-full rounded-3xl border !transition-all duration-500 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full" : "-top-full -translate-y-full"} `}
+        className={`border-greyscale-200/50 bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-700/50 absolute left-0 mt-4 w-full rounded-3xl border shadow-[var(--nav-bar-light)] !transition-[top,translate] duration-500 ease-in-out dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-[calc(100%+0.725rem)]" : "pointer-events-none -top-full -translate-y-full"} `}
       >
         {NAVBAR_CONST.LINKS.map(({ HREF, TEXT }) => (
           <li
             key={TEXT}
-            className="border-greyscale-100 dark:border-greyscale-900 flex border-b-[1px] p-1 last:border-0"
+            className="border-greyscale-200/50 dark:border-greyscale-700/50 flex border-b-[1px] p-3 last:border-0"
           >
             <Button
               href={HREF}

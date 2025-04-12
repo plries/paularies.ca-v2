@@ -17,9 +17,6 @@ export const NAVBAR_CONST = {
       TEXT: "contact",
     },
   ],
-  LIGHT_DARK: {
-    TEXT: "light-dark toggle",
-  },
   CONTACT: {
     HREF: "mailto:hello@paularies.ca",
     TEXT: "contact",

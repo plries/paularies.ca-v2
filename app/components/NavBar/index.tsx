@@ -3,39 +3,37 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { MOTION_CONFIG } from "@/app/const";
 import { NAVBAR_CONST } from "./const";
-import {
-  PaStar,
-  PaWordmark,
-  LightDarkToggleIcon,
-  EmailIcon,
-  ChevronIcon,
-} from "@/public";
+import { PaStar, PaWordmark, EmailIcon, ChevronIcon } from "@/public";
 import { Button, IconButton } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
-import { useModeToggle, useWindowSize } from "@/app/hooks";
+import { useWindowSize } from "@/app/hooks";
 import { useNavBar } from "./useNavBar";
 
 export const NavBar = () => {
   const pathname = usePathname();
   const windowSize = useWindowSize();
-  const lightDark = useModeToggle();
   const useMobile = useMobileMenu();
   const useNav = useNavBar();
+
+  const handleClick = () => {
+    useNav.toggleNav();
+    useMobile.closeMenu();
+  };
 
   return (
     <motion.header
       initial={MOTION_CONFIG.HEADER.INITIAL}
       whileInView={MOTION_CONFIG.HEADER.WHILE_IN_VIEW}
       transition={MOTION_CONFIG.TRANSITION}
-      className={`border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ relative sticky top-3 left-0 z-50 m-3 w-[calc(100%-1.5rem)] max-w-7xl rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale] duration-700 md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "translate-y-[calc(-100%+1.25rem)] scale-90 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
+      className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ relative sticky top-3 left-0 z-50 m-3 w-[calc(100%-1.5rem)] max-w-7xl rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale] duration-700 md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "pointer-events-none translate-y-[calc(-100%+1.25rem)] scale-90 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
     >
       <IconButton
-        onClick={useNav.toggleMenu}
+        onClick={handleClick}
         theme="secondary"
         additionalClasses={{
           container:
-            "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 z-10 transition-opacity duration-700 ease-in-out-circ",
+            "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 transition-opacity duration-700 ease-in-out-circ pointer-events-auto",
           button: "!rounded-full",
           hover: "!rounded-full",
         }}
@@ -51,6 +49,7 @@ export const NavBar = () => {
       />
       <nav
         className={`ease-in-out-circ flex flex-row items-center justify-between place-self-stretch rounded-3xl p-3 transition-opacity duration-700 ${useNav.isOpen ? "opacity-100" : "opacity-0"}`}
+        ref={useNav.navRef}
       >
         <Button
           theme="tertiary"
@@ -82,19 +81,6 @@ export const NavBar = () => {
               ))}
             </ul>
             <IconButton
-              onClick={lightDark.toggleMode}
-              icon={
-                <span
-                  className={`transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
-                >
-                  <LightDarkToggleIcon />
-                </span>
-              }
-              theme="secondary"
-              name={NAVBAR_CONST.LIGHT_DARK.TEXT}
-              noBlur
-            />
-            <IconButton
               href={NAVBAR_CONST.CONTACT.HREF}
               icon={<EmailIcon />}
               theme="primary"
@@ -108,24 +94,7 @@ export const NavBar = () => {
             />
           </div>
         )}
-        {windowSize.isMobile && (
-          <div className="flex flex-row gap-1">
-            <IconButton
-              onClick={lightDark.toggleMode}
-              icon={
-                <span
-                  className={`transition-transform duration-500 ${lightDark.mode === "dark" ? "rotate-180" : ""}`}
-                >
-                  <LightDarkToggleIcon />
-                </span>
-              }
-              theme="secondary"
-              name={NAVBAR_CONST.LIGHT_DARK.TEXT}
-              noBlur
-            />
-            <MobileMenu hook={useMobile} />
-          </div>
-        )}
+        {windowSize.isMobile && <MobileMenu hook={useMobile} />}
       </nav>
     </motion.header>
   );

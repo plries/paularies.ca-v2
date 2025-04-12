@@ -8,6 +8,7 @@ export type ButtonLinkPropTypes = {
     button?: string;
     icon?: string;
     text?: string;
+    hover?: string;
   };
   icon?: React.ReactNode;
   iconRight?: boolean;

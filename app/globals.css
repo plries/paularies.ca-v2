@@ -104,7 +104,7 @@
 }
 
 .animate-float {
-  animation: float 5s ease-in-out-circ infinite;
+  animation: float 5s ease-in-out infinite;
 }
 
   @keyframes fadeIn {
@@ -117,7 +117,7 @@
   }
 
 .animate-fadeIn {
-  animation: fadeIn 1s ease-in-out-circ;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .ease-in-out-circ {
@@ -216,6 +216,18 @@ i {
   ::selection {
     background-color: var(--color-grass-800);
     color: var(--color-grass-200);
+  }
+}
+
+/* focus */
+
+*:focus-visible {
+  outline: 2px solid var(--color-sky-600);
+}
+
+.dark {
+  *:focus-visible {
+    outline: 2px solid var(--color-grass-600);
   }
 }
 
