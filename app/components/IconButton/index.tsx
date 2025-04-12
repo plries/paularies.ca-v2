@@ -16,7 +16,7 @@ export const IconButton = ({
   noHover,
   target,
 }: IconButtonPropTypes) => {
-  const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border p-2.5 ease-in-out ${additionalClasses?.button || ""} ${
+  const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border p-2.5 ease-in-out-circ ${additionalClasses?.button || ""} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-50/10 text-greyscale-50 shadow-[var(--button-dark)] dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950 dark:shadow-[var(--button-light)]"
       : theme === "secondary"
@@ -26,7 +26,7 @@ export const IconButton = ({
 
   const containerStyles = `relative group ${additionalClasses?.container || ""}`;
 
-  const hoverStyles = `absolute -inset-1 rounded-2xl p-1 transition-[background-color] duration-500 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"}`;
+  const hoverStyles = `absolute -inset-1 rounded-2xl p-1 transition-[background-color] duration-500 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
 
   return (
     <>

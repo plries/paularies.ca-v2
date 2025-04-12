@@ -3,31 +3,60 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { MOTION_CONFIG } from "@/app/const";
 import { NAVBAR_CONST } from "./const";
-import { PaStar, PaWordmark, LightDarkToggleIcon, EmailIcon } from "@/public";
+import {
+  PaStar,
+  PaWordmark,
+  LightDarkToggleIcon,
+  EmailIcon,
+  ChevronIcon,
+} from "@/public";
 import { Button, IconButton } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
 import { useModeToggle, useWindowSize } from "@/app/hooks";
+import { useNavBar } from "./useNavBar";
 
 export const NavBar = () => {
   const pathname = usePathname();
   const windowSize = useWindowSize();
   const lightDark = useModeToggle();
   const useMobile = useMobileMenu();
+  const useNav = useNavBar();
 
   return (
     <motion.header
       initial={MOTION_CONFIG.HEADER.INITIAL}
       whileInView={MOTION_CONFIG.HEADER.WHILE_IN_VIEW}
       transition={MOTION_CONFIG.TRANSITION}
-      className="border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 bg-greyscale-50/50 sticky top-3 left-0 z-50 m-3 flex max-w-7xl flex-row items-center justify-between place-self-stretch rounded-3xl border p-3 shadow-[var(--nav-bar-light)] backdrop-blur-sm md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)]"
+      className={`border-greyscale-100 dark:border-greyscale-800 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ relative sticky top-3 left-0 z-50 m-3 w-[calc(100%-1.5rem)] max-w-7xl rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale] duration-700 md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "translate-y-[calc(-100%+1.25rem)] scale-90 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
     >
-      <nav className="contents">
+      <IconButton
+        onClick={useNav.toggleMenu}
+        theme="secondary"
+        additionalClasses={{
+          container:
+            "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 z-10 transition-opacity duration-700 ease-in-out-circ",
+          button: "!rounded-full",
+          hover: "!rounded-full",
+        }}
+        icon={
+          <span
+            className={`text-greyscale-600 dark:text-greyscale-300 ease-in-out-circ transition-transform duration-700 ${useNav.isOpen ? "-rotate-180" : ""}`}
+          >
+            <ChevronIcon />
+          </span>
+        }
+        name={`${useNav.isOpen ? NAVBAR_CONST.NAV_BAR.SHOW_MENU : NAVBAR_CONST.NAV_BAR.HIDE_MENU}`}
+        noBlur
+      />
+      <nav
+        className={`ease-in-out-circ flex flex-row items-center justify-between place-self-stretch rounded-3xl p-3 transition-opacity duration-700 ${useNav.isOpen ? "opacity-100" : "opacity-0"}`}
+      >
         <Button
           theme="tertiary"
           href={pathname === "/" ? "#top" : NAVBAR_CONST.LOGO.HREF}
           onClick={useMobile.closeMenu}
-          additionalClasses={{ button: "[&&]:!p-1 h-full" }}
+          additionalClasses={{ button: "[&&]:!p-0 md:[&&]:!p-1 h-full" }}
           isLink
           noBlur
         >

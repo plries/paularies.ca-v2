@@ -37,7 +37,7 @@ export default function RootLayout({
             __html: `
             (function() {
               const theme = localStorage.getItem("theme") || 
-                (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                (window.matchMedia("(prefers-color-scheme: dark").matches ? "dark" : "light");
               if (theme === "dark") {
                 document.documentElement.classList.add("dark");
               } else {
@@ -50,7 +50,7 @@ export default function RootLayout({
       </head>
       <ReactLenis root>
         <body
-          className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 overflow-hidden dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased`}
+          className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center overflow-hidden antialiased`}
         >
           <ScrollToTop />
           <ClientOnly>

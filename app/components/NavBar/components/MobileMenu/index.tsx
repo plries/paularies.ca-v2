@@ -11,12 +11,12 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
         icon={
           <>
             <span
-              className={`absolute !transition-[rotate,margin] duration-500 ease-in-out ${hook.isOpen ? "" : "mb-1.5"}`}
+              className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${hook.isOpen ? "" : "mb-1.5"}`}
             >
               <LineIcon />
             </span>
             <span
-              className={`absolute !transition-[rotate,margin] duration-500 ease-in-out ${hook.isOpen ? "rotate-90" : "mt-1.5"}`}
+              className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${hook.isOpen ? "rotate-90" : "mt-1.5"}`}
             >
               <LineIcon />
             </span>
@@ -35,7 +35,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
         noBlur
       />
       <ul
-        className={`border-greyscale-100 shadow-[var(--nav-bar-light)]t bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-900 absolute left-0 mt-4 w-full rounded-3xl border !transition-all duration-500 ease-in-out dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full" : "-top-full -translate-y-full"} `}
+        className={`border-greyscale-100 shadow-[var(--nav-bar-light)]t bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-900 ease-in-out absolute left-0 mt-4 w-full rounded-3xl border !transition-all duration-500 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full" : "-top-full -translate-y-full"} `}
       >
         {NAVBAR_CONST.LINKS.map(({ HREF, TEXT }) => (
           <li

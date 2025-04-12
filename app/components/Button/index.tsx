@@ -17,7 +17,7 @@ export const Button = ({
   noHover,
   target,
 }: ButtonLinkPropTypes) => {
-  const buttonStyles = `relative cursor-pointer flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border px-3 py-2 text-base ease-in-out md:text-lg lg:text-xl ${additionalClasses?.button || ""} ${
+  const buttonStyles = `relative cursor-pointer flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border px-3 py-2 text-base ease-in-out-circ md:text-lg lg:text-xl ${additionalClasses?.button || ""} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-50/10 text-greyscale-50 shadow-[var(--button-dark)] dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950  dark:shadow-[var(--button-light)]"
       : theme === "secondary"

@@ -8,7 +8,7 @@ export const useModeToggle = () => {
       if (storedTheme) return storedTheme as "light" | "dark";
 
       // system preference fallback
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
+      return window.matchMedia("(prefers-color-scheme: dark").matches
         ? "dark"
         : "light";
     }
@@ -30,7 +30,7 @@ export const useModeToggle = () => {
 
   // listen for system preference changes
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark");
 
     const handleChange = (e: MediaQueryListEvent) => {
       if (!localStorage.getItem("theme")) {

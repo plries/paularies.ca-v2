@@ -6,6 +6,7 @@ export type IconButtonPropTypes = {
   additionalClasses?: {
     container?: string;
     button?: string;
+    hover?: string;
   };
   icon: React.ReactNode;
   isLink?: boolean;

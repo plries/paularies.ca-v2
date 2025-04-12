@@ -24,7 +24,9 @@ export const TestimonialCard = ({
           button: `bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 !text-greyscale-600 dark:!text-greyscale-300 dark:bg-greyscale-950 ${isOpen ? "" : "shadow-sm"}`,
         }}
         icon={
-          <span className={`${isOpen ? "rotate-180" : ""}`}>
+          <span
+            className={`ease-in-out-circ transition-transform duration-1000 ${isOpen ? "-rotate-180" : ""}`}
+          >
             <ChevronIcon />
           </span>
         }

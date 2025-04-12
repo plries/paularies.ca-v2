@@ -28,4 +28,8 @@ export const NAVBAR_CONST = {
     OPEN_MENU: "open menu",
     CLOSE_MENU: "close menu",
   },
+  NAV_BAR: {
+    SHOW_MENU: "show menu",
+    HIDE_MENU: "hide menu",
+  }
 };

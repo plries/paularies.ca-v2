@@ -25,7 +25,7 @@ export const PROJECTS_CONST = {
       SLUG: "guy",
     },
     {
-      DISCIPLINE: ["development", "design"],
+      DISCIPLINE: ["design"],
       IMAGE: {
         SRC: "",
         ALT: "",
@@ -36,7 +36,7 @@ export const PROJECTS_CONST = {
       SLUG: "",
     },
     {
-      DISCIPLINE: ["development", "design"],
+      DISCIPLINE: ["design", "development"],
       IMAGE: {
         SRC: "",
         ALT: "",

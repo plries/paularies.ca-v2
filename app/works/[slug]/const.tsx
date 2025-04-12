@@ -225,12 +225,12 @@ export const useModal = () => {
       <div className="relative">
         <div
           ref={labelBgRef}
-          className="absolute -top-3 z-10 mx-2 h-fit w-fit bg-transparent px-2 transition-all duration-300 ease-in-out"
+          className="absolute -top-3 z-10 mx-2 h-fit w-fit bg-transparent px-2 transition-all duration-300 ease-in-out-circ"
         >
           <label
             ref={labelRef}
             htmlFor={htmlFor}
-            className="pointer-events-none z-10 inline-block origin-left translate-y-7 text-base text-tan-90 transition-all duration-300 ease-in-out md:translate-y-[1.9rem]"
+            className="pointer-events-none z-10 inline-block origin-left translate-y-7 text-base text-tan-90 transition-all duration-300 ease-in-out-circ md:translate-y-[1.9rem]"
           >
             {label}
           </label>
@@ -247,7 +247,7 @@ export const useModal = () => {
           }
           name={name}
           required
-          className="border-tan-60 h-14 w-full appearance-none rounded-lg border bg-tan-30 p-4 text-base font-light transition-all duration-300 ease-in-out focus:shadow-md focus:outline-blue-10 md:h-[60px] md:text-lg"
+          className="border-tan-60 h-14 w-full appearance-none rounded-lg border bg-tan-30 p-4 text-base font-light transition-all duration-300 ease-in-out-circ focus:shadow-md focus:outline-blue-10 md:h-[60px] md:text-lg"
           autoComplete="on"
           onFocus={() => moveLabel(true)}
           onBlur={() => moveLabel()}
