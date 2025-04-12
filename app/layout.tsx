@@ -1,7 +1,6 @@
 import { Hanken_Grotesk, Instrument_Serif, DM_Mono } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import { NavBar, Footer, ClientOnly, PageContent } from "./components/";
-import { ScrollToTop } from "./hooks";
 import { metadata } from "./layoutMetadata";
 import "./globals.css";
 
@@ -52,11 +51,10 @@ export default function RootLayout({
         <body
           className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased`}
         >
-          <ScrollToTop />
           <ClientOnly>
             <NavBar />
             <PageContent>{children}</PageContent>
-            <div className="mask-gradient pointer-events-none fixed bottom-0 left-0 z-40 h-16 w-screen backdrop-blur-2xl" />
+            <div className="mask-gradient pointer-events-none fixed bottom-0 left-0 z-40 h-16 w-screen backdrop-blur-md" />
             <Footer />
           </ClientOnly>
         </body>

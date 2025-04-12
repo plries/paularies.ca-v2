@@ -4,12 +4,14 @@ import { Button, PageTransition } from "@/app/components";
 import { ArrowIcon } from "@/public";
 import { PROJECT_PAGE_CONST } from "./const";
 import { useProjectPage } from "./useProjectPage";
+import { ScrollToTop } from "@/app/hooks";
 
 export default function ProjectPage() {
   const hook = useProjectPage();
 
   return (
     <PageTransition>
+      <ScrollToTop />
       <Button
         theme="tertiary"
         icon={<ArrowIcon />}
