@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { MOTION_CONFIG } from "@/app/const";
 import { ButtonLinkPropTypes } from "./types";
+import { useWindowSize } from "@/app/hooks";
 
 export const Button = ({
   href,
@@ -33,11 +34,13 @@ export const Button = ({
 
   const iconStyles = `inline-block ${additionalClasses?.icon || ""}`;
 
+  const hook = useWindowSize();
+
   return (
     <>
       {noBlur ? (
         <div className={containerStyles}>
-          <div className={noHover ? "" : hoverStyles} />
+          {!hook.isMobile && <div className={noHover ? "" : hoverStyles} />}
           {isLink ? (
             <Link
               target={target}
@@ -76,7 +79,7 @@ export const Button = ({
           transition={MOTION_CONFIG.TRANSITION}
           className={containerStyles}
         >
-          <div className={noHover ? "" : hoverStyles} />
+          {!hook.isMobile && <div className={noHover ? "" : hoverStyles} />}
           {isLink ? (
             <Link
               target={target}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { MOTION_CONFIG } from "@/app/const";
 import { IconButtonPropTypes } from "./types";
+import { useWindowSize } from "@/app/hooks";
 
 export const IconButton = ({
   theme,
@@ -28,11 +29,13 @@ export const IconButton = ({
 
   const hoverStyles = `absolute -inset-1 pointer-events-none rounded-2xl p-1 transition-[background-color] duration-500 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
 
+  const hook = useWindowSize();
+
   return (
     <>
       {noBlur ? (
         <div className={containerStyles}>
-          <div className={noHover ? "" : hoverStyles} />
+          {!hook.isMobile && <div className={noHover ? "" : hoverStyles} />}
           {isLink ? (
             <Link target={target} href={href ?? ""} className={buttonStyles}>
               {icon}
@@ -52,7 +55,7 @@ export const IconButton = ({
           transition={MOTION_CONFIG.TRANSITION}
           className={containerStyles}
         >
-          <div className={noHover ? "" : hoverStyles} />
+          {!hook.isMobile && <div className={noHover ? "" : hoverStyles} />}
           {isLink ? (
             <Link target={target} href={href ?? ""} className={buttonStyles}>
               {icon}
