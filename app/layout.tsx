@@ -50,7 +50,7 @@ export default function RootLayout({
       </head>
       <ReactLenis root>
         <body
-          className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center overflow-x-hidden  antialiased`}
+          className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased`}
         >
           <ScrollToTop />
           <ClientOnly>
