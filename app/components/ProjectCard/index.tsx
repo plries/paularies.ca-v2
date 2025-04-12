@@ -19,8 +19,8 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
       transition={MOTION_CONFIG.TRANSITION}
       className="group group col-span-full rounded-2xl"
     >
-      {hook.isMobile && (
-        <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 absolute -inset-1 rounded-2xl duration-500 pointer-events-none" />
+      {!hook.isMobile && (
+        <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 pointer-events-none absolute -inset-1 rounded-2xl duration-500" />
       )}
       <article
         className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-2 rounded-xl border p-2 shadow-[var(--card-light)] md:flex-row dark:shadow-[var(--card-dark)] ${
