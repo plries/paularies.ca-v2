@@ -4,6 +4,7 @@ export * from "./ClientOnly";
 export * from "./CodeSnippet";
 export * from "./ContentBlock";
 export * from "./ContentHeading";
+export * from "./Cursor";
 export * from "./Dot";
 export * from "./Footer";
 export * from "./Heading";

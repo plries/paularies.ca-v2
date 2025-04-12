@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Cursor } from "../Cursor";
 import { PaStar } from "@/public";
 
 export const ClientOnly = ({ children }: { children: React.ReactNode }) => {
@@ -23,6 +24,11 @@ export const ClientOnly = ({ children }: { children: React.ReactNode }) => {
       </div>
     );
   {
-    return <>{children}</>;
+    return (
+      <>
+        <Cursor />
+        {children}
+      </>
+    );
   }
 };

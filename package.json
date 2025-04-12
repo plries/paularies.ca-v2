@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-hook/mouse-position": "^4.1.3",
     "lenis": "^1.2.0",
     "motion": "^12.6.3",
     "next": "15.2.4",
