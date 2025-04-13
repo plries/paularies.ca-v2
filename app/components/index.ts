@@ -10,6 +10,7 @@ export * from "./Footer";
 export * from "./Heading";
 export * from "./IconButton";
 export * from "./InsetBlock";
+export * from "./Marquee";
 export * from "./NavBar";
 export * from "./PageContent";
 export * from "./PageTransition";

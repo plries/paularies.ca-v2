@@ -1,15 +1,22 @@
-import { Heading, ContentBlock, Dot, ContentHeading } from "@/app/components";
+import {
+  Heading,
+  ContentBlock,
+  Dot,
+  ContentHeading,
+  Marquee,
+} from "@/app/components";
 import { SKILLS_CONST } from "../const";
 
 export const Skills = () => {
   return (
     <section className="col-span-full mt-16 grid grid-cols-4 gap-3 rounded-3xl md:grid-cols-8 md:gap-4 lg:grid-cols-12">
       <Heading level="h2">{SKILLS_CONST.HEADING}</Heading>
+      <Marquee ICONS={SKILLS_CONST.ICONS} from={0} to={"-100%"} />
       {SKILLS_CONST.SKILLS.map((skill, index) => (
         <ContentBlock
           key={index}
           additionalClasses={
-            "col-span-full md:col-span-3 md:col-start-2 [&:nth-child(3)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(3)]:lg:col-start-7"
+            "col-span-full md:col-span-3 md:col-start-2 [&:nth-child(4)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(4)]:lg:col-start-7"
           }
         >
           <div className="flex flex-row items-center gap-1">

@@ -1,3 +1,21 @@
+import {
+  AeIcon,
+  AiIcon,
+  CssIcon,
+  FigmaIcon,
+  HtmlIcon,
+  IdIcon,
+  JsIcon,
+  PhpIcon,
+  PsIcon,
+  ReactIcon,
+  SassIcon,
+  TailwindIcon,
+  TsIcon,
+  WpIcon,
+} from "@/public";
+import { PrIcon } from "@/public/icons/PrIcon";
+
 export const ABOUT_CONST = {
   HEADING: "about",
   BUTTON: {
@@ -69,6 +87,22 @@ export const SKILLS_CONST = {
       ],
     },
   ],
+  ICONS: [
+    <HtmlIcon key="html" />,
+    <PsIcon key="ps" />,
+    <FigmaIcon key="figma" />,
+    <CssIcon key="css" />,
+    <ReactIcon key="react" />,
+    <JsIcon key="js" />,
+    <WpIcon key="wp" />,
+    <AiIcon key="ai" />,
+    <SassIcon key="sass" />,
+    <TsIcon key="ts" />,
+    <TailwindIcon key="tailwind" />,
+    <AeIcon key="ae" />,
+    <PhpIcon key="php" />,
+    <PrIcon key="pr" />,
+  ],
 };
 
 export const VALUES_CONST = {
@@ -86,7 +120,9 @@ export const VALUES_CONST = {
       TITLE: "collaboration",
       PARAGRAPH: [
         "having danced in multiple competitive groups and working apart of two food-service teams, i value working with others and collaborating. i recognize the ",
-        <strong key="responsibility">importance of communication and responsibility</strong>,
+        <strong key="responsibility">
+          importance of communication and responsibility
+        </strong>,
         " when working towards a shared goal.",
       ],
     },
