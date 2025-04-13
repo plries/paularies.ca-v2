@@ -8,9 +8,11 @@ import { ProjectCardPropTypes } from "./types";
 import { IconButton, ContentHeading } from "../../components";
 import { ArrowIcon } from "@/public";
 import { useWindowSize } from "@/app/hooks";
+import { useProjectCard } from "./useProjectCard";
 
 export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
-  const hook = useWindowSize();
+  const windowSize = useWindowSize();
+  const projectCard = useProjectCard();
 
   return (
     <motion.div
@@ -19,7 +21,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
       transition={MOTION_CONFIG.TRANSITION}
       className="group group col-span-full rounded-2xl"
     >
-      {!hook.isMobile && (
+      {!windowSize.isMobile && (
         <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 pointer-events-none absolute -inset-1 rounded-2xl duration-500" />
       )}
       <article
@@ -27,11 +29,12 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
           PROJECT.DISCIPLINE[0] === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
-        } ${isChecked ? "!flex-col" : ""} `}
+        } ${isChecked ? "!flex-col" : ""} ${projectCard.isLoading ? "animate-pulse" : ""}`}
       >
         <Link
           className="contents"
           href={`/works/${encodeURIComponent(PROJECT.SLUG)}`}
+          onClick={projectCard.handleOnClick}
         >
           <div className="dark:bg-greyscale-900 bg-greyscale-100 relative grid aspect-video w-full place-items-center overflow-hidden rounded-lg">
             {PROJECT.IMAGE.SRC && (

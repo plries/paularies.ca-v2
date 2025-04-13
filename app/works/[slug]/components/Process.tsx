@@ -10,7 +10,7 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
   const hook = useWindowSize();
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-3 md:gap-4">
       <Heading level="h2">{PROJECT_PAGE_CONST.HEADINGS.PROCESS}</Heading>
       <div className="relative">
         {!hook.isTablet && (

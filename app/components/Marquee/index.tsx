@@ -15,7 +15,7 @@ export const Marquee = ({
         className="flex"
         initial={{ x: from }}
         animate={{ x: to }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       >
         {[...ICONS, ...ICONS].map((Icon: React.ReactNode, index) => (
           <div

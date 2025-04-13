@@ -34,7 +34,7 @@ export const TestimonialCard = ({
         noBlur
       />
       <div
-        className={`after:to-greyscale-100 dark:after:to-greyscale-900 mb-10 flex flex-col gap-4 transition-opacity duration-1000 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-1000 ${isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
+        className={`after:to-greyscale-100 dark:after:to-greyscale-900 flex flex-col gap-4 transition-opacity duration-1000 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-1000 md:mb-10 ${isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
       >
         <div className="flex flex-row items-center gap-2">
           <Image
