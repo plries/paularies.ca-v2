@@ -26,7 +26,7 @@ export const NavBar = () => {
       initial={MOTION_CONFIG.HEADER.INITIAL}
       whileInView={MOTION_CONFIG.HEADER.WHILE_IN_VIEW}
       transition={MOTION_CONFIG.TRANSITION}
-      className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ relative sticky top-3 left-0 z-50 m-3 mb-7 w-[calc(100%-1.5rem)] max-w-7xl rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale] duration-700 md:top-6 md:m-6 md:mb-7 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "pointer-events-none translate-y-[calc(-100%+1.25rem)] scale-90 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
+      className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ sticky top-3 left-0 z-50 m-3 mb-7 w-[calc(100%-1.5rem)] max-w-7xl rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale] duration-700 md:top-6 md:m-6 md:mb-7 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "pointer-events-none translate-y-[calc(-100%+1.25rem)] scale-90 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
     >
       <IconButton
         onClick={handleClick}
