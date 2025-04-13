@@ -7,6 +7,7 @@ export * from "./ContentHeading";
 export * from "./Cursor";
 export * from "./Dot";
 export * from "./Footer";
+export * from "./GradientBlock";
 export * from "./Heading";
 export * from "./IconButton";
 export * from "./InsetBlock";

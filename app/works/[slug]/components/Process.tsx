@@ -15,7 +15,7 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
       <div className="relative">
         {!hook.isTablet && (
           <motion.div
-            className={`absolute top-0 -left-8 flex h-full w-px flex-col items-center border-b bg-gradient-to-b ${PROJECT.HERO.DISCIPLINE.length == 2 ? "to-grass-600 from-sky-300" : PROJECT.HERO.DISCIPLINE[0] === "design" ? "from-sky-300 to-sky-600" : PROJECT.HERO.DISCIPLINE[0] === "development" ? "from-grass-300 to-grass-600" : ""} `}
+            className={`absolute top-0 -left-8 flex h-full w-px flex-col items-center border-b bg-gradient-to-b ${PROJECT.HERO.DISCIPLINE.length == 2 ? "to-grass-600 from-sky-400" : PROJECT.HERO.DISCIPLINE[0] === "design" ? "from-sky-400 to-sky-600" : PROJECT.HERO.DISCIPLINE[0] === "development" ? "from-grass-400 to-grass-600" : ""} `}
             initial={MOTION_CONFIG.DEFAULT.INITIAL}
             whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
             transition={MOTION_CONFIG.TRANSITION}
@@ -25,7 +25,7 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
           <div className="relative" key={index}>
             {!hook.isTablet && (
               <div className="absolute top-0 -left-8 flex h-full w-px flex-col items-center justify-between">
-                <div className="border-greyscale-950/10 dark:bg-greyscale-950 bg-greyscale-50 dark:border-greyscale-50/10 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center">
+                <div className="border-greyscale-950/10 dark:bg-greyscale-950 bg-greyscale-50 dark:border-greyscale-50/10 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center shadow-xs">
                   <p className="text-greyscale-600 dark:text-greyscale-300 !text-xs">
                     {index + 1}
                   </p>

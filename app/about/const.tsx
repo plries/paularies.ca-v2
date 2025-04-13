@@ -149,7 +149,7 @@ export const EXPERIENCE_CONST = {
     },
     {
       TITLE: "freelance",
-      SPAN: "mar 2025 - present",
+      SPAN: "feb 2025 - present",
       DUTIES: [
         "took on freelance projects outside of day job to help clients achieve their goals.",
         "designed and developed responsive websites and digital assets tailored to client needs.",
