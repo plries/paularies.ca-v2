@@ -25,7 +25,7 @@ export const TestimonialCard = ({
         }}
         icon={
           <span
-            className={`ease-in-out-circ transition-transform duration-1000 ${isOpen ? "-rotate-180" : ""}`}
+            className={`ease-in-out-circ transition-transform duration-500 ${isOpen ? "-rotate-180" : ""}`}
           >
             <ChevronIcon />
           </span>
@@ -45,12 +45,7 @@ export const TestimonialCard = ({
             className="border-greyscale-950/10 dark:border-greyscale-50/10 aspect-square h-12 w-12 rounded-full border lg:h-14 lg:w-14"
           />
           <div className="flex flex-col">
-            <ContentHeading
-              level="h3"
-              additionalClasses="leading-none !text-2xl md:!text-[1.75rem] lg:!text-[2rem]"
-            >
-              {testimonial.NAME}
-            </ContentHeading>
+            <ContentHeading level="h3">{testimonial.NAME}</ContentHeading>
             <h4 className="text-greyscale-800 dark:text-greyscale-200 text-sm leading-none md:!text-base lg:!text-lg">
               {testimonial.TITLE}
             </h4>

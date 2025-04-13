@@ -16,14 +16,14 @@ export const AboutHero = () => {
             alt={ABOUT_HERO_CONST.IMAGES[0].ALT}
             height={500}
             width={500}
-            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 z-10 col-span-2 col-start-2 aspect-square w-16 translate-x-2 -rotate-4 rounded-xl border shadow-md transition-[scale] duration-700 hover:scale-105 md:w-36"
+            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 z-10 col-span-2 col-start-2 aspect-square w-16 translate-x-2 -rotate-4 rounded-xl border shadow-md transition-[scale] duration-500 hover:scale-105 md:w-36"
           />
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 col-span-2 col-start-2 aspect-square w-24 rounded-xl border shadow-md transition-[scale] duration-700 hover:scale-105 md:w-48"
+            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 col-span-2 col-start-2 aspect-square w-24 rounded-xl border shadow-md transition-[scale] duration-500 hover:scale-105 md:w-48"
           >
             <source src={ABOUT_HERO_CONST.VIDEO} type="video/mp4" />
           </video>
@@ -32,7 +32,7 @@ export const AboutHero = () => {
             alt={ABOUT_HERO_CONST.IMAGES[1].ALT}
             height={500}
             width={500}
-            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 z-10 col-span-2 col-start-2 aspect-square w-16 -translate-x-2 rotate-4 rounded-xl border shadow-md transition-[scale] duration-700 hover:scale-105 md:w-36"
+            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 z-10 col-span-2 col-start-2 aspect-square w-16 -translate-x-2 rotate-4 rounded-xl border shadow-md transition-[scale] duration-500 hover:scale-105 md:w-36"
           />
         </div>
         <p className="dark:text-greyscale-50 col-span-full flex flex-col items-center gap-1 text-center !text-xl leading-none md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
@@ -62,9 +62,7 @@ export const AboutHero = () => {
         className="text-greyscale-600 dark:text-greyscale-300 col-span-full mt-16 text-center md:col-span-6 md:col-start-2 lg:col-start-4"
       >
         {ABOUT_HERO_CONST.PARAGRAPH.map((text, index) => (
-          <React.Fragment key={index}>
-            {text}
-          </React.Fragment>
+          <React.Fragment key={index}>{text}</React.Fragment>
         ))}
       </motion.p>
     </section>

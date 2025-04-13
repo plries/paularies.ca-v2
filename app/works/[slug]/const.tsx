@@ -108,7 +108,7 @@ export const PROJECTS: ProjectPagePropsTypes = {
         DESCRIPTION: [
           "to promote ",
           <i key="limited">afleuries illustrated’s limited-time offer</i>,
-          " a modal automatically appears on the homepage—but only for first-time visitors and only within a specific date range. defined in a seperate",
+          " a modal automatically appears on the homepage—but only for first-time visitors and only within a specific date range. defined in a seperate ",
           <CodeSnippet key="usemodal">useModal.ts</CodeSnippet>,
           " file, it uses ",
           <strong key="localstorage">localStorage</strong>,

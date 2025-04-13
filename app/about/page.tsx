@@ -22,7 +22,7 @@ export default function About() {
           target="_blank"
           icon={<ArrowIcon />}
           additionalClasses={{
-            icon: "-rotate-45 transition-[rotate] duration-500 ease-in-out-circ group-hover:rotate-0",
+            icon: "-rotate-45 transition-[rotate] duration-300 ease-in-out-circ group-hover:rotate-0",
           }}
           iconRight
         >

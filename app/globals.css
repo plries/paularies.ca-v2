@@ -196,8 +196,9 @@ strong {
 }
 
 i {
-  font-family: var(--font-serif);
+  font-family: var(--font-instrument-serif);
   color: var(--color-greyscale-800);
+  letter-spacing: normal;
 }
 
 .dark {

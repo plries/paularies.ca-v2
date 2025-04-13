@@ -43,11 +43,16 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
               <div className="flex w-full flex-col gap-3">
                 <div className="flex flex-row items-center gap-3">
                   {hook.isTablet && (
-                    <div className="border-greyscale-950/10 dark:bg-greyscale-950 bg-greyscale-50 dark:border-greyscale-50/10 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center">
+                    <motion.div
+                      className="border-greyscale-950/10 dark:bg-greyscale-950 bg-greyscale-50 dark:border-greyscale-50/10 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center"
+                      initial={MOTION_CONFIG.DEFAULT.INITIAL}
+                      whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
+                      transition={MOTION_CONFIG.TRANSITION}
+                    >
                       <p className="text-greyscale-600 dark:text-greyscale-300 !text-xs">
                         {index + 1}
                       </p>
-                    </div>
+                    </motion.div>
                   )}
                   <ContentHeading level="h3">{process.HEADING}</ContentHeading>
                 </div>

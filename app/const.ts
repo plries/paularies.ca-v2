@@ -50,7 +50,7 @@ export const PROJECTS_CONST = {
 };
 
 export const MOTION_CONFIG = {
-  TRANSITION: { duration: 0.7, easeInOut },
+  TRANSITION: { duration: 0.5, easeInOut },
   DEFAULT: {
     INITIAL: { filter: "blur(8px)", opacity: 0 },
     WHILE_IN_VIEW: { filter: "blur(0)", opacity: 1 },
