@@ -6,7 +6,6 @@ export * from "./CssIcon";
 export * from "./EmailIcon";
 export * from "./FigmaIcon";
 export * from "./HtmlIcon";
-export * from "./IdIcon";
 export * from "./JsIcon";
 export * from "./LightDarkToggleIcon";
 export * from "./LineIcon";

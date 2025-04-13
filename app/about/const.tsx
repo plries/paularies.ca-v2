@@ -4,7 +4,6 @@ import {
   CssIcon,
   FigmaIcon,
   HtmlIcon,
-  IdIcon,
   JsIcon,
   PhpIcon,
   PsIcon,
