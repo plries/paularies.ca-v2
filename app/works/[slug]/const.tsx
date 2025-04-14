@@ -66,7 +66,7 @@ export const PROJECTS: ProjectPagePropsTypes = {
           <strong key="framer-motion">framer motion</strong>,
           " keep the transition feeling polished and responsive, while the copy defined in a ",
           <CodeSnippet key="const">const.js</CodeSnippet>,
-          "file ensures the codebase clean and easy to maintain.",
+          " file ensures the codebase clean and easy to maintain.",
         ],
         VIDEO: "/videos/projects/afleuries/afleuries-toggle.mp4",
         CODE: `<motion.div

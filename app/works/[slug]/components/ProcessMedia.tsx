@@ -40,7 +40,7 @@ export const ProcessMedia = ({
           </video>
         )}
         {PROCESS.CODE && (
-          <div className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 aspect-video w-full overflow-y-auto rounded-lg border p-4">
+          <div className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 h-full w-full touch-pan-y overflow-y-auto overscroll-contain rounded-lg border p-4">
             <Highlight className="text-greyscale-800 dark:text-greyscale-200">
               {PROCESS.CODE}
             </Highlight>
