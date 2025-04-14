@@ -64,7 +64,7 @@
     0px 1px 1px 0px rgba(26, 26, 26, 0.25) inset,
     0px 1px 1px 0px rgba(26, 26, 26, 0.25);
   --inset-light:
-    0px 1px 1px 0px rgba(26, 26, 26, 0.25) inset, 0px -1px 1px 0px #fff inset;
+    0px 1px 1px 0px rgba(26, 26, 26, 0.25) inset, 0px -1px 1px 0px rgb(246, 246, 246, 0.5) inset;
   --inset-dark:
     0px 1px 1px 0px #1a1a1a inset,
     0px -1px 1px 0px rgba(117, 117, 117, 0.25) inset;
