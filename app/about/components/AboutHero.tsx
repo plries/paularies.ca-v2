@@ -7,6 +7,9 @@ import { InsetBlock } from "@/app/components";
 import { ABOUT_HERO_CONST } from "../const";
 
 export const AboutHero = () => {
+  const imageStyles =
+    "animate-float border-greyscale-100 col-span-2 col-start-2 dark:border-greyscale-900 border shadow-md transition-[scale] duration-500 hover:scale-105 aspect-square rounded-xl";
+
   return (
     <section className="mt-16 contents">
       <InsetBlock>
@@ -16,14 +19,14 @@ export const AboutHero = () => {
             alt={ABOUT_HERO_CONST.IMAGES[0].ALT}
             height={500}
             width={500}
-            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 z-10 col-span-2 col-start-2 aspect-square w-16 translate-x-2 -rotate-4 rounded-xl border shadow-md transition-[scale] duration-500 hover:scale-105 md:w-36"
+            className={`z-10 w-16 translate-x-2 -rotate-4 md:w-36 ${imageStyles}`}
           />
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 col-span-2 col-start-2 aspect-square w-24 rounded-xl border shadow-md transition-[scale] duration-500 hover:scale-105 md:w-48"
+            className={`w-24 md:w-48 ${imageStyles}`}
           >
             <source src={ABOUT_HERO_CONST.VIDEO} type="video/mp4" />
           </video>
@@ -32,7 +35,7 @@ export const AboutHero = () => {
             alt={ABOUT_HERO_CONST.IMAGES[1].ALT}
             height={500}
             width={500}
-            className="animate-float border-greyscale-950/10 dark:border-greyscale-50/10 z-10 col-span-2 col-start-2 aspect-square w-16 -translate-x-2 rotate-4 rounded-xl border shadow-md transition-[scale] duration-500 hover:scale-105 md:w-36"
+            className={`z-10 w-16 -translate-x-2 rotate-4 md:w-36 ${imageStyles}`}
           />
         </div>
         <p className="dark:text-greyscale-50 col-span-full flex flex-col items-center gap-1 text-center !text-xl leading-none md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
