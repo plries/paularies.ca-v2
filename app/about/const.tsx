@@ -12,8 +12,9 @@ import {
   TailwindIcon,
   TsIcon,
   WpIcon,
+  PrIcon,
 } from "@/public";
-import { PrIcon } from "@/public/icons/PrIcon";
+import { Tooltip } from "../components";
 
 export const ABOUT_CONST = {
   HEADING: "about",
@@ -27,11 +28,11 @@ export const ABOUT_HERO_CONST = {
   IMAGES: [
     {
       SRC: "/images/about/paul-ship.jpg",
-      ALT: "paul aries on a ship",
+      ALT: "paul on a ship",
     },
     {
       SRC: "/images/about/paul-bear.jpg",
-      ALT: "paul aries with wa bear",
+      ALT: "paul with a bear",
     },
   ],
   VIDEO: "/videos/about/paul-vid.mp4",
@@ -47,9 +48,29 @@ export const ABOUT_HERO_CONST = {
   ],
   PARAGRAPH: [
     "when i'm not at my desk, you can find me ",
-    <strong key="outdoors">exploring the outdoors</strong>,
+    <Tooltip
+      key="outdoors"
+      image={{
+        src: "/images/about/outdoors.jpg",
+        alt: "paul and friends going on a hike",
+        width: 400,
+        height: 400,
+      }}
+    >
+      exploring the outdoors
+    </Tooltip>,
     " or ",
-    <strong key="dancing">dancing at a concert</strong>,
+    <Tooltip
+      key="dancing"
+      image={{
+        src: "/images/about/concert.jpg",
+        alt: "front row at a concert",
+        width: 400,
+        height: 400,
+      }}
+    >
+      dancing at a concert
+    </Tooltip>,
     ". surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
   ],
 };

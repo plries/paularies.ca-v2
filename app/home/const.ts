@@ -67,7 +67,7 @@ export const TESTIMONIALS_CONST = {
         ALT: "headshot of emma englund",
       },
       NAME: "emma englund",
-      TITLE: "founder of englund social",
+      TITLE: "founder @ englund social",
       QUOTE: [
         "paul is a wonderful person to work with and an exceptional designer and web developer. his work always wows me, especially his eye for perfect colour combinations and seamless web design.",
         "his strong work ethic really stands out, and i know i can rely on him to complete projects efficiently and perfectly aligned with the goals.",
@@ -93,7 +93,7 @@ export const TESTIMONIALS_CONST = {
         ALT: "headshot maria supikhanova",
       },
       NAME: "maria supikhanova",
-      TITLE: "web developer",
+      TITLE: "front end dev & ui designer @ splitmango media inc.",
       QUOTE: [
         "paul is one of the most reliable and talented people i’ve worked with. his natural eye for design shines through in every project, making his work both polished and creative.",
         "he’s great at meeting deadlines, often takes on extra responsibilities, and is a fantastic collaborator. paul’s versatility across creative fields makes every solution he offers thoughtful and effective.",
@@ -107,7 +107,7 @@ export const TESTIMONIALS_CONST = {
         ALT: "headshot of nicole espiritu",
       },
       NAME: "nicole espiritu",
-      TITLE: "web developer",
+      TITLE: "freelance creative",
       QUOTE: [
         "paul consistently impresses me with his dedication to his craft. not only is he highly talented with a keen eye for design, but he also writes clean, innovative code that perfectly complements his user-centered ui.",
         "having paul on your team is a true asset—he’s reliable and manages his time so effectively that he consistently delivers strong, well-thought-out projects.",

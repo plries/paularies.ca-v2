@@ -65,7 +65,7 @@ export const Footer = () => {
           onClick={hook.toggleMode}
           icon={
             <span
-              className={`transition-transform duration-300 ease-in-out-circ ${hook.mode === "dark" ? "rotate-180" : ""}`}
+              className={`ease-in-out-circ transition-transform duration-300 ${hook.mode === "dark" ? "rotate-180" : ""}`}
             >
               <LightDarkToggleIcon />
             </span>
