@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { ContentBlockPropTypes } from "./types";
 
 export const ContentBlock = ({

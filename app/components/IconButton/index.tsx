@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { IconButtonPropTypes } from "./types";
 import { useWindowSize } from "@/app/hooks";
 

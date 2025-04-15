@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { PaWordmark, LightDarkToggleIcon } from "@/public";
 import { Button, IconButton } from "@/app/components/";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { FOOTER_CONST } from "./const";
 import { useModeToggle } from "@/app/hooks";
 

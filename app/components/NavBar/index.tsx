@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
 import { PaStar, PaWordmark, EmailIcon, ChevronIcon } from "@/public";
 import { Button, IconButton } from "../";

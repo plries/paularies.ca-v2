@@ -2,7 +2,7 @@ import { ProjectPagePropsTypes } from "./types";
 import { Heading, ContentBlock, ContentHeading } from "@/app/components";
 import { ProcessMedia } from "./ProcessMedia";
 import { PROJECT_PAGE_CONST } from "../const";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { motion } from "motion/react";
 import { useWindowSize } from "@/app/hooks";
 

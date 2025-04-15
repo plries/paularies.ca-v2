@@ -1,5 +1,5 @@
 import { Heading, Button, ProjectCard } from "@/app/components";
-import { PROJECTS_CONST } from "@/app/const";
+import { PROJECTS_CONST } from "@/app/(site)/const";
 import { SELECTED_WORKS_CONST } from "../const";
 
 export const SelectedWorks = () => {

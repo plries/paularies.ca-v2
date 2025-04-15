@@ -2,10 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { Dot } from "../Dot";
 import { ProjectCardPropTypes } from "./types";
-import { IconButton, ContentHeading } from "../../components";
+import { IconButton, ContentHeading } from "@/app/components";
 import { ArrowIcon } from "@/public";
 import { useWindowSize } from "@/app/hooks";
 import { useProjectCard } from "./useProjectCard";
@@ -69,7 +69,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
               <div className="flex h-fit w-fit flex-row flex-wrap gap-y-2">
                 {PROJECT.SKILLS.map((tag, index) => (
                   <p
-                    className="bg-greyscale-100 font-dm-mono text-greyscale-500 dark:bg-greyscale-900 border border-greyscale-950/10 dark:border-greyscale-50/10 dark:text-greyscale-400 mr-[1px] p-2 !text-sm leading-none first:rounded-l-xl first:pl-3 last:rounded-r-xl last:pr-3 md:!text-base"
+                    className="bg-greyscale-100 font-dm-mono text-greyscale-500 dark:bg-greyscale-900 border-greyscale-950/10 dark:border-greyscale-50/10 dark:text-greyscale-400 mr-[1px] border p-2 !text-sm leading-none first:rounded-l-xl first:pl-3 last:rounded-r-xl last:pr-3 md:!text-base"
                     key={index}
                   >
                     {tag}

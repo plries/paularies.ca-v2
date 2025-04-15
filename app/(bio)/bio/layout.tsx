@@ -1,8 +1,7 @@
 import { Hanken_Grotesk, Instrument_Serif, DM_Mono } from "next/font/google";
 import { ReactLenis } from "lenis/react";
-import { NavBar, Footer, ClientOnly, PageContent } from "./components/";
-import { metadata } from "./layoutMetadata";
-import "./globals.css";
+import "../../globals.css";
+import { ClientOnly } from "@/app/components";
 
 export const hankenGrotesk = Hanken_Grotesk({
   weight: ["300", "400", "500", "600", "700"],
@@ -23,7 +22,7 @@ export const dmMono = DM_Mono({
   variable: "--font-dm-mono",
 });
 
-export default function RootLayout({
+export default function BioLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -49,18 +48,15 @@ export default function RootLayout({
       </head>
       <ReactLenis root>
         <body
-          className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased`}
+          className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900 grid h-screen place-items-center overflow-hidden antialiased`}
         >
           <ClientOnly>
-            <NavBar />
-            <PageContent>{children}</PageContent>
-            <div className="mask-gradient bg-greyscale-50/50 dark:bg-greyscale-950/50 pointer-events-none fixed bottom-0 left-0 z-40 h-24 w-screen backdrop-blur-md" />
-            <Footer />
+            <main className="border-greyscale-950/5 dark:border-greyscale-50/5 relative mx-auto grid w-full max-w-7xl grid-cols-4 gap-3 border-x border-dashed px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-12">
+              {children}
+            </main>
           </ClientOnly>
         </body>
       </ReactLenis>
     </html>
   );
 }
-
-export { metadata };

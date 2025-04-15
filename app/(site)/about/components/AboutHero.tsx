@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { InsetBlock } from "@/app/components";
 import { ABOUT_HERO_CONST } from "../const";
 

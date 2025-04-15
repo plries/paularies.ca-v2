@@ -14,7 +14,7 @@ import {
   WpIcon,
   PrIcon,
 } from "@/public";
-import { Tooltip } from "../components";
+import { Tooltip } from "@/app/components";
 
 export const ABOUT_CONST = {
   HEADING: "about",

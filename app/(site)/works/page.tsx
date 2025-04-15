@@ -1,7 +1,7 @@
 "use client";
-import { ProjectCard, Heading, ActionBar, ToggleInput } from "../components";
-import { useToggleInput, useWindowSize, ScrollToTop } from "../hooks";
-import { PROJECTS_CONST } from "../const";
+import { ProjectCard, Heading, ActionBar, ToggleInput } from "@/app/components";
+import { useToggleInput, useWindowSize, ScrollToTop } from "@/app/hooks";
+import { PROJECTS_CONST } from "@/app/(site)/const";
 import { WORKS_CONST } from "./const";
 
 export default function Works() {

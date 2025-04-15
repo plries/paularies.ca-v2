@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MOTION_CONFIG } from "@/app/const";
+import { MOTION_CONFIG } from "@/app/(site)/const";
 import { ButtonLinkPropTypes } from "./types";
 import { useWindowSize } from "@/app/hooks";
 
@@ -23,7 +23,7 @@ export const Button = ({
       ? "bg-greyscale-950 border-greyscale-50/10 text-greyscale-50 shadow-[var(--button-dark)] dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950  dark:shadow-[var(--button-light)]"
       : theme === "secondary"
         ? "bg-greyscale-50 border-greyscale-950/10 text-greyscale-950 shadow-[var(--button-light)] dark:bg-greyscale-950 dark:border-greyscale-50/10 dark:text-greyscale-50  dark:shadow-[var(--button-dark)]"
-        : "text-greyscale-950 border-transparent dark:text-greyscale-50 dark:border-transparent !p-2 !py-0"
+        : "text-greyscale-950 border-transparent dark:text-greyscale-50 dark:border-transparent !px-2 !py-0"
   }`;
 
   const containerStyles = `relative group ${additionalClasses?.container || ""}`;
