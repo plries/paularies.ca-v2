@@ -37,6 +37,7 @@ export default function BioPage() {
                 target="_blank"
                 additionalClasses={{
                   button: "!text-greyscale-950 dark:!text-greyscale-200",
+                  container: "h-fit"
                 }}
               >
                 {link.label}
