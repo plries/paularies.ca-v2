@@ -9,7 +9,7 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
   return (
     <>
       <InsetBlock additionalClasses="!p-3 md:!p-4">
-        <div className="bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 dark:bg-greyscale-950 relative col-span-full aspect-video overflow-hidden rounded-lg border">
+        <div className="bg-greyscale-100 border-greyscale-950/10 dark:border-greyscale-50/10 dark:bg-greyscale-900 relative col-span-full aspect-video overflow-hidden rounded-lg md:rounded-2xl border">
           <Image
             src={PROJECT.HERO.IMAGE.SRC}
             alt={PROJECT.HERO.IMAGE.ALT}

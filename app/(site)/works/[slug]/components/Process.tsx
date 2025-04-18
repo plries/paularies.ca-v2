@@ -40,7 +40,7 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
             <ContentBlock
               additionalClasses={`gap-3 md:gap-6 lg:gap-8 mb-3 md:mb-4 ${index === PROJECT.PROCESS.length - 1 ? "md:last:mb-0" : ""}`}
             >
-              <div className="flex w-full flex-col gap-3">
+              <div className="flex w-full flex-col gap-3 md:gap-4">
                 <div className="flex flex-row items-center gap-3">
                   {hook.isTablet && (
                     <motion.div

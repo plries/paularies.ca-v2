@@ -19,13 +19,13 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
       initial={MOTION_CONFIG.PROJECT_CARD.INITIAL}
       whileInView={MOTION_CONFIG.PROJECT_CARD.WHILE_IN_VIEW}
       transition={MOTION_CONFIG.TRANSITION}
-      className="group group col-span-full rounded-2xl"
+      className="group group col-span-full"
     >
       {!windowSize.isMobile && (
-        <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 pointer-events-none absolute -inset-1 rounded-2xl duration-300" />
+        <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 pointer-events-none absolute -inset-1 rounded-[1.75rem] duration-300" />
       )}
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-2 rounded-xl border p-2 shadow-[var(--card-light)] md:flex-row dark:shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-4 rounded-xl md:rounded-3xl border p-4 shadow-[var(--card-light)] md:flex-row dark:shadow-[var(--card-dark)] ${
           PROJECT.DISCIPLINE[0] === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
@@ -36,7 +36,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
           href={`/works/${encodeURIComponent(PROJECT.SLUG)}`}
           onClick={projectCard.handleOnClick}
         >
-          <div className="dark:bg-greyscale-900 bg-greyscale-100 relative grid aspect-video w-full place-items-center overflow-hidden rounded-lg">
+          <div className="dark:bg-greyscale-900 bg-greyscale-100 relative grid aspect-video w-full place-items-center overflow-hidden rounded-lg md:rounded-xl">
             {PROJECT.IMAGE.SRC && (
               <Image
                 src={PROJECT.IMAGE.SRC}

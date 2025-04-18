@@ -17,7 +17,7 @@ export const ViewToggle = ({ isCode, toggleView }: ViewTogglePropTypes) => {
         theme="tertiary"
         additionalClasses={{
           container: `w-full !rounded-lg ${!isCode ? "hover:!bg-transparent" : ""}`,
-          button: `w-full !text-greyscale-950 dark:!text-greyscale-50 ${!isCode ? "!cursor-default" : ""}`,
+          button: `w-full !text-greyscale-950 dark:!text-greyscale-50 ${!isCode ? "!cursor-crosshair" : ""}`,
           text: `transition-[scale] duration-500 ${!isCode ? "group-hover:scale-100 pointer-events-none" : "!text-greyscale-950/50 dark:!text-greyscale-50/50"}`,
         }}
         onClick={!isCode ? () => {} : toggleView}
@@ -30,7 +30,7 @@ export const ViewToggle = ({ isCode, toggleView }: ViewTogglePropTypes) => {
         onClick={isCode ? () => {} : toggleView}
         additionalClasses={{
           container: `w-full !rounded-lg ${isCode ? "hover:!bg-transparent" : ""}`,
-          button: `w-full !text-greyscale-950 dark:!text-greyscale-50 ${isCode ? "!cursor-default" : ""}`,
+          button: `w-full !text-greyscale-950 dark:!text-greyscale-50 ${isCode ? "!cursor-crosshair" : ""}`,
           text: `transition-[scale] duration-500 ${isCode ? "group-hover:scale-100 pointer-events-none" : "!text-greyscale-950/50 dark:!text-greyscale-50/50"}`,
         }}
         noHover
