@@ -9,7 +9,7 @@ export const Tooltip = ({ children, image, text }: TooltipPropTypes) => {
   return (
     <span className="relative w-fit">
       <span
-        className="bg-greyscale-950/5 dark:bg-greyscale-800 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 font-instrument-serif rounded-full border px-2 text-nowrap"
+        className="bg-greyscale-950/5 dark:bg-greyscale-800 dark:text-greyscale-50 text-greyscale-950 font-instrument-serif rounded-full shadow-xs px-2 text-nowrap"
         onMouseEnter={() => hook.setIsHovered(true)}
         onMouseLeave={() => hook.setIsHovered(false)}
       >

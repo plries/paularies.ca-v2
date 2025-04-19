@@ -419,7 +419,7 @@ i {
 .gradient-container::after {
   content: '';
   position: absolute;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -428,4 +428,14 @@ i {
   opacity: 0.50;
   pointer-events: none;
   mix-blend-mode: overlay;
+}
+
+.radial-gradient {
+  background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-100) 100%);
+}
+
+.dark {
+  .radial-gradient {
+    background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-900) 100%);
+  }
 }
