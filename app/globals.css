@@ -431,11 +431,23 @@ i {
 }
 
 .radial-gradient {
-  background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-100) 100%);
+  background: radial-gradient(75% 50% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-100) 100%);
 }
 
 .dark {
   .radial-gradient {
-    background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-900) 100%);
+    background: radial-gradient(75% 50% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-900) 100%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .radial-gradient {
+    background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-100) 100%);
+  }
+  
+  .dark {
+    .radial-gradient {
+      background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-900) 100%);
+    }
   }
 }
