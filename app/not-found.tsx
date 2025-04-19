@@ -1,5 +1,6 @@
 import { hankenGrotesk, instrumentSerif, dmMono } from "./fonts";
 import { Button, ClientOnly, ContentBlock, ContentHeading } from "./components";
+import { NOT_FOUND_CONST } from "./const";
 
 export default function NotFound() {
   return (
@@ -11,7 +12,7 @@ export default function NotFound() {
           <ContentBlock additionalClasses="col-start-2 col-span-2 md:col-start-2 md:col-span-6 lg:col-start-4 lg:col-span-6">
             <ContentHeading level="h1">not found</ContentHeading>
             <p className="text-greyscale-600 dark:text-greyscale-300 w-full">
-              the page you are looking for doesn't exist.
+              {NOT_FOUND_CONST.DESCRIPTION}
             </p>
             <div className="flex justify-end">
               <Button
@@ -20,7 +21,7 @@ export default function NotFound() {
                 additionalClasses={{ container: "w-fit" }}
                 isLink
               >
-                go back
+                {NOT_FOUND_CONST.BUTTON}
               </Button>
             </div>
           </ContentBlock>
