@@ -1,4 +1,4 @@
-export const CollaborationIcon = () => {
+export const GearsIcon = () => {
   return (
     <svg
       width="24"

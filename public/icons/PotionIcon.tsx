@@ -1,4 +1,4 @@
-export const AdaptabilityIcon = () => {
+export const PotionIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
