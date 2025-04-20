@@ -13,4 +13,5 @@ export type IconButtonPropTypes = {
   noBlur?: boolean;
   noHover?: boolean;
   target?: string;
+  disabled?: boolean;
 };

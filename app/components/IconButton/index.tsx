@@ -16,8 +16,9 @@ export const IconButton = ({
   noBlur,
   noHover,
   target,
+  disabled,
 }: IconButtonPropTypes) => {
-  const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border p-2.5 ease-in-out-circ ${additionalClasses?.button || ""} ${
+  const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border p-2.5 ease-in-out-circ disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 transition-[scale] duration-300  ${additionalClasses?.button || ""} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-50/10 text-greyscale-50 shadow-[var(--button-dark)] dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950 dark:shadow-[var(--button-light)]"
       : theme === "secondary"
@@ -42,7 +43,11 @@ export const IconButton = ({
               <span className="sr-only">{name}</span>
             </Link>
           ) : (
-            <button onClick={onClick} className={buttonStyles}>
+            <button
+              onClick={onClick}
+              className={buttonStyles}
+              disabled={disabled}
+            >
               {icon}
               <span className="sr-only">{name}</span>
             </button>
@@ -62,7 +67,11 @@ export const IconButton = ({
               <span className="sr-only">{name}</span>
             </Link>
           ) : (
-            <button onClick={onClick} className={buttonStyles}>
+            <button
+              onClick={onClick}
+              className={buttonStyles}
+              disabled={disabled}
+            >
               {icon}
               <span className="sr-only">{name}</span>
             </button>
