@@ -188,3 +188,21 @@ export const EXPERIENCE_CONST = {
     },
   ],
 };
+
+export const FACTS_CONST = {
+  HEADING: "fun facts",
+  FACTS: [
+    {
+      TITLE: "",
+      DESCRIPTION: "",
+    },
+    {
+      TITLE: "",
+      DESCRIPTION: "",
+    },
+    {
+      TITLE: "",
+      DESCRIPTION: "",
+    },
+  ],
+};

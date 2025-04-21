@@ -9,7 +9,7 @@ export default function NotFound() {
       className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} radial-gradient flex h-screen flex-col items-center antialiased`}
     >
       <ClientOnly>
-        <main className="relative mx-auto grid h-full w-full max-w-7xl grid-cols-4 place-items-center gap-3 px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-12">
+        <main className="relative grid h-full w-full max-w-[1440px] grid-cols-4 place-items-center gap-3 px-3 md:grid-cols-8 md:gap-4 md:px-6 lg:grid-cols-12 lg:px-12">
           <ContentBlock additionalClasses="col-span-full h-fit md:col-start-2 md:col-span-6 lg:col-start-4 lg:col-span-6 -rotate-1">
             <ContentHeading level="h1">
               {NOT_FOUND_CONST.HEADING}
