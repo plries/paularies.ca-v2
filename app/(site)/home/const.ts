@@ -18,14 +18,14 @@ export const HERO_CONST = {
 
 export const INTRO_CONST = {
   PARAGRAPH_ONE: [
-    "my passion for both ",
+    "my love for both ",
     "art ",
     "and ",
     "tech ",
     "has always driven me to merge the two creatively.",
   ],
   PARAGRAPH_TWO: [
-    "that's why i love the world of front-end development—i can create innovative solutions and help users navigate the digital world in a satisfying and refreshing way.",
+    "which is why i'm in the world of web development—i'm able to combine my creative and technical skills all while helping others bring their ideas to life.",
   ],
   BUTTON: {
     HREF: "/about",
