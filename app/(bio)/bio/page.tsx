@@ -11,7 +11,7 @@ export default function BioPage() {
   return (
     <>
       <Hero />
-      <div className="absolute top-2 left-5 md:top-2 md:left-8 lg:left-14">
+      <div className="absolute top-4 left-7 md:top-4 md:left-10 lg:left-16 lg:top-4">
         <IconButton
           onClick={hook.toggleMode}
           icon={
@@ -26,8 +26,8 @@ export default function BioPage() {
         />
       </div>
       <div className="col-span-full flex w-full flex-col justify-between gap-3 md:flex-row md:gap-4">
-        <div className="flex w-full flex-row gap-3 md:gap-4">
-          <div className="flex w-full flex-col gap-3 md:flex-row md:gap-4">
+        <div className="flex w-full flex-col gap-3 md:gap-4">
+          <div className="flex justify-center gap-3 flex-wrap md:gap-4">
             {BIO_CONST.LINKS_CONST.map((link, index) => (
               <Button
                 key={index}
@@ -37,14 +37,14 @@ export default function BioPage() {
                 target="_blank"
                 additionalClasses={{
                   button: "!text-greyscale-950 dark:!text-greyscale-200",
-                  container: "h-fit"
+                  container: "h-fit w-fit"
                 }}
               >
                 {link.label}
               </Button>
             ))}
           </div>
-          <div className="flex w-full flex-col items-end justify-end gap-3 md:flex-row md:flex-wrap md:gap-4">
+          <div className="border-t border-greyscale-950/5 dark:border-greyscale-50/5 pt-3 md:pt-4 flex justify-center gap-3 flex-wrap md:gap-4">
             {BIO_CONST.CONTACTS_CONST.map((link, index) => (
               <Button
                 key={index}
