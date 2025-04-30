@@ -201,8 +201,8 @@ export const FACTS_CONST = {
         " and ",
         <i key="visionaries">visionaries</i>,
         ". from traditional art, dancing, to filmmaking, we've explored a wide range of creative pursuits. recently, my family and i collaborated for a short film that premiered at the innovate dance film showcase 2023.",
-        <br/>,
-        <br/>,
+        <br key="br-1"/>,
+        <br key="br-2"/>,
         "if you're curious you can check it out our film ",
         <Tooltip
           key="innovate"
@@ -230,8 +230,8 @@ export const FACTS_CONST = {
         " and ",
         <strong key="indie">indie</strong>,
         " i love to listen, dance, and every so often, DJ (within the comfort of my bedroom).",
-        <br/>,
-        <br/>,
+        <br key="br-3"/>,
+        <br key="br-4"/>,
         "you can find my unnecessarily large catalog of playlists on my ",
         <Tooltip
           key="spotify"
