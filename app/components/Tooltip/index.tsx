@@ -16,10 +16,7 @@ export const Tooltip = ({ children, image, text }: TooltipPropTypes) => {
         {children}
       </span>
       <motion.span
-        className={`pointer-events-none absolute bottom-full left-0 z-50 mb-2 transition-opacity duration-500 ease-in-out ${hook.isHovered ? "" : "opacity-0 blur-sm"}`}
-        variants={hook.variants}
-        animate={hook.cursorVariant}
-        transition={hook.spring}
+        className={`pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 z-50 mb-2 min-w-40 transition-opacity duration-500 ease-in-out ${hook.isHovered ? "" : "opacity-0 blur-sm"}`}
       >
         {image && (
           <Image
@@ -27,7 +24,7 @@ export const Tooltip = ({ children, image, text }: TooltipPropTypes) => {
             width={image.width}
             height={image.height}
             alt={image.alt}
-            className="border-greyscale-100 dark:border-greyscale-900 animate-float aspect-square -rotate-4 rounded-xl border shadow-md transition-[scale] duration-500"
+            className="border-greyscale-100 dark:border-greyscale-900 animate-float rounded-xl border shadow-md transition-[scale] duration-500"
           />
         )}
         {text && <>{text}</>}

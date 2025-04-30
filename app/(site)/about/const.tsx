@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   AeIcon,
   AiIcon,
@@ -193,16 +194,60 @@ export const FACTS_CONST = {
   HEADING: "fun facts",
   FACTS: [
     {
-      TITLE: "",
-      DESCRIPTION: "",
+      TITLE: "a family of visionaries",
+      DESCRIPTION: [
+        "i come from a family of ",
+        <i key="artists">artists</i>,
+        " and ",
+        <i key="visionaries">visionaries</i>,
+        ". from traditional art, dancing, to filmmaking, we've explored a wide range of creative pursuits. recently, my family and i collaborated for a short film that premiered at the innovate dance film showcase 2023.",
+        <br/>,
+        <br/>,
+        "if you're curious you can check it out our film ",
+        <Tooltip
+          key="innovate"
+          image={{
+              width: 400,
+              height: 711,
+              src: "/images/about/innovate.jpg",
+              alt: "innovate dance film showcase 2023 poster",
+          }}
+        >
+          <Link href="https://www.youtube.com/watch?v=vkEjWKE912s" target="_blank">
+            careful
+          </Link>
+        </Tooltip>,
+        " here."
+      ]
     },
     {
-      TITLE: "",
-      DESCRIPTION: "",
-    },
-    {
-      TITLE: "",
-      DESCRIPTION: "",
+      TITLE: "music enthusiast",
+      DESCRIPTION: [
+        "music has always been a huge part of my life, and i find myself drawn to a wide variety of genres. everything from ",
+        <strong key="house">house</strong>,
+        " to ",
+        <strong key="rb">r&b</strong>,
+        " and ",
+        <strong key="indie">indie</strong>,
+        " i love to listen, dance, and every so often, DJ (within the comfort of my bedroom).",
+        <br/>,
+        <br/>,
+        "you can find my unnecessarily large catalog of playlists on my ",
+        <Tooltip
+          key="spotify"
+          image={{
+            width: 300,
+            height: 300,
+            src: "/images/about/spotify.jpg",
+            alt: "spotify profile picture",
+          }}
+          >
+            <Link href="https://open.spotify.com/user/paullaries?si=8152ee173b134572" target="_blank">
+            spotify
+            </Link>
+        </Tooltip>,
+        "profile."
+      ]
     },
   ],
 };

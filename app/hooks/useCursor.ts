@@ -25,8 +25,8 @@ export const useCursor = () => {
   const variants = useMemo(
     () => ({
       default: {
-        x: mousePos.x + 24,
-        y: mousePos.y + 24,
+        x: mousePos.x + 20,
+        y: mousePos.y + 20,
         // if the mouse is outside the window, fade out the cursor
         opacity: isInWindow ? 1 : 0,
         transition: {
