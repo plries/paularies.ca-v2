@@ -185,7 +185,7 @@ code {
 }
 
 strong {
-  color: var(--color-greyscale-800);
+  color: var(--color-greyscale-700);
   font-weight: 500;
 }
 
@@ -195,14 +195,14 @@ strong {
   }
 }
 
-i {
+em {
   font-family: var(--font-instrument-serif);
   color: var(--color-greyscale-800);
   letter-spacing: normal;
 }
 
 .dark {
-  i {
+  em {
     color: var(--color-greyscale-200);
   }
 }

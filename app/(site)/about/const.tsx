@@ -194,60 +194,61 @@ export const FACTS_CONST = {
   HEADING: "fun facts",
   FACTS: [
     {
+      TITLE: "dancing through life",
+      DESCRIPTION: [
+        "i've been dancing ever since i was seven years old, and competively dancing for over a decade. i was trained in mainly ",
+        <strong key="hip-hop">hip hop</strong>,
+        ", and had the privilege of competing in multiple ",
+        <em key="national">national</em>,
+        " and ",
+        <em key="international">international</em>,
+        " competitions. ",
+        <br key="br-5" />,
+        <br key="br-6" />,
+        "you can check out some of my dance footage on my page!",
+      ],
+      LINK: {
+        HREF: "https://www.instagram.com/plries/reels/",
+        NAME: "dance",
+      },
+    },
+    {
       TITLE: "a family of visionaries",
       DESCRIPTION: [
         "i come from a family of ",
-        <i key="artists">artists</i>,
+        <em key="artists">artists</em>,
         " and ",
-        <i key="visionaries">visionaries</i>,
-        ". from traditional art, dancing, to filmmaking, we've explored a wide range of creative pursuits. recently, my family and i collaborated for a short film that premiered at the innovate dance film showcase 2023.",
-        <br key="br-1"/>,
-        <br key="br-2"/>,
-        "if you're curious you can check it out our film ",
-        <Tooltip
-          key="innovate"
-          image={{
-              width: 400,
-              height: 711,
-              src: "/images/about/innovate.jpg",
-              alt: "innovate dance film showcase 2023 poster",
-          }}
-        >
-          <Link href="https://www.youtube.com/watch?v=vkEjWKE912s" target="_blank">
-            careful
-          </Link>
-        </Tooltip>,
-        " here."
-      ]
+        <em key="visionaries">visionaries</em>,
+        ". from traditional art, dancing, to filmmaking, we've explored a wide range of creative pursuits.",
+        <br key="br-1" />,
+        <br key="br-2" />,
+        "recently, my family and i collaborated for a short film that premiered at the ",
+        <strong key="innovate"> innovate dance film showcase 2023</strong>,
+        ". check it out!",
+      ],
+      LINK: {
+        HREF: "https://www.youtube.com/watch?v=vkEjWKE912s",
+        NAME: "careful",
+      },
     },
     {
       TITLE: "music enthusiast",
       DESCRIPTION: [
-        "music has always been a huge part of my life, and i find myself drawn to a wide variety of genres. everything from ",
+        "music has been a huge part of my life, and i enjoy a wide range of genres—everything from ",
         <strong key="house">house</strong>,
         " to ",
         <strong key="rb">r&b</strong>,
-        " and ",
+        " or ",
         <strong key="indie">indie</strong>,
-        " i love to listen, dance, and every so often, DJ (within the comfort of my bedroom).",
-        <br key="br-3"/>,
-        <br key="br-4"/>,
-        "you can find my unnecessarily large catalog of playlists on my ",
-        <Tooltip
-          key="spotify"
-          image={{
-            width: 300,
-            height: 300,
-            src: "/images/about/spotify.jpg",
-            alt: "spotify profile picture",
-          }}
-          >
-            <Link href="https://open.spotify.com/user/paullaries?si=8152ee173b134572" target="_blank">
-            spotify
-            </Link>
-        </Tooltip>,
-        "profile."
-      ]
+        ". i love to listen, dance, and every so often, DJ (within the comfort of my bedroom of course).",
+        <br key="br-3" />,
+        <br key="br-4" />,
+        "if you're curious, you can check my unnecesarily large catalog of playlists above!",
+      ],
+      LINK: {
+        HREF: "https://open.spotify.com/user/paullaries?si=8152ee173b134572",
+        NAME: "spotify",
+      },
     },
   ],
 };
