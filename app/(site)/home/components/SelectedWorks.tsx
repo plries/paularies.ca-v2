@@ -1,3 +1,4 @@
+import { GalleryVerticalEnd } from "lucide-react";
 import { Heading, Button, ProjectCard } from "@/app/components";
 import { PROJECTS_CONST } from "@/app/(site)/const";
 import { SELECTED_WORKS_CONST } from "../const";
@@ -10,7 +11,13 @@ export const SelectedWorks = () => {
         <ProjectCard key={project.TITLE} PROJECT={project} />
       ))}
       <div className="col-span-full mb-16 grid justify-end">
-        <Button href={SELECTED_WORKS_CONST.BUTTON.HREF} theme="primary" isLink>
+        <Button
+          href={SELECTED_WORKS_CONST.BUTTON.HREF}
+          theme="primary"
+          isLink
+          icon={<GalleryVerticalEnd width={20} height={20} />}
+          iconRight
+        >
           {SELECTED_WORKS_CONST.BUTTON.TEXT}
         </Button>
       </div>

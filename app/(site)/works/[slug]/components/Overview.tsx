@@ -14,7 +14,7 @@ export const Overview = ({ PROJECT }: ProjectPagePropsTypes) => {
             key={index}
           >
             <div className="bg-greyscale-100 border-greyscale-950/5 dark:border-greyscale-50/5 dark:bg-greyscale-900 text-greyscale-600 dark:text-greyscale-400 mb-6 w-fit rounded-full border p-2">
-              {index === 0 ? <TriangleAlert /> : <PencilRuler />}
+              {index === 0 ? <TriangleAlert width={20} height={20} /> : <PencilRuler width={20} height={20} />}
             </div>
             <div className="flex flex-col gap-3">
               <ContentHeading level="h3">{overview.HEADING}</ContentHeading>

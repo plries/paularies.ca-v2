@@ -1,5 +1,5 @@
 "use client";
-import { Sun, Moon, Mail } from "lucide-react";
+import { Sun, Moon, MessageCircle, GalleryVerticalEnd, FileUser } from "lucide-react";
 import { Hero } from "@/app/(site)/home";
 import { BIO_CONST } from "./const";
 import { Button, IconButton } from "@/app/components";
@@ -64,7 +64,8 @@ export default function BioPage() {
                 additionalClasses={{
                   button: `${index === BIO_CONST.CONTACTS_CONST.length - 1 ? "!shadow-[var(--button-gradient-light)] dark:!shadow-[var(--button-gradient-dark)]" : ""}`,
                 }}
-                icon={index === BIO_CONST.CONTACTS_CONST.length - 1 && <Mail width={20} height={20} />}
+                icon={index === 0 ? <GalleryVerticalEnd width={20} height={20}/> : index === 1 ? <FileUser width={20} height={20}/> : <MessageCircle width={20} height={20}/>}
+                iconRight
               >
                 {link.label}
               </Button>

@@ -1,3 +1,4 @@
+import { CircleUserRound } from "lucide-react";
 import { INTRO_CONST } from "../const";
 import { Button, ContentBlock, GradientBlock } from "@/app/components";
 
@@ -29,10 +30,11 @@ export const Intro = () => {
           href={INTRO_CONST.BUTTON.HREF}
           theme="secondary"
           additionalClasses={{
-            container:
-              "col-span-2 col-start-3 justify-self-end md:col-start-6 lg:col-start-9",
+            container: "col-span-2 col-start-3 justify-self-end md:col-start-6 lg:col-start-9",
           }}
           isLink
+          icon={<CircleUserRound width={20} height={20} />}
+          iconRight
         >
           {INTRO_CONST.BUTTON.TEXT}
         </Button>

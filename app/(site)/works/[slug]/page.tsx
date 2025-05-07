@@ -15,6 +15,8 @@ export default function ProjectPage() {
         icon={<ArrowLeft />}
         additionalClasses={{
           container: "col-span-full mb-12 w-fit",
+          icon: "mt-0.5",
+          text: "mb-0.5 !gap-1"
         }}
         iconRight={false}
         href="/works"
@@ -33,6 +35,7 @@ export default function ProjectPage() {
           theme="tertiary"
           onClick={hook.handlePrevious}
           icon={<ArrowLeft />}
+          additionalClasses={{ icon: "mt-0.5", text: "mb-0.5 !gap-1" }}
         >
           {PROJECT_PAGE_CONST.BUTTONS.PREVIOUS}
         </Button>
@@ -40,6 +43,7 @@ export default function ProjectPage() {
           theme="tertiary"
           onClick={hook.handleNext}
           icon={<ArrowRight />}
+          additionalClasses={{ icon: "mt-0.5", text: "mb-0.5 !gap-1" }}
           iconRight
         >
           {PROJECT_PAGE_CONST.BUTTONS.NEXT}

@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Mail, PanelTopClose, PanelTopOpen } from "lucide-react";
+import { MessageCircle, PanelTopClose, PanelTopOpen } from "lucide-react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
 import { PaStar, PaWordmark } from "@/public";
@@ -88,7 +88,7 @@ export const NavBar = () => {
             </ul>
             <Button
               href={NAVBAR_CONST.CONTACT.HREF}
-              icon={<Mail width={20} height={20} />}
+              icon={<MessageCircle width={20} height={20} />}
               theme="primary"
               additionalClasses={{
                 button:
@@ -96,8 +96,9 @@ export const NavBar = () => {
               }}
               isLink
               noBlur
+              iconRight
             >
-              <span className="mb-1">{NAVBAR_CONST.CONTACT.TEXT}</span>
+              {NAVBAR_CONST.CONTACT.TEXT}
             </Button>
           </div>
         )}

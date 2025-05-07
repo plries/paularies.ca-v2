@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { InsetBlock, Button, ContentHeading, Dot } from "@/app/components";
+import { InsetBlock, IconButton, ContentHeading, Dot } from "@/app/components";
+import { ArrowRight, Github } from "lucide-react";
 import { PROJECT_PAGE_CONST } from ".././const";
 import { ProjectPagePropsTypes } from "./types";
 import { useWindowSize } from "@/app/hooks";
@@ -51,25 +52,29 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
                 </div>
                 <div className="flex flex-row justify-end gap-2">
                   {PROJECT.HERO.GITHUB && (
-                    <Button
+                    <IconButton
                       theme="secondary"
                       href={PROJECT.HERO.GITHUB}
+                      name={PROJECT_PAGE_CONST.BUTTONS.GITHUB}
+                      icon={<Github width={20} height={20} />}
                       target="_blank"
                       isLink
                       noBlur
-                    >
-                      {PROJECT_PAGE_CONST.BUTTONS.GITHUB}
-                    </Button>
+                    />
                   )}
-                  <Button
+                  <IconButton
                     theme="primary"
                     href={PROJECT.HERO.LINK}
+                    name={PROJECT_PAGE_CONST.BUTTONS.VIEW}
                     target="_blank"
+                    icon={
+                      <span className="ease-in-out-circ -rotate-45 transition-[rotate] duration-300 group-hover:rotate-0">
+                        <ArrowRight width={20} height={20} />
+                      </span>
+                    }
                     isLink
                     noBlur
-                  >
-                    {PROJECT_PAGE_CONST.BUTTONS.VIEW}
-                  </Button>
+                  />
                 </div>
               </div>
               <div className="mask-gradient bg-greyscale-50/50 dark:bg-greyscale-950/50 pointer-events-none absolute bottom-0 left-0 h-1/3 w-full backdrop-blur-md" />
@@ -111,25 +116,29 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
               </div>
               <div className="flex w-full flex-row justify-end gap-2">
                 {PROJECT.HERO.GITHUB && (
-                  <Button
+                  <IconButton
                     theme="secondary"
                     href={PROJECT.HERO.GITHUB}
+                    name={PROJECT_PAGE_CONST.BUTTONS.GITHUB}
+                    icon={<Github width={20} height={20} />}
                     target="_blank"
                     isLink
                     noBlur
-                  >
-                    {PROJECT_PAGE_CONST.BUTTONS.GITHUB}
-                  </Button>
+                  />
                 )}
-                <Button
+                <IconButton
                   theme="primary"
                   href={PROJECT.HERO.LINK}
+                  name={PROJECT_PAGE_CONST.BUTTONS.VIEW}
                   target="_blank"
+                  icon={
+                    <span className="ease-in-out-circ -rotate-45 transition-[rotate] duration-300 group-hover:rotate-0">
+                      <ArrowRight width={20} height={20} />
+                    </span>
+                  }
                   isLink
                   noBlur
-                >
-                  {PROJECT_PAGE_CONST.BUTTONS.VIEW}
-                </Button>
+                />
               </div>
             </div>
           </div>
