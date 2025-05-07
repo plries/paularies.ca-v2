@@ -1,5 +1,4 @@
-import { ReactLenis } from "lenis/react";
-import { NavBar, Footer, ClientOnly, PageContent } from "../components/";
+import { NavBar, Footer, ClientOnly, PageContent, SmoothScroll } from "../components/";
 import { metadata } from "./layoutMetadata";
 import "../globals.css";
 
@@ -9,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactLenis root>
+    <SmoothScroll>
       <div className="bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased">
         <ClientOnly>
           <NavBar />
@@ -18,7 +17,7 @@ export default function RootLayout({
           <Footer />
         </ClientOnly>
       </div>
-    </ReactLenis>
+    </SmoothScroll>
   );
 }
 

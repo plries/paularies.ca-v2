@@ -2,12 +2,10 @@ import { ActionBar, Heading, Button } from "@/app/components";
 import { AboutHero, Experience, Skills, Values, Facts } from "./components";
 import { ArrowIcon } from "@/public";
 import { ABOUT_CONST } from "./const";
-import { ScrollToTop } from "@/app/hooks";
 
 export default function About() {
   return (
     <>
-      <ScrollToTop />
       <Heading level="h1">{ABOUT_CONST.HEADING}</Heading>
       <AboutHero />
       <Skills />

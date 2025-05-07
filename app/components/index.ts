@@ -16,6 +16,7 @@ export * from "./NavBar";
 export * from "./PageContent";
 export * from "./PageTransition";
 export * from "./ProjectCard";
+export * from "./SmoothScroll";
 export * from "./TestimonialCard";
 export * from "./ToggleInput";
 export * from "./Tooltip";

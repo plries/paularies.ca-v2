@@ -1,4 +1,3 @@
-export * from "./ScrollToTop";
 export * from "./useCursor";
 export * from "./useModeToggle";
 export * from "./useToggleInput";

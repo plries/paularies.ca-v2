@@ -56,6 +56,7 @@ export const NavBar = () => {
           href={pathname === "/" ? "#top" : NAVBAR_CONST.LOGO.HREF}
           onClick={useMobile.closeMenu}
           additionalClasses={{ button: "[&&]:!p-0 md:[&&]:!p-1 h-full" }}
+          scroll={false}
           isLink
           noBlur
         >
@@ -74,7 +75,7 @@ export const NavBar = () => {
             <ul className="contents">
               {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, TEXT }) => (
                 <li key={TEXT}>
-                  <Button href={HREF} theme="tertiary" isLink noBlur>
+                  <Button href={HREF} theme="tertiary" scroll={false} isLink noBlur>
                     {TEXT}
                   </Button>
                 </li>

@@ -17,4 +17,5 @@ export type ButtonLinkPropTypes = {
   noHover?: boolean;
   target?: string;
   disabled?: boolean;
+  scroll?: boolean;
 };

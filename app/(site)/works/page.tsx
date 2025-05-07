@@ -1,6 +1,6 @@
 "use client";
 import { ProjectCard, Heading, ActionBar, ToggleInput } from "@/app/components";
-import { useToggleInput, useWindowSize, ScrollToTop } from "@/app/hooks";
+import { useToggleInput, useWindowSize } from "@/app/hooks";
 import { PROJECTS_CONST } from "@/app/(site)/const";
 import { WORKS_CONST } from "./const";
 
@@ -10,7 +10,6 @@ export default function Works() {
 
   return (
     <>
-      <ScrollToTop />
       <Heading level="h1">{WORKS_CONST.HEADING}</Heading>
       {(!toggle.isChecked || windowSize.isMobile) && (
         <>
