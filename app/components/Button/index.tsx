@@ -19,6 +19,7 @@ export const Button = ({
   target,
   disabled,
   scroll,
+  tabIndex,
 }: ButtonLinkPropTypes) => {
   const buttonStyles = `relative cursor-pointer flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border px-3 py-2 text-base ease-in-out-circ md:text-lg lg:text-xl disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 transition-[scale] duration-300 ${additionalClasses?.button || ""} ${
     theme === "primary"
@@ -50,6 +51,7 @@ export const Button = ({
               onClick={onClick}
               className={buttonStyles}
               scroll={scroll}
+              tabIndex={tabIndex}
             >
               <span className={textStyles}>
                 {icon && !iconRight && (
@@ -66,6 +68,7 @@ export const Button = ({
               onClick={onClick}
               className={buttonStyles}
               disabled={disabled}
+              tabIndex={tabIndex}
             >
               <span className={textStyles}>
                 {icon && !iconRight && (
@@ -94,6 +97,7 @@ export const Button = ({
               onClick={onClick}
               className={buttonStyles}
               scroll={scroll}
+              tabIndex={tabIndex}
             >
               <span className={textStyles}>
                 {icon && !iconRight && (
@@ -110,6 +114,7 @@ export const Button = ({
               onClick={onClick}
               className={buttonStyles}
               disabled={disabled}
+              tabIndex={tabIndex}
             >
               <span className={textStyles}>
                 {icon && !iconRight && (

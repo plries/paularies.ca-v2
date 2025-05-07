@@ -20,7 +20,7 @@ export const Facts = () => {
               <ContentHeading level="h3">{fact.TITLE}</ContentHeading>
               <IconButton
                 isLink
-                theme="secondary"
+                theme="tertiary"
                 href={fact.LINK.HREF}
                 name={fact.LINK.NAME}
                 target="_blank"
@@ -31,7 +31,6 @@ export const Facts = () => {
                 }
                 additionalClasses={{
                   container: "w-fit",
-                  button: "bg-greyscale-100",
                 }}
               />
             </div>

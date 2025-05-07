@@ -51,6 +51,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
                 container: "w-full",
                 button: "w-full justify-end",
               }}
+              tabIndex={hook.isOpen ? 0 : -1}
               noBlur
             >
               {TEXT}

@@ -18,4 +18,5 @@ export type ButtonLinkPropTypes = {
   target?: string;
   disabled?: boolean;
   scroll?: boolean;
+  tabIndex?: number;
 };

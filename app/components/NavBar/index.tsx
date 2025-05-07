@@ -33,7 +33,7 @@ export const NavBar = () => {
         theme="secondary"
         additionalClasses={{
           container:
-            "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 transition-opacity duration-500 ease-in-out-circ pointer-events-auto",
+            "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 transition-opacity duration-500 ease-in-out-circ pointer-events-auto md:opacity-0 md:hover:opacity-100",
           button: "!rounded-full",
           hover: "!rounded-full",
         }}
