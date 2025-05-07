@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { ArrowRight } from "lucide-react";
 import { FACTS_CONST } from "../const";
 import {
   ContentBlock,
@@ -7,7 +8,6 @@ import {
   Heading,
   IconButton,
 } from "@/app/components/";
-import { ArrowIcon } from "@/public";
 
 export const Facts = () => {
   return (
@@ -26,7 +26,7 @@ export const Facts = () => {
                 target="_blank"
                 icon={
                   <span className="ease-in-out-circ -rotate-45 transition-[rotate] duration-300 group-hover:rotate-0">
-                    <ArrowIcon />
+                    <ArrowRight width={20} height={20} />
                   </span>
                 }
                 additionalClasses={{

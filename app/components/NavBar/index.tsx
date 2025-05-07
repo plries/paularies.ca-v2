@@ -1,9 +1,10 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { Mail, PanelTopClose, PanelTopOpen } from "lucide-react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
-import { PaStar, PaWordmark, EmailIcon, ChevronIcon } from "@/public";
+import { PaStar, PaWordmark } from "@/public";
 import { Button, IconButton } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
@@ -33,15 +34,19 @@ export const NavBar = () => {
         theme="secondary"
         additionalClasses={{
           container:
-            "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 transition-opacity duration-500 ease-in-out-circ pointer-events-auto md:opacity-0 md:hover:opacity-100",
+            "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 transition-opacity duration-500 ease-in-out-circ pointer-events-auto",
           button: "!rounded-full",
           hover: "!rounded-full",
         }}
         icon={
           <span
-            className={`text-greyscale-600 dark:text-greyscale-300 ease-in-out-circ transition-transform duration-500 ${useNav.isOpen ? "-rotate-180" : ""}`}
+            className="text-greyscale-400 dark:text-greyscale-300"
           >
-            <ChevronIcon />
+            {useNav.isOpen ? (
+              <PanelTopClose width={20} height={20} />
+            ) : (
+              <PanelTopOpen width={20} height={20} />
+            )}
           </span>
         }
         name={`${useNav.isOpen ? NAVBAR_CONST.NAV_BAR.SHOW_MENU : NAVBAR_CONST.NAV_BAR.HIDE_MENU}`}
@@ -83,7 +88,7 @@ export const NavBar = () => {
             </ul>
             <Button
               href={NAVBAR_CONST.CONTACT.HREF}
-              icon={<EmailIcon />}
+              icon={<Mail width={20} height={20} />}
               theme="primary"
               additionalClasses={{
                 button:

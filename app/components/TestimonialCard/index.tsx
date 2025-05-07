@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 import { ContentBlock, ContentHeading, IconButton } from "../";
 import { TestimonialCardPropTypes } from "./types";
-import { ChevronIcon } from "@/public";
 
 export const TestimonialCard = ({
   testimonial,
@@ -27,7 +27,7 @@ export const TestimonialCard = ({
           <span
             className={`ease-in-out-circ transition-transform duration-500 ${isOpen ? "-rotate-180" : ""}`}
           >
-            <ChevronIcon />
+            <ChevronDown width={20} height={20} />
           </span>
         }
         name={`${isOpen ? CLOSE : EXPAND}`}

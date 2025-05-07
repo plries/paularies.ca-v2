@@ -32,7 +32,7 @@ export const BIO_CONST = {
         },
         {
             href: "mailto:hello@paularies.ca",
-            label: "hello@paularies.ca",
+            label: "contact",
         }
     ],
     LIGHT_DARK: {

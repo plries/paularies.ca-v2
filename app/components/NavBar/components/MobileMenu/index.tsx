@@ -1,6 +1,6 @@
+import { Minus } from "lucide-react";
 import { Button, IconButton } from "@/app/components";
 import { NAVBAR_CONST } from "../../const";
-import { LineIcon } from "@/public";
 import { MobileMenuPropTypes } from "./types";
 
 export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
@@ -13,12 +13,12 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
             <span
               className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${hook.isOpen ? "" : "mb-1.5"}`}
             >
-              <LineIcon />
+              <Minus width={20} height={20} />
             </span>
             <span
               className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${hook.isOpen ? "rotate-90" : "mt-1.5"}`}
             >
-              <LineIcon />
+              <Minus width={20} height={20} />
             </span>
           </>
         }

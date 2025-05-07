@@ -1,7 +1,7 @@
 import React from "react";
+import { Feather, HeartHandshake, RefreshCcw } from "lucide-react";
 import { Heading, ContentBlock, ContentHeading } from "@/app/components";
 import { VALUES_CONST } from "../const";
-import { PotionIcon, GearsIcon, HandHeartIcon } from "@/public";
 
 export const Values = () => {
   return (
@@ -12,11 +12,11 @@ export const Values = () => {
           <ContentBlock key={index} additionalClasses="w-full">
             <div className="bg-greyscale-100 border-greyscale-950/5 dark:border-greyscale-50/5 dark:bg-greyscale-900 text-greyscale-600 dark:text-greyscale-400 mb-6 w-fit rounded-full border p-2">
               {index === 0 ? (
-                <PotionIcon />
+                <RefreshCcw />
               ) : index === 1 ? (
-                <GearsIcon />
+                <HeartHandshake />
               ) : (
-                <HandHeartIcon />
+                <Feather />
               )}
             </div>
             <ContentHeading level="h3">{value.TITLE}</ContentHeading>

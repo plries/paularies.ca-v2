@@ -1,8 +1,8 @@
 "use client";
+import { Sun, Moon, Mail } from "lucide-react";
 import { Hero } from "@/app/(site)/home";
 import { BIO_CONST } from "./const";
 import { Button, IconButton } from "@/app/components";
-import { LightDarkToggleIcon } from "@/public";
 import { useModeToggle } from "@/app/hooks";
 
 export default function BioPage() {
@@ -16,9 +16,14 @@ export default function BioPage() {
           onClick={hook.toggleMode}
           icon={
             <span
-              className={`ease-in-out-circ transition-transform duration-300 ${hook.mode === "dark" ? "rotate-180" : ""}`}
+              className={`ease-in-out-circ transition-transform duration-500 ${hook.mode === "dark" ? "rotate-360" : ""}`}
             >
-              <LightDarkToggleIcon />
+              {hook.mode === "dark" ? (
+                <Sun width={20} height={20} />
+                ) : (
+                  <Moon width={20} height={20} />
+                )
+              }
             </span>
           }
           theme="secondary"
@@ -59,6 +64,7 @@ export default function BioPage() {
                 additionalClasses={{
                   button: `${index === BIO_CONST.CONTACTS_CONST.length - 1 ? "!shadow-[var(--button-gradient-light)] dark:!shadow-[var(--button-gradient-dark)]" : ""}`,
                 }}
+                icon={index === BIO_CONST.CONTACTS_CONST.length - 1 && <Mail width={20} height={20} />}
               >
                 {link.label}
               </Button>

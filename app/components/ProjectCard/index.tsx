@@ -2,11 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { Dot } from "../Dot";
 import { ProjectCardPropTypes } from "./types";
 import { IconButton, ContentHeading } from "@/app/components";
-import { ArrowIcon } from "@/public";
 import { useWindowSize } from "@/app/hooks";
 import { useProjectCard } from "./useProjectCard";
 
@@ -85,7 +85,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                   <span
                     className={`dark:text-greyscale-50 transition-[rotate] duration-300 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.SLUG == "" ? "group-hover:rotate-360" : ""}`}
                   >
-                    <ArrowIcon />
+                    <ArrowRight width={20} height={20} />
                   </span>
                 }
                 additionalClasses={{

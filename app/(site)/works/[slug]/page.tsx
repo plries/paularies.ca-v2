@@ -1,7 +1,7 @@
 "use client";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { WorksHero, Overview, Process, Reflection } from "./components";
 import { Button, PageTransition } from "@/app/components";
-import { ArrowIcon } from "@/public";
 import { PROJECT_PAGE_CONST } from "./const";
 import { useProjectPage } from "./useProjectPage";
 
@@ -12,10 +12,9 @@ export default function ProjectPage() {
     <PageTransition>
       <Button
         theme="tertiary"
-        icon={<ArrowIcon />}
+        icon={<ArrowLeft />}
         additionalClasses={{
           container: "col-span-full mb-12 w-fit",
-          icon: "rotate-180",
         }}
         iconRight={false}
         href="/works"
@@ -33,15 +32,14 @@ export default function ProjectPage() {
         <Button
           theme="tertiary"
           onClick={hook.handlePrevious}
-          icon={<ArrowIcon />}
-          additionalClasses={{ icon: "rotate-180" }}
+          icon={<ArrowLeft />}
         >
           {PROJECT_PAGE_CONST.BUTTONS.PREVIOUS}
         </Button>
         <Button
           theme="tertiary"
           onClick={hook.handleNext}
-          icon={<ArrowIcon />}
+          icon={<ArrowRight />}
           iconRight
         >
           {PROJECT_PAGE_CONST.BUTTONS.NEXT}

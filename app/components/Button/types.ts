@@ -10,7 +10,7 @@ export type ButtonLinkPropTypes = {
     text?: string;
     hover?: string;
   };
-  icon?: React.ReactNode;
+  icon?: React.ReactNode | null;
   iconRight?: boolean;
   isLink?: boolean;
   noBlur?: boolean;

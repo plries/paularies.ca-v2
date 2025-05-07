@@ -1,6 +1,6 @@
+import { ArrowRight } from "lucide-react";
 import { ActionBar, Heading, Button } from "@/app/components";
 import { AboutHero, Experience, Skills, Values, Facts } from "./components";
-import { ArrowIcon } from "@/public";
 import { ABOUT_CONST } from "./const";
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
           isLink
           noBlur
           target="_blank"
-          icon={<ArrowIcon />}
+          icon={<ArrowRight width={20} height={20} />}
           additionalClasses={{
             icon: "-rotate-45 transition-[rotate] duration-300 ease-in-out-circ group-hover:rotate-0",
           }}

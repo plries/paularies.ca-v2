@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { PaWordmark, LightDarkToggleIcon } from "@/public";
+import { Moon, Sun } from "lucide-react";
+import { PaWordmark } from "@/public";
 import { Button, IconButton } from "@/app/components/";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { FOOTER_CONST } from "./const";
@@ -65,9 +66,14 @@ export const Footer = () => {
           onClick={hook.toggleMode}
           icon={
             <span
-              className={`ease-in-out-circ transition-transform duration-300 ${hook.mode === "dark" ? "rotate-180" : ""}`}
+              className={`ease-in-out-circ transition-transform duration-500 ${hook.mode === "dark" ? "rotate-360" : ""}`}
             >
-              <LightDarkToggleIcon />
+              {hook.mode === "dark" ? (
+                <Sun width={20} height={20} />
+                ) : (
+                  <Moon width={20} height={20} />
+                )
+              }
             </span>
           }
           theme="secondary"
