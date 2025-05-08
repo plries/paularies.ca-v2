@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const useMobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -9,6 +12,10 @@ export const useMobileMenu = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return {
     isOpen,

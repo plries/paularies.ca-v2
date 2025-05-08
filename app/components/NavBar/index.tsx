@@ -88,6 +88,14 @@ export const NavBar = () => {
                       scroll={false}
                       isLink
                       noBlur
+                      onClick={() => {
+                        if (pathname === HREF) {
+                          lenis?.scrollTo(0, { immediate: false });
+                        }
+                      }}
+                      additionalClasses={{
+                        hover: `${pathname === HREF || (pathname.startsWith("/works/") && HREF === "/works") ? "bg-greyscale-300/10 dark:bg-greyscale-600/10" : ""}`,
+                      }}
                     >
                       {TEXT}
                     </Button>
