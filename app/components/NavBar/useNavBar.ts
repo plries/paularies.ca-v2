@@ -25,7 +25,23 @@ export const useNavBar = () => {
           return () => clearTimeout(timeout);
         }
       }, [isOpen]);
-      
+
+      useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+
+          // ctrl + b (windows) or cmd + b (mac)
+          const isCtrlOrCmd = event.ctrlKey || event.metaKey;
+          if (isCtrlOrCmd && event.key.toLowerCase() === "b") {
+            event.preventDefault(); 
+            setIsOpen(prev => !prev);
+          }
+        };
+    
+        window.addEventListener("keydown", handleKeyDown);
+        return () => {
+          window.removeEventListener("keydown", handleKeyDown);
+        };
+      }, []);
 
     return {
         isOpen,
