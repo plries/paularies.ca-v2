@@ -58,7 +58,9 @@ export const NavBar = () => {
             href={pathname === "/" ? "" : NAVBAR_CONST.LOGO.HREF}
             onClick={() => {
               useMobile.closeMenu();
-              pathname === "/" && lenis?.scrollTo(0, { immediate: false });
+              if (pathname === "/") {
+                lenis?.scrollTo(0, { immediate: false });
+              }
             }}
             additionalClasses={{ button: "[&&]:!p-0 md:[&&]:!p-1 h-full" }}
             scroll={false}
