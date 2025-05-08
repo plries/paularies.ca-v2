@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@phosphor-icons/react";
 import { FACTS_CONST } from "../const";
 import {
   ContentBlock,
@@ -13,11 +13,13 @@ export const Facts = () => {
   return (
     <section className="col-span-full mt-16 grid grid-cols-4 gap-3 rounded-3xl md:grid-cols-8 md:gap-4 lg:grid-cols-12">
       <Heading level="h2">{FACTS_CONST.HEADING}</Heading>
-      <div className="col-span-full flex flex-col gap-3 md:col-span-3 md:col-span-6 md:col-start-2 md:flex-row md:gap-4 lg:col-span-10 lg:col-start-2">
+      <div className="col-span-full flex flex-col gap-3 md:col-span-6 md:col-start-2 md:flex-row md:gap-4 lg:col-span-10 lg:col-start-2">
         {FACTS_CONST.FACTS.map((fact, index) => (
           <ContentBlock key={index} additionalClasses="w-full">
-            <div className="flex w-full flex-row items-center justify-between">
-              <ContentHeading level="h3">{fact.TITLE}</ContentHeading>
+            <div className="flex w-full flex-row flex-wrap items-center justify-between gap-3">
+              <ContentHeading level="h3" additionalClasses="!w-fit">
+                {fact.TITLE}
+              </ContentHeading>
               <IconButton
                 isLink
                 theme="tertiary"
@@ -25,8 +27,8 @@ export const Facts = () => {
                 name={fact.LINK.NAME}
                 target="_blank"
                 icon={
-                  <span className="ease-in-out-circ -rotate-45 transition-[rotate] duration-300 group-hover:rotate-0">
-                    <ArrowRight width={20} height={20} />
+                  <span className="ease-in-out-circ -rotate-45 transition-transform duration-300 group-hover:rotate-0">
+                    <ArrowRight size={20} />
                   </span>
                 }
                 additionalClasses={{

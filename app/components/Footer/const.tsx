@@ -4,8 +4,8 @@ export const FOOTER_CONST = {
     PARAGRAPH: [
       <strong key="work">like my work? have questions?</strong>,
       "feel free to reach out, i'd love to collaborate!",
-      "just say...",
     ],
+    JUST_SAY: "just say...",
     BUTTON: {
       HREF: "mailto:hello@paularies.ca",
       TEXT: "hello@paularies.ca",

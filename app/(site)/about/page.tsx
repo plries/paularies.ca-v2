@@ -1,4 +1,5 @@
-import { FileUser } from "lucide-react";
+"use client";
+import { Note } from "@phosphor-icons/react";
 import { ActionBar, Heading, Button } from "@/app/components";
 import { AboutHero, Experience, Skills, Values, Facts } from "./components";
 import { ABOUT_CONST } from "./const";
@@ -19,7 +20,12 @@ export default function About() {
           isLink
           noBlur
           target="_blank"
-          icon={<FileUser width={20} height={20} />}
+          icon={
+            <Note
+              size={20}
+              className="ease-in-out-circ mt-0.5 rotate-12 transition-transform duration-300 group-hover:rotate-0"
+            />
+          }
           iconRight
         >
           {ABOUT_CONST.BUTTON.TEXT}

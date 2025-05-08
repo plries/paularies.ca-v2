@@ -19,7 +19,7 @@ export const Skills = () => {
             "col-span-full md:col-span-3 md:col-start-2 [&:nth-child(4)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(4)]:lg:col-start-7"
           }
         >
-          <div className="flex flex-row items-center gap-1">
+          <div className="flex flex-row items-center gap-2">
             <Dot discipline={skill.TITLE as "design" | "development"} />
             <ContentHeading level="h3">{skill.TITLE}</ContentHeading>
           </div>

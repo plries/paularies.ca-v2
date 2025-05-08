@@ -1,25 +1,22 @@
-import { Minus } from "lucide-react";
+"use client";
+import { IconContext, Minus } from "@phosphor-icons/react";
 import { Button, IconButton } from "@/app/components";
 import { NAVBAR_CONST } from "../../const";
 import { MobileMenuPropTypes } from "./types";
 
 export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
   return (
-    <>
+    <IconContext.Provider value={{ size: 20 }}>
       <IconButton
         onClick={hook.toggleMenu}
         icon={
           <>
-            <span
+            <Minus
               className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${hook.isOpen ? "" : "mb-1.5"}`}
-            >
-              <Minus width={20} height={20} />
-            </span>
-            <span
+            />
+            <Minus
               className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${hook.isOpen ? "rotate-90" : "mt-1.5"}`}
-            >
-              <Minus width={20} height={20} />
-            </span>
+            />
           </>
         }
         theme="primary"
@@ -37,7 +34,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
       <ul
         className={`border-greyscale-200/50 bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-700/50 ease-in-out-circ absolute left-0 mt-4 w-full rounded-3xl border shadow-[var(--nav-bar-light)] !transition-[top,translate] duration-500 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-[calc(100%+0.725rem)]" : "pointer-events-none -top-full -translate-y-full"} `}
       >
-        {NAVBAR_CONST.LINKS.map(({ HREF, TEXT }) => (
+        {NAVBAR_CONST.MOBILE_LINKS.map(({ HREF, TEXT }) => (
           <li
             key={TEXT}
             className="border-greyscale-200/50 dark:border-greyscale-700/50 flex border-b-[1px] p-3 last:border-0"
@@ -59,6 +56,6 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
           </li>
         ))}
       </ul>
-    </>
+    </IconContext.Provider>
   );
 };

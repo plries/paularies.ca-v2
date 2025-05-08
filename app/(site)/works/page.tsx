@@ -1,9 +1,9 @@
 "use client";
+import { SquaresFour } from "@phosphor-icons/react";
 import { ProjectCard, Heading, ActionBar, ToggleInput } from "@/app/components";
 import { useToggleInput, useWindowSize } from "@/app/hooks";
 import { PROJECTS_CONST } from "@/app/(site)/const";
 import { WORKS_CONST } from "./const";
-import { LayoutGrid } from "lucide-react";
 
 export default function Works() {
   const toggle = useToggleInput();
@@ -50,16 +50,20 @@ export default function Works() {
         </>
       )}
       {!windowSize.isMobile && (
-        <ActionBar additionalClasses={{ container: "!px-3 text-greyscale-400 dark:text-greyscale-300" }}>
+        <ActionBar
+          additionalClasses={{
+            container: "!px-3 text-greyscale-400 dark:text-greyscale-300",
+          }}
+        >
           <ToggleInput
             onChange={toggle.toggleInput}
             isChecked={toggle.isChecked}
             label={WORKS_CONST.TOGGLE}
             additionalClasses={{
               label: "sr-only",
-             }}
+            }}
           />
-            <LayoutGrid />
+          <SquaresFour size={24} />
         </ActionBar>
       )}
     </>

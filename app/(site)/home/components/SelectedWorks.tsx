@@ -1,4 +1,5 @@
-import { GalleryVerticalEnd } from "lucide-react";
+"use client";
+import { CardsThree } from "@phosphor-icons/react";
 import { Heading, Button, ProjectCard } from "@/app/components";
 import { PROJECTS_CONST } from "@/app/(site)/const";
 import { SELECTED_WORKS_CONST } from "../const";
@@ -15,7 +16,13 @@ export const SelectedWorks = () => {
           href={SELECTED_WORKS_CONST.BUTTON.HREF}
           theme="primary"
           isLink
-          icon={<GalleryVerticalEnd width={20} height={20} />}
+          icon={
+            <CardsThree
+              width={20}
+              height={20}
+              className="ease-in-out-circ transition-transform duration-300 group-hover:rotate-12"
+            />
+          }
           iconRight
         >
           {SELECTED_WORKS_CONST.BUTTON.TEXT}

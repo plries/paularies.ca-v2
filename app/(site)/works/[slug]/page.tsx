@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { IconContext, ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import { WorksHero, Overview, Process, Reflection } from "./components";
 import { Button, PageTransition } from "@/app/components";
 import { PROJECT_PAGE_CONST } from "./const";
@@ -9,46 +9,48 @@ export default function ProjectPage() {
   const hook = useProjectPage();
 
   return (
-    <PageTransition>
-      <Button
-        theme="tertiary"
-        icon={<ArrowLeft />}
-        additionalClasses={{
-          container: "col-span-full mb-12 w-fit",
-          icon: "mt-0.5",
-          text: "mb-0.5 !gap-1"
-        }}
-        iconRight={false}
-        href="/works"
-        isLink
-      >
-        {PROJECT_PAGE_CONST.BUTTONS.BACK}
-      </Button>
-      <WorksHero PROJECT={hook.constants} />
-      <div className="col-span-full flex flex-col gap-16 lg:col-span-10 lg:col-start-2">
-        <Overview PROJECT={hook.constants} />
-        <Process PROJECT={hook.constants} />
-        <Reflection PROJECT={hook.constants} />
-      </div>
-      <div className="col-span-full mt-12 flex w-full flex-row justify-between">
+    <IconContext.Provider value={{ size: 20 }}>
+      <PageTransition>
         <Button
           theme="tertiary"
-          onClick={hook.handlePrevious}
           icon={<ArrowLeft />}
-          additionalClasses={{ icon: "mt-0.5", text: "mb-0.5 !gap-1" }}
+          additionalClasses={{
+            container: "col-span-full mb-12 w-fit",
+            icon: "mt-0.5",
+            text: "mb-0.5 !gap-1"
+          }}
+          iconRight={false}
+          href="/works"
+          isLink
         >
-          {PROJECT_PAGE_CONST.BUTTONS.PREVIOUS}
+          {PROJECT_PAGE_CONST.BUTTONS.BACK}
         </Button>
-        <Button
-          theme="tertiary"
-          onClick={hook.handleNext}
-          icon={<ArrowRight />}
-          additionalClasses={{ icon: "mt-0.5", text: "mb-0.5 !gap-1" }}
-          iconRight
-        >
-          {PROJECT_PAGE_CONST.BUTTONS.NEXT}
-        </Button>
-      </div>
-    </PageTransition>
+        <WorksHero PROJECT={hook.constants} />
+        <div className="col-span-full flex flex-col gap-16 lg:col-span-10 lg:col-start-2">
+          <Overview PROJECT={hook.constants} />
+          <Process PROJECT={hook.constants} />
+          <Reflection PROJECT={hook.constants} />
+        </div>
+        <div className="col-span-full mt-12 flex w-full flex-row justify-between">
+          <Button
+            theme="tertiary"
+            onClick={hook.handlePrevious}
+            icon={<ArrowLeft />}
+            additionalClasses={{ icon: "mt-0.5", text: "mb-0.5 !gap-1" }}
+          >
+            {PROJECT_PAGE_CONST.BUTTONS.PREVIOUS}
+          </Button>
+          <Button
+            theme="tertiary"
+            onClick={hook.handleNext}
+            icon={<ArrowRight />}
+            additionalClasses={{ icon: "mt-0.5", text: "mb-0.5 !gap-1" }}
+            iconRight
+          >
+            {PROJECT_PAGE_CONST.BUTTONS.NEXT}
+          </Button>
+        </div>
+      </PageTransition>
+    </IconContext.Provider>
   );
 }

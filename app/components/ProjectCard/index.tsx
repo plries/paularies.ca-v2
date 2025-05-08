@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@phosphor-icons/react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { Dot } from "../Dot";
 import { ProjectCardPropTypes } from "./types";
@@ -25,7 +25,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
         <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 pointer-events-none absolute -inset-1 rounded-[1.75rem] duration-300" />
       )}
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-4 rounded-xl md:rounded-3xl border p-4 shadow-[var(--card-light)] md:flex-row dark:shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-4 rounded-xl border p-4 shadow-[var(--card-light)] md:flex-row md:rounded-3xl dark:shadow-[var(--card-dark)] ${
           PROJECT.DISCIPLINE[0] === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"
@@ -82,11 +82,10 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                 theme="tertiary"
                 name={"view project"}
                 icon={
-                  <span
-                    className={`dark:text-greyscale-50 transition-[rotate] duration-300 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.SLUG == "" ? "group-hover:rotate-360" : ""}`}
-                  >
-                    <ArrowRight width={20} height={20} />
-                  </span>
+                  <ArrowRight
+                    size={20}
+                    className={`dark:text-greyscale-50 transition-transform duration-300 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.SLUG == "" ? "group-hover:rotate-360" : ""}`}
+                  />
                 }
                 additionalClasses={{
                   button: "dark:border-greyscale-50",

@@ -17,6 +17,24 @@ export const NAVBAR_CONST = {
       TEXT: "contact",
     },
   ],
+  MOBILE_LINKS: [
+    {
+      HREF: "/",
+      TEXT: "home",
+    },
+    {
+      HREF: "/works",
+      TEXT: "works",
+    },
+    {
+      HREF: "/about",
+      TEXT: "about",
+    },
+    {
+      HREF: "mailto:hello@paularies.ca",
+      TEXT: "contact",
+    },
+  ],
   CONTACT: {
     HREF: "mailto:hello@paularies.ca",
     TEXT: "contact",

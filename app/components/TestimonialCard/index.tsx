@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { CaretDown } from "@phosphor-icons/react";
 import { ContentBlock, ContentHeading, IconButton } from "../";
 import { TestimonialCardPropTypes } from "./types";
 
@@ -27,7 +27,7 @@ export const TestimonialCard = ({
           <span
             className={`ease-in-out-circ transition-transform duration-500 ${isOpen ? "-rotate-180" : ""}`}
           >
-            <ChevronDown width={20} height={20} />
+            <CaretDown />
           </span>
         }
         name={`${isOpen ? CLOSE : EXPAND}`}

@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
+import { IconContext, ArrowRight, GithubLogo } from "@phosphor-icons/react";
 import { InsetBlock, IconButton, ContentHeading, Dot } from "@/app/components";
-import { ArrowRight, Github } from "lucide-react";
 import { PROJECT_PAGE_CONST } from ".././const";
 import { ProjectPagePropsTypes } from "./types";
 import { useWindowSize } from "@/app/hooks";
@@ -8,7 +9,7 @@ import { useWindowSize } from "@/app/hooks";
 export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
   const hook = useWindowSize();
   return (
-    <>
+    <IconContext.Provider value={{ size: 20 }}>
       <InsetBlock additionalClasses="!p-3 md:!p-4">
         <div className="bg-greyscale-100 border-greyscale-950/10 dark:border-greyscale-50/10 dark:bg-greyscale-900 relative col-span-full aspect-video overflow-hidden rounded-lg border md:rounded-2xl">
           <Image
@@ -21,9 +22,12 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
             <>
               <div className="absolute bottom-0 left-0 z-10 m-2 flex w-[calc(100%-1rem)] flex-row items-end justify-between">
                 <div className="dark:bg-greyscale-950 bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-2xl border p-4 shadow-[var(--button-light)] dark:shadow-[var(--button-dark)]">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col gap-3">
                     <div className="flex w-full items-start justify-between">
-                      <ContentHeading level="h3">
+                      <ContentHeading
+                        level="h1"
+                        additionalClasses="!text-2xl md:!text-[1.75rem] lg:!text-[2.25rem]"
+                      >
                         {PROJECT.HERO.TITLE}
                       </ContentHeading>
                       <div className="flex flex-row gap-1">
@@ -56,7 +60,7 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
                       theme="secondary"
                       href={PROJECT.HERO.GITHUB}
                       name={PROJECT_PAGE_CONST.BUTTONS.GITHUB}
-                      icon={<Github width={20} height={20} />}
+                      icon={<GithubLogo />}
                       target="_blank"
                       isLink
                       noBlur
@@ -68,8 +72,8 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
                     name={PROJECT_PAGE_CONST.BUTTONS.VIEW}
                     target="_blank"
                     icon={
-                      <span className="ease-in-out-circ -rotate-45 transition-[rotate] duration-300 group-hover:rotate-0">
-                        <ArrowRight width={20} height={20} />
+                      <span className="ease-in-out-circ -rotate-45 transition-transform duration-300 group-hover:rotate-0">
+                        <ArrowRight />
                       </span>
                     }
                     isLink
@@ -85,9 +89,12 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
           <div className="col-span-full flex h-full flex-col justify-between gap-4">
             <div className="dark:bg-greyscale-950 bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-4 rounded-2xl border p-4 shadow-[var(--button-light)] dark:shadow-[var(--button-dark)]">
               <div className="flex flex-col gap-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-3">
                   <div className="flex w-full items-start justify-between">
-                    <ContentHeading level="h3">
+                    <ContentHeading
+                      level="h1"
+                      additionalClasses="!text-2xl md:!text-[1.75rem] lg:!text-[2.25rem]"
+                    >
                       {PROJECT.HERO.TITLE}
                     </ContentHeading>
                     <div className="flex flex-row gap-1">
@@ -120,7 +127,7 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
                     theme="secondary"
                     href={PROJECT.HERO.GITHUB}
                     name={PROJECT_PAGE_CONST.BUTTONS.GITHUB}
-                    icon={<Github width={20} height={20} />}
+                    icon={<GithubLogo />}
                     target="_blank"
                     isLink
                     noBlur
@@ -132,8 +139,8 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
                   name={PROJECT_PAGE_CONST.BUTTONS.VIEW}
                   target="_blank"
                   icon={
-                    <span className="ease-in-out-circ -rotate-45 transition-[rotate] duration-300 group-hover:rotate-0">
-                      <ArrowRight width={20} height={20} />
+                    <span className="ease-in-out-circ -rotate-45 transition-transform duration-300 group-hover:rotate-0">
+                      <ArrowRight />
                     </span>
                   }
                   isLink
@@ -144,6 +151,6 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
           </div>
         )}
       </InsetBlock>
-    </>
+    </IconContext.Provider>
   );
 };
