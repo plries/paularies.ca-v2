@@ -4,7 +4,7 @@ import {
   IconContext,
   Feather,
   Handshake,
-  ArrowCounterClockwise,
+  Waves,
 } from "@phosphor-icons/react";
 import { Heading, ContentBlock, ContentHeading } from "@/app/components";
 import { VALUES_CONST } from "../const";
@@ -19,7 +19,7 @@ export const Values = () => {
             <ContentBlock key={index} additionalClasses="w-full">
               <div className="bg-greyscale-100 border-greyscale-950/5 dark:border-greyscale-50/5 dark:bg-greyscale-900 text-greyscale-600 dark:text-greyscale-400 mb-6 w-fit rounded-full border p-2">
                 {index === 0 ? (
-                  <ArrowCounterClockwise />
+                  <Waves />
                 ) : index === 1 ? (
                   <Handshake />
                 ) : (

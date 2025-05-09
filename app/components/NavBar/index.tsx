@@ -6,7 +6,7 @@ import { IconContext, CaretDown, ChatsCircle } from "@phosphor-icons/react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
 import { PaStar, PaWordmark } from "@/public";
-import { Button, IconButton } from "../";
+import { Button, IconButton, Tooltip } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
 import { useWindowSize } from "@/app/hooks";
@@ -19,36 +19,36 @@ export const NavBar = () => {
   const useNav = useNavBar();
   const lenis = useLenis();
 
-  const handleClick = () => {
-    useNav.toggleNav();
-    useMobile.closeMenu();
-  };
-
   return (
     <IconContext.Provider value={{ size: 20 }}>
-      <motion.header
-        initial={MOTION_CONFIG.HEADER.INITIAL}
-        whileInView={MOTION_CONFIG.HEADER.WHILE_IN_VIEW}
-        transition={MOTION_CONFIG.TRANSITION}
-        className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ sticky top-3 left-0 z-50 m-3 mb-7 w-[calc(100%-1.5rem)] max-w-[1440px] rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale] duration-500 md:top-6 md:m-6 md:mb-7 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "pointer-events-none translate-y-[calc(-100%+1.25rem)] scale-90 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
-      >
+      <div className="pointer-events-none fixed top-0 left-0 z-50 h-screen w-full">
         <IconButton
-          onClick={handleClick}
-          theme="secondary"
+          onClick={() => {
+            useNav.toggleNav();
+            useMobile.closeMenu();
+          }}
+          theme="tertiary"
           additionalClasses={{
             container:
-              "!absolute w-fit bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 transition-opacity duration-500 ease-in-out-circ pointer-events-auto",
+              "transition-opacity duration-500 ease-in-out-circ pointer-events-auto !absolute bottom-4 right-4 w-fit",
             button: "!rounded-full",
             hover: "!rounded-full",
           }}
           icon={
             <CaretDown
-              className={`text-greyscale-400 dark:text-greyscale-300ease-in-out-circ transition-transform duration-500 ${useNav.isOpen ? "-rotate-180" : ""}`}
+              className={`text-greyscale-400 dark:text-greyscale-300 ease-in-out-circ transition-transform duration-500 ${useNav.isOpen ? "-rotate-180" : ""}`}
             />
           }
           name={`${useNav.isOpen ? NAVBAR_CONST.NAV_BAR.SHOW_MENU : NAVBAR_CONST.NAV_BAR.HIDE_MENU}`}
           noBlur
         />
+      </div>
+      <motion.header
+        initial={MOTION_CONFIG.HEADER.INITIAL}
+        whileInView={MOTION_CONFIG.HEADER.WHILE_IN_VIEW}
+        transition={MOTION_CONFIG.TRANSITION}
+        className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ sticky top-3 left-0 z-50 m-3 mb-7 w-[calc(100%-1.5rem)] max-w-[calc(1440px-1.5rem)] rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale,opacity] duration-500 md:top-6 md:m-6 md:mb-7 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "pointer-events-none translate-y-[calc(-100%+1.25rem)] scale-95 !opacity-0 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
+      >
         <nav
           className={`ease-in-out-circ flex flex-row items-center justify-between place-self-stretch rounded-3xl p-3 transition-opacity duration-500 ${useNav.isOpen ? "opacity-100" : "opacity-0"}`}
           ref={useNav.navRef}

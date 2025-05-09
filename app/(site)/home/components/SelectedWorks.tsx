@@ -18,8 +18,7 @@ export const SelectedWorks = () => {
           isLink
           icon={
             <CardsThree
-              width={20}
-              height={20}
+              size={20}
               className="ease-in-out-circ transition-transform duration-300 group-hover:rotate-12"
             />
           }

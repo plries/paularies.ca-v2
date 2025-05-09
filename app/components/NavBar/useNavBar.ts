@@ -29,10 +29,8 @@ export const useNavBar = () => {
       useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
 
-          // ctrl + b (windows) or cmd + b (mac)
-          const isCtrlOrCmd = event.ctrlKey || event.metaKey;
-          if (isCtrlOrCmd && event.key.toLowerCase() === "b") {
-            event.preventDefault(); 
+          if (event.key === "\\") {
+            event.preventDefault();
             setIsOpen(prev => !prev);
           }
         };

@@ -45,7 +45,7 @@ export const AboutHero = () => {
               height={160}
               src={ABOUT_HERO_CONST.EMOJI.SRC}
               alt={ABOUT_HERO_CONST.EMOJI.ALT}
-              className="aspect-square h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7"
+              className="aspect-square h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 ease-in-out-circ transition-transform duration-500 hover:-rotate-12" 
             />
             {ABOUT_HERO_CONST.HEADING[0]}
           </span>

@@ -133,7 +133,7 @@ export const VALUES_CONST = {
       PARAGRAPH: [
         "i embrace change and ",
         <strong key="learning">enjoy learning new things</strong>,
-        " within the industry. my flexibility enables me to remain enthusiastic when learning ways to tackle new challenges.",
+        " within the industry. my flexibility allows me to stay enthusiastic when learning ways to tackle new challenges.",
       ],
     },
     {
