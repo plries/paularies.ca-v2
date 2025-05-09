@@ -6,7 +6,7 @@ import { IconContext, CaretDown, ChatsCircle } from "@phosphor-icons/react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
 import { PaStar, PaWordmark } from "@/public";
-import { Button, IconButton, Tooltip } from "../";
+import { Button, IconButton } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
 import { useWindowSize } from "@/app/hooks";
