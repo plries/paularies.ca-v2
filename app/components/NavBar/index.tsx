@@ -21,7 +21,7 @@ export const NavBar = () => {
 
   return (
     <IconContext.Provider value={{ size: 20 }}>
-      <div className="pointer-events-none fixed top-0 left-0 z-50 h-screen w-full">
+      <div className="pointer-events-none fixed top-0 left-0 z-50 h-full w-full">
         <IconButton
           onClick={() => {
             useNav.toggleNav();
