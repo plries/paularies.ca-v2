@@ -1,49 +1,62 @@
 import { useState, useRef, useEffect } from "react";
 
-export const useNavBar = () => {
-    const navRef = useRef<HTMLElement>(null);
-    const [isOpen, setIsOpen] = useState(true);
+export const useNavBar = ({
+  closeMenu,
+}: { closeMenu: () => void }) => {
+  const navRef = useRef<HTMLElement>(null);
+  const [isOpen, setIsOpen] = useState(true);
 
-    const toggleNav = () => {
-        setIsOpen(!isOpen);
-    };
+  const toggleNav = () => {
+      setIsOpen(!isOpen);
+  };
 
-    useEffect(() => {
-        if (isOpen) {
-          // shows immediately
-          if (isOpen && navRef.current) {
-            navRef.current.style.visibility = "visible";
-          }
-        } else {
-          // hides after a delay
-          const timeout = setTimeout(() => {
-            if (navRef.current) {
-              navRef.current.style.visibility = "hidden";
-            }
-          }, 700);
-      
-          return () => clearTimeout(timeout);
+  useEffect(() => {
+      if (isOpen) {
+        // shows immediately
+        if (isOpen && navRef.current) {
+          navRef.current.style.visibility = "visible";
         }
-      }, [isOpen]);
-
-      useEffect(() => {
-        const handleKeyDown = (event: KeyboardEvent) => {
-
-          if (event.key === "\\") {
-            event.preventDefault();
-            setIsOpen(prev => !prev);
+      } else {
+        // hides after a delay
+        const timeout = setTimeout(() => {
+          if (navRef.current) {
+            navRef.current.style.visibility = "hidden";
           }
-        };
+        }, 700);
     
-        window.addEventListener("keydown", handleKeyDown);
-        return () => {
-          window.removeEventListener("keydown", handleKeyDown);
-        };
-      }, []);
+        return () => clearTimeout(timeout);
+      }
+    }, [isOpen]);
 
-    return {
-        isOpen,
-        toggleNav,
-        navRef
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // scrolling down
+        setIsOpen(false);
+        closeMenu();
+      } else if (currentScrollY < lastScrollY) {
+        // scrolling up
+        setIsOpen(true);
+      }
+
+      lastScrollY = currentScrollY;
     };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+  return {
+      isOpen,
+      toggleNav,
+      navRef
+  };
 };

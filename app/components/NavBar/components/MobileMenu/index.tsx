@@ -37,7 +37,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
         noBlur
       />
       <ul
-        className={`border-greyscale-200/50 bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-700/50 ease-in-out-circ absolute right-0 mt-4 flex w-full flex-col gap-3 rounded-3xl border p-3 shadow-[var(--nav-bar-light)] !transition-[top,translate] duration-500 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-[calc(100%+0.725rem)]" : "pointer-events-none -top-full -translate-y-full"} `}
+        className={`border-greyscale-200/50 bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-700/50 ease-in-out-circ absolute right-0 mt-4 flex w-full flex-col gap-3 rounded-3xl border p-3 shadow-[var(--nav-bar-light)] !transition-[top,opacity] duration-500 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full opacity-100" : "pointer-events-none top-5/6 opacity-0"} `}
       >
         {NAVBAR_CONST.MOBILE_LINKS.map(({ HREF, TEXT }) => (
           <li key={TEXT}>

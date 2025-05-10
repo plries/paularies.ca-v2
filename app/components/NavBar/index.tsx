@@ -3,11 +3,10 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { useLenis } from "lenis/react";
 import { IconContext, ChatsCircle } from "@phosphor-icons/react";
-import { PanelTopClose, PanelTopOpen } from "lucide-react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
 import { PaStar, PaWordmark } from "@/public";
-import { Button, IconButton } from "../";
+import { Button } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
 import { useWindowSize } from "@/app/hooks";
@@ -17,35 +16,11 @@ export const NavBar = () => {
   const pathname = usePathname();
   const windowSize = useWindowSize();
   const useMobile = useMobileMenu();
-  const useNav = useNavBar();
+  const useNav = useNavBar({ closeMenu: useMobile.closeMenu });
   const lenis = useLenis();
 
   return (
     <IconContext.Provider value={{ size: 20 }}>
-      <div className="pointer-events-none fixed top-0 left-0 z-50 h-full w-full">
-        <IconButton
-          onClick={() => {
-            useNav.toggleNav();
-            useMobile.closeMenu();
-          }}
-          theme="tertiary"
-          additionalClasses={{
-            container:
-              "transition-opacity duration-500 ease-in-out-circ pointer-events-auto !absolute bottom-4 right-4 w-fit",
-            button: "!rounded-full",
-            hover: "!rounded-full",
-          }}
-          icon={
-            useNav.isOpen ? (
-              <PanelTopClose size={20} className="!text-greyscale-600 dark:!text-greyscale-300" />
-            ) : (
-              <PanelTopOpen size={20} className="!text-greyscale-600 dark:!text-greyscale-300" />
-            )
-          }
-          name={`${useNav.isOpen ? NAVBAR_CONST.NAV_BAR.SHOW_MENU : NAVBAR_CONST.NAV_BAR.HIDE_MENU}`}
-          noBlur
-        />
-      </div>
       <motion.header
         initial={MOTION_CONFIG.HEADER.INITIAL}
         whileInView={MOTION_CONFIG.HEADER.WHILE_IN_VIEW}
