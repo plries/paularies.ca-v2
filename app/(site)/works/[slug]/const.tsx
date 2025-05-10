@@ -65,7 +65,7 @@ export const PROJECTS: ProjectPagePropsTypes = {
           ". each option updates the image and step-by-step breakdown instantly, making it easy to understand what’s included. smooth animations defined from ",
           <strong key="framer-motion">framer motion</strong>,
           " keep the transition feeling polished and responsive, while the copy defined in a ",
-          <CodeSnippet key="const">const.js</CodeSnippet>,
+          <CodeSnippet key="const">const.ts</CodeSnippet>,
           " file ensures the codebase clean and easy to maintain.",
         ],
         VIDEO: "/videos/projects/afleuries/afleuries-toggle.mp4",
@@ -108,7 +108,7 @@ export const PROJECTS: ProjectPagePropsTypes = {
         DESCRIPTION: [
           "to promote ",
           <em key="limited">afleuries illustrated’s limited-time offer</em>,
-          " a modal automatically appears on the homepage—but only for first-time visitors and only within a specific date range. defined in a seperate ",
+          " a modal automatically appears on the homepage—but only for first-time visitors and within a specific date range. defined in a seperate ",
           <CodeSnippet key="usemodal">useModal.ts</CodeSnippet>,
           " file, it uses ",
           <strong key="localstorage">localStorage</strong>,
@@ -316,6 +316,7 @@ export const useModal = () => {
         DESCRIPTION: [
           <strong key="localstorage">localStorage</strong>,
           " allows for data to be stored in a user’s browser, allowing for certain settings to be stored across different sessions. i stored the user’s ",
+          <strong key="theme">preferred theme</strong>,
           " so that it can be saved every time they visit the website or refresh the page, resulting in a ",
           <em key="pleasant">pleasant user experience</em>,
           ".",
@@ -461,7 +462,7 @@ FAQBtns.forEach(FAQBtn => FAQBtn.addEventListener('click', toggleFAQ));`,
     REFLECTION: {
       HEADING: "bringing it together",
       DESCRIPTION: [
-        "the marketing page became a successful blend of modern design, interactive features, and smooth user experience. by leveraging Sass for organized styling, the IntersectionObserver API added an interactive layer, and localStorage integration i was able to explore the intriguing challenge of marketing a product through a sleek website.",
+        "the marketing page became a successful blend of modern design and interactive features. by leveraging Sass for organized styling, the IntersectionObserver API for smooth animations, and localStorage integration i was able to communicate the service's message through a sleek website.",
       ],
     },
   },
