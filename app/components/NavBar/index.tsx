@@ -2,7 +2,8 @@
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { useLenis } from "lenis/react";
-import { IconContext, CaretDown, ChatsCircle } from "@phosphor-icons/react";
+import { IconContext, ChatsCircle } from "@phosphor-icons/react";
+import { PanelTopClose, PanelTopOpen } from "lucide-react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
 import { PaStar, PaWordmark } from "@/public";
@@ -35,9 +36,11 @@ export const NavBar = () => {
             hover: "!rounded-full",
           }}
           icon={
-            <CaretDown
-              className={`text-greyscale-400 dark:text-greyscale-300 ease-in-out-circ transition-transform duration-500 ${useNav.isOpen ? "-rotate-180" : ""}`}
-            />
+            useNav.isOpen ? (
+              <PanelTopClose size={20} className="!text-greyscale-600 dark:!text-greyscale-300" />
+            ) : (
+              <PanelTopOpen size={20} className="!text-greyscale-600 dark:!text-greyscale-300" />
+            )
           }
           name={`${useNav.isOpen ? NAVBAR_CONST.NAV_BAR.SHOW_MENU : NAVBAR_CONST.NAV_BAR.HIDE_MENU}`}
           noBlur
