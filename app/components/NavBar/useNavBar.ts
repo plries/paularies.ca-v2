@@ -32,7 +32,7 @@ export const useNavBar = ({
   let lastScrollY = window.scrollY;
 
   const handleScroll = () => {
-    let currentScrollY = Math.max(0, window.scrollY); // clamp to 0
+    const currentScrollY = Math.max(0, window.scrollY); // clamp to 0
     const deltaY = currentScrollY - lastScrollY;
 
     // ignore small movements
@@ -55,7 +55,7 @@ export const useNavBar = ({
   return () => {
     window.removeEventListener("scroll", handleScroll);
   };
-}, []);
+}, [closeMenu]);
 
   return {
       isOpen,
