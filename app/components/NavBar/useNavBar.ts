@@ -35,12 +35,13 @@ export const useNavBar = ({
     let currentScrollY = Math.max(0, window.scrollY); // clamp to 0
     const deltaY = currentScrollY - lastScrollY;
 
-    // ignore small movements (likely bounce effect)
+    // ignore small movements
     if (Math.abs(deltaY) < 5) return;
 
     if (deltaY > 0) {
       // scrolling down
       setIsOpen(false);
+      closeMenu();
     } else if (deltaY < 0) {
       // scrolling up
       setIsOpen(true);
