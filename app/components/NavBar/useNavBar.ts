@@ -28,31 +28,33 @@ export const useNavBar = ({
       }
     }, [isOpen]);
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
+ useEffect(() => {
+  let lastScrollY = window.scrollY;
 
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  const handleScroll = () => {
+    let currentScrollY = Math.max(0, window.scrollY); // clamp to 0
+    const deltaY = currentScrollY - lastScrollY;
 
-      if (currentScrollY > lastScrollY) {
-        // scrolling down
-        setIsOpen(false);
-        closeMenu();
-      } else if (currentScrollY < lastScrollY) {
-        // scrolling up
-        setIsOpen(true);
-      }
+    // ignore small movements (likely bounce effect)
+    if (Math.abs(deltaY) < 5) return;
 
-      lastScrollY = currentScrollY;
-    };
+    if (deltaY > 0) {
+      // scrolling down
+      setIsOpen(false);
+    } else if (deltaY < 0) {
+      // scrolling up
+      setIsOpen(true);
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    lastScrollY = currentScrollY;
+  };
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  window.addEventListener("scroll", handleScroll, { passive: true });
 
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   return {
       isOpen,
