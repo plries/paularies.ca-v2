@@ -3,14 +3,17 @@ import { motion } from "framer-motion";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { ActionBarPropTypes } from "./types";
 
-export const ActionBar = ({ children, additionalClasses }: ActionBarPropTypes) => {
+export const ActionBar = ({
+  children,
+  additionalClasses,
+}: ActionBarPropTypes) => {
   return (
     <div className="pointer-events-none fixed bottom-0 left-0 z-50 flex h-fit w-screen items-end justify-center">
       <motion.div
         initial={MOTION_CONFIG.ACTION_BAR.INITIAL}
         whileInView={MOTION_CONFIG.ACTION_BAR.WHILE_IN_VIEW}
         transition={MOTION_CONFIG.TRANSITION}
-        className={`dark:bg-greyscale-950/50 bg-greyscale-50/50 border-greyscale-100 dark:border-greyscale-800 pointer-events-auto m-3 w-fit rounded-2xl border p-2 shadow-[var(--nav-bar-light)] backdrop-blur-sm md:m-6 dark:shadow-[var(--nav-bar-dark)] flex flex-row gap-2 items-center ${additionalClasses?.container ?? ""}`}
+        className={`dark:bg-greyscale-950/50 bg-greyscale-50/50 border-greyscale-100 dark:border-greyscale-800 pointer-events-auto m-3 flex w-fit flex-row items-center gap-2 rounded-2xl border p-2 shadow-[var(--nav-bar-light)] backdrop-blur-sm md:m-6 dark:shadow-[var(--nav-bar-dark)] ${additionalClasses?.container ?? ""}`}
       >
         {children}
       </motion.div>

@@ -78,6 +78,10 @@
     0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px -1px rgba(0, 0, 0, 0.05);
   --card-dark:
     0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --page-light:
+    0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 2px 2px -1px rgba(0, 0, 0, 0.05);
+  --page-dark:
+    0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 2px 2px -1px rgba(0, 0, 0, 0.1);
   /* animations */
   --ease-in-out-circ: 
   cubic-bezier(0.79,0.14,0.15,0.86);
@@ -431,23 +435,23 @@ em {
 }
 
 .radial-gradient {
-  background: radial-gradient(75% 50% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-100) 100%);
+  background: radial-gradient(75% 50% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-50) 100%);
 }
 
 .dark {
   .radial-gradient {
-    background: radial-gradient(75% 50% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-900) 100%);
+    background: radial-gradient(75% 50% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-950) 100%);
   }
 }
 
 @media screen and (min-width: 768px) {
   .radial-gradient {
-    background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-100) 100%);
+    background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-300) 0%, var(--color-greyscale-50) 100%);
   }
   
   .dark {
     .radial-gradient {
-      background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-900) 100%);
+      background: radial-gradient(50% 75% at 50% 100%, var(--color-greyscale-700) 0%, var(--color-greyscale-950) 100%);
     }
   }
 }
