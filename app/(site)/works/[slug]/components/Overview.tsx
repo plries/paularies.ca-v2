@@ -7,14 +7,12 @@ import {
   Users,
 } from "@phosphor-icons/react";
 import { ProjectPagePropsTypes } from "./types";
-import { PROJECT_PAGE_CONST } from "../const";
-import { Heading, ContentBlock, ContentHeading } from "@/app/components";
+import { ContentBlock, ContentHeading } from "@/app/components";
 
 export const Overview = ({ PROJECT }: ProjectPagePropsTypes) => {
   return (
     <IconContext.Provider value={{ size: 20 }}>
       <div className="mt-16 flex flex-col gap-3 md:gap-4">
-        <Heading level="h2">{PROJECT_PAGE_CONST.HEADINGS.OVERVIEW}</Heading>
         <div className="flex flex-col gap-3 md:flex-row md:gap-4">
           {PROJECT.OVERVIEW.slice(0, 2).map((overview, index) => (
             <ContentBlock

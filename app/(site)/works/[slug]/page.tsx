@@ -1,12 +1,20 @@
 "use client";
 import { IconContext, ArrowLeft, ArrowRight } from "@phosphor-icons/react";
-import { WorksHero, Overview, Process, Reflection } from "./components";
+import {
+  WorksHero,
+  Overview,
+  Process,
+  Reflection,
+  Details,
+} from "./components";
 import { Button, PageTransition } from "@/app/components";
-import { PROJECT_PAGE_CONST } from "./const";
+import { useWindowSize } from "@/app/hooks";
 import { useProjectPage } from "./useProjectPage";
+import { PROJECT_PAGE_CONST } from "./const";
 
 export default function ProjectPage() {
   const hook = useProjectPage();
+  const useMobile = useWindowSize();
 
   return (
     <IconContext.Provider value={{ size: 20 }}>
@@ -17,7 +25,7 @@ export default function ProjectPage() {
           additionalClasses={{
             container: "col-span-full mb-12 w-fit",
             icon: "mt-0.5",
-            text: "mb-0.5 !gap-1"
+            text: "mb-0.5 !gap-1",
           }}
           iconRight={false}
           href="/works"
@@ -25,8 +33,14 @@ export default function ProjectPage() {
         >
           {PROJECT_PAGE_CONST.BUTTONS.BACK}
         </Button>
+
         <WorksHero PROJECT={hook.constants} />
-        <div className="col-span-full flex flex-col gap-16 lg:col-span-10 lg:col-start-2">
+        {!useMobile.isMobile && !useMobile.isTablet && (
+          <div className="h-full lg:col-span-4 lg:col-start-1 lg:mr-12">
+            <Details PROJECT={hook.constants} hasLinks />
+          </div>
+        )}
+        <div className="col-span-full flex flex-col gap-16 lg:col-span-8 lg:col-start-5">
           <Overview PROJECT={hook.constants} />
           <Process PROJECT={hook.constants} />
           <Reflection PROJECT={hook.constants} />

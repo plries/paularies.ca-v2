@@ -1,5 +1,6 @@
 export * from "./ActionBar";
 export * from "./Button";
+export * from "./Chip";
 export * from "./ClientOnly";
 export * from "./CodeSnippet";
 export * from "./ContentBlock";

@@ -37,9 +37,9 @@ export const Intro = () => {
             }}
             isLink
             icon={
-              <span className=" relative" >
-                <Smiley className="opacity-100 group-hover:opacity-0 ease-in-out-circ transition-transform duration-300 group-hover:rotate-45"/>
-                <SmileyWink className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 ease-in-out-circ transition-transform duration-300 group-hover:rotate-45"/>
+              <span className="relative">
+                <Smiley className="ease-in-out-circ opacity-100 transition-transform duration-300 group-hover:rotate-45 group-hover:opacity-0" />
+                <SmileyWink className="ease-in-out-circ absolute top-0 left-0 opacity-0 transition-transform duration-300 group-hover:rotate-45 group-hover:opacity-100" />
               </span>
             }
             iconRight

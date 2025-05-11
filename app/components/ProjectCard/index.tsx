@@ -6,7 +6,7 @@ import { ArrowRight } from "@phosphor-icons/react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { Dot } from "../Dot";
 import { ProjectCardPropTypes } from "./types";
-import { IconButton, ContentHeading } from "@/app/components";
+import { IconButton, ContentHeading, Chip } from "@/app/components";
 import { useWindowSize } from "@/app/hooks";
 import { useProjectCard } from "./useProjectCard";
 
@@ -34,7 +34,9 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
         <Link
           className="contents"
           href={`/works/${encodeURIComponent(PROJECT.SLUG)}`}
-          onClick={projectCard.handleOnClick}
+          onClick={() => {
+            if (PROJECT.SLUG !== "") projectCard.handleOnClick();
+          }}
         >
           <div className="dark:bg-greyscale-900 bg-greyscale-100 relative grid aspect-video w-full place-items-center overflow-hidden rounded-lg md:rounded-xl">
             {PROJECT.IMAGE.SRC && (
@@ -66,25 +68,20 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                   {PROJECT.DESCRIPTION}
                 </p>
               </div>
-              <div className="flex h-fit w-fit flex-row flex-wrap gap-y-2">
+              <div className="flex h-fit w-fit flex-row flex-wrap gap-2">
                 {PROJECT.SKILLS.map((tag, index) => (
-                  <p
-                    className="bg-greyscale-100 font-dm-mono text-greyscale-500 dark:bg-greyscale-900 border-greyscale-950/10 dark:border-greyscale-50/10 dark:text-greyscale-400 mr-[1px] border p-2 !text-sm leading-none first:rounded-l-xl first:pl-3 last:rounded-r-xl last:pr-3 md:!text-base"
-                    key={index}
-                  >
-                    {tag}
-                  </p>
+                  <Chip key={index}>{tag}</Chip>
                 ))}
               </div>
             </div>
             <div className="flex flex-row items-end justify-end gap-2">
               <IconButton
-                theme="tertiary"
-                name={"view project"}
+                theme="primary"
+                name="view project"
                 icon={
                   <ArrowRight
                     size={20}
-                    className={`dark:text-greyscale-50 transition-transform duration-300 group-hover:-rotate-45 hover:bg-transparent ${PROJECT.SLUG == "" ? "group-hover:rotate-360" : ""}`}
+                    className={`ease-in-out-circ -rotate-45 transition-transform duration-300 group-hover:rotate-0 group-disabled:group-hover:-rotate-45`}
                   />
                 }
                 additionalClasses={{
@@ -92,6 +89,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                 }}
                 noBlur
                 noHover
+                disabled={PROJECT.SLUG !== "" ? false : true}
               />
             </div>
           </div>

@@ -6,16 +6,13 @@ import { Dot, InsetBlock } from "@/app/components";
 export const Hero = () => {
   return (
     <InsetBlock>
-      <div
-        id="top"
-        className="animate-float relative col-span-full grid place-items-center drop-shadow-md md:col-span-4 md:col-start-3 lg:col-span-6 lg:col-start-4"
-      >
+      <div className="animate-float relative col-span-full h-fit drop-shadow-md md:col-span-4 md:col-start-3 lg:col-span-6 lg:col-start-4">
         <Image
           src={HERO_CONST.HEADSHOT.SRC}
           alt={HERO_CONST.HEADSHOT.ALT}
           height={1056}
           width={1056}
-          className="border-greyscale-950/10 dark:border-greyscale-50/10 aspect-square max-w-48 rounded-full border"
+          className="border-greyscale-950/10 dark:border-greyscale-50/10 mx-auto aspect-square max-w-48 rounded-full border"
         />
         <div className="-mt-8 grid w-full place-items-center">
           <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rotate-2 rounded-xl border px-4 py-3 transition-transform duration-500 hover:rotate-0">
