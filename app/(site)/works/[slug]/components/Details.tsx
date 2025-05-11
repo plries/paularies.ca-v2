@@ -21,7 +21,7 @@ export const Details = ({
 } & { hasLinks?: boolean }) => {
   return (
     <IconContext.Provider value={{ size: 20 }}>
-      <div className="dark:bg-greyscale-950 bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border p-4 shadow-xs md:rounded-3xl lg:sticky lg:top-32 lg:mt-16 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
+      <div className="dark:bg-greyscale-950 bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border p-4 shadow-xs md:rounded-3xl lg:sticky lg:top-32 lg:mt-16 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:dark:border-transparent lg:dark:bg-transparent">
         <div className="flex flex-col gap-3">
           <div className="flex w-full items-start justify-between lg:flex-row-reverse lg:items-center lg:gap-2">
             <ContentHeading
