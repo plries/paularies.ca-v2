@@ -7,7 +7,7 @@ import {
   Reflection,
   Details,
 } from "./components";
-import { Button, PageTransition } from "@/app/components";
+import { Button } from "@/app/components";
 import { useWindowSize } from "@/app/hooks";
 import { useProjectPage } from "./useProjectPage";
 import { PROJECT_PAGE_CONST } from "./const";
