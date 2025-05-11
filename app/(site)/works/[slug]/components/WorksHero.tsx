@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import { IconContext, ArrowRight, GithubLogo } from "@phosphor-icons/react";
-import { InsetBlock, IconButton } from "@/app/components";
-import { PROJECT_PAGE_CONST } from ".././const";
+import { IconContext } from "@phosphor-icons/react";
+import { InsetBlock } from "@/app/components";
 import { ProjectPagePropsTypes } from "./types";
 import { useWindowSize } from "@/app/hooks";
 import { Details } from "./Details";

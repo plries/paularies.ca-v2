@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { IconContext, GithubLogo, ArrowRight } from "@phosphor-icons/react";
 import { Chip, ContentHeading, Dot, IconButton } from "@/app/components";
 import { PROJECT_PAGE_CONST } from "../const";
