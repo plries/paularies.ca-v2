@@ -10,8 +10,8 @@ export const Footer = () => {
 
   return (
     <IconContext.Provider value={{ size: 20 }}>
-      <div className="radial-gradient sticky bottom-0 left-0 -mt-8 grid w-full place-items-center py-16">
-        <footer className="dark:text-greyscale-100 col-span-full my-16 grid w-full max-w-[1440px] grid-cols-4 gap-x-3 gap-y-6 rounded-3xl px-3 md:grid-cols-8 md:gap-x-4 md:px-6 lg:grid-cols-12 lg:rounded-4xl lg:px-12">
+      <div className="radial-gradient sticky bottom-0 left-0 -mt-8 grid w-full place-items-center pt-24 pb-16">
+        <footer className="dark:text-greyscale-100 col-span-full grid w-full max-w-[1440px] grid-cols-4 gap-x-3 gap-y-6 rounded-3xl px-3 md:grid-cols-8 md:gap-x-4 md:px-6 lg:grid-cols-12 lg:rounded-4xl lg:px-12">
           <div className="col-span-full col-start-1 flex flex-col gap-3 md:col-span-5 md:gap-4 lg:col-span-8">
             <h3 className="font-instrument-serif dark:text-greyscale-50 text-2xl md:text-[1.75rem] lg:text-[2rem]">
               {FOOTER_CONST.CONTACT.HEADING}
