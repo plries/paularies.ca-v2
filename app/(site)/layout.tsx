@@ -1,10 +1,4 @@
-import {
-  NavBar,
-  Footer,
-  ClientOnly,
-  PageContent,
-  SmoothScroll,
-} from "../components/";
+import { Footer, ClientOnly, PageContent, SmoothScroll } from "../components/";
 import { metadata } from "./layoutMetadata";
 import "../globals.css";
 
@@ -17,7 +11,6 @@ export default function RootLayout({
     <SmoothScroll>
       <div className="bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased">
         <ClientOnly>
-          <NavBar />
           <PageContent>{children}</PageContent>
           <Footer />
         </ClientOnly>
