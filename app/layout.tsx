@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { hankenGrotesk, instrumentSerif, dmMono } from "./fonts";
 import "./globals.css";
 
@@ -29,7 +30,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
