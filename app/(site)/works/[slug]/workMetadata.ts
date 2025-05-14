@@ -1,10 +1,9 @@
-import type { Metadata, Viewport } from "next";
+import type { Viewport } from "next";
 import { WorkMetadataPropTypes } from "./types";
 
-export async function workMetadata({
-  params,
-}: WorkMetadataPropTypes): Promise<Metadata> {
-  const { slug } = params;
+export async function workMetadata({ params }: WorkMetadataPropTypes) {
+
+  const { slug } = await params;
 
   const title = slug.replace(/-/g, " ");
 

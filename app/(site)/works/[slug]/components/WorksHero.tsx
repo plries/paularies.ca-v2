@@ -18,6 +18,7 @@ export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
             alt={PROJECT.HERO.IMAGE.ALT}
             height={1080}
             width={1920}
+            priority
           />
         </div>
         {(hook.isMobile || hook.isTablet) && (
