@@ -3,7 +3,6 @@ import { workMetadata } from "./workMetadata";
 import { WorkMetadataPropTypes } from "./types";
 
 export async function generateMetadata({ params }: WorkMetadataPropTypes) {
-  console.log("generateMetadata - params type:", typeof params);
   return workMetadata({ params });
 }
 
