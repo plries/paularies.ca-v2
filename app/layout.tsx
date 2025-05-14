@@ -1,11 +1,6 @@
 import { hankenGrotesk, instrumentSerif, dmMono } from "./fonts";
 import "./globals.css";
 
-export const metadata = {
-  title: "Your Site",
-  description: "Description here",
-};
-
 export default function RootLayout({
   children,
 }: {

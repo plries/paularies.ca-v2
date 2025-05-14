@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://paularies.ca"),
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
       "hey there, i'm paul aries! i'm a creative, user-centered designer and developer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
     images: [
       {
-        url: "https://paularies.ca/og-image.jpg",
+        url: "https://paularies.ca/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -47,8 +46,8 @@ export const metadata: Metadata = {
     url: "https://paularies.ca",
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   icons: {
     icon: "/favicon.ico",
