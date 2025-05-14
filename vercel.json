@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/bio",
+      "has": [
+        {
+          "type": "host",
+          "value": "bio.paularies.ca"
+        }
+      ]
+    }
+  ]
+}
