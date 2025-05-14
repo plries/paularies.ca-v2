@@ -1,3 +1,3 @@
 export type WorkMetadataPropTypes = {
-  params: { slug: string | Promise<object> };
+  params: { slug: string };
 };
