@@ -1,10 +1,10 @@
 import type { Viewport } from "next";
-import { WorkMetadataPropTypes } from "./types";
+import { Params } from "./types";
 
-export async function workMetadata({ params }: WorkMetadataPropTypes) {
+export async function workMetadata({ params }: Params) {
   const { slug } = await params;
 
-  const title = slug.replace(/-/g, " ");
+  const title = (slug as string).replace(/-/g, " ");
 
   return {
     metadataBase: new URL(`https://paularies/works/${slug}/paularies.ca`),

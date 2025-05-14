@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { Project } from "./components/Project";
 import { workMetadata } from "./workMetadata";
-import { WorkMetadataPropTypes } from "./types";
+import { Params } from "./types";
 
-export async function generateMetadata({ params }: WorkMetadataPropTypes): Promise<Metadata> {
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const metadata = await workMetadata({ params });
   return metadata;
 }
