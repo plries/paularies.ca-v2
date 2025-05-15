@@ -4,8 +4,19 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@phosphor-icons/react"],
   },
-  async rewrites() {
+  async redirects() {
     return [
+      {
+        source: "/",
+        has: [
+          {
+            type: "host",
+            value: "bio.paularies.ca",
+          },
+        ],
+        destination: "/bio",
+        permanent: true,
+      },
       {
         source: "/:path*",
         has: [
@@ -15,11 +26,10 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: "/bio/:path*",
+        permanent: true,
       },
     ];
   },
-  basePath: "",
-  assetPrefix: "",
 };
 
 export default nextConfig;
