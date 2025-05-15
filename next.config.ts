@@ -17,17 +17,6 @@ const nextConfig: NextConfig = {
         destination: "/bio",
         permanent: true,
       },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "bio.paularies.ca",
-          },
-        ],
-        destination: "/bio/:path*",
-        permanent: true,
-      },
     ];
   },
 };
