@@ -13,11 +13,11 @@
     <priority>0.8</priority>
 </url>
 <url>
-    <loc>https://www.paularies.ca/afleuries-illustrated</loc>
+    <loc>https://www.paularies.ca/works/afleuries-illustrated</loc>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://www.paularies.ca/guy</loc>
+    <loc>https://www.paularies.ca/works/guy</loc>
     <priority>0.5</priority>
 </url>
 </urlset>
