@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "bio · paul aries",
   publisher: "Paul Aries",
   description:
-    "hey there, i'm paul aries! i'm a creative, user-centered designer and developer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
+    "hey there, i'm paul aries! i'm a creative, user-centered developer and designer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
   keywords: [
     "paul aries",
     "paul aries web developer",
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "bio · paul aries",
     description:
-      "hey there, i'm paul aries! i'm a creative, user-centered designer and developer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
+      "hey there, i'm paul aries! i'm a creative, user-centered developer and designer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
     images: [
       {
-        url: "https://paularies.ca/og-image.jpg",
+        url: "https://paularies.ca/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
     ],
     siteName: "bio · paul aries",
-    url: "https://paularies.ca",
+    url: "https://bio.paularies.ca",
   },
   robots: {
     index: false,

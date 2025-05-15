@@ -40,9 +40,7 @@ export async function workMetadata({ params }: Params) {
     ],
     openGraph: {
       title: `${title} · paul aries`,
-      description: `check out ${title}, a
-    ${title === "afleuries illustrated" ? " stylized " : " modern "} marketing page for
-    ${title === "afleuries illustrated" ? " a live portrait artist" : " a fictional mobile app companion"}.`,
+      description: `check out ${title}, a ${title === "afleuries illustrated" ? " stylized " : " modern "} marketing page for ${title === "afleuries illustrated" ? " a live portrait artist" : " a fictional mobile app companion"}.`,
       images: [
         {
           url: `https://paularies.ca/opengraph-image-${slug}.jpg`,
