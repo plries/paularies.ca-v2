@@ -1,14 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizePackageImports: ["@phosphor-icons/react"],
+  },
   async rewrites() {
-    
-    module.exports = {
-      experimental: {
-        optimizePackageImports: ["@phosphor-icons/react"],
-      },
-    }
-
     return [
       {
         source: "/",
