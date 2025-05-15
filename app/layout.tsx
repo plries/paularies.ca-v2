@@ -29,7 +29,6 @@ export default function RootLayout({
           `,
           }}
         />
-        <base href="/" />
       </head>
       <body>
         {children}
