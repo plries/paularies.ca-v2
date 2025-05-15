@@ -1,7 +1,7 @@
 import { ReactLenis } from "lenis/react";
 import { ClientOnly } from "@/app/components";
 import { metadata } from "./layoutMetadata";
-import "../../globals.css";
+import "@/app/globals.css";
 
 export default function BioLayout({
   children,

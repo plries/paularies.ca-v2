@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 import { hankenGrotesk, instrumentSerif, dmMono } from "./fonts";
 import "./globals.css";
 
@@ -29,6 +29,7 @@ export default function RootLayout({
           `,
           }}
         />
+        <base href="/" />
       </head>
       <body>
         {children}
