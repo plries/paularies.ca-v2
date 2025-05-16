@@ -9,7 +9,7 @@ export async function workMetadata({ params }: Params) {
   return {
     metadataBase: new URL(`https://paularies.ca/works/${slug}`),
     alternates: {
-      canonical: `/works/${slug}`,
+      canonical: `https://paularies.ca/works/${slug}`,
     },
     title: `${title} · paul aries`,
     description: `check out ${title}, a ${title === "afleuries illustrated" ? " stylized " : " modern "} marketing page for ${title === "afleuries illustrated" ? " a live portrait artist" : " a fictional mobile app companion"}.`,
