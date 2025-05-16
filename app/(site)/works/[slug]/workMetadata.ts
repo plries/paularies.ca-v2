@@ -7,7 +7,7 @@ export async function workMetadata({ params }: Params) {
   const title = (slug as string).replace(/-/g, " ");
 
   return {
-    metadataBase: new URL(`https://paularies.ca/works/${slug}`),
+    metadataBase: new URL(`https://paularies.ca`),
     alternates: {
       canonical: `https://paularies.ca/works/${slug}`,
     },
