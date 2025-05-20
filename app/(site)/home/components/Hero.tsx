@@ -1,12 +1,19 @@
+"use client";
 import Image from "next/image";
+import { motion, easeInOut } from "framer-motion";
 import { PaLogo } from "@/public";
 import { HERO_CONST } from "../const";
-import { Dot, InsetBlock } from "@/app/components";
+import { InsetBlock } from "@/app/components";
 
 export const Hero = () => {
   return (
     <InsetBlock>
-      <div className="animate-float relative col-span-full h-fit drop-shadow-md md:col-span-4 md:col-start-3 lg:col-span-6 lg:col-start-4">
+      <motion.div
+        initial={{ transform: "translateY(25%)" }}
+        animate={{ transform: "translateY(0%)" }}
+        transition={{ duration: 0.7, ease: easeInOut, delay: 0.5 }}
+        className="relative z-10 col-span-full h-fit drop-shadow-md md:col-span-4 md:col-start-3 lg:col-span-6 lg:col-start-4"
+      >
         <Image
           src={HERO_CONST.HEADSHOT.SRC}
           alt={HERO_CONST.HEADSHOT.ALT}
@@ -20,24 +27,61 @@ export const Hero = () => {
             <span className="sr-only">{HERO_CONST.LOGO.ALT}</span>
           </h1>
         </div>
-      </div>
+      </motion.div>
       <h1 className="dark:text-greyscale-50 col-span-full inline-flex h-fit flex-col gap-x-2 gap-y-1 text-center text-xl leading-none text-nowrap md:col-span-4 md:col-start-3 md:text-2xl lg:col-span-6 lg:col-start-4 lg:text-[1.75rem]">
-        {HERO_CONST.INTRO[0]}
-        <span className="inline-flex flex-row justify-center gap-x-2">
-          <span className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic">
-            <Dot discipline="development" />
-            {HERO_CONST.INTRO[1]}
+        <span className="inline-flex flex-col">
+          <span className="inline-flex flex-row flex-wrap items-center justify-center gap-x-2 overflow-hidden">
+            {HERO_CONST.INTRO.slice(0, 4).map((text, index) => (
+              <motion.span
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={{
+                  ease: easeInOut,
+                  duration: 0.5,
+                  delay: 0.5 + index * 0.1,
+                }}
+                className="inline-block w-fit"
+                key={index}
+              >
+                {text}
+              </motion.span>
+            ))}
           </span>
-          {HERO_CONST.INTRO[2]}
-          <span className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic">
-            <Dot discipline="design" />
-            {HERO_CONST.INTRO[3]}
+          <span className="inline-flex flex-row flex-wrap items-center justify-center gap-x-2 overflow-hidden py-1">
+            {HERO_CONST.INTRO.slice(4, 7).map((text, index) => (
+              <motion.span
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={{
+                  ease: easeInOut,
+                  duration: 0.5,
+                  delay: 0.5 + 0.4 + index * 0.1,
+                }}
+                className="inline-block w-fit"
+                key={index}
+              >
+                {text}
+              </motion.span>
+            ))}
           </span>
-        </span>
-        <span className="inline-flex flex-row justify-center gap-x-2">
-          {HERO_CONST.INTRO[4]}
-          <span className="font-instrument-serif italic">
-            {HERO_CONST.INTRO[5]}
+          <span className="inline-flex flex-row flex-wrap items-center justify-center gap-x-2 overflow-hidden">
+            {HERO_CONST.INTRO.slice(7, HERO_CONST.INTRO.length).map(
+              (text, index) => (
+                <motion.span
+                  initial={{ y: 100 }}
+                  animate={{ y: 0 }}
+                  transition={{
+                    ease: easeInOut,
+                    duration: 0.5,
+                    delay: 0.5 + 0.7 + index * 0.1,
+                  }}
+                  className="inline-block w-fit"
+                  key={index}
+                >
+                  {text}
+                </motion.span>
+              ),
+            )}
           </span>
         </span>
       </h1>

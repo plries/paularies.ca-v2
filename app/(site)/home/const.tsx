@@ -1,3 +1,5 @@
+import { Dot } from "@/app/components";
+
 export const HERO_CONST = {
   HEADSHOT: {
     SRC: "/images/PaulAriesHeadshot.jpg",
@@ -7,12 +9,29 @@ export const HERO_CONST = {
     ALT: "paul aries",
   },
   INTRO: [
-    "is a creative, user-centered",
-    "developer",
-    "and",
-    "designer",
-    "based in",
-    "vancouver, canada.",
+    "is ",
+    "a ",
+    "creative, ",
+    "user-centered ",
+    <span
+      key="developer"
+      className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic"
+    >
+      <Dot discipline="development" />
+      developer
+    </span>,
+    "and ",
+    <span
+      key="designer"
+      className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic"
+    >
+      <Dot discipline="design" />
+      designer
+    </span>,
+    "based in ",
+    <span key="vancouver" className="font-instrument-serif italic">
+      vancouver, canada
+    </span>,
   ],
 };
 
@@ -42,7 +61,7 @@ export const SELECTED_WORKS_CONST = {
 };
 
 export const TESTIMONIALS_CONST = {
-  HEADING: "testimonials",
+  HEADING: "kind words",
   CLOSE: "close testimonial",
   EXPAND: "expand testimonial",
   TESTIMONIALS: [
