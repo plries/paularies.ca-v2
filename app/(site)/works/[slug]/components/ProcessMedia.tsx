@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Highlight from "react-highlight";
 import { IconButton, ViewToggle } from "@/app/components";
@@ -8,6 +10,7 @@ export const ProcessMedia = ({
   PROCESS,
   setMediaSrc,
   setCodeSrc,
+  isOpen,
 }: {
   PROCESS: {
     HEADING: string;
@@ -18,8 +21,15 @@ export const ProcessMedia = ({
   };
   setMediaSrc: (src: string, type: "image" | "video", alt?: string) => void;
   setCodeSrc: (src: string) => void;
+  isOpen: boolean;
 }) => {
   const hook = useViewToggle();
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) videoRef.current?.play();
+  });
 
   return (
     <div className="relative flex w-full flex-col gap-2">
@@ -39,6 +49,7 @@ export const ProcessMedia = ({
           muted
           playsInline
           className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 duration- aspect-video h-full w-full rounded-lg border object-cover"
+          ref={videoRef}
         >
           <source src={PROCESS.VIDEO} type="video/mp4" />
         </video>
@@ -58,11 +69,13 @@ export const ProcessMedia = ({
             icon={<CornersOut />}
             name="fullscreen view"
             additionalClasses={{
-              button: "h-full w-full",
+              button: "h-full w-[50px]",
             }}
             onClick={() => {
-              if (!hook.isCode && PROCESS.VIDEO)
+              if (!hook.isCode && PROCESS.VIDEO) {
                 setMediaSrc(PROCESS.VIDEO, "video");
+                videoRef.current?.pause();
+              }
               if (!hook.isCode && PROCESS.IMAGE)
                 setMediaSrc(PROCESS.IMAGE.SRC, "image");
               if (hook.isCode && PROCESS.CODE) setCodeSrc(PROCESS.CODE);

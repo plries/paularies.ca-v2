@@ -41,6 +41,7 @@ export const Project = () => {
             PROJECT={hook.constants}
             setMediaSrc={useLight.setMediaSrc}
             setCodeSrc={useLight.setCodeSrc}
+            isOpen={useLight.isOpen}
           />
           <Reflection PROJECT={hook.constants} />
         </div>

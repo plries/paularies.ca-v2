@@ -9,6 +9,7 @@ export const Process = ({
   PROJECT,
   setMediaSrc,
   setCodeSrc,
+  isOpen,
 }: {
   PROJECT: {
     HERO: {
@@ -47,6 +48,7 @@ export const Process = ({
 } & {
   setMediaSrc: (src: string, type: "image" | "video", alt?: string) => void;
   setCodeSrc: (src: string) => void;
+  isOpen: boolean;
 }) => {
   const hook = useWindowSize();
 
@@ -110,6 +112,7 @@ export const Process = ({
                 }}
                 setMediaSrc={setMediaSrc}
                 setCodeSrc={setCodeSrc}
+                isOpen={isOpen}
               />
             </ContentBlock>
           </div>
