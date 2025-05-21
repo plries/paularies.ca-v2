@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://paularies.ca"),
+  metadataBase: new URL("https://www.paularies.ca/"),
   alternates: {
     canonical: "https://www.paularies.ca/about/",
   },

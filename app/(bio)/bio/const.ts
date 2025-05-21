@@ -23,7 +23,7 @@ export const BIO_CONST = {
     ],
     CONTACTS_CONST: [
         {
-            href: "https://paularies.ca",
+            href: "https://www.paularies.ca/",
             label: "portfolio",
         },
         {
