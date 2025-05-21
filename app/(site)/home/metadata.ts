@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://paularies.ca"),
   alternates: {
-    canonical: "https://paularies.ca/",
+    canonical: "https://www.paularies.ca/",
   },
   title: "portfolio · paul aries",
   publisher: "Paul Aries",
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
       "hey there, i'm paul aries! i'm a creative, user-centered developer and designer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
     images: [
       {
-        url: "https://paularies.ca/opengraph-image.jpg",
+        url: "https://www.paularies.ca/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
     ],
     siteName: "portfolio · paul aries",
-    url: "https://paularies.ca/",
+    url: "https://www.paularies.ca/",
   },
   robots: {
     index: true,

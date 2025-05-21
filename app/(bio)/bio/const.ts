@@ -27,7 +27,7 @@ export const BIO_CONST = {
             label: "portfolio",
         },
         {
-            href: "https://paularies.ca/PaulAries-Resume.pdf",
+            href: "https://www.paularies.ca/PaulAries-Resume.pdf",
             label: "resume",
         },
         {

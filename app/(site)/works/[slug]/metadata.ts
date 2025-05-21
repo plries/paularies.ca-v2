@@ -9,7 +9,7 @@ export async function worksMetadata({ params }: Params) {
   return {
     metadataBase: new URL(`https://paularies.ca`),
     alternates: {
-      canonical: `https://paularies.ca/works/${slug}`,
+      canonical: `https://www.paularies.ca/works/${slug}`,
     },
     title: `${title} · paul aries`,
     description: `check out ${title}, a ${title === "afleuries illustrated" ? "stylized" : "modern"} marketing page for ${title === "afleuries illustrated" ? "a live portrait artist" : "a fictional mobile app companion"}.`,
@@ -43,13 +43,13 @@ export async function worksMetadata({ params }: Params) {
       description: `check out ${title}, a ${title === "afleuries illustrated" ? " stylized " : " modern "} marketing page for ${title === "afleuries illustrated" ? " a live portrait artist" : " a fictional mobile app companion"}.`,
       images: [
         {
-          url: `https://paularies.ca/opengraph-image-${slug}.jpg`,
+          url: `https://www.paularies.ca/opengraph-image-${slug}.jpg`,
           width: 1200,
           height: 630,
         },
       ],
       siteName: `${title} · paul aries`,
-      url: `https://paularies.ca/works/${slug}`,
+      url: `https://www.paularies.ca/works/${slug}`,
     },
     robots: {
       index: true,

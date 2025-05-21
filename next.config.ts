@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
             value: "bio.paularies.ca",
           },
         ],
-        destination: "https://paularies.ca/bio",
+        destination: "https://www.paularies.ca/bio",
         permanent: false,
       },
     ];
