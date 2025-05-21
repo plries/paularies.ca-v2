@@ -1,4 +1,3 @@
-import { ProjectPagePropsTypes } from "./types";
 import { Heading, ContentBlock, ContentHeading } from "@/app/components";
 import { ProcessMedia } from "./ProcessMedia";
 import { PROJECT_PAGE_CONST } from "../const";

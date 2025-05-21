@@ -32,7 +32,7 @@ export const ProcessMedia = ({
           className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 pointer-events-none aspect-video h-full w-full rounded-lg border object-cover transition-[opacity,filter] duration-500 hover:opacity-75"
           onClick={() => {
             toggleLightbox();
-            PROCESS.IMAGE &&
+            if (PROCESS.IMAGE)
               setMediaSrc(PROCESS.IMAGE.SRC, "image", PROCESS.IMAGE.ALT);
           }}
         />
@@ -46,7 +46,7 @@ export const ProcessMedia = ({
           className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 duration- aspect-video h-full w-full rounded-lg border object-cover transition-[opacity,filter] duration-500 hover:opacity-75"
           onClick={() => {
             toggleLightbox();
-            PROCESS.VIDEO && setMediaSrc(PROCESS.VIDEO, "video");
+            if (PROCESS.VIDEO) setMediaSrc(PROCESS.VIDEO, "video");
           }}
         >
           <source src={PROCESS.VIDEO} type="video/mp4" />
