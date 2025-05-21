@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Project } from "./components/Project";
-import { workMetadata } from "./workMetadata";
+import { worksMetadata } from "./metadata";
 import { Params } from "./types";
 
 export const dynamic = "force-static";
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const metadata = await workMetadata({ params });
+  const metadata = await worksMetadata({ params });
   return metadata;
 }
 

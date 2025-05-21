@@ -28,8 +28,14 @@ export const ProcessMedia = ({
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (!isOpen) videoRef.current?.play();
-  });
+    if (isOpen) {
+      videoRef.current?.play().catch((error) => {
+        console.warn("Video play failed:", error);
+      });
+    } else {
+      videoRef.current?.pause();
+    }
+  }, [isOpen]);
 
   return (
     <div className="relative flex w-full flex-col gap-2">

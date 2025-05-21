@@ -3,12 +3,12 @@ import type { Metadata, Viewport } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://paularies.ca"),
   alternates: {
-    canonical: "/",
+    canonical: "https://paularies.ca/about/",
   },
-  title: "portfolio · paul aries",
+  title: "about · paul aries",
   publisher: "Paul Aries",
   description:
-    "hey there, i'm paul aries! i'm a creative, user-centered developer and designer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
+    "hey there, i'm paul aries! learn more about me, my background, and why i love to create things. explore my portfolio, view my work, and get in touch!",
   keywords: [
     "paul aries",
     "paul aries web developer",
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "paul aries portfolio site",
     "paul aries projects",
     "paul aries work",
+    "paul aries about",
     "paul aries portfolio",
     "developer portfolio",
     "web design portfolio",
@@ -32,9 +33,9 @@ export const metadata: Metadata = {
     "web design",
   ],
   openGraph: {
-    title: "portfolio · paul aries",
+    title: "about · paul aries",
     description:
-      "hey there, i'm paul aries! i'm a creative, user-centered developer and designer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
+      "hey there, i'm paul aries! learn more about me, my background, and why i love to create things. explore my portfolio, view my work, and get in touch!",
     images: [
       {
         url: "https://paularies.ca/opengraph-image.jpg",
@@ -42,8 +43,8 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-    siteName: "portfolio · paul aries",
-    url: "https://paularies.ca",
+    siteName: "about · paul aries",
+    url: "https://paularies.ca/about/",
   },
   robots: {
     index: true,

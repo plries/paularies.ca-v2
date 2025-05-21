@@ -1,7 +1,7 @@
 import type { Viewport } from "next";
 import { Params } from "./types";
 
-export async function workMetadata({ params }: Params) {
+export async function worksMetadata({ params }: Params) {
   const { slug } = await params;
 
   const title = (slug as string).replace(/-/g, " ");

@@ -1,5 +1,4 @@
 import { Footer, ClientOnly, PageContent, SmoothScroll } from "../components/";
-import { metadata } from "./layoutMetadata";
 import "../globals.css";
 
 export default function RootLayout({
@@ -18,5 +17,3 @@ export default function RootLayout({
     </SmoothScroll>
   );
 }
-
-export { metadata };
