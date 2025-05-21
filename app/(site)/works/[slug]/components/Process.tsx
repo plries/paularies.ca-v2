@@ -6,7 +6,49 @@ import { MOTION_CONFIG } from "@/app/(site)/const";
 import { motion } from "motion/react";
 import { useWindowSize } from "@/app/hooks";
 
-export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
+export const Process = ({
+  PROJECT,
+  toggleLightbox,
+  setMediaSrc,
+}: {
+  PROJECT: {
+    HERO: {
+      TITLE: string;
+      DISCIPLINE: string[];
+      DESCRIPTION: string;
+      SKILLS: string[];
+      LINK: string;
+      GITHUB?: string;
+      IMAGE: { SRC: string; ALT: string };
+    };
+    PROCESS: [
+      {
+        HEADING: string;
+        DESCRIPTION: React.ReactNode[];
+        IMAGE?: { SRC: string; ALT: string };
+        VIDEO?: string;
+        CODE?: string;
+      },
+      {
+        HEADING: string;
+        DESCRIPTION: React.ReactNode[];
+        IMAGE?: { SRC: string; ALT: string };
+        VIDEO?: string;
+        CODE?: string;
+      },
+      {
+        HEADING: string;
+        DESCRIPTION: React.ReactNode[];
+        IMAGE?: { SRC: string; ALT: string };
+        VIDEO?: string;
+        CODE?: string;
+      },
+    ];
+  };
+} & {
+  toggleLightbox: () => void;
+  setMediaSrc: (src: string, type: "image" | "video", alt?: string) => void;
+}) => {
   const hook = useWindowSize();
 
   return (
@@ -67,6 +109,8 @@ export const Process = ({ PROJECT }: ProjectPagePropsTypes) => {
                     (node) => node?.toString() ?? "",
                   ),
                 }}
+                toggleLightbox={toggleLightbox}
+                setMediaSrc={setMediaSrc}
               />
             </ContentBlock>
           </div>

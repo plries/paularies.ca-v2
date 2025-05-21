@@ -12,6 +12,7 @@ export * from "./GradientBlock";
 export * from "./Heading";
 export * from "./IconButton";
 export * from "./InsetBlock";
+export * from "./Lightbox";
 export * from "./Marquee";
 export * from "./NavBar";
 export * from "./PageContent";
