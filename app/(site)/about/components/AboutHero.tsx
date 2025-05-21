@@ -18,7 +18,7 @@ export const AboutHero = () => {
             initial={{ transform: "translateX(100%)" }}
             animate={{ transform: "translateX(0%)" }}
             transition={{ duration: 0.7, ease: easeInOut, delay: 0.5 }}
-            className={`z-10 min-w-16 translate-x-2 -rotate-4 md:min-w-36 ${imageStyles}`}
+            className={`z-10 max-w-24 min-w-16 translate-x-2 -rotate-4 md:min-w-36 ${imageStyles}`}
           >
             <Image
               src={ABOUT_HERO_CONST.IMAGES[0].SRC}
@@ -31,7 +31,7 @@ export const AboutHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, ease: easeInOut, delay: 0.7 }}
-            className={`min-w-24 md:min-w-48 ${imageStyles}`}
+            className={`max-w-36 min-w-24 md:max-w-48 md:min-w-48 ${imageStyles}`}
           >
             <video autoPlay loop muted playsInline>
               <source src={ABOUT_HERO_CONST.VIDEO} type="video/mp4" />
@@ -41,7 +41,7 @@ export const AboutHero = () => {
             initial={{ transform: "translateX(-100%)" }}
             animate={{ transform: "translateX(0%)" }}
             transition={{ duration: 0.7, ease: easeInOut, delay: 0.5 }}
-            className={`z-10 min-w-16 -translate-x-2 rotate-4 md:min-w-36 ${imageStyles}`}
+            className={`z-10 max-w-24 min-w-16 -translate-x-2 rotate-4 md:min-w-36 ${imageStyles}`}
           >
             <Image
               src={ABOUT_HERO_CONST.IMAGES[1].SRC}
