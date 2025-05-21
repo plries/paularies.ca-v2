@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Highlight from "react-highlight";
-import { ViewToggle } from "@/app/components";
+import { IconButton, ViewToggle } from "@/app/components";
 import { useViewToggle } from "@/app/hooks";
+import { CornersOut } from "@phosphor-icons/react";
 
 export const ProcessMedia = ({
   PROCESS,
-  toggleLightbox,
   setMediaSrc,
+  setCodeSrc,
 }: {
   PROCESS: {
     HEADING: string;
@@ -15,26 +16,20 @@ export const ProcessMedia = ({
     VIDEO?: string;
     CODE?: string;
   };
-  toggleLightbox: () => void;
   setMediaSrc: (src: string, type: "image" | "video", alt?: string) => void;
+  setCodeSrc: (src: string) => void;
 }) => {
   const hook = useViewToggle();
 
   return (
-    <div className="flex w-full flex-col gap-2">
-      <div className="pointer-events-none shadow-md"></div>
+    <div className="relative flex w-full flex-col gap-2">
       {!hook.isCode && PROCESS.IMAGE && (
         <Image
           src={PROCESS.IMAGE.SRC}
           alt={PROCESS.IMAGE.ALT}
           width={1920}
           height={1080}
-          className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 pointer-events-none aspect-video h-full w-full rounded-lg border object-cover transition-[opacity,filter] duration-500 hover:opacity-75"
-          onClick={() => {
-            toggleLightbox();
-            if (PROCESS.IMAGE)
-              setMediaSrc(PROCESS.IMAGE.SRC, "image", PROCESS.IMAGE.ALT);
-          }}
+          className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 pointer-events-none relative aspect-video h-full w-full rounded-lg border object-cover"
         />
       )}
       {!hook.isCode && PROCESS.VIDEO && (
@@ -43,24 +38,38 @@ export const ProcessMedia = ({
           loop
           muted
           playsInline
-          className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 duration- aspect-video h-full w-full rounded-lg border object-cover transition-[opacity,filter] duration-500 hover:opacity-75"
-          onClick={() => {
-            toggleLightbox();
-            if (PROCESS.VIDEO) setMediaSrc(PROCESS.VIDEO, "video");
-          }}
+          className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 duration- aspect-video h-full w-full rounded-lg border object-cover"
         >
           <source src={PROCESS.VIDEO} type="video/mp4" />
         </video>
       )}
       {hook.isCode && PROCESS.CODE && (
-        <div className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 aspect-video w-full overflow-y-auto rounded-lg border p-4">
+        <div className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 relative aspect-video w-full overflow-y-auto rounded-lg border p-4">
           <Highlight className="text-greyscale-800 dark:text-greyscale-200">
             {PROCESS.CODE}
           </Highlight>
         </div>
       )}
       {PROCESS.CODE && (
-        <ViewToggle isCode={hook.isCode} toggleView={hook.toggleView} />
+        <div className="flex w-full flex-row gap-2">
+          <ViewToggle isCode={hook.isCode} toggleView={hook.toggleView} />
+          <IconButton
+            theme="secondary"
+            icon={<CornersOut />}
+            name="fullscreen view"
+            additionalClasses={{
+              button: "h-full w-full",
+            }}
+            onClick={() => {
+              if (!hook.isCode && PROCESS.VIDEO)
+                setMediaSrc(PROCESS.VIDEO, "video");
+              if (!hook.isCode && PROCESS.IMAGE)
+                setMediaSrc(PROCESS.IMAGE.SRC, "image");
+              if (hook.isCode && PROCESS.CODE) setCodeSrc(PROCESS.CODE);
+            }}
+            noBlur
+          />
+        </div>
       )}
     </div>
   );

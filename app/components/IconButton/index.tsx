@@ -17,6 +17,8 @@ export const IconButton = ({
   noHover,
   target,
   disabled,
+  tabIndex,
+  buttonRef,
 }: IconButtonPropTypes) => {
   const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border p-2 ease-in-out-circ disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 disabled:active:scale-100 transition-[scale] duration-300 ${additionalClasses?.button || ""} ${
     theme === "primary"
@@ -47,6 +49,9 @@ export const IconButton = ({
               onClick={onClick}
               className={buttonStyles}
               disabled={disabled}
+              tabIndex={tabIndex}
+              ref={buttonRef}
+
             >
               {icon}
               <span className="sr-only">{name}</span>
@@ -71,6 +76,8 @@ export const IconButton = ({
               onClick={onClick}
               className={buttonStyles}
               disabled={disabled}
+              tabIndex={tabIndex}
+              ref={buttonRef}
             >
               {icon}
               <span className="sr-only">{name}</span>

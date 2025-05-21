@@ -39,8 +39,8 @@ export const Project = () => {
           <Overview PROJECT={hook.constants} />
           <Process
             PROJECT={hook.constants}
-            toggleLightbox={useLight.toggleLightbox}
             setMediaSrc={useLight.setMediaSrc}
+            setCodeSrc={useLight.setCodeSrc}
           />
           <Reflection PROJECT={hook.constants} />
         </div>
@@ -65,7 +65,8 @@ export const Project = () => {
         </div>
       </IconContext.Provider>
       <Lightbox
-        key={useLight.media?.key}
+        lightboxRef={useLight.lightboxRef}
+        closeButtonRef={useLight.closeButtonRef}
         isOpen={useLight.isOpen}
         toggleLightbox={useLight.toggleLightbox}
         media={
@@ -75,6 +76,7 @@ export const Project = () => {
             type: useLight.media.type as "image" | "video",
           }
         }
+        code={useLight.code}
       />
     </>
   );

@@ -7,8 +7,8 @@ import { useWindowSize } from "@/app/hooks";
 
 export const Process = ({
   PROJECT,
-  toggleLightbox,
   setMediaSrc,
+  setCodeSrc,
 }: {
   PROJECT: {
     HERO: {
@@ -45,8 +45,8 @@ export const Process = ({
     ];
   };
 } & {
-  toggleLightbox: () => void;
   setMediaSrc: (src: string, type: "image" | "video", alt?: string) => void;
+  setCodeSrc: (src: string) => void;
 }) => {
   const hook = useWindowSize();
 
@@ -108,8 +108,8 @@ export const Process = ({
                     (node) => node?.toString() ?? "",
                   ),
                 }}
-                toggleLightbox={toggleLightbox}
                 setMediaSrc={setMediaSrc}
+                setCodeSrc={setCodeSrc}
               />
             </ContentBlock>
           </div>

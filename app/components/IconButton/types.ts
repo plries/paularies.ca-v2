@@ -14,4 +14,6 @@ export type IconButtonPropTypes = {
   noHover?: boolean;
   target?: string;
   disabled?: boolean;
+  tabIndex?: number;
+  buttonRef?: React.RefObject<HTMLButtonElement | null>;
 };
