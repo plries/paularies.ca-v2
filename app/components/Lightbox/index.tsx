@@ -31,7 +31,7 @@ export const Lightbox = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.3, ease: easeInOut }}
-            className="relative max-w-7xl"
+            className="relative w-full max-w-7xl"
             onClick={(event) => event.stopPropagation()}
             tabIndex={-1}
             role="dialog"
@@ -74,7 +74,7 @@ export const Lightbox = ({
             {code && (
               <div
                 key={code}
-                className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 max-h-[80vh] max-w-full overflow-x-scroll overflow-y-scroll rounded-lg border p-4"
+                className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 max-h-[80vh] min-w-full overflow-x-scroll overflow-y-scroll rounded-lg border p-4"
               >
                 <Highlight className="text-greyscale-800 dark:text-greyscale-200 break-all md:break-normal">
                   {code}

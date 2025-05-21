@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState, useRef } from "react";
+import { useLenis } from "lenis/react";
 import { MediaType } from "../components/Lightbox/types";
 
 export const useLightbox = () => {
@@ -9,6 +10,8 @@ export const useLightbox = () => {
 
   const lightboxRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  const lenis = useLenis();
 
   const toggleLightbox = () => setIsOpen(!isOpen);
 
@@ -45,8 +48,16 @@ export const useLightbox = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    if (isOpen && closeButtonRef.current) {
-      closeButtonRef.current.focus();
+    if (!lenis) return; 
+    
+    if (isOpen) {
+      lenis.stop();
+
+      if (closeButtonRef.current) {
+        closeButtonRef.current.focus();
+      }
+    } else {
+      lenis.start();
     }
   }, [isOpen]);
 
