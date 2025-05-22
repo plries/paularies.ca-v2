@@ -2,23 +2,9 @@
 import { IconContext, GithubLogo, ArrowRight } from "@phosphor-icons/react";
 import { Chip, ContentHeading, Dot, IconButton } from "@/app/components";
 import { PROJECT_PAGE_CONST } from "../const";
+import { WorksDetailsPropTypes } from "./types";
 
-export const Details = ({
-  PROJECT,
-  hasLinks,
-}: {
-  PROJECT: {
-    HERO: {
-      TITLE: string;
-      DISCIPLINE: string[];
-      DESCRIPTION: string;
-      SKILLS: string[];
-      LINK: string;
-      GITHUB?: string;
-      IMAGE: { SRC: string; ALT: string };
-    };
-  };
-} & { hasLinks?: boolean }) => {
+export const Details = ({ PROJECT, hasLinks }: WorksDetailsPropTypes) => {
   return (
     <IconContext.Provider value={{ size: 20 }}>
       <div className="dark:bg-greyscale-950 bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 flex flex-col gap-2 rounded-xl border p-4 shadow-xs md:rounded-3xl lg:sticky lg:top-32 lg:mt-16 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:dark:border-transparent lg:dark:bg-transparent">

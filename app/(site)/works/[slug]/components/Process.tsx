@@ -4,52 +4,14 @@ import { PROJECT_PAGE_CONST } from "../const";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { motion } from "motion/react";
 import { useWindowSize } from "@/app/hooks";
+import { WorksProcessPropTypes } from "./types";
 
 export const Process = ({
   PROJECT,
   setMediaSrc,
   setCodeSrc,
   isOpen,
-}: {
-  PROJECT: {
-    HERO: {
-      TITLE: string;
-      DISCIPLINE: string[];
-      DESCRIPTION: string;
-      SKILLS: string[];
-      LINK: string;
-      GITHUB?: string;
-      IMAGE: { SRC: string; ALT: string };
-    };
-    PROCESS: [
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-        IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: string;
-        CODE?: string;
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-        IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: string;
-        CODE?: string;
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-        IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: string;
-        CODE?: string;
-      },
-    ];
-  };
-} & {
-  setMediaSrc: (src: string, type: "image" | "video", alt?: string) => void;
-  setCodeSrc: (src: string) => void;
-  isOpen: boolean;
-}) => {
+}: WorksProcessPropTypes) => {
   const hook = useWindowSize();
 
   return (
@@ -110,9 +72,9 @@ export const Process = ({
                     (node) => node?.toString() ?? "",
                   ),
                 }}
-                setMediaSrc={setMediaSrc}
-                setCodeSrc={setCodeSrc}
-                isOpen={isOpen}
+                setMediaSrc={setMediaSrc || (() => {})}
+                setCodeSrc={setCodeSrc || (() => {})}
+                isOpen={isOpen || false}
               />
             </ContentBlock>
           </div>

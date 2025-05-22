@@ -2,33 +2,23 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Highlight from "react-highlight";
+import { CornersOut } from "@phosphor-icons/react";
 import { IconButton, ViewToggle } from "@/app/components";
 import { useViewToggle } from "@/app/hooks";
-import { CornersOut } from "@phosphor-icons/react";
+import { WorksProcessMediaPropTypes } from "./types";
 
 export const ProcessMedia = ({
   PROCESS,
   setMediaSrc,
   setCodeSrc,
   isOpen,
-}: {
-  PROCESS: {
-    HEADING: string;
-    DESCRIPTION: string[];
-    IMAGE?: { SRC: string; ALT: string };
-    VIDEO?: string;
-    CODE?: string;
-  };
-  setMediaSrc: (src: string, type: "image" | "video", alt?: string) => void;
-  setCodeSrc: (src: string) => void;
-  isOpen: boolean;
-}) => {
+}: WorksProcessMediaPropTypes) => {
   const hook = useViewToggle();
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (isOpen) {
+    if (!isOpen) {
       videoRef.current?.play().catch((error) => {
         console.warn("Video play failed:", error);
       });
@@ -78,13 +68,14 @@ export const ProcessMedia = ({
               button: "h-full w-[50px]",
             }}
             onClick={() => {
-              if (!hook.isCode && PROCESS.VIDEO) {
+              if (!hook.isCode && PROCESS.VIDEO && setMediaSrc) {
                 setMediaSrc(PROCESS.VIDEO, "video");
                 videoRef.current?.pause();
               }
-              if (!hook.isCode && PROCESS.IMAGE)
+              if (!hook.isCode && PROCESS.IMAGE && setMediaSrc)
                 setMediaSrc(PROCESS.IMAGE.SRC, "image");
-              if (hook.isCode && PROCESS.CODE) setCodeSrc(PROCESS.CODE);
+              if (hook.isCode && PROCESS.CODE && setCodeSrc)
+                setCodeSrc(PROCESS.CODE);
             }}
             noBlur
           />

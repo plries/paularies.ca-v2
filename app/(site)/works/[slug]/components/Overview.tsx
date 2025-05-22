@@ -6,10 +6,10 @@ import {
   Warning,
   Users,
 } from "@phosphor-icons/react";
-import { ProjectPagePropsTypes } from "./types";
+import { WorksOverviewPropTypes } from "./types";
 import { ContentBlock, ContentHeading } from "@/app/components";
 
-export const Overview = ({ PROJECT }: ProjectPagePropsTypes) => {
+export const Overview = ({ PROJECT }: WorksOverviewPropTypes) => {
   return (
     <IconContext.Provider value={{ size: 20 }}>
       <div className="mt-16 flex flex-col gap-3 md:gap-4">

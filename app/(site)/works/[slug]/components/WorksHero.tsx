@@ -2,11 +2,11 @@
 import Image from "next/image";
 import { IconContext } from "@phosphor-icons/react";
 import { InsetBlock } from "@/app/components";
-import { ProjectPagePropsTypes } from "./types";
+import { WorksHeroPropTypes } from "./types";
 import { useWindowSize } from "@/app/hooks";
 import { Details } from "./Details";
 
-export const WorksHero = ({ PROJECT }: ProjectPagePropsTypes) => {
+export const WorksHero = ({ PROJECT }: WorksHeroPropTypes) => {
   const hook = useWindowSize();
 
   return (
