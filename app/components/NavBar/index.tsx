@@ -43,7 +43,7 @@ export const NavBar = () => {
             additionalClasses={{ button: "[&&]:!p-0 md:[&&]:!p-1 h-full" }}
             scroll={false}
             isLink
-            noBlur
+            noMotion
           >
             <span className="motion-safe:animate-[spin_12s_linear_infinite]">
               <PaStar />
@@ -65,7 +65,7 @@ export const NavBar = () => {
                       theme="tertiary"
                       scroll={false}
                       isLink
-                      noBlur
+                      noMotion
                       onClick={() => {
                         if (pathname === HREF) {
                           lenis?.scrollTo(0, { immediate: false });
@@ -91,7 +91,7 @@ export const NavBar = () => {
                     "!shadow-[var(--button-gradient-dark)] dark:!shadow-[var(--button-gradient-light)]",
                 }}
                 isLink
-                noBlur
+                noMotion
                 iconRight
               >
                 {NAVBAR_CONST.CONTACT.TEXT}

@@ -34,7 +34,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
           container: `transition-[rotate,scale] duration-500  ${hook.isOpen ? "rotate-45 scale-90" : ""}`,
           button: "relative flex items-center justify-center",
         }}
-        noBlur
+        noMotion
       />
       <ul
         className={`border-greyscale-200/50 bg-greyscale-50 dark:bg-greyscale-950 dark:border-greyscale-700/50 ease-in-out-circ absolute right-0 mt-4 flex w-full flex-col gap-3 rounded-3xl border p-3 shadow-[var(--nav-bar-light)] !transition-[top,opacity] duration-500 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-full opacity-100" : "pointer-events-none top-5/6 opacity-0"} `}
@@ -56,7 +56,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
                 button: `w-full justify-end !px-4 ${pathname === HREF || (pathname.startsWith("/works/") && HREF === "/works") ? "bg-greyscale-300/10 dark:bg-greyscale-600/10" : ""}`,
               }}
               tabIndex={hook.isOpen ? 0 : -1}
-              noBlur
+              noMotion
             >
               {TEXT}
             </Button>

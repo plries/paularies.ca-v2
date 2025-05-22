@@ -74,7 +74,7 @@ export const Footer = () => {
               }
               theme="secondary"
               name={FOOTER_CONST.LIGHT_DARK.TEXT}
-              noBlur
+              noMotion
             />
             <p className="text-greyscale-50 dark:text-greyscale-950 flex flex-row items-center gap-2">
               {FOOTER_CONST.BAR.TEXT}

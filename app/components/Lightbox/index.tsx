@@ -20,7 +20,7 @@ export const Lightbox = ({
         <motion.div
           key="lightbox"
           initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-          animate={{ opacity: 1, backdropFilter: "blur(4px)" }}
+          animate={{ opacity: 1, backdropFilter: "blur(2px)" }}
           exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
           transition={{ duration: 0.3, ease: easeInOut }}
           className="bg-greyscale-950/75 fixed top-0 left-0 z-[99] grid h-full w-full place-items-center p-4"

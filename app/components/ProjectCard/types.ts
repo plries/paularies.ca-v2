@@ -11,4 +11,5 @@ export type ProjectCardPropTypes = {
     SLUG: string;
   };
   isChecked?: boolean;
+  index: number;
 };

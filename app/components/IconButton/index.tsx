@@ -13,7 +13,7 @@ export const IconButton = ({
   icon,
   name,
   isLink,
-  noBlur,
+  noMotion,
   noHover,
   target,
   disabled,
@@ -36,7 +36,7 @@ export const IconButton = ({
 
   return (
     <>
-      {noBlur ? (
+      {noMotion ? (
         <div className={containerStyles}>
           {!hook.isMobile && <div className={noHover ? "" : hoverStyles} />}
           {isLink ? (

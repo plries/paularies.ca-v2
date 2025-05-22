@@ -14,11 +14,12 @@ export const Works = () => {
       <Heading level="h1">{WORKS_CONST.HEADING}</Heading>
       {(!toggle.isChecked || windowSize.isMobile) && (
         <>
-          {PROJECTS_CONST.PROJECTS.map((PROJECT) => (
+          {PROJECTS_CONST.PROJECTS.map((PROJECT, index) => (
             <ProjectCard
               key={PROJECT.TITLE}
               PROJECT={PROJECT}
               isChecked={toggle.isChecked}
+              index={index}
             />
           ))}
         </>
@@ -27,22 +28,24 @@ export const Works = () => {
         <>
           <div className="flex flex-col gap-4 md:col-span-4 lg:col-span-6">
             {PROJECTS_CONST.PROJECTS.filter((_, index) => index % 2 === 0).map(
-              (PROJECT) => (
+              (PROJECT, index) => (
                 <ProjectCard
                   key={PROJECT.TITLE}
                   PROJECT={PROJECT}
                   isChecked={toggle.isChecked}
+                  index={index}
                 />
               ),
             )}
           </div>
           <div className="flex flex-col gap-4 md:col-span-4 lg:col-span-6">
             {PROJECTS_CONST.PROJECTS.filter((_, index) => index % 2 !== 0).map(
-              (PROJECT) => (
+              (PROJECT, index) => (
                 <ProjectCard
                   key={PROJECT.TITLE}
                   PROJECT={PROJECT}
                   isChecked={toggle.isChecked}
+                  index={index}
                 />
               ),
             )}

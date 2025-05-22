@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { ArrowRight } from "@phosphor-icons/react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { Dot } from "../Dot";
@@ -10,7 +10,11 @@ import { IconButton, ContentHeading, Chip } from "@/app/components";
 import { useWindowSize } from "@/app/hooks";
 import { useProjectCard } from "./useProjectCard";
 
-export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
+export const ProjectCard = ({
+  PROJECT,
+  isChecked,
+  index = 0,
+}: ProjectCardPropTypes) => {
   const windowSize = useWindowSize();
   const projectCard = useProjectCard();
 
@@ -18,8 +22,12 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
     <motion.div
       initial={MOTION_CONFIG.PROJECT_CARD.INITIAL}
       whileInView={MOTION_CONFIG.PROJECT_CARD.WHILE_IN_VIEW}
-      transition={MOTION_CONFIG.TRANSITION}
-      className="group group col-span-full"
+      transition={{
+        duration: 0.5,
+        easeInOut,
+        delay: (index ?? 0) * 0.1,
+      }}
+      className="group group relative col-span-full"
     >
       {!windowSize.isMobile && (
         <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 ease-in-out-circ pointer-events-none absolute -inset-1 scale-95 rounded-[1.75rem] transition-[background-color,scale] duration-300 group-hover:scale-100" />
@@ -87,7 +95,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
                 additionalClasses={{
                   button: "dark:border-greyscale-50",
                 }}
-                noBlur
+                noMotion
                 noHover
                 disabled={PROJECT.SLUG !== "" ? false : true}
               />

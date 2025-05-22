@@ -69,11 +69,7 @@ export const ProcessMedia = ({
             }}
             onClick={() => {
               if (!hook.isCode && PROCESS.VIDEO && setMediaSrc) {
-                setMediaSrc(
-                  PROCESS.VIDEO.SRC,
-                  "video",
-                  PROCESS.VIDEO.CAPTION,
-                );
+                setMediaSrc(PROCESS.VIDEO.SRC, "video", PROCESS.VIDEO.CAPTION);
                 videoRef.current?.pause();
               }
               if (!hook.isCode && PROCESS.IMAGE && setMediaSrc)
@@ -81,7 +77,7 @@ export const ProcessMedia = ({
               if (hook.isCode && PROCESS.CODE && setCodeSrc)
                 setCodeSrc(PROCESS.CODE);
             }}
-            noBlur
+            noMotion
           />
         </div>
       )}

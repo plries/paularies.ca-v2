@@ -18,7 +18,7 @@ export const About = () => {
           theme="primary"
           href={ABOUT_CONST.BUTTON.HREF}
           isLink
-          noBlur
+          noMotion
           target="_blank"
           icon={
             <Note

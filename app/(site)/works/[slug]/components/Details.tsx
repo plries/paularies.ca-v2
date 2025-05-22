@@ -44,7 +44,7 @@ export const Details = ({ PROJECT, hasLinks }: WorksDetailsPropTypes) => {
                 icon={<GithubLogo />}
                 target="_blank"
                 isLink
-                noBlur
+                noMotion
               />
             )}
             <IconButton
@@ -56,7 +56,7 @@ export const Details = ({ PROJECT, hasLinks }: WorksDetailsPropTypes) => {
                 <ArrowRight className="ease-in-out-circ -rotate-45 transition-transform duration-300 group-hover:rotate-0" />
               }
               isLink
-              noBlur
+              noMotion
             />
           </div>
         )}

@@ -50,19 +50,17 @@ export const PROJECTS_CONST = {
 };
 
 export const MOTION_CONFIG = {
-  TRANSITION: { duration: 0.5, easeInOut },
+  TRANSITION: { duration: 0.5, easeInOut, delay: 0.1 },
   DEFAULT: {
-    INITIAL: { filter: "blur(8px)", opacity: 0 },
-    WHILE_IN_VIEW: { filter: "blur(0)", opacity: 1 },
+    INITIAL: { opacity: 0 },
+    WHILE_IN_VIEW: {  opacity: 1 },
   },
   PROJECT_CARD: {
     INITIAL: {
-      filter: "blur(8px)",
       opacity: 0,
       scale: 0.9,
     },
     WHILE_IN_VIEW: {
-      filter: "blur(0)",
       opacity: 1,
       scale: 1,
     },
@@ -70,36 +68,30 @@ export const MOTION_CONFIG = {
   HEADER: {
     INITIAL: {
       transform: "translateY(-64px)",
-      filter: "blur(8px)",
       opacity: 0,
     },
     WHILE_IN_VIEW: {
       transform: "translateY(0)",
-      filter: "blur(0)",
       opacity: 1,
     },
   },
   FOOTER: {
     INITIAL: {
       transform: "translateY(64px)",
-      filter: "blur(8px)",
       opacity: 0,
     },
     WHILE_IN_VIEW: {
       transform: "translateY(0)",
-      filter: "blur(0)",
       opacity: 1,
     },
   },
   ACTION_BAR: {
     INITIAL: {
-      transform: "translateY(64px)",
-      filter: "blur(8px)",
+      transform: "translateY(24px)",
       opacity: 0,
     },
-    WHILE_IN_VIEW: {
+    ANIMATE: {
       transform: "translateY(0)",
-      filter: "blur(0)",
       opacity: 1,
     },
   },
