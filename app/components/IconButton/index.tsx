@@ -30,7 +30,7 @@ export const IconButton = ({
 
   const containerStyles = `relative group ${additionalClasses?.container || ""}`;
 
-  const hoverStyles = `absolute -inset-1 pointer-events-none rounded-2xl p-1 transition-[background-color] duration-300 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
+  const hoverStyles = `absolute -inset-1 pointer-events-none rounded-2xl p-1 transition-[background-color,scale] group-hover:scale-100 scale-0 duration-300 ease-in-out-circ ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
 
   const hook = useWindowSize();
 
@@ -51,7 +51,6 @@ export const IconButton = ({
               disabled={disabled}
               tabIndex={tabIndex}
               ref={buttonRef}
-
             >
               {icon}
               <span className="sr-only">{name}</span>

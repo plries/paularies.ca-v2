@@ -31,7 +31,7 @@ export const Button = ({
 
   const containerStyles = `relative group ${additionalClasses?.container || ""}`;
 
-  const hoverStyles = `absolute z-0 rounded-2xl duration-300 -inset-1 pointer-events-none ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
+  const hoverStyles = `absolute z-0 rounded-2xl duration-300 -inset-1 pointer-events-none transition-[background-color,scale] ease-in-out-circ duration-300 group-hover:scale-100 scale-0 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
 
   const textStyles = `inline-flex flex-row items-center gap-2  ${additionalClasses?.text || ""}`;
 

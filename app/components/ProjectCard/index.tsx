@@ -22,7 +22,7 @@ export const ProjectCard = ({ PROJECT, isChecked }: ProjectCardPropTypes) => {
       className="group group col-span-full"
     >
       {!windowSize.isMobile && (
-        <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 pointer-events-none absolute -inset-1 rounded-[1.75rem] duration-300" />
+        <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 ease-in-out-circ pointer-events-none absolute -inset-1 scale-95 rounded-[1.75rem] transition-[background-color,scale] duration-300 group-hover:scale-100" />
       )}
       <article
         className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-4 rounded-xl border p-4 shadow-[var(--card-light)] md:flex-row md:rounded-3xl dark:shadow-[var(--card-dark)] ${
