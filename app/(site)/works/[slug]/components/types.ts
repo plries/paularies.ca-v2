@@ -50,21 +50,21 @@ export type WorksProcessPropTypes = {
         HEADING: string;
         DESCRIPTION: React.ReactNode[];
         IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: string;
+        VIDEO?: { SRC: string; CAPTION: string };
         CODE?: string;
       },
       {
         HEADING: string;
         DESCRIPTION: React.ReactNode[];
         IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: string;
+        VIDEO?: { SRC: string; CAPTION: string };
         CODE?: string;
       },
       {
         HEADING: string;
         DESCRIPTION: React.ReactNode[];
         IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: string;
+        VIDEO?: { SRC: string; CAPTION: string };
         CODE?: string;
       },
     ];

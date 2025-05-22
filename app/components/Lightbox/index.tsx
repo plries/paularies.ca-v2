@@ -23,7 +23,7 @@ export const Lightbox = ({
           animate={{ opacity: 1, backdropFilter: "blur(4px)" }}
           exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
           transition={{ duration: 0.3, ease: easeInOut }}
-          className="bg-greyscale-950/50 fixed top-0 left-0 z-[99] grid h-full w-full place-items-center p-4"
+          className="bg-greyscale-950/75 fixed top-0 left-0 z-[99] grid h-full w-full place-items-center p-4"
           onClick={toggleLightbox}
         >
           <motion.div
@@ -71,6 +71,12 @@ export const Lightbox = ({
                 className="border-greyscale-100 dark:border-greyscale-900 bg-greyscale-50 dark:bg-greyscale-800 aspect-video h-auto max-w-full rounded-xl border shadow-md"
               />
             )}
+            {media && media.alt && (
+              <div className="mt-2 flex items-center justify-center">
+                <p className="text-greyscale-50 text-center">{media.alt}</p>
+              </div>
+            )}
+
             {code && (
               <div
                 key={code}

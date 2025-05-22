@@ -47,7 +47,7 @@ export const ProcessMedia = ({
           className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-50 dark:bg-greyscale-800 duration- aspect-video h-full w-full rounded-lg border object-cover"
           ref={videoRef}
         >
-          <source src={PROCESS.VIDEO} type="video/mp4" />
+          <source src={PROCESS.VIDEO.SRC} type="video/mp4" />
         </video>
       )}
       {hook.isCode && PROCESS.CODE && (
@@ -69,11 +69,15 @@ export const ProcessMedia = ({
             }}
             onClick={() => {
               if (!hook.isCode && PROCESS.VIDEO && setMediaSrc) {
-                setMediaSrc(PROCESS.VIDEO, "video");
+                setMediaSrc(
+                  PROCESS.VIDEO.SRC,
+                  "video",
+                  PROCESS.VIDEO.CAPTION,
+                );
                 videoRef.current?.pause();
               }
               if (!hook.isCode && PROCESS.IMAGE && setMediaSrc)
-                setMediaSrc(PROCESS.IMAGE.SRC, "image");
+                setMediaSrc(PROCESS.IMAGE.SRC, "image", PROCESS.IMAGE.ALT);
               if (hook.isCode && PROCESS.CODE && setCodeSrc)
                 setCodeSrc(PROCESS.CODE);
             }}

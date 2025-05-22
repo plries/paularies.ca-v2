@@ -68,7 +68,11 @@ export const PROJECTS: ProjectPagePropsTypes = {
           <CodeSnippet key="const">const.ts</CodeSnippet>,
           " file ensures the codebase clean and easy to maintain.",
         ],
-        VIDEO: "/videos/projects/afleuries/afleuries-toggle.mp4",
+        VIDEO: {
+          SRC: "/videos/projects/afleuries/afleuries-toggle.mp4",
+          CAPTION:
+            "having a toggle allows users to compare the two different services easily.",
+        },
         CODE: `<motion.div
   initial={MOTION_CONFIG.INITIAL}
   whileInView={MOTION_CONFIG.WHILE_IN_VIEW}
@@ -114,7 +118,11 @@ export const PROJECTS: ProjectPagePropsTypes = {
           <strong key="localstorage">localStorage</strong>,
           " to remember if someone has already seen it, ensuring it doesn't become repetitive, and the delayed appearance and fade-in animation makes it feel smooth and non-intrusive.",
         ],
-        VIDEO: "/videos/projects/afleuries/afleuries-modal.mp4",
+        VIDEO: {
+          SRC: "/videos/projects/afleuries/afleuries-modal.mp4",
+          CAPTION:
+            "allowing users to explore the page before the modal appears makes it feel non-intrusive.",
+        },
         CODE: `// hook to manage the modal state and display it if the current date is within the specified range
 export const useModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -184,7 +192,11 @@ export const useModal = () => {
           <strong key="tailwind">tailwind</strong>,
           " classes are applied to the label, animating it while staying visible as a guide. this subtle movement keeps the form clean and intuitive while ensuring clarity at every step.",
         ],
-        VIDEO: "/videos/projects/afleuries/afleuries-input.mp4",
+        VIDEO: {
+          SRC: "/videos/projects/afleuries/afleuries-input.mp4",
+          CAPTION:
+            "smooth micro-interactions makes daunting tasks—like filling out a form—a bit more enjoyable.",
+        },
         CODE: `export const Input = ({
   label,
   name,
@@ -321,7 +333,11 @@ export const useModal = () => {
           <em key="pleasant">pleasant user experience</em>,
           ".",
         ],
-        VIDEO: "/videos/projects/guy/guy-ls.mp4",
+        VIDEO: {
+          SRC: "/videos/projects/guy/guy-ls.mp4",
+          CAPTION:
+            "storing user preferences in local storage allows for them to be saved across sessions.",
+        },
         CODE: `// moon -> toggles dark mode; default
 let toggleoff = document.querySelector('#dark');
 // sun -> toggles light mode
@@ -392,7 +408,11 @@ if (mode === 'darkmode') {
           <em key="dynamic">dynamic section indicator</em>,
           " to the navbar, improving the site’s navigation and user experience.",
         ],
-        VIDEO: "/videos/projects/guy/guy-io.mp4",
+        VIDEO: {
+          SRC: "/videos/projects/guy/guy-io.mp4",
+          CAPTION:
+            "the IntersectionObserver API can be used to trigger animations as elements enter the viewport.",
+        },
         CODE: `nav {
     display: flex;
     align-items: center;
@@ -433,7 +453,11 @@ if (mode === 'darkmode') {
           <em key="smooth">smooth transitions</em>,
           " when opening or closing each question.",
         ],
-        VIDEO: "/videos/projects/guy/guy-faq.mp4",
+        VIDEO: {
+          SRC: "/videos/projects/guy/guy-faq.mp4",
+          CAPTION:
+            "adjusting the max-height property creates smooth transitions that fit to the accordion's content.",
+        },
         CODE: `// gets all FAQ items
 const FAQS = document.querySelectorAll('.faq-item');
 // gets all FAQ buttons
