@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { easeInOut } from "framer-motion";
 import { CaretDown } from "@phosphor-icons/react";
 import { ContentBlock, ContentHeading, IconButton } from "../";
 import { TestimonialCardPropTypes } from "./types";
@@ -10,11 +11,13 @@ export const TestimonialCard = ({
   EXPAND,
   isOpen,
   toggleCard,
+  index,
 }: TestimonialCardPropTypes) => {
   return (
     <ContentBlock
       additionalClasses={`pb-18 transition-[max-height] duration-1000 overflow-hidden relative
-          ${isOpen ? "max-h-[50rem] md:max-h-[46rem] lg:max-h-[39rem]" : "max-h-48"}`}
+      ${isOpen ? "max-h-[50rem] md:max-h-[46rem] lg:max-h-[39rem]" : "max-h-48"}`}
+      transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
     >
       <IconButton
         onClick={() => toggleCard(testimonial.NAME)}

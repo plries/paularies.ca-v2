@@ -13,4 +13,5 @@ export type TestimonialCardPropTypes = {
   };
   isOpen: boolean;
   toggleCard: (name: string) => void;
+  index: number;
 };

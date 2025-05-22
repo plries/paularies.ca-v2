@@ -1,3 +1,4 @@
+import { easeInOut } from "framer-motion";
 import { ContentBlock, ContentHeading, Heading } from "@/app/components";
 import { EXPERIENCE_CONST } from "../const";
 
@@ -9,6 +10,7 @@ export const Experience = () => {
         <ContentBlock
           key={index}
           additionalClasses="col-span-full md:col-start-2 md:col-span-6 lg:col-start-2 lg:col-span-10"
+          transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
         >
           <div className="flex flex-col md:flex-row md:items-start md:justify-between">
             <ContentHeading level="h3">{role.TITLE}</ContentHeading>

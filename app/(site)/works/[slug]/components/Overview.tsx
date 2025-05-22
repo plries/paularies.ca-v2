@@ -1,4 +1,5 @@
 "use client";
+import { easeInOut } from "framer-motion";
 import {
   IconContext,
   CalendarDots,
@@ -18,6 +19,11 @@ export const Overview = ({ PROJECT }: WorksOverviewPropTypes) => {
             <ContentBlock
               additionalClasses="w-full md:w-full md:first:w-2/3"
               key={index}
+              transition={{
+                duration: 0.5,
+                easeInOut,
+                delay: (index ?? 0) * 0.2,
+              }}
             >
               <div className="bg-greyscale-100 border-greyscale-950/5 dark:border-greyscale-50/5 dark:bg-greyscale-900 text-greyscale-600 dark:text-greyscale-400 mb-6 w-fit rounded-full border p-2">
                 {index === 0 ? <Warning /> : <LineSegments />}

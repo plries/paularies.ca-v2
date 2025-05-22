@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { easeInOut } from "framer-motion";
 import { ArrowRight } from "@phosphor-icons/react";
 import { FACTS_CONST } from "../const";
 import {
@@ -15,7 +16,11 @@ export const Facts = () => {
       <Heading level="h2">{FACTS_CONST.HEADING}</Heading>
       <div className="col-span-full flex flex-col gap-3 md:col-span-6 md:col-start-2 md:flex-row md:gap-4 lg:col-span-10 lg:col-start-2">
         {FACTS_CONST.FACTS.map((fact, index) => (
-          <ContentBlock key={index} additionalClasses="w-full">
+          <ContentBlock
+            key={index}
+            additionalClasses="w-full"
+            transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
+          >
             <div className="flex w-full flex-row flex-wrap items-center justify-between gap-3">
               <ContentHeading level="h3" additionalClasses="!w-fit">
                 {fact.TITLE}

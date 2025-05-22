@@ -14,7 +14,7 @@ export const Testimonials = () => {
           {TESTIMONIALS_CONST.TESTIMONIALS.slice(
             0,
             TESTIMONIALS_CONST.TESTIMONIALS.length / 2,
-          ).map((testimonial) => (
+          ).map((testimonial, index) => (
             <TestimonialCard
               key={testimonial.NAME}
               testimonial={testimonial}
@@ -22,6 +22,7 @@ export const Testimonials = () => {
               EXPAND={TESTIMONIALS_CONST.EXPAND}
               isOpen={hook.openCardName === testimonial.NAME}
               toggleCard={hook.handleToggle}
+              index={index}
             />
           ))}
         </div>
@@ -29,7 +30,7 @@ export const Testimonials = () => {
           {TESTIMONIALS_CONST.TESTIMONIALS.slice(
             TESTIMONIALS_CONST.TESTIMONIALS.length / 2,
             TESTIMONIALS_CONST.TESTIMONIALS.length,
-          ).map((testimonial) => (
+          ).map((testimonial, index) => (
             <TestimonialCard
               key={testimonial.NAME}
               testimonial={testimonial}
@@ -37,6 +38,7 @@ export const Testimonials = () => {
               EXPAND={TESTIMONIALS_CONST.EXPAND}
               isOpen={hook.openCardName === testimonial.NAME}
               toggleCard={hook.handleToggle}
+              index={index}
             />
           ))}
         </div>

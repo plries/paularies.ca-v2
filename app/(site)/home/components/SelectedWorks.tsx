@@ -8,8 +8,8 @@ export const SelectedWorks = () => {
   return (
     <section className="contents">
       <Heading level="h2">{SELECTED_WORKS_CONST.HEADING}</Heading>
-      {PROJECTS_CONST.PROJECTS.slice(0, 2).map((project) => (
-        <ProjectCard key={project.TITLE} PROJECT={project} />
+      {PROJECTS_CONST.PROJECTS.slice(0, 2).map((project, index) => (
+        <ProjectCard key={project.TITLE} PROJECT={project} index={index} />
       ))}
       <div className="col-span-full mb-16 grid justify-end">
         <Button

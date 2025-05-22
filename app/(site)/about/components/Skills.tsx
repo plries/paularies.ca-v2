@@ -1,3 +1,4 @@
+import { easeInOut } from "framer-motion";
 import {
   Heading,
   ContentBlock,
@@ -18,6 +19,7 @@ export const Skills = () => {
           additionalClasses={
             "col-span-full md:col-span-3 md:col-start-2 [&:nth-child(4)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(4)]:lg:col-start-7"
           }
+          transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
         >
           <div className="flex flex-row items-center gap-2">
             <Dot discipline={skill.TITLE as "design" | "development"} />
