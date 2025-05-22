@@ -52,12 +52,14 @@ export const useLightbox = () => {
     
     if (isOpen) {
       lenis.stop();
+      document.body.classList.add("overflow-hidden");
 
       if (closeButtonRef.current) {
         closeButtonRef.current.focus();
       }
     } else {
       lenis.start();
+      document.body.classList.remove("overflow-hidden")
     }
   }, [isOpen]);
 
