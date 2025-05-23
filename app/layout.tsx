@@ -31,12 +31,6 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div
-          className="pointer-events-none fixed z-[9999] h-screen w-screen opacity-30 mix-blend-overlay"
-          style={{
-            background: "url('https://www.paularies.ca/images/texture.png')",
-          }}
-        />
         {children}
         <Analytics />
       </body>
