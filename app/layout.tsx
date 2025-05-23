@@ -31,6 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <div className="pointer-events-none fixed z-[9999] h-screen w-screen bg-[url('@/public/images/texture.png')] opacity-30 mix-blend-overlay" />
         {children}
         <Analytics />
       </body>
