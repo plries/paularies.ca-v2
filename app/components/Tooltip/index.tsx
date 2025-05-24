@@ -16,7 +16,7 @@ export const Tooltip = ({ children, image, text }: TooltipPropTypes) => {
         {children}
       </span>
       <motion.span
-        className={`pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 min-w-40 -translate-x-1/2 px-2 transition-[opacity,translate] duration-500 ease-in-out ${hook.isHovered ? "" : "translate-y-1 opacity-0"}`}
+        className={`pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 min-w-40 -translate-x-1/2 px-2 transition-[opacity,translate] duration-500 ease-in-out ${hook.isHovered ? "" : "translate-y-1 opacity-0"}`}
       >
         {image && (
           <Image
