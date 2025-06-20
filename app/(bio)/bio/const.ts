@@ -1,7 +1,7 @@
 export const BIO_CONST = {
     LINKS_CONST: [
         {
-            href: "https://www.linkedin.com/in/paul-aries/",
+            href: "https://www.linkedin.com/in/paularies/",
             label: "linkedin",
         },
         {
