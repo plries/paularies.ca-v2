@@ -17,7 +17,7 @@ export const Process = ({
   return (
     <div className="flex flex-col gap-3 md:gap-4">
       <Heading level="h2">{PROJECT_PAGE_CONST.HEADINGS.PROCESS}</Heading>
-      <div className="relative">
+      <div className="relative flex flex-col gap-16">
         {!hook.isTablet && (
           <motion.div
             className={`absolute top-0 -left-8 flex h-full w-px flex-col items-center border-b bg-gradient-to-b ${PROJECT.HERO.DISCIPLINE.length == 2 ? "to-grass-600 from-sky-400" : PROJECT.HERO.DISCIPLINE[0] === "design" ? "from-sky-400 to-sky-600" : PROJECT.HERO.DISCIPLINE[0] === "development" ? "from-grass-400 to-grass-600" : ""} `}
@@ -42,26 +42,23 @@ export const Process = ({
                 )}
               </div>
             )}
-            <ContentBlock
-              additionalClasses={`gap-3 md:gap-6 lg:gap-8 mb-3 md:mb-4 ${index === PROJECT.PROCESS.length - 1 ? "md:last:mb-0" : ""}`}
+            <div
+              className={`mb-3 flex flex-col gap-3 md:mb-4 md:gap-6 lg:gap-8 ${index === PROJECT.PROCESS.length - 1 ? "md:last:mb-0" : ""}`}
             >
-              <div className="flex w-full flex-col gap-3 md:gap-4">
-                <div className="flex flex-row items-center gap-3">
-                  {hook.isTablet && (
-                    <motion.div
-                      className="border-greyscale-950/10 dark:bg-greyscale-900 bg-greyscale-100 dark:border-greyscale-50/10 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center"
-                      initial={MOTION_CONFIG.DEFAULT.INITIAL}
-                      whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
-                      transition={MOTION_CONFIG.TRANSITION}
-                    >
-                      <p className="text-greyscale-600 dark:text-greyscale-300 !text-xs">
-                        {index + 1}
-                      </p>
-                    </motion.div>
-                  )}
-                  <ContentHeading level="h3">{process.HEADING}</ContentHeading>
-                </div>
-                <p className="text-greyscale-600 dark:text-greyscale-300">
+              <div className="relative flex w-full flex-col md:gap-4">
+                {hook.isTablet && (
+                  <motion.div
+                    className="border-greyscale-950/10 dark:bg-greyscale-900 bg-greyscale-100 dark:border-greyscale-50/10 absolute top-0 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center shadow-xs"
+                    initial={MOTION_CONFIG.DEFAULT.INITIAL}
+                    whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
+                    transition={MOTION_CONFIG.TRANSITION}
+                  >
+                    <p className="text-greyscale-600 dark:text-greyscale-300 !text-xs">
+                      {index + 1}
+                    </p>
+                  </motion.div>
+                )}
+                <p className="text-greyscale-600 dark:text-greyscale-300 mt-2 indent-10">
                   {process.DESCRIPTION}
                 </p>
               </div>
@@ -76,7 +73,7 @@ export const Process = ({
                 setCodeSrc={setCodeSrc || (() => {})}
                 isOpen={isOpen || false}
               />
-            </ContentBlock>
+            </div>
           </div>
         ))}
       </div>
