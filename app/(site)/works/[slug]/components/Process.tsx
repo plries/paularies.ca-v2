@@ -1,4 +1,4 @@
-import { Heading, ContentBlock, ContentHeading } from "@/app/components";
+import { Heading } from "@/app/components";
 import { ProcessMedia } from "./ProcessMedia";
 import { PROJECT_PAGE_CONST } from "../const";
 import { MOTION_CONFIG } from "@/app/(site)/const";
