@@ -25,14 +25,14 @@ export const PROJECTS_CONST = {
       SLUG: "guy",
     },
     {
-      DISCIPLINE: ["design"],
+      DISCIPLINE: ["design", "development"],
       IMAGE: {
-        SRC: "",
-        ALT: "",
+        SRC: "/images/projects/jakhaus.png",
+        ALT: "jakhaus",
       },
-      TITLE: "coming soon",
-      DESCRIPTION: "stay tuned!",
-      SKILLS: ["#$&", "0/@", "%?!"],
+      TITLE: "jakhaus",
+      DESCRIPTION: "a sleek CMS for a media agency.",
+      SKILLS: ["figma", "next.js", "tailwind", "motion", "supabase"],
       SLUG: "",
     },
     {

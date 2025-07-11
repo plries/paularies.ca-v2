@@ -47,7 +47,7 @@ export const PROJECTS: ProjectPagePropsTypes = {
       },
       {
         HEADING: "timeframe",
-        DESCRIPTION: ["feb 13 - mar, 2025"],
+        DESCRIPTION: ["feb 13 - mar 23, 2025"],
       },
       {
         HEADING: "contributions",
