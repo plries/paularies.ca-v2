@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export const useNavBar = ({
-  closeMenu,
-}: { closeMenu: () => void }) => {
+export const useNavBar = () => {
   const navRef = useRef<HTMLElement>(null);
   const [isOpen, setIsOpen] = useState(true);
 

@@ -16,7 +16,7 @@ export const NavBar = () => {
   const pathname = usePathname();
   const windowSize = useWindowSize();
   const useMobile = useMobileMenu();
-  const useNav = useNavBar({ closeMenu: useMobile.closeMenu });
+  const useNav = useNavBar();
   const lenis = useLenis();
 
   return (
