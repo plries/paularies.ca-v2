@@ -10,7 +10,7 @@ export const Skills = () => {
       {SKILLS_CONST.SKILLS.map((skill, index) => (
         <motion.div
           key={index}
-          className="col-span-full flex flex-col gap-4 md:col-span-3 md:col-start-2 lg:col-span-10 lg:col-start-2"
+          className="col-span-full flex flex-col gap-4 md:col-span-6 md:col-start-2 lg:col-span-10 lg:col-start-2"
           transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
         >
           <div className="flex w-full flex-row gap-4">

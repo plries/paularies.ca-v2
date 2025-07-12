@@ -18,7 +18,7 @@ export const Facts = () => {
         {FACTS_CONST.FACTS.map((fact, index) => (
           <ContentBlock
             key={index}
-            additionalClasses={`w-full first:rotate-2 last:-rotate-2 ${index === 1 && "translate-y-2"}`}
+            additionalClasses={`w-full lg:first:rotate-2 lg:last:-rotate-2 ${index === 1 && "lg:translate-y-2"}`}
             transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
           >
             <div className="flex w-full flex-row flex-wrap items-center justify-between gap-3">
