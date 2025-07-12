@@ -9,8 +9,8 @@ export const About = () => {
     <>
       <Heading level="h1">{ABOUT_CONST.HEADING}</Heading>
       <AboutHero />
-      <Skills />
       <Values />
+      <Skills />
       <Experience />
       <Facts />
       <ActionBar>

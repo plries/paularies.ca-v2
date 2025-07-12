@@ -79,7 +79,6 @@ export const SKILLS_CONST = {
   HEADING: "skills",
   SKILLS: [
     {
-      TITLE: "development",
       CONTENT: [
         "html",
         "css",
@@ -93,11 +92,6 @@ export const SKILLS_CONST = {
         "framer motion",
         "gsap",
         "wordpress",
-      ],
-    },
-    {
-      TITLE: "design",
-      CONTENT: [
         "figma",
         "photoshop",
         "illustrator",
@@ -202,9 +196,6 @@ export const FACTS_CONST = {
         " and ",
         <em key="international">international</em>,
         " competitions. ",
-        <br key="br-5" />,
-        <br key="br-6" />,
-        "you can check out some of my dance footage on my page!",
       ],
       LINK: {
         HREF: "https://www.instagram.com/plries/reels/",
@@ -218,10 +209,7 @@ export const FACTS_CONST = {
         <em key="artists">artists</em>,
         " and ",
         <em key="visionaries">visionaries</em>,
-        ". from traditional art, dancing, to filmmaking, we've explored a wide range of creative pursuits.",
-        <br key="br-1" />,
-        <br key="br-2" />,
-        "recently, my family and i collaborated for a short film that premiered at the ",
+        ". from traditional art, dancing, to filmmaking, we've explored a wide range of creative pursuits. recently, my family and i collaborated for a short film that premiered at the",
         <strong key="innovate"> innovate dance film showcase 2023</strong>,
         ". check it out!",
       ],
@@ -240,9 +228,6 @@ export const FACTS_CONST = {
         " or ",
         <strong key="indie">indie</strong>,
         ". i love to listen, dance, and every so often, DJ (within the comfort of my bedroom of course).",
-        <br key="br-3" />,
-        <br key="br-4" />,
-        "if you're curious, you can check my unnecesarily large catalog of playlists above!",
       ],
       LINK: {
         HREF: "https://open.spotify.com/user/paullaries?si=8152ee173b134572",

@@ -1,11 +1,5 @@
-import { easeInOut } from "framer-motion";
-import {
-  Heading,
-  ContentBlock,
-  Dot,
-  ContentHeading,
-  Marquee,
-} from "@/app/components";
+import { motion, easeInOut } from "framer-motion";
+import { Heading, Marquee } from "@/app/components";
 import { SKILLS_CONST } from "../const";
 
 export const Skills = () => {
@@ -14,20 +8,14 @@ export const Skills = () => {
       <Heading level="h2">{SKILLS_CONST.HEADING}</Heading>
       <Marquee ICONS={SKILLS_CONST.ICONS} from={0} to={"-100%"} />
       {SKILLS_CONST.SKILLS.map((skill, index) => (
-        <ContentBlock
+        <motion.div
           key={index}
-          additionalClasses={
-            "col-span-full md:col-span-3 md:col-start-2 [&:nth-child(4)]:md:col-start-5 lg:col-span-5 lg:col-start-2 [&:nth-child(4)]:lg:col-start-7"
-          }
+          className="col-span-full flex flex-col gap-4 md:col-span-3 md:col-start-2 lg:col-span-10 lg:col-start-2"
           transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
         >
-          <div className="flex flex-row items-center gap-2">
-            <Dot discipline={skill.TITLE as "design" | "development"} />
-            <ContentHeading level="h3">{skill.TITLE}</ContentHeading>
-          </div>
           <div className="flex w-full flex-row gap-4">
             <ul className="w-full">
-              {skill.CONTENT.slice(0, skill.CONTENT.length / 2).map(
+              {skill.CONTENT.slice(0, skill.CONTENT.length / 4).map(
                 (item, index) => (
                   <li
                     className="text-greyscale-600 dark:text-greyscale-300"
@@ -40,7 +28,33 @@ export const Skills = () => {
             </ul>
             <ul className="w-full">
               {skill.CONTENT.slice(
+                skill.CONTENT.length / 4,
                 skill.CONTENT.length / 2,
+              ).map((item, index) => (
+                <li
+                  className="text-greyscale-600 dark:text-greyscale-300"
+                  key={index}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <ul className="w-full">
+              {skill.CONTENT.slice(
+                skill.CONTENT.length / 4 + skill.CONTENT.length / 4,
+                skill.CONTENT.length / 2 + skill.CONTENT.length / 4,
+              ).map((item, index) => (
+                <li
+                  className="text-greyscale-600 dark:text-greyscale-300"
+                  key={index}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <ul className="w-full">
+              {skill.CONTENT.slice(
+                skill.CONTENT.length / 2 + skill.CONTENT.length / 4,
                 skill.CONTENT.length,
               ).map((item, index) => (
                 <li
@@ -52,7 +66,7 @@ export const Skills = () => {
               ))}
             </ul>
           </div>
-        </ContentBlock>
+        </motion.div>
       ))}
     </section>
   );

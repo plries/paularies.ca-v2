@@ -25,7 +25,7 @@ export const PROJECTS_CONST = {
       SLUG: "guy",
     },
     {
-      DISCIPLINE: ["design", "development"],
+      DISCIPLINE: ["development", "design"],
       IMAGE: {
         SRC: "/images/projects/jakhaus.png",
         ALT: "jakhaus",

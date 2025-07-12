@@ -76,7 +76,7 @@ export const Footer = () => {
               name={FOOTER_CONST.LIGHT_DARK.TEXT}
               noMotion
             />
-            <p className="text-greyscale-50 dark:text-greyscale-950 flex flex-row items-center gap-2">
+            <p className="text-greyscale-50 dark:text-greyscale-950 flex flex-row items-center gap-3">
               {FOOTER_CONST.BAR.TEXT}
               <PaWordmark />
               <span className="sr-only">{FOOTER_CONST.BAR.SR}</span>
