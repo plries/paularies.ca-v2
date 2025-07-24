@@ -27,7 +27,7 @@ export const ProjectCard = ({
         easeInOut,
         delay: (index ?? 0) * 0.1,
       }}
-      className="group group relative col-span-full"
+      className="group relative col-span-full"
     >
       {!windowSize.isMobile && (
         <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 ease-in-out-circ pointer-events-none absolute -inset-1 scale-95 rounded-[1.75rem] transition-[background-color,scale] duration-300 group-hover:scale-100" />
@@ -41,7 +41,7 @@ export const ProjectCard = ({
       >
         <Link
           className="contents"
-          href={`/works/${encodeURIComponent(PROJECT.SLUG)}`}
+          href={PROJECT.SLUG === "" ? "" : `/works/${encodeURIComponent(PROJECT.SLUG)}`}
           onClick={() => {
             if (PROJECT.SLUG !== "") projectCard.handleOnClick();
           }}

@@ -7,4 +7,6 @@ export type TooltipPropTypes = {
         height: number;
         alt: string;
     }
+    additionalClasses?: string
+    isText?: boolean;
 };
