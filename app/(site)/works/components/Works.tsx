@@ -1,9 +1,16 @@
 "use client";
 import { SquaresFour } from "@phosphor-icons/react";
-import { ProjectCard, Heading, ActionBar, ToggleInput, Tooltip } from "@/app/components";
+import {
+  ProjectCard,
+  Heading,
+  ActionBar,
+  ToggleInput,
+  Tooltip,
+} from "@/app/components";
 import { useToggleInput, useWindowSize } from "@/app/hooks";
 import { PROJECTS_CONST } from "@/app/(site)/const";
 import { WORKS_CONST } from "../const";
+import React from "react";
 
 export const Works = () => {
   const toggle = useToggleInput();
@@ -15,7 +22,7 @@ export const Works = () => {
       {(!toggle.isChecked || windowSize.isMobile) && (
         <>
           {PROJECTS_CONST.PROJECTS.map((PROJECT, index) => (
-            <>
+            <React.Fragment key={PROJECT.TITLE}>
               {PROJECT.SLUG === "" ? (
                 <Tooltip
                   key={PROJECT.TITLE}
@@ -37,7 +44,7 @@ export const Works = () => {
                   index={index}
                 />
               )}
-            </>
+            </React.Fragment>
           ))}
         </>
       )}
@@ -46,7 +53,7 @@ export const Works = () => {
           <div className="flex flex-col gap-4 md:col-span-4 lg:col-span-6">
             {PROJECTS_CONST.PROJECTS.filter((_, index) => index % 2 === 0).map(
               (PROJECT, index) => (
-                <>
+                <React.Fragment key={PROJECT.TITLE}>
                   {PROJECT.SLUG === "" ? (
                     <Tooltip
                       key={PROJECT.TITLE}
@@ -68,14 +75,14 @@ export const Works = () => {
                       index={index}
                     />
                   )}
-                </>
+                </React.Fragment>
               ),
             )}
           </div>
           <div className="flex flex-col gap-4 md:col-span-4 lg:col-span-6">
             {PROJECTS_CONST.PROJECTS.filter((_, index) => index % 2 !== 0).map(
               (PROJECT, index) => (
-                <>
+                <React.Fragment key={PROJECT.TITLE}>
                   {PROJECT.SLUG === "" ? (
                     <Tooltip
                       key={PROJECT.TITLE}
@@ -97,7 +104,7 @@ export const Works = () => {
                       index={index}
                     />
                   )}
-                </>
+                </React.Fragment>
               ),
             )}
           </div>

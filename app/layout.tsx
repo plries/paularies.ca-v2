@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} bg-greyscale-100 dark:bg-greyscale-900`}
+      className={`${hankenGrotesk.variable} ${instrumentSerif.variable} ${dmMono.variable} from-grass-200 dark:from-grass-800 bg-gradient-to-r to-sky-200 dark:to-sky-800`}
       suppressHydrationWarning
     >
       <head>

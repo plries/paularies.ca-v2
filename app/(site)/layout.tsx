@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <SmoothScroll>
-      <div className="bg-greyscale-100 dark:bg-greyscale-900 relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased">
+      <div className="relative mx-auto grid auto-rows-min grid-cols-1 place-items-center antialiased">
         <ClientOnly>
           <PageContent>{children}</PageContent>
           <Footer />
