@@ -13,7 +13,7 @@ export const AboutHero = () => {
   return (
     <section className="mt-16 contents">
       <InsetBlock>
-        <div className="col-span-full flex flex-row items-center justify-center md:col-span-4 md:col-start-3 lg:col-start-5">
+        <div className="z-10 col-span-full flex flex-row items-center justify-center md:col-span-4 md:col-start-3 lg:col-start-5">
           <motion.div
             initial={{ transform: "translateX(100%)" }}
             animate={{ transform: "translateX(0%)" }}
@@ -51,7 +51,7 @@ export const AboutHero = () => {
             />
           </motion.div>
         </div>
-        <p className="dark:text-greyscale-50 col-span-full flex flex-col items-center gap-1 text-center !text-xl leading-none md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
+        <p className="dark:text-greyscale-50 z-10 col-span-full flex flex-col items-center gap-1 text-center !text-xl leading-none md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
           <span className="inline-flex w-fit flex-row items-center gap-x-2">
             <Image
               width={160}
@@ -70,6 +70,24 @@ export const AboutHero = () => {
             </span>
           </span>
         </p>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: easeInOut, delay: 0.5 }}
+          className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 absolute top-1/2 left-1/2 aspect-square w-4/6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial shadow-2xl md:w-4/7 lg:w-3/6"
+        />
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: easeInOut, delay: 0.6 }}
+          className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 absolute top-1/2 left-1/2 aspect-square w-5/6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial shadow-2xl md:w-5/7 lg:w-4/6"
+        />
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: easeInOut, delay: 0.7 }}
+          className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial shadow-2xl md:w-6/7 lg:w-5/6"
+        />
       </InsetBlock>
       <motion.p
         initial={MOTION_CONFIG.DEFAULT.INITIAL}

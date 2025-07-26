@@ -41,7 +41,11 @@ export const ProjectCard = ({
       >
         <Link
           className="contents"
-          href={PROJECT.SLUG === "" ? "" : `/works/${encodeURIComponent(PROJECT.SLUG)}`}
+          href={
+            PROJECT.SLUG === ""
+              ? "#"
+              : `/works/${encodeURIComponent(PROJECT.SLUG)}`
+          }
           onClick={() => {
             if (PROJECT.SLUG !== "") projectCard.handleOnClick();
           }}
