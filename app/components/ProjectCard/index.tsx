@@ -57,7 +57,7 @@ export const ProjectCard = ({
                 alt={PROJECT.IMAGE.ALT}
                 height={1080}
                 width={1920}
-                className={`w-full transition-[translate,scale] duration-300 ease-in-out ${PROJECT.DISCIPLINE[0] === "development" ? "scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
+                className={`w-full transition-[translate,scale] duration-300 ease-in-out ${PROJECT.DISCIPLINE[0] === "development" ? "translate-y-4 scale-105 group-hover:-translate-y-2" : "group-hover:scale-[102%]"}`}
               />
             )}
             <p className="text-greyscale-600 dark:text-greyscale-300">...</p>

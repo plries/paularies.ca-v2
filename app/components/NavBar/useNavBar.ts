@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 export const useNavBar = () => {
-  const navRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleNav = () => {

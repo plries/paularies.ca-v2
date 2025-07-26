@@ -2,11 +2,11 @@
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { useLenis } from "lenis/react";
-import { IconContext, ChatsCircle } from "@phosphor-icons/react";
+import { IconContext, ChatsCircle, Minus } from "@phosphor-icons/react";
 import { MOTION_CONFIG } from "@/app/(site)/const";
 import { NAVBAR_CONST } from "./const";
 import { PaStar, PaWordmark } from "@/public";
-import { Button } from "../";
+import { Button, IconButton } from "../";
 import { MobileMenu } from "./components";
 import { useMobileMenu } from "./useMobileMenu";
 import { useWindowSize } from "@/app/hooks";
@@ -27,7 +27,7 @@ export const NavBar = () => {
         transition={MOTION_CONFIG.TRANSITION}
         className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ sticky top-3 left-0 z-50 m-3 w-[calc(100%-1.5rem)] max-w-[calc(1440px-1.5rem)] rounded-3xl border shadow-[var(--nav-bar-light)] backdrop-blur-sm transition-[translate,scale,opacity] duration-500 md:top-6 md:m-6 lg:top-8 lg:mx-auto lg:my-8 lg:w-[calc(100%-2rem)] dark:shadow-[var(--nav-bar-dark)] ${useNav.isOpen ? "translate-y-0" : "pointer-events-none translate-y-[calc(-100%+1.25rem)] scale-95 !opacity-0 md:translate-y-[calc(-100%+0.725rem)] lg:translate-y-[-100%]"}`}
       >
-        <nav
+        <div
           className={`ease-in-out-circ flex flex-row items-center justify-between place-self-stretch rounded-3xl p-3 transition-opacity duration-500 ${useNav.isOpen ? "opacity-100" : "opacity-0"}`}
           ref={useNav.navRef}
         >
@@ -56,7 +56,7 @@ export const NavBar = () => {
             <span className="sr-only">{NAVBAR_CONST.LOGO.HOME}</span>
           </Button>
           {!windowSize.isMobile && (
-            <div className="hidden h-full flex-row items-center gap-3 md:flex">
+            <nav className="hidden h-full flex-row items-center gap-3 md:flex">
               <ul className="contents">
                 {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, TEXT }) => (
                   <li key={TEXT}>
@@ -96,11 +96,37 @@ export const NavBar = () => {
               >
                 {NAVBAR_CONST.CONTACT.TEXT}
               </Button>
-            </div>
+            </nav>
           )}
-          {windowSize.isMobile && <MobileMenu hook={useMobile} />}
-        </nav>
+          {windowSize.isMobile && (
+            <IconButton
+              onClick={useMobile.toggleMenu}
+              icon={
+                <>
+                  <Minus
+                    className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${useMobile.isOpen ? "" : "mb-1.5"}`}
+                  />
+                  <Minus
+                    className={`ease-in-out-circ absolute !transition-[rotate,margin] duration-500 ${useMobile.isOpen ? "rotate-90" : "mt-1.5"}`}
+                  />
+                </>
+              }
+              theme="primary"
+              name={
+                useMobile.isOpen
+                  ? NAVBAR_CONST.MOBILE_MENU.OPEN_MENU
+                  : NAVBAR_CONST.MOBILE_MENU.CLOSE_MENU
+              }
+              additionalClasses={{
+                container: `transition-[rotate,scale] duration-500  ${useMobile.isOpen ? "rotate-45 scale-90" : ""}`,
+                button: "relative flex items-center justify-center",
+              }}
+              noMotion
+            />
+          )}
+        </div>
       </motion.header>
+      {windowSize.isMobile && <MobileMenu hook={useMobile} />}
     </IconContext.Provider>
   );
 };
