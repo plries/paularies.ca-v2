@@ -13,9 +13,6 @@ export const Footer = () => {
       <div className="radial-gradient sticky bottom-0 left-0 mt-8 grid w-[calc(100%-2rem)] -translate-y-4 place-items-center rounded-3xl px-4 py-8 shadow-2xl md:py-16">
         <footer className="dark:text-greyscale-100 col-span-full grid w-full max-w-[1440px] grid-cols-4 gap-x-3 gap-y-6 rounded-3xl px-3 md:grid-cols-8 md:gap-x-4 md:px-6 lg:grid-cols-12 lg:rounded-4xl lg:px-12">
           <div className="col-span-full col-start-1 flex flex-col gap-3 md:col-span-5 md:gap-4 lg:col-span-8">
-            <h3 className="font-instrument-serif dark:text-greyscale-50 text-2xl md:text-[1.75rem] lg:text-[2rem]">
-              {FOOTER_CONST.CONTACT.HEADING}
-            </h3>
             <p className="text-greyscale-600 dark:text-greyscale-300">
               {FOOTER_CONST.CONTACT.PARAGRAPH.map((text, index) => (
                 <span className="block" key={index}>
@@ -42,10 +39,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="col-span-full flex flex-col gap-3 md:col-span-4 md:col-start-6 md:gap-4 lg:col-start-9">
-            <h3 className="font-instrument-serif dark:text-greyscale-50 text-2xl md:text-[1.75rem] lg:text-[2rem]">
-              {FOOTER_CONST.LINKS.HEADING}
-            </h3>
-            {FOOTER_CONST.LINKS.LINKS.map((link, index) => (
+            {FOOTER_CONST.LINKS.map((link, index) => (
               <Button
                 theme="tertiary"
                 key={index}

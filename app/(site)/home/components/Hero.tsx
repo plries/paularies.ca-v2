@@ -12,17 +12,17 @@ export const Hero = () => {
         initial={{ transform: "translateY(25%)" }}
         animate={{ transform: "translateY(0%)" }}
         transition={{ duration: 0.7, ease: easeInOut, delay: 0.5 }}
-        className="relative z-20 col-span-full h-fit drop-shadow-md md:col-span-4 md:col-start-3 lg:col-span-6 lg:col-start-4"
+        className="relative z-20 col-span-full h-fit md:col-span-4 md:col-start-3 lg:col-span-6 lg:col-start-4"
       >
         <Image
           src={HERO_CONST.HEADSHOT.SRC}
           alt={HERO_CONST.HEADSHOT.ALT}
           height={1056}
           width={1056}
-          className="border-greyscale-950/10 dark:border-greyscale-50/10 mx-auto aspect-square max-w-48 rounded-full border"
+          className="border-greyscale-950/10 dark:border-greyscale-50/10 mx-auto aspect-square max-w-48 rounded-full border shadow-xl"
         />
         <div className="-mt-8 grid w-full place-items-center">
-          <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rotate-2 rounded-xl border px-4 py-3 transition-transform duration-500 hover:rotate-0">
+          <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rotate-2 rounded-xl border px-4 py-3 shadow-xl transition-transform duration-500 hover:rotate-0">
             <PaLogo />
             <span className="sr-only">{HERO_CONST.LOGO.ALT}</span>
           </h1>
@@ -89,19 +89,19 @@ export const Hero = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1, ease: easeInOut, delay: 0.5 }}
-        className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/50 absolute top-1/2 left-1/2 z-[2] aspect-square w-8/10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial shadow-2xl md:w-4/7 lg:w-3/6"
+        className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/15 border-greyscale-950/5 dark:border-greyscale-50/5 absolute top-1/2 left-1/2 z-[2] aspect-square w-8/10 -translate-x-1/2 -translate-y-1/2 rounded-full border bg-radial shadow-2xl md:w-4/7 lg:w-3/6"
       />
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1, ease: easeInOut, delay: 0.6 }}
-        className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/50 absolute top-1/2 left-1/2 z-[1] aspect-square w-[95%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial shadow-2xl md:w-5/7 lg:w-4/6"
+        className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/15 dark:border-greyscale-50/5 border-greyscale-950/5 absolute top-1/2 left-1/2 z-[1] aspect-square w-[95%] -translate-x-1/2 -translate-y-1/2 rounded-full border bg-radial shadow-2xl md:w-5/7 lg:w-4/6"
       />
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1, ease: easeInOut, delay: 0.7 }}
-        className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/50 absolute top-1/2 left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial shadow-2xl md:w-6/7 lg:w-5/6"
+        className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/15 border-greyscale-950/5 dark:border-greyscale-50/5 absolute top-1/2 left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-full border bg-radial shadow-2xl md:w-6/7 lg:w-5/6"
       />
     </InsetBlock>
   );
