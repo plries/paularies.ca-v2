@@ -74,19 +74,19 @@ export const AboutHero = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1, ease: easeInOut, delay: 0.5 }}
-          className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/50 dark:border-greyscale-50/5 border-greyscale-950/5 absolute top-1/2 left-1/2 z-[2] aspect-square w-8/10 -translate-x-1/2 -translate-y-1/2 rounded-full border bg-radial shadow-2xl md:w-4/7 lg:w-3/6"
+          className="from-greyscale-100/50 to-greyscale-950/1 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-900/75 dark:to-greyscale-50/1 absolute top-1/2 left-1/2 z-[2] aspect-square w-8/10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-t shadow-2xl md:w-4/7 lg:w-3/6"
         />
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1, ease: easeInOut, delay: 0.6 }}
-          className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/50 dark:border-greyscale-50/5 border-greyscale-950/5 absolute top-1/2 left-1/2 z-[1] aspect-square w-[95%] -translate-x-1/2 -translate-y-1/2 rounded-full border bg-radial shadow-2xl md:w-5/7 lg:w-4/6"
+          className="from-greyscale-100/50 to-greyscale-950/1 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-900/75 dark:to-greyscale-50/1 absolute top-1/2 left-1/2 z-[1] aspect-square w-[95%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-t shadow-2xl md:w-5/7 lg:w-4/6"
         />
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1, ease: easeInOut, delay: 0.7 }}
-          className="from-greyscale-950/1 to-greyscale-100/50 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-950/25 dark:to-greyscale-700/50 dark:border-greyscale-50/5 border-greyscale-950/5 absolute top-1/2 left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-full border bg-radial shadow-2xl md:w-6/7 lg:w-5/6"
+          className="from-greyscale-100/50 to-greyscale-950/1 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-900/75 dark:to-greyscale-50/1 absolute top-1/2 left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-t shadow-2xl md:w-6/7 lg:w-5/6"
         />
       </InsetBlock>
       <motion.p

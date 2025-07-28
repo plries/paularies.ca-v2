@@ -1,7 +1,7 @@
 export const FOOTER_CONST = {
   CONTACT: {
     PARAGRAPH: [
-      <strong key="work">interested?</strong>,
+      <strong key="work">like my work? have questions?</strong>,
       "feel free to reach out, i'd love to collaborate!",
     ],
     JUST_SAY: "just say...",
