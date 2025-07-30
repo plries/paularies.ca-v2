@@ -10,7 +10,7 @@ export const Intro = () => {
         <GradientBlock>
           <ContentBlock
             additionalClasses={
-              "flex flex-col gap-3 col-span-full md:col-span-6 md:col-start-2 md:flex-row md:gap-4 md:p-4 lg:col-span-8 lg:col-start-3"
+              "flex flex-col gap-3 col-span-full md:col-span-6 md:col-start-2 md:flex-row md:gap-4 md:p-4 lg:col-span-8 lg:col-start-3 -rotate-1 md:-rotate-2 ease-in-out !shadow-lg"
             }
           >
             <p className="font-instrument-serif dark:text-greyscale-200 w-full !text-xl md:!text-2xl lg:!text-[1.75rem]">
@@ -30,10 +30,11 @@ export const Intro = () => {
           </ContentBlock>
           <Button
             href={INTRO_CONST.BUTTON.HREF}
-            theme="secondary"
+            theme="primary"
             additionalClasses={{
               container:
                 "col-span-2 col-start-3 justify-self-end md:col-start-6 lg:col-start-9 group",
+              button: "!shadow-xl",
             }}
             isLink
             icon={
