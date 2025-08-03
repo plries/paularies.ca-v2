@@ -9,6 +9,12 @@ export const Hero = () => {
   return (
     <InsetBlock>
       <motion.div
+        initial={{ y: `100%` }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1.4, ease: easeInOut, delay: 0.5 }}
+        className="absolute top-0 left-0 h-full w-full scale-150 bg-[url('/images/asciiLight.jpg')] bg-cover bg-center opacity-25 mix-blend-darken dark:bg-[url('/images/asciiDark.jpg')] dark:mix-blend-lighten"
+      />
+      <motion.div
         initial={{ transform: "translateY(25%)" }}
         animate={{ transform: "translateY(0%)" }}
         transition={{ duration: 0.7, ease: easeInOut, delay: 0.5 }}
@@ -85,7 +91,7 @@ export const Hero = () => {
           </span>
         </span>
       </h1>
-      <motion.div
+      {/* <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1, ease: easeInOut, delay: 0.5 }}
@@ -102,7 +108,7 @@ export const Hero = () => {
         animate={{ scale: 1 }}
         transition={{ duration: 1, ease: easeInOut, delay: 0.7 }}
         className="from-greyscale-100/50 to-greyscale-950/1 shadow-greyscale-950/10 dark:from-greyscale-50/1 dark:shadow-greyscale-900/75 dark:to-greyscale-50/1 absolute top-1/2 left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-t shadow-2xl md:w-6/7 lg:w-5/6"
-      />
+      /> */}
     </InsetBlock>
   );
 };

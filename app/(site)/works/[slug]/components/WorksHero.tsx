@@ -11,14 +11,22 @@ export const WorksHero = ({ PROJECT }: WorksHeroPropTypes) => {
 
   return (
     <IconContext.Provider value={{ size: 20 }}>
-      <InsetBlock additionalClasses="!p-3 md:!p-4">
-        <div className="bg-greyscale-100 border-greyscale-950/10 dark:border-greyscale-50/10 dark:bg-greyscale-900 relative col-span-full aspect-video overflow-hidden rounded-lg border md:rounded-2xl">
+      <InsetBlock additionalClasses="!p-3 md:!p-4 !overflow-visible">
+        <div className="bg-greyscale-100 border-greyscale-950/10 dark:border-greyscale-50/10 dark:bg-greyscale-900 relative col-span-full aspect-video rounded-lg border md:rounded-2xl">
           <Image
             src={PROJECT.HERO.IMAGE.SRC}
             alt={PROJECT.HERO.IMAGE.ALT}
             height={1080}
             width={1920}
             priority
+          />
+          <Image
+            src={PROJECT.HERO.IMAGE.SRC}
+            alt={PROJECT.HERO.IMAGE.ALT}
+            height={1080}
+            width={1920}
+            priority
+            className="absolute top-0 left-0 -z-10 blur-2xl"
           />
         </div>
         {(hook.isMobile || hook.isTablet) && (
