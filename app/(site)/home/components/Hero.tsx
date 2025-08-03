@@ -9,10 +9,10 @@ export const Hero = () => {
   return (
     <InsetBlock>
       <motion.div
-        initial={{ y: `100%` }}
-        animate={{ y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.15 }}
         transition={{ duration: 1.4, ease: easeInOut, delay: 0.5 }}
-        className="absolute top-0 left-0 h-full w-full scale-150 bg-[url('/images/asciiLight.jpg')] bg-cover bg-center opacity-25 mix-blend-darken dark:bg-[url('/images/asciiDark.jpg')] dark:mix-blend-lighten"
+        className="absolute top-0 left-0 h-full w-full scale-150 bg-[url('/images/asciiLight.jpg')] bg-cover bg-center mix-blend-darken dark:bg-[url('/images/asciiDark.jpg')] dark:mix-blend-lighten"
       />
       <motion.div
         initial={{ transform: "translateY(25%)" }}
