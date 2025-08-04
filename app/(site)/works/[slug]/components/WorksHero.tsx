@@ -20,13 +20,11 @@ export const WorksHero = ({ PROJECT }: WorksHeroPropTypes) => {
             width={1920}
             priority
           />
-          <Image
-            src={PROJECT.HERO.IMAGE.SRC}
-            alt={PROJECT.HERO.IMAGE.ALT}
-            height={1080}
-            width={1920}
-            priority
-            className="absolute top-0 left-0 -z-10 blur-2xl"
+          <div
+            className={`absolute top-0 left-0 -z-10 h-full w-full rounded-lg bg-cover bg-center blur-2xl`}
+            style={{
+              backgroundImage: `url(${PROJECT.HERO.IMAGE.SRC})`,
+            }}
           />
         </div>
         {(hook.isMobile || hook.isTablet) && (
