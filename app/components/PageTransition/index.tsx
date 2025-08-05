@@ -14,6 +14,7 @@ export const PageTransition = ({
         <AnimatePresence mode="wait">
           <React.Fragment key={usePathname()}>{children}</React.Fragment>
         </AnimatePresence>
+        <div className="bg-greyscale-950/10 dark:bg-greyscale-50/10 mb-2 h-1 w-12 rounded-full lg:absolute lg:bottom-0" />
       </motion.div>
     </>
   );

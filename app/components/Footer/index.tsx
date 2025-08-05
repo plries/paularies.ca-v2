@@ -10,7 +10,7 @@ export const Footer = () => {
 
   return (
     <IconContext.Provider value={{ size: 20 }}>
-      <div className="radial-gradient sticky bottom-0 left-0 mt-8 grid w-[calc(100%-2rem)] -translate-y-4 place-items-center rounded-3xl px-4 py-8 shadow-2xl md:py-16">
+      <div className="bg-greyscale-50/75 border-greyscale-50/10 dark:bg-greyscale-950/75 dark:border-greyscale-950/10 sticky bottom-0 left-0 mt-8 grid w-[calc(100%-2rem)] -translate-y-4 place-items-center rounded-3xl border px-4 py-8 shadow-2xl md:py-16">
         <footer className="dark:text-greyscale-100 col-span-full grid w-full max-w-[1440px] grid-cols-4 gap-x-3 gap-y-6 rounded-3xl px-3 md:grid-cols-8 md:gap-x-4 md:px-6 lg:grid-cols-12 lg:rounded-4xl lg:px-12">
           <div className="col-span-full col-start-1 flex flex-col gap-3 md:col-span-5 md:gap-4 lg:col-span-8">
             <p className="text-greyscale-600 dark:text-greyscale-300">
