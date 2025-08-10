@@ -45,29 +45,13 @@ export type WorksProcessPropTypes = {
     HERO: {
       DISCIPLINE: string[];
     };
-    PROCESS: [
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-        IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: { SRC: string; CAPTION: string };
-        CODE?: string;
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-        IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: { SRC: string; CAPTION: string };
-        CODE?: string;
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-        IMAGE?: { SRC: string; ALT: string };
-        VIDEO?: { SRC: string; CAPTION: string };
-        CODE?: string;
-      },
-    ];
+    PROCESS: {
+      HEADING: string;
+      DESCRIPTION: React.ReactNode[];
+      IMAGE?: { SRC: string; ALT: string };
+      VIDEO?: { SRC: string; CAPTION: string };
+      CODE?: string;
+    }[]
   };
   setMediaSrc?: (src: string, type: "image" | "video", alt?: string) => void;
   setCodeSrc?: (src: string) => void;
