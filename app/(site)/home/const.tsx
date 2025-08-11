@@ -1,5 +1,3 @@
-import { Dot } from "@/app/components";
-
 export const HERO_CONST = {
   HEADSHOT: {
     SRC: "/images/PaulAriesHeadshot.jpg",
