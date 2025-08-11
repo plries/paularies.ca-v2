@@ -48,7 +48,9 @@ export const TestimonialCard = ({
             className="border-greyscale-950/10 dark:border-greyscale-50/10 aspect-square h-12 w-12 rounded-full border lg:h-14 lg:w-14"
           />
           <div className="flex flex-col">
-            <ContentHeading level="h3">{testimonial.NAME}</ContentHeading>
+            <ContentHeading level="h3" additionalClasses="mb-1">
+              {testimonial.NAME}
+            </ContentHeading>
             <h4 className="text-greyscale-800 dark:text-greyscale-200 text-sm leading-none md:!text-base lg:!text-lg">
               {testimonial.TITLE}
             </h4>

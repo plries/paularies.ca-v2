@@ -19,24 +19,10 @@ export type WorksDetailsPropTypes = {
 
 export type WorksOverviewPropTypes = {
   PROJECT: {
-    OVERVIEW: [
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-      },
-      {
-        HEADING: string;
-        DESCRIPTION: React.ReactNode[];
-      },
-    ];
+    OVERVIEW: {
+      HEADING: string;
+      DESCRIPTION: React.ReactNode[];
+    }[]
   }
 }
 

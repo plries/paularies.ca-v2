@@ -17,10 +17,12 @@ export const ClientOnly = ({ children }: { children: React.ReactNode }) => {
 
   if (!isClient && !hasMounted)
     return (
-      <div className="bg-greyscale-100 dark:bg-greyscale-900 grid h-screen w-screen place-items-center motion-safe:animate-pulse">
-        <span className="text-greyscale-950 dark:text-greyscale-50 motion-safe:animate-[spin_12s_linear_infinite]">
-          <PaStar />
-        </span>
+      <div className="bg-greyscale-100 dark:bg-greyscale-900 grid h-screen w-screen place-items-center">
+        <div className="motion-safe:animate-pulse">
+          <span className="text-greyscale-950 dark:text-greyscale-50 motion-safe:animate-[spin_12s_linear_infinite]">
+            <PaStar />
+          </span>
+        </div>
       </div>
     );
   {

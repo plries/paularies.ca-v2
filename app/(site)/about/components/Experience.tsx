@@ -20,7 +20,7 @@ export const Experience = () => {
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between">
               <ContentHeading level="h3">{role.TITLE}</ContentHeading>
-              <h4 className="text-greyscale-800 dark:text-greyscale-200 text-sm leading-none md:w-full md:text-right md:!text-base lg:!text-lg">
+              <h4 className="text-greyscale-400 mt-1 text-xs leading-none md:mt-0 md:w-full md:text-right md:!text-sm">
                 {role.SPAN}
               </h4>
             </div>

@@ -8,31 +8,9 @@ export const HERO_CONST = {
   LOGO: {
     ALT: "paul aries",
   },
-  INTRO: [
-    "is ",
-    "a ",
-    "creative, ",
-    "user-centered ",
-    <span
-      key="developer"
-      className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic"
-    >
-      <Dot discipline="development" />
-      developer
-    </span>,
-    "and ",
-    <span
-      key="designer"
-      className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1 italic"
-    >
-      <Dot discipline="design" />
-      designer
-    </span>,
-    "based in ",
-    <span key="vancouver" className="font-instrument-serif italic">
-      vancouver, canada
-    </span>,
-  ],
+  DEVELOPER: "developer",
+  DESIGNER: "designer",
+  LOCATION: "vancouver, canada",
 };
 
 export const INTRO_CONST = {

@@ -51,7 +51,7 @@ export const AboutHero = () => {
             />
           </motion.div>
         </div>
-        <p className="dark:text-greyscale-50 z-10 col-span-full flex flex-col items-center gap-1 text-center !text-xl leading-none md:col-span-6 md:col-start-2 md:!text-2xl lg:col-start-4 lg:!text-[1.75rem]">
+        <p className="dark:text-greyscale-50 z-10 col-span-full flex flex-col items-center gap-1 text-center !text-lg leading-none md:col-span-6 md:col-start-2 md:!text-xl lg:col-start-4 lg:!text-2xl">
           <span className="inline-flex w-fit flex-row items-center gap-x-2">
             <Image
               width={160}

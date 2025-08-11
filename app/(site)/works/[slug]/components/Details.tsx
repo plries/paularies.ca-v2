@@ -12,7 +12,7 @@ export const Details = ({ PROJECT, hasLinks }: WorksDetailsPropTypes) => {
           <div className="flex w-full items-start justify-between lg:flex-row-reverse lg:items-center lg:gap-2">
             <ContentHeading
               level="h1"
-              additionalClasses="!text-2xl md:!text-[1.75rem] lg:!text-[2.25rem]"
+              additionalClasses="!text-xl md:!text-2xl lg:!text-[1.75rem]"
             >
               {PROJECT.HERO.TITLE}
             </ContentHeading>

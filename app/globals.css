@@ -151,6 +151,7 @@ a,
 li,
 button {
   font-size: 1rem;
+  line-height: calc(1.3em);
 }
 
 code {
@@ -158,7 +159,7 @@ code {
   line-height: calc(1.3em);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   p,
   a,
   li,
@@ -166,22 +167,6 @@ code {
     font-size: 1.125rem;
   }
 
-  code {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  p,
-  a,
-  li,
-  button {
-    font-size: 1.25rem;
-  }
-
-  code {
-    font-size: 1rem;
-  }
 }
 
 strong {

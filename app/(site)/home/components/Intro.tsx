@@ -13,7 +13,7 @@ export const Intro = () => {
               "flex flex-col gap-3 col-span-full md:col-span-6 md:col-start-2 md:flex-row md:gap-4 md:p-4 lg:col-span-8 lg:col-start-3 -rotate-1 md:-rotate-2 ease-in-out !shadow-lg"
             }
           >
-            <p className="font-instrument-serif dark:text-greyscale-200 w-full !text-xl md:!text-2xl lg:!text-[1.75rem]">
+            <p className="font-instrument-serif dark:text-greyscale-200 w-full !text-lg md:!text-xl lg:!text-2xl">
               {INTRO_CONST.PARAGRAPH_ONE.map((text, index) => (
                 <span className="even:italic" key={index}>
                   {text}

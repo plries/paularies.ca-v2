@@ -52,7 +52,7 @@ export const ProcessMedia = ({
       )}
       {hook.isCode && PROCESS.CODE && (
         <div className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 relative aspect-video w-full overflow-y-auto rounded-lg border p-4">
-          <Highlight className="text-greyscale-800 dark:text-greyscale-200">
+          <Highlight className="text-greyscale-800 dark:text-greyscale-200 font-dm-mono">
             {PROCESS.CODE}
           </Highlight>
         </div>

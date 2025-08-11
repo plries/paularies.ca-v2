@@ -73,7 +73,9 @@ export const Lightbox = ({
             )}
             {media && media.alt && (
               <div className="mt-2 flex items-center justify-center">
-                <p className="text-greyscale-50 text-center">{media.alt}</p>
+                <p className="text-greyscale-50/75 dark:text-greyscale-50/50 text-center">
+                  {media.alt}
+                </p>
               </div>
             )}
 
@@ -82,7 +84,7 @@ export const Lightbox = ({
                 key={code}
                 className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 max-h-[80vh] min-w-full overflow-x-scroll overflow-y-scroll rounded-lg border p-4"
               >
-                <Highlight className="text-greyscale-800 dark:text-greyscale-200 break-all md:break-normal">
+                <Highlight className="text-greyscale-800 dark:text-greyscale-200 font-dm-mono break-all md:break-normal">
                   {code}
                 </Highlight>
               </div>
