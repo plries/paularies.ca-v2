@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useWindowSize } from "@/app/hooks";
 
 export const useMobileMenu = () => {
+  const windowSize = useWindowSize();
+
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -16,6 +19,12 @@ export const useMobileMenu = () => {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!windowSize.isMobile) {
+      closeMenu();
+    }
+  }, [windowSize.isMobile]);
 
   return {
     isOpen,

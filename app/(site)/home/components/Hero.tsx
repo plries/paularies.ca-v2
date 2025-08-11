@@ -51,8 +51,8 @@ export const Hero = () => {
             </h1>
           </div>
         </div>
-        <h1 className="dark:text-greyscale-50 z-20 col-span-full inline-flex h-fit w-full flex-row justify-center gap-2 pt-3 text-center text-lg leading-none text-nowrap md:col-span-4 md:col-start-3 md:text-xl lg:col-span-6 lg:col-start-4 lg:text-2xl">
-          <span className="overflow-y-hidden md:absolute md:top-1/3 md:left-0 md:-translate-x-full md:px-4">
+        <h1 className="dark:text-greyscale-50 font-instrument-serif z-20 col-span-full inline-flex h-fit w-full flex-row items-center justify-center gap-0.5 overflow-hidden pt-3 text-center text-lg leading-none text-nowrap md:col-span-4 md:col-start-3 md:text-xl lg:col-span-6 lg:col-start-4 lg:text-2xl">
+          <span className="overflow-hidden pb-1 md:absolute md:top-1/3 md:left-0 md:-translate-x-full md:px-4">
             <motion.span
               initial={{ y: 100 }}
               animate={{ y: 0 }}
@@ -61,25 +61,37 @@ export const Hero = () => {
                 duration: 1,
                 delay: 0.75,
               }}
-              className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1.5 px-1 pb-1 italic"
+              className="inline-flex h-fit flex-row items-center gap-1.5 px-1 pb-1 italic"
             >
               <Dot discipline="development" />
               {HERO_CONST.DEVELOPER}
             </motion.span>
           </span>
-          <span className="overflow-y-hidden px-1 md:absolute md:top-1/3 md:right-0 md:translate-x-full md:px-4">
+          <motion.span
+            initial={{ y: 100 }}
+            animate={{ y: 0 }}
+            transition={{
+              ease: easeInOut,
+              duration: 1,
+              delay: 1,
+            }}
+            className="md:hidden"
+          >
+            +
+          </motion.span>
+          <span className="overflow-hidden md:absolute md:top-1/3 md:right-0 md:translate-x-full md:px-4">
             <motion.span
               initial={{ y: 100 }}
               animate={{ y: 0 }}
               transition={{
                 ease: easeInOut,
                 duration: 1,
-                delay: 1,
+                delay: 1.25,
               }}
-              className="font-instrument-serif inline-flex h-fit flex-row items-center gap-1.5 pb-1 italic"
+              className="inline-flex h-fit flex-row items-center gap-1.5 px-1 pb-1 italic"
             >
               {HERO_CONST.DESIGNER}
-              <Dot discipline="design" additionalClasses="mt-1" />
+              <Dot discipline="design" />
             </motion.span>
           </span>
         </h1>

@@ -14,7 +14,7 @@ export const MobileMenu = ({ hook }: MobileMenuPropTypes) => {
     <IconContext.Provider value={{ size: 20 }}>
       <nav className="contents">
         <ul
-          className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ fixed right-3 z-40 mt-7 flex w-[calc(100%-1.5rem)] flex-col gap-3 rounded-3xl border p-3 shadow-[var(--nav-bar-light)] backdrop-blur-sm !transition-[top,opacity] duration-500 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "top-16 opacity-100" : "pointer-events-none -top-1/3 opacity-0"} `}
+          className={`border-greyscale-200/50 dark:border-greyscale-700 dark:bg-greyscale-950/50 bg-greyscale-50/50 ease-in-out-circ fixed top-13 right-3 z-40 mt-7 flex w-[calc(100%-1.5rem)] flex-col gap-3 overflow-hidden rounded-b-3xl border p-3 shadow-[var(--nav-bar-light)] backdrop-blur-sm !transition-[translate,max-height] duration-700 dark:shadow-[var(--nav-bar-dark)] ${hook.isOpen ? "max-h-64" : "pointer-events-none max-h-0 -translate-y-8"} `}
         >
           {NAVBAR_CONST.MOBILE_LINKS.map(({ HREF, TEXT }) => (
             <li key={TEXT}>

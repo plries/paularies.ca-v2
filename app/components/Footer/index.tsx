@@ -56,7 +56,7 @@ export const Footer = () => {
               </Button>
             ))}
           </div>
-          <div className="bg-greyscale-950 dark:bg-greyscale-50 col-span-full flex flex-row items-center justify-between rounded-xl p-4 shadow-[var(--nav-bar-dark)] md:p-6 lg:p-8 dark:shadow-[var(--nav-bar-light)]">
+          <div className="bg-greyscale-950 dark:bg-greyscale-50 col-span-full flex flex-row items-center justify-between gap-4 rounded-xl p-4 shadow-[var(--nav-bar-dark)] md:p-6 lg:p-8 dark:shadow-[var(--nav-bar-light)]">
             <IconButton
               onClick={hook.toggleMode}
               icon={
@@ -71,7 +71,7 @@ export const Footer = () => {
               noMotion
             />
             <p className="text-greyscale-50 dark:text-greyscale-950 flex flex-row items-center gap-3">
-              {FOOTER_CONST.BAR.TEXT}
+              <span className="hidden md:block">{FOOTER_CONST.BAR.TEXT}</span>
               <PaWordmark />
               <span className="sr-only">{FOOTER_CONST.BAR.SR}</span>
             </p>
