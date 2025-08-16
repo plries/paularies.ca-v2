@@ -155,7 +155,7 @@ export const EXPERIENCE_CONST = {
   HEADING: "experience",
   ROLES: [
     {
-      TITLE: "front-end developer @ convergence",
+      TITLE: "software developer / quality assurance @ simuhealth",
       SPAN: "apr 2025 - present",
       DUTIES: [
         "developed and refined front-end features, fixing styling and functionality issues.",
@@ -166,7 +166,6 @@ export const EXPERIENCE_CONST = {
       TITLE: "freelance",
       SPAN: "feb 2025 - present",
       DUTIES: [
-        "took on freelance projects outside of day job to help clients achieve their goals.",
         "designed and developed responsive websites and digital assets tailored to client needs.",
         "communicated closely with clients to ensure accurate execution of their vision.",
       ],
