@@ -48,7 +48,7 @@ export const Process = ({
               <div className="relative flex w-full flex-col md:gap-4">
                 {hook.isTablet && (
                   <motion.div
-                    className="border-greyscale-950/10 dark:bg-greyscale-900 bg-greyscale-100 dark:border-greyscale-50/10 absolute top-0 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center shadow-xs"
+                    className="border-greyscale-950/10 dark:bg-greyscale-900 bg-greyscale-100 dark:border-greyscale-50/10 absolute -top-2 grid aspect-square h-8 w-8 place-items-center rounded-full border text-center shadow-xs md:-top-1"
                     initial={MOTION_CONFIG.DEFAULT.INITIAL}
                     whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
                     transition={MOTION_CONFIG.TRANSITION}
