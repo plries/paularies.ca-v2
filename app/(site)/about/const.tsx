@@ -158,7 +158,7 @@ export const EXPERIENCE_CONST = {
       TITLE: "software developer / quality assurance @ simuhealth",
       SPAN: "apr 2025 - present",
       DUTIES: [
-        "developed and refined front-end features, fixing styling and functionality issues.",
+        "developed and refined front-end and back-end features, fixing styling and functionality issues.",
         "collaborated with the design/development team to improve user experience and interface consistency.",
       ],
     },

@@ -48,7 +48,7 @@ export const TESTIMONIALS_CONST = {
         ALT: "headshot of sharleen yan",
       },
       NAME: "sharleen yan",
-      TITLE: "ux/ui design lead @ convergence",
+      TITLE: "head of product design @ simuhealth",
       QUOTE: [
         "as paul’s design lead, i had the pleasure of working with him during his time on our team, and i can confidently say he’s one of those rare all-rounders who excels at everything he takes on. his attention to detail and design skills always impressed me, and his front-end abilities were just as strong. he consistently exceeded expectations, surprising us time and time again with his creativity and execution.",
         "what i appreciated most about paul was his mindset—no challenge was too big, and he was always eager to push his limits. he’s constantly learning, refining his skills, and looking for ways to improve, which made him an invaluable part of the team. beyond his talent, he’s also someone you can truly rely on—always willing to step up and contribute wherever needed.",
@@ -76,7 +76,7 @@ export const TESTIMONIALS_CONST = {
         ALT: "headshot of thanh nguyen",
       },
       NAME: "thanh nguyen",
-      TITLE: "ux/ui designer @ convergence",
+      TITLE: "ux/ui designer @ simuhealth",
       QUOTE: [
         "what makes paul stand out is his ability to combine striking visual design with outstanding front-end development skills. he is a reliable team player with a strong work ethic, and you can always count on him to find technical solutions to everyday design challenges. not only is he well-versed in coding languages, but he also creates impressive video productions with sleek motion graphics. with a strong sense of responsibility and keen attention to detail, paul would be an incredible asset to any team he joins.",
       ],
