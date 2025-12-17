@@ -58,7 +58,7 @@ export const NavBar = () => {
           {!windowSize.isMobile && (
             <nav className="hidden h-full flex-row items-center gap-3 md:flex">
               <ul className="contents">
-                {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, TEXT }) => (
+                {NAVBAR_CONST.LINKS.slice(0, NAVBAR_CONST.LINKS.length - 1).map(({ HREF, TEXT }) => (
                   <li key={TEXT}>
                     <Button
                       href={HREF}

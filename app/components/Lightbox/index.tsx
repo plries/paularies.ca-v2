@@ -13,6 +13,7 @@ export const Lightbox = ({
   code,
   lightboxRef,
   closeButtonRef,
+  additionalClasses,
 }: LightboxPropTypes) => {
   return (
     <AnimatePresence>
@@ -31,7 +32,7 @@ export const Lightbox = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.3, ease: easeInOut }}
-            className="relative w-full max-w-7xl"
+            className={`relative w-full max-w-7xl ${additionalClasses?.container ?? ""}`}
             onClick={(event) => event.stopPropagation()}
             tabIndex={-1}
             role="dialog"
@@ -56,7 +57,7 @@ export const Lightbox = ({
                 loop
                 muted
                 playsInline
-                className="border-greyscale-100 dark:border-greyscale-900 bg-greyscale-50 dark:bg-greyscale-800 aspect-video h-auto max-w-full rounded-xl border shadow-md"
+                className={`border-greyscale-100 dark:border-greyscale-900 bg-greyscale-50 dark:bg-greyscale-800 aspect-video h-auto max-w-full rounded-xl border shadow-md ${additionalClasses?.media ?? ""}`}
               >
                 <source src={media.src} type="video/mp4" />
               </video>
@@ -68,7 +69,7 @@ export const Lightbox = ({
                 alt={media.alt || ""}
                 width={1920}
                 height={1080}
-                className="border-greyscale-100 dark:border-greyscale-900 bg-greyscale-50 dark:bg-greyscale-800 aspect-video h-auto max-w-full rounded-xl border shadow-md"
+                className={`border-greyscale-100 dark:border-greyscale-900 bg-greyscale-50 dark:bg-greyscale-800 aspect-video h-auto max-w-full rounded-xl border shadow-md ${additionalClasses?.media ?? ""} `}
               />
             )}
             {media && media.alt && (
@@ -82,7 +83,7 @@ export const Lightbox = ({
             {code && (
               <div
                 key={code}
-                className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 max-h-[80vh] min-w-full overflow-x-scroll overflow-y-scroll rounded-lg border p-4"
+                className="border-greyscale-950/10 dark:border-greyscale-50/10 bg-greyscale-100 dark:bg-greyscale-800 max-h-[80vh] min-w-full overflow-scroll rounded-lg border p-4"
               >
                 <Highlight className="text-greyscale-800 dark:text-greyscale-200 font-dm-mono break-all md:break-normal">
                   {code}

@@ -15,7 +15,7 @@ export const Experience = () => {
             className={`bg-greyscale-200 dark:bg-greyscale-700 grid aspect-square h-4 w-4 place-items-center rounded-full after:absolute after:left-2 after:h-full after:w-px ${index === EXPERIENCE_CONST.ROLES.length - 1 ? "after:from-greyscale-50 after:to-greyscale-200 dark:after:from-greyscale-900 dark:after:to-greyscale-700 after:top-0 after:bg-gradient-to-t after:via-25%" : "after:bg-greyscale-200 dark:after:bg-greyscale-700 after:top-4"}`}
           />
           <ContentBlock
-            additionalClasses="w-full"
+            additionalClasses={`w-full ${index === 0 ? "!shadow-sm" : ""}`}
             transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between">

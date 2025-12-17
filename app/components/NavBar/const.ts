@@ -9,6 +9,10 @@ export const NAVBAR_CONST = {
       TEXT: "works",
     },
     {
+      HREF: "/lab",
+      TEXT: "lab",
+    },
+    {
       HREF: "/about",
       TEXT: "about",
     },
@@ -25,6 +29,10 @@ export const NAVBAR_CONST = {
     {
       HREF: "/works",
       TEXT: "works",
+    },
+    {
+      HREF: "/lab",
+      TEXT: "lab",
     },
     {
       HREF: "/about",

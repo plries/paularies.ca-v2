@@ -359,6 +359,7 @@ em {
 ::-webkit-scrollbar-track {
   background: var(--color-greyscale-50);
   border-left: 1px solid rgba(26, 26, 26, 0.1);
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -372,10 +373,15 @@ em {
   background-color: var(--color-greyscale-300);
 }
 
+::-webkit-scrollbar-corner {
+  background: var(--color-greyscale-50);
+}
+
 .dark {
   ::-webkit-scrollbar-track {
   background: var(--color-greyscale-950);
   border-left: 1px solid rgba(246, 246, 246, 0.1);
+  border-top: 1px solid rgba(246, 246, 246, 0.1);
 }
 
   ::-webkit-scrollbar-thumb {
@@ -386,6 +392,10 @@ em {
 
   ::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-greyscale-500);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--color-greyscale-950);
   }
 }
 

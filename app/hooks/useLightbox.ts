@@ -6,7 +6,7 @@ import { MediaType } from "../components/Lightbox/types";
 export const useLightbox = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [media, setMedia] = useState<MediaType | null>(null);
-  const [code, setCode] = useState<string | null>(null);
+  const [code, setCode] = useState<string | undefined>(undefined);
 
   const lightboxRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -16,7 +16,7 @@ export const useLightbox = () => {
   const toggleLightbox = () => setIsOpen(!isOpen);
 
   const clearMedia = () => setMedia(null);
-  const clearCode = () => setCode(null);
+  const clearCode = () => setCode(undefined);
 
   const setMediaSrc = (src: string, type: "image" | "video", alt?: string) => {
     clearCode()

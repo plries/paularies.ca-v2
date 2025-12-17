@@ -3,7 +3,7 @@ import { metadata } from "./home/"
 
 export { metadata };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Hero />
