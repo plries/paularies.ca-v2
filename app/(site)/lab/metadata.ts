@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "web design",
   ],
   openGraph: {
-    title: "portfolio · paul aries",
+    title: "lab · paul aries",
     description:
       "hey there, i'm paul aries! i'm a creative, user-centered developer and designer based in vancouver, canada. explore my portfolio, view my work, and get in touch!",
     images: [
