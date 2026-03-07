@@ -56,7 +56,7 @@ export const Footer = () => {
               </Button>
             ))}
           </div>
-          <div className="bg-greyscale-950 dark:bg-greyscale-50 col-span-full flex flex-row items-center justify-between gap-4 rounded-xl p-4 shadow-[var(--nav-bar-dark)] md:p-6 lg:p-8 dark:shadow-[var(--nav-bar-light)]">
+          <div className="bg-greyscale-950 dark:bg-greyscale-50 col-span-full flex flex-row items-center justify-between gap-4 rounded-3xl p-4 shadow-[var(--nav-bar-dark)] md:p-6 lg:p-8 dark:shadow-[var(--nav-bar-light)]">
             <IconButton
               onClick={hook.toggleMode}
               icon={

@@ -13,7 +13,7 @@ export const ContentBlock = ({
       initial={MOTION_CONFIG.DEFAULT.INITIAL}
       whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
       transition={transition ? transition : MOTION_CONFIG.TRANSITION}
-      className={`bg-greyscale-50 border-greyscale-950/10 dark:bg-greyscale-950 dark:border-greyscale-50/10 flex flex-col gap-3 rounded-xl border p-3 shadow-xs md:rounded-3xl md:p-6 lg:p-8 ${additionalClasses ?? ""}`}
+      className={`bg-greyscale-50 border-greyscale-950/10 dark:bg-greyscale-950 dark:border-greyscale-50/10 flex flex-col gap-3 rounded-xl border p-3 shadow-xs md:rounded-3xl md:p-4 ${additionalClasses ?? ""}`}
     >
       {children}
     </motion.div>

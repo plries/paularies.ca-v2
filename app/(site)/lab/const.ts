@@ -21,6 +21,10 @@ export const LAB_CONST = {
     {
       src: "/images/lab/5.jpg",
       type: "image",
+    },
+    {
+      src: "/images/lab/6.jpg",
+      type: "image",
     }
   ]
 }

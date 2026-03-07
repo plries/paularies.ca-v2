@@ -15,7 +15,7 @@ export const TestimonialCard = ({
 }: TestimonialCardPropTypes) => {
   return (
     <ContentBlock
-      additionalClasses={`pb-18 transition-[max-height] duration-1000 overflow-hidden relative
+      additionalClasses={`pb-13 transition-[max-height] duration-1000 overflow-hidden relative
       ${isOpen ? "max-h-[50rem] md:max-h-[46rem] lg:max-h-[39rem]" : "max-h-48"}`}
       transition={{ duration: 0.5, easeInOut, delay: (index ?? 0) * 0.2 }}
     >
@@ -23,8 +23,8 @@ export const TestimonialCard = ({
         onClick={() => toggleCard(testimonial.NAME)}
         theme="tertiary"
         additionalClasses={{
-          container: "!absolute w-fit bottom-4 left-1/2 -translate-x-1/2 z-10",
-          button: `bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 !text-greyscale-600 dark:!text-greyscale-300 dark:bg-greyscale-950 ${isOpen ? "" : "shadow-sm"}`,
+          container: "!absolute w-fit bottom-2 left-1/2 -translate-x-1/2 z-10",
+          button: `!bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 !text-greyscale-600 dark:!text-greyscale-300 dark:bg-greyscale-950 ${isOpen ? "" : "shadow-sm"}`,
         }}
         icon={
           <span
@@ -37,7 +37,7 @@ export const TestimonialCard = ({
         noMotion
       />
       <div
-        className={`after:to-greyscale-100 dark:after:to-greyscale-900 flex flex-col gap-4 transition-opacity duration-1000 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-1000 md:mb-10 ${isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
+        className={`after:to-greyscale-100 dark:after:to-greyscale-900 flex flex-col gap-4 transition-opacity duration-1000 after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-xl after:bg-gradient-to-b after:from-transparent after:from-50% after:transition-opacity after:duration-1000 md:mb-9 ${isOpen ? "after:opacity-0" : "opacity-50 after:opacity-100"}`}
       >
         <div className="flex flex-row items-center gap-2">
           <Image
