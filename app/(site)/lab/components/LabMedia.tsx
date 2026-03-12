@@ -9,14 +9,14 @@ export const LabMedia = ({ setMediaSrc }: SetMediaSrcPropTypes) => {
   return (
     <div className="col-span-full grid grid-cols-4 gap-3 md:grid-cols-8 md:gap-4 lg:grid-cols-12">
       <Heading level="h1">{LAB_CONST.HEADING}</Heading>
-      <motion.p
+      {/* <motion.p
         initial={MOTION_CONFIG.DEFAULT.INITIAL}
         whileInView={MOTION_CONFIG.DEFAULT.WHILE_IN_VIEW}
         transition={MOTION_CONFIG.TRANSITION}
         className="text-greyscale-600 dark:text-greyscale-300 col-span-full mb-8 text-center md:col-span-6 md:col-start-2 lg:col-start-4"
       >
         {LAB_CONST.DESCRIPTION}
-      </motion.p>
+      </motion.p> */}
 
       <div className="col-span-full flex flex-col gap-4 md:col-span-4 lg:col-span-4">
         {LAB_CONST.MEDIA_LIST.map((media, index) => ({ media, index }))

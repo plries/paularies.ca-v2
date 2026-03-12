@@ -6,9 +6,12 @@ import { ActionBarPropTypes } from "./types";
 export const ActionBar = ({
   children,
   additionalClasses,
+  positionType = "fixed",
 }: ActionBarPropTypes) => {
   return (
-    <div className="pointer-events-none fixed bottom-0 left-0 z-50 flex h-fit w-screen items-end justify-center">
+    <div
+      className={`${positionType} ${additionalClasses?.wrapper ?? ""} pointer-events-none bottom-0 left-0 z-50 flex h-fit w-screen items-end justify-center`}
+    >
       <motion.div
         initial={MOTION_CONFIG.ACTION_BAR.INITIAL}
         animate={MOTION_CONFIG.ACTION_BAR.ANIMATE}

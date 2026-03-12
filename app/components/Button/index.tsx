@@ -21,7 +21,7 @@ export const Button = ({
   scroll,
   tabIndex,
 }: ButtonLinkPropTypes) => {
-  const buttonStyles = `text-nowrap relative cursor-pointer flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border px-3 py-2 text-base ease-in-out-circ md:text-lg lg:text-xl disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 disabled:active:scale-100 transition-[scale] duration-300 ${additionalClasses?.button || ""} ${
+  const buttonStyles = `text-nowrap relative cursor-pointer flex h-10 w-fit flex-row items-center justify-center gap-2 rounded-xl border px-3 py-2 text-base ease-in-out-circ md:text-lg lg:text-xl disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 disabled:active:scale-100 transition-[scale] duration-150 ${additionalClasses?.button || ""} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-50/10 text-greyscale-50 shadow-[var(--button-dark)] dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950  dark:shadow-[var(--button-light)]"
       : theme === "secondary"
@@ -31,7 +31,7 @@ export const Button = ({
 
   const containerStyles = `relative group ${additionalClasses?.container || ""}`;
 
-  const hoverStyles = `absolute z-0 rounded-2xl duration-300 -inset-1 pointer-events-none transition-[background-color,scale] ease-in-out-circ duration-300 group-hover:scale-100 scale-0 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
+  const hoverStyles = `absolute z-0 rounded-2xl duration-150 -inset-1 pointer-events-none transition-[background-color,scale] ease-in-out-circ duration-150 group-hover:scale-100 scale-0 ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
 
   const textStyles = `inline-flex flex-row items-center gap-2  ${additionalClasses?.text || ""}`;
 

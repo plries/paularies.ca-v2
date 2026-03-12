@@ -114,7 +114,9 @@ export const Works = () => {
         <ActionBar
           additionalClasses={{
             container: "!px-3 text-greyscale-400 dark:text-greyscale-300",
+            wrapper: "!w-full col-span-full",
           }}
+          positionType="sticky"
         >
           <ToggleInput
             onChange={toggle.toggleInput}

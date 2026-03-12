@@ -9,11 +9,14 @@ export const About = () => {
     <>
       <Heading level="h1">{ABOUT_CONST.HEADING}</Heading>
       <AboutHero />
-      <Values />
+      {/* <Values /> */}
       <Skills />
       <Experience />
-      <Facts />
-      <ActionBar>
+      {/* <Facts /> */}
+      <ActionBar
+        positionType="sticky"
+        additionalClasses={{ wrapper: "!w-full col-span-full" }}
+      >
         <Button
           theme="primary"
           href={ABOUT_CONST.BUTTON.HREF}

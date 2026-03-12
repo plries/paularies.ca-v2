@@ -20,7 +20,7 @@ export const IconButton = ({
   tabIndex,
   buttonRef,
 }: IconButtonPropTypes) => {
-  const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border p-2 ease-in-out-circ disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 disabled:active:scale-100 transition-[scale] duration-300 !text-lg ${additionalClasses?.button || ""} ${
+  const buttonStyles = `relative grid aspect-square group h-10 w-10 cursor-pointer place-items-center rounded-xl border p-2 ease-in-out-circ disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 disabled:active:scale-100 transition-[scale] duration-150 !text-lg ${additionalClasses?.button || ""} ${
     theme === "primary"
       ? "bg-greyscale-950 border-greyscale-50/10 text-greyscale-50 shadow-[var(--button-dark)] dark:bg-greyscale-50 dark:border-greyscale-100 dark:text-greyscale-950 dark:shadow-[var(--button-light)]"
       : theme === "secondary"
@@ -30,7 +30,7 @@ export const IconButton = ({
 
   const containerStyles = `relative group ${additionalClasses?.container || ""}`;
 
-  const hoverStyles = `absolute -inset-1 pointer-events-none rounded-2xl p-1 transition-[background-color,scale] group-hover:scale-100 scale-0 duration-300 ease-in-out-circ ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
+  const hoverStyles = `absolute -inset-1 pointer-events-none rounded-2xl p-1 transition-[background-color,scale] group-hover:scale-100 scale-0 duration-150 ease-in-out-circ ${theme === "primary" ? "group-hover:bg-greyscale-300/50 group-hover:dark:bg-greyscale-600/75" : "group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25"} ${additionalClasses?.hover || ""}`;
 
   const hook = useWindowSize();
 
