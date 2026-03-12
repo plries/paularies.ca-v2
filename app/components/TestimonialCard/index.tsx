@@ -24,7 +24,7 @@ export const TestimonialCard = ({
         theme="tertiary"
         additionalClasses={{
           container: "!absolute w-fit bottom-2 left-1/2 -translate-x-1/2 z-10",
-          button: `!bg-greyscale-50 border-greyscale-950/10 dark:border-greyscale-50/10 !text-greyscale-600 dark:!text-greyscale-300 dark:bg-greyscale-950 ${isOpen ? "" : "shadow-sm"}`,
+          button: `!bg-greyscale-50 border-greyscale-950/10 dark:!border-greyscale-50/10 !text-greyscale-600 dark:!text-greyscale-300 dark:!bg-greyscale-950 ${isOpen ? "" : "shadow-sm"}`,
         }}
         icon={
           <span
