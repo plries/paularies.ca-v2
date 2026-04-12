@@ -20,7 +20,7 @@ export const INTRO_CONST = {
     "has always driven me to merge the two creatively.",
   ],
   PARAGRAPH_TWO: [
-    "which is why i'm in the world of web development—i'm able to combine my creative and technical skills all while helping others bring their ideas to life.",
+    "which is why i'm in the world of web development - i'm able to combine my creative and technical skills all while helping others bring their ideas to life.",
   ],
   BUTTON: {
     HREF: "/about",

@@ -280,7 +280,7 @@ export const useModal = () => {
     REFLECTION: {
       HEADING: "the big picture",
       DESCRIPTION: [
-        "afleuries illustrated was a fun balance of personality and polish—blending hand-drawn elements with smooth interactions to make the experience feel both welcoming and professional. every detail, from the animated inputs to the timed modal, was crafted to feel thoughtful yet playful, communicating the artist's message clearly.",
+        "afleuries illustrated was a fun balance of personality and polish; blending hand-drawn elements with smooth interactions to make the experience feel both welcoming and professional. every detail, from the animated inputs to the timed modal, was crafted to feel thoughtful yet playful, communicating the artist's message clearly.",
       ],
     },
   },

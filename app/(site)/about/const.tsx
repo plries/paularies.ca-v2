@@ -71,7 +71,7 @@ export const ABOUT_HERO_CONST = {
     >
       dancing at a concert
     </Tooltip>,
-    ". surrounding myself with art and nature keeps me inspired, and fuels my desire to create (especially with others) !",
+    ". surrounding myself with art and nature always keeps me inspired!",
   ],
 };
 
