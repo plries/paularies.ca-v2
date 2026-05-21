@@ -51,36 +51,6 @@ export default function BioPage() {
               </Button>
             ))}
           </div>
-          <div className="border-greyscale-950/5 dark:border-greyscale-50/5 flex flex-wrap justify-center gap-3 border-t pt-3 md:gap-4 md:pt-4">
-            {BIO_CONST.CONTACTS_CONST.map((link, index) => (
-              <Button
-                key={index}
-                href={link.href}
-                theme={
-                  index === BIO_CONST.CONTACTS_CONST.length - 1
-                    ? "primary"
-                    : "secondary"
-                }
-                isLink
-                target="_blank"
-                additionalClasses={{
-                  button: `${index === BIO_CONST.CONTACTS_CONST.length - 1 ? "!shadow-[var(--button-gradient-light)] dark:!shadow-[var(--button-gradient-dark)]" : ""}`,
-                }}
-                icon={
-                  index === 0 ? (
-                    <CardsThree className="ease-in-out-circ transition-transform duration-300 group-hover:rotate-12" />
-                  ) : index === 1 ? (
-                    <Note className="ease-in-out-circ mt-0.5 rotate-12 transition-transform duration-300 group-hover:rotate-0" />
-                  ) : (
-                    <ChatsCircle className="ease-in-out-circ transition-transform duration-300 group-hover:-rotate-12" />
-                  )
-                }
-                iconRight
-              >
-                {link.label}
-              </Button>
-            ))}
-          </div>
         </div>
       </div>
     </IconContext.Provider>

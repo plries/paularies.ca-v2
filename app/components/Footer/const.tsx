@@ -12,7 +12,7 @@ export const FOOTER_CONST = {
   },
   LINKS: [
     {
-      HREF: "https://www.linkedin.com/in/paularies/",
+      HREF: "https://www.linkedin.com/in/paularies",
       TEXT: "linkedin",
     },
     {
@@ -20,9 +20,9 @@ export const FOOTER_CONST = {
       TEXT: "github",
     },
     {
-      HREF: "https://bio.paularies.ca",
-      TEXT: "socials",
-    },
+      HREF: "https://www.instagram.com/plries",
+      TEXT: "instagram",
+    }
   ],
   BAR: {
     TEXT: "hand-coded by ",

@@ -42,10 +42,10 @@ export const Hero = () => {
             alt={HERO_CONST.HEADSHOT.ALT}
             height={1056}
             width={1056}
-            className="border-greyscale-950/10 dark:border-greyscale-50/10 mx-auto aspect-square w-full max-w-48 rounded-full border shadow-xl"
+            className="border-greyscale-950/10 dark:border-greyscale-50/10 mx-auto aspect-square w-full max-w-48 rounded-4xl border shadow-xl"
           />
           <div className="-mt-8 grid w-full place-items-center">
-            <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rotate-2 rounded-xl border px-4 py-3 shadow-xl transition-transform duration-500 hover:rotate-0">
+            <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rounded-xl border px-4 py-3 shadow-xl transition-transform duration-500">
               <PaLogo />
               <span className="sr-only">{HERO_CONST.LOGO.ALT}</span>
             </h1>

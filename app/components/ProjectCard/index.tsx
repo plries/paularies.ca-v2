@@ -33,7 +33,7 @@ export const ProjectCard = ({
         <div className="group-hover:bg-greyscale-300/25 dark:group-hover:bg-greyscale-600/25 ease-in-out-circ pointer-events-none absolute -inset-1 scale-95 rounded-[1.75rem] transition-[background-color,scale] duration-300 group-hover:scale-100" />
       )}
       <article
-        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-4 rounded-xl border p-4 shadow-[var(--card-light)] md:flex-row md:rounded-3xl dark:shadow-[var(--card-dark)] ${
+        className={`bg-greyscale-50 dark:bg-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 relative flex flex-col gap-3 rounded-xl border p-3 shadow-[var(--card-light)] md:flex-row md:rounded-3xl dark:shadow-[var(--card-dark)] ${
           PROJECT.DISCIPLINE[0] === "design"
             ? "hover:border-sky-200 dark:hover:border-sky-900"
             : "hover:border-grass-200 dark:hover:border-grass-900"

@@ -1,7 +1,11 @@
 export const BIO_CONST = {
     LINKS_CONST: [
         {
-            href: "https://www.linkedin.com/in/paularies/",
+            href: "https://www.paularies.ca/",
+            label: "portfolio",
+        },
+        {
+            href: "https://www.linkedin.com/in/paularies",
             label: "linkedin",
         },
         {
@@ -9,30 +13,8 @@ export const BIO_CONST = {
             label: "github",
         },
         {
-            href: "https://www.are.na/paul-aries/",
-            label: "are.na",
-        },
-        {
-            href: "https://open.spotify.com/user/paullaries?si=dac56e92acc54b7d",
-            label: "spotify",
-        },
-        {
-            href: "https://www.instagram.com/plries/",
+            href: "https://www.instagram.com/plries",
             label: "instagram",
-        }
-    ],
-    CONTACTS_CONST: [
-        {
-            href: "https://www.paularies.ca/",
-            label: "portfolio",
-        },
-        {
-            href: "https://www.paularies.ca/PaulAries-Resume.pdf",
-            label: "resume",
-        },
-        {
-            href: "mailto:hello@paularies.ca",
-            label: "contact",
         }
     ],
     LIGHT_DARK: {
