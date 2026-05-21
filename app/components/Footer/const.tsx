@@ -22,7 +22,7 @@ export const FOOTER_CONST = {
     {
       HREF: "https://www.instagram.com/plries",
       TEXT: "instagram",
-    }
+    },
   ],
   BAR: {
     TEXT: "hand-coded by ",

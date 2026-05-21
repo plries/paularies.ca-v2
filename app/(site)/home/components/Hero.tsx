@@ -42,10 +42,10 @@ export const Hero = () => {
             alt={HERO_CONST.HEADSHOT.ALT}
             height={1056}
             width={1056}
-            className="border-greyscale-950/10 dark:border-greyscale-50/10 mx-auto aspect-square w-full max-w-48 rounded-4xl border shadow-xl"
+            className="border-greyscale-950/10 dark:border-greyscale-50/10 mx-auto aspect-square w-full max-w-36 rounded-4xl border shadow-xl md:max-w-48"
           />
           <div className="-mt-8 grid w-full place-items-center">
-            <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rounded-xl border px-4 py-3 shadow-xl transition-transform duration-500">
+            <h1 className="dark:bg-greyscale-950 bg-greyscale-50 dark:text-greyscale-50 text-greyscale-950 border-greyscale-950/10 dark:border-greyscale-50/10 z-10 w-fit rounded-xl border p-3 shadow-xl transition-transform duration-500">
               <PaLogo />
               <span className="sr-only">{HERO_CONST.LOGO.ALT}</span>
             </h1>
@@ -96,15 +96,17 @@ export const Hero = () => {
           </span>
         </h1>
       </div>
-      <div className="bg-greyscale-50 dark:border-greyscale-50/10 dark:bg-greyscale-900 border-greyscale-950/10 text-greyscale-400 md:col-end-automd:m-0 z-20 col-span-full flex max-w-fit flex-row items-center justify-center gap-1 place-self-center rounded-full border py-0.5 pr-2 pl-1.5 shadow-sm md:absolute md:bottom-4 md:left-4 md:col-start-auto">
-        <MapPin size={14} />
-        <p className="font-dm-mono !text-xs text-nowrap">
-          {HERO_CONST.LOCATION}
-        </p>
-      </div>
-      <div className="bg-greyscale-50 dark:border-greyscale-50/10 dark:bg-greyscale-900 border-greyscale-950/10 text-greyscale-400 z-20 col-span-full -mt-2 flex w-fit flex-row items-center justify-center gap-1 place-self-center rounded-full border py-0.5 pr-2 pl-1.5 shadow-sm md:absolute md:right-4 md:bottom-4 md:col-start-auto md:col-end-auto md:m-0">
-        <Clock size={14} />
-        <p className="font-dm-mono !text-xs text-nowrap">{currentTime}</p>
+      <div className="col-span-full flex w-full flex-row justify-between gap-4">
+        <div className="bg-greyscale-50 dark:border-greyscale-50/10 dark:bg-greyscale-900 border-greyscale-950/10 text-greyscale-400 z-20 flex max-w-fit flex-row items-center justify-center gap-1 rounded-full border py-0.5 pr-2 pl-1.5 shadow-sm md:absolute md:bottom-4 md:left-4 md:col-start-auto md:col-end-auto">
+          <MapPin size={14} />
+          <p className="font-dm-mono !text-xs text-nowrap">
+            {HERO_CONST.LOCATION}
+          </p>
+        </div>
+        <div className="bg-greyscale-50 dark:border-greyscale-50/10 dark:bg-greyscale-900 border-greyscale-950/10 text-greyscale-400 z-20 flex w-fit flex-row items-center justify-center gap-1 rounded-full border py-0.5 pr-2 pl-1.5 shadow-sm md:absolute md:right-4 md:bottom-4 md:col-start-auto md:col-end-auto">
+          <Clock size={14} />
+          <p className="font-dm-mono !text-xs text-nowrap">{currentTime}</p>
+        </div>
       </div>
     </InsetBlock>
   );
